@@ -12,5 +12,6 @@
 		<groupId>it.cai.cividale</groupId>
 		<artifactId>scuola-rcp-releng</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../scuola-rcp-releng</relativePath>
 	</parent>
 </project>

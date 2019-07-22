@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scuola-rcp-emf
+Bundle-SymbolicName: scuola-rcp-emf
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: scuola_rcp_emf.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: scuola-rcp-emf
+Bundle-ActivationPolicy: lazy
