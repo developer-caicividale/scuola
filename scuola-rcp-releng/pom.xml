@@ -124,6 +124,6 @@
 		<module>../org.eclipse.core.commands</module>
 
 
-		<module>../scuola-rcp-feature</module>
+		<!--  <module>../scuola-rcp-feature</module>-->
 	</modules>
 </project>

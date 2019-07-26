@@ -1,0 +1,1137 @@
+/**
+ */
+package it.caicividale.corsicai.model.impl;
+
+import it.caicividale.corsicai.model.Allievo;
+import it.caicividale.corsicai.model.Documento;
+import it.caicividale.corsicai.model.Iscrizione;
+import it.caicividale.corsicai.model.MaterialeNoleggiato;
+import it.caicividale.corsicai.model.ModelPackage;
+
+import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Iscrizione</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsModuloIscrizione <em>Is Modulo Iscrizione</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsConsensoInformato <em>Is Consenso Informato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNuovoAllievo <em>Is Nuovo Allievo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDataScadenzaCertificatoMedico <em>Data Scadenza Certificato Medico</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsBollinoAnnoCorso <em>Is Bollino Anno Corso</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getCaparra <em>Caparra</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getSaldo <em>Saldo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleVersato <em>Totale Versato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDocumenti <em>Documenti</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getId <em>Id</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getNote <em>Note</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNoleggio <em>Is Noleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggio <em>Quota Noleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedico <em>Is Certificato Medico</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedicoOk <em>Is Certificato Medico Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsQuotaVersataOk <em>Is Quota Versata Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggioDaVersare <em>Quota Noleggio Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleDaVersare <em>Totale Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDifferenzaTotaleVersatoTotaleDaVersare <em>Differenza Totale Versato Totale Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMessaggiErrore <em>Messaggi Errore</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getAllievo <em>Allievo</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizione {
+	/**
+	 * The default value of the '{@link #getIsModuloIscrizione() <em>Is Modulo Iscrizione</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsModuloIscrizione()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_MODULO_ISCRIZIONE_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getIsModuloIscrizione() <em>Is Modulo Iscrizione</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsModuloIscrizione()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isModuloIscrizione = IS_MODULO_ISCRIZIONE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsConsensoInformato() <em>Is Consenso Informato</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsConsensoInformato()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_CONSENSO_INFORMATO_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getIsConsensoInformato() <em>Is Consenso Informato</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsConsensoInformato()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isConsensoInformato = IS_CONSENSO_INFORMATO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo Allievo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsNuovoAllievo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_NUOVO_ALLIEVO_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo Allievo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsNuovoAllievo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isNuovoAllievo = IS_NUOVO_ALLIEVO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data Scadenza Certificato Medico</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataScadenzaCertificatoMedico()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data Scadenza Certificato Medico</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataScadenzaCertificatoMedico()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date dataScadenzaCertificatoMedico = DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno Corso</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsBollinoAnnoCorso()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_BOLLINO_ANNO_CORSO_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno Corso</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsBollinoAnnoCorso()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isBollinoAnnoCorso = IS_BOLLINO_ANNO_CORSO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCaparra() <em>Caparra</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaparra()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float CAPARRA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCaparra() <em>Caparra</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaparra()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float caparra = CAPARRA_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSaldo() <em>Saldo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaldo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float SALDO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSaldo() <em>Saldo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSaldo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float saldo = SALDO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTotaleVersato() <em>Totale Versato</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotaleVersato()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float TOTALE_VERSATO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDocumenti() <em>Documenti</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDocumenti()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Documento> documenti;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Long ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected Long id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNote() <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNote()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NOTE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNote() <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNote()
+	 * @generated
+	 * @ordered
+	 */
+	protected String note = NOTE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsNoleggio() <em>Is Noleggio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsNoleggio()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_NOLEGGIO_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getMaterialeNoleggiato() <em>Materiale Noleggiato</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaterialeNoleggiato()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<MaterialeNoleggiato> materialeNoleggiato;
+
+	/**
+	 * The default value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione Ok</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsIscrizioneOk()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_ISCRIZIONE_OK_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The default value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuotaNoleggio()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float QUOTA_NOLEGGIO_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuotaNoleggio()
+	 * @generated
+	 * @ordered
+	 */
+	protected Float quotaNoleggio = QUOTA_NOLEGGIO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsCertificatoMedico() <em>Is Certificato Medico</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsCertificatoMedico()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_CERTIFICATO_MEDICO_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The cached value of the '{@link #getIsCertificatoMedico() <em>Is Certificato Medico</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsCertificatoMedico()
+	 * @generated
+	 * @ordered
+	 */
+	protected Boolean isCertificatoMedico = IS_CERTIFICATO_MEDICO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIsCertificatoMedicoOk() <em>Is Certificato Medico Ok</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsCertificatoMedicoOk()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_CERTIFICATO_MEDICO_OK_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The default value of the '{@link #getIsQuotaVersataOk() <em>Is Quota Versata Ok</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIsQuotaVersataOk()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Boolean IS_QUOTA_VERSATA_OK_EDEFAULT = Boolean.FALSE;
+
+	/**
+	 * The default value of the '{@link #getQuotaNoleggioDaVersare() <em>Quota Noleggio Da Versare</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuotaNoleggioDaVersare()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getTotaleDaVersare() <em>Totale Da Versare</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTotaleDaVersare()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float TOTALE_DA_VERSARE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getDifferenzaTotaleVersatoTotaleDaVersare() <em>Differenza Totale Versato Totale Da Versare</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDifferenzaTotaleVersatoTotaleDaVersare()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Float DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAllievo() <em>Allievo</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllievo()
+	 * @generated
+	 * @ordered
+	 */
+	protected Allievo allievo;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IscrizioneImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ModelPackage.Literals.ISCRIZIONE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsModuloIscrizione() {
+		return isModuloIscrizione;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsModuloIscrizione(Boolean newIsModuloIscrizione) {
+		Boolean oldIsModuloIscrizione = isModuloIscrizione;
+		isModuloIscrizione = newIsModuloIscrizione;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE,
+					oldIsModuloIscrizione, isModuloIscrizione));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsConsensoInformato() {
+		return isConsensoInformato;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsConsensoInformato(Boolean newIsConsensoInformato) {
+		Boolean oldIsConsensoInformato = isConsensoInformato;
+		isConsensoInformato = newIsConsensoInformato;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_CONSENSO_INFORMATO,
+					oldIsConsensoInformato, isConsensoInformato));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsNuovoAllievo() {
+		return isNuovoAllievo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsNuovoAllievo(Boolean newIsNuovoAllievo) {
+		Boolean oldIsNuovoAllievo = isNuovoAllievo;
+		isNuovoAllievo = newIsNuovoAllievo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_NUOVO_ALLIEVO,
+					oldIsNuovoAllievo, isNuovoAllievo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Date getDataScadenzaCertificatoMedico() {
+		return dataScadenzaCertificatoMedico;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDataScadenzaCertificatoMedico(Date newDataScadenzaCertificatoMedico) {
+		Date oldDataScadenzaCertificatoMedico = dataScadenzaCertificatoMedico;
+		dataScadenzaCertificatoMedico = newDataScadenzaCertificatoMedico;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO, oldDataScadenzaCertificatoMedico,
+					dataScadenzaCertificatoMedico));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsBollinoAnnoCorso() {
+		return isBollinoAnnoCorso;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsBollinoAnnoCorso(Boolean newIsBollinoAnnoCorso) {
+		Boolean oldIsBollinoAnnoCorso = isBollinoAnnoCorso;
+		isBollinoAnnoCorso = newIsBollinoAnnoCorso;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO,
+					oldIsBollinoAnnoCorso, isBollinoAnnoCorso));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getCaparra() {
+		return caparra;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCaparra(Float newCaparra) {
+		Float oldCaparra = caparra;
+		caparra = newCaparra;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__CAPARRA, oldCaparra,
+					caparra));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getSaldo() {
+		return saldo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSaldo(Float newSaldo) {
+		Float oldSaldo = saldo;
+		saldo = newSaldo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__SALDO, oldSaldo, saldo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getTotaleVersato() {
+		// TODO: implement this method to return the 'Totale Versato' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Documento> getDocumenti() {
+		if (documenti == null) {
+			documenti = new EObjectResolvingEList<Documento>(Documento.class, this, ModelPackage.ISCRIZIONE__DOCUMENTI);
+		}
+		return documenti;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(Long newId) {
+		Long oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getNote() {
+		return note;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setNote(String newNote) {
+		String oldNote = note;
+		note = newNote;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__NOTE, oldNote, note));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsNoleggio() {
+		// TODO: implement this method to return the 'Is Noleggio' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<MaterialeNoleggiato> getMaterialeNoleggiato() {
+		if (materialeNoleggiato == null) {
+			materialeNoleggiato = new EObjectResolvingEList<MaterialeNoleggiato>(MaterialeNoleggiato.class, this,
+					ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO);
+		}
+		return materialeNoleggiato;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsIscrizioneOk() {
+		// TODO: implement this method to return the 'Is Iscrizione Ok' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getQuotaNoleggio() {
+		return quotaNoleggio;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuotaNoleggio(Float newQuotaNoleggio) {
+		Float oldQuotaNoleggio = quotaNoleggio;
+		quotaNoleggio = newQuotaNoleggio;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO,
+					oldQuotaNoleggio, quotaNoleggio));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsCertificatoMedico() {
+		return isCertificatoMedico;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsCertificatoMedico(Boolean newIsCertificatoMedico) {
+		Boolean oldIsCertificatoMedico = isCertificatoMedico;
+		isCertificatoMedico = newIsCertificatoMedico;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO,
+					oldIsCertificatoMedico, isCertificatoMedico));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsCertificatoMedicoOk() {
+		// TODO: implement this method to return the 'Is Certificato Medico Ok' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Boolean getIsQuotaVersataOk() {
+		// TODO: implement this method to return the 'Is Quota Versata Ok' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getQuotaNoleggioDaVersare() {
+		// TODO: implement this method to return the 'Quota Noleggio Da Versare' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getTotaleDaVersare() {
+		// TODO: implement this method to return the 'Totale Da Versare' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Float getDifferenzaTotaleVersatoTotaleDaVersare() {
+		// TODO: implement this method to return the 'Differenza Totale Versato Totale Da Versare' attribute
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getMessaggiErrore() {
+		// TODO: implement this method to return the 'Messaggi Errore' attribute list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Allievo getAllievo() {
+		if (allievo != null && ((EObject) allievo).eIsProxy()) {
+			InternalEObject oldAllievo = (InternalEObject) allievo;
+			allievo = (Allievo) eResolveProxy(oldAllievo);
+			if (allievo != oldAllievo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ISCRIZIONE__ALLIEVO,
+							oldAllievo, allievo));
+			}
+		}
+		return allievo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allievo basicGetAllievo() {
+		return allievo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setAllievo(Allievo newAllievo) {
+		Allievo oldAllievo = allievo;
+		allievo = newAllievo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__ALLIEVO, oldAllievo,
+					allievo));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE:
+			return getIsModuloIscrizione();
+		case ModelPackage.ISCRIZIONE__IS_CONSENSO_INFORMATO:
+			return getIsConsensoInformato();
+		case ModelPackage.ISCRIZIONE__IS_NUOVO_ALLIEVO:
+			return getIsNuovoAllievo();
+		case ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO:
+			return getDataScadenzaCertificatoMedico();
+		case ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO:
+			return getIsBollinoAnnoCorso();
+		case ModelPackage.ISCRIZIONE__CAPARRA:
+			return getCaparra();
+		case ModelPackage.ISCRIZIONE__SALDO:
+			return getSaldo();
+		case ModelPackage.ISCRIZIONE__TOTALE_VERSATO:
+			return getTotaleVersato();
+		case ModelPackage.ISCRIZIONE__DOCUMENTI:
+			return getDocumenti();
+		case ModelPackage.ISCRIZIONE__ID:
+			return getId();
+		case ModelPackage.ISCRIZIONE__NOTE:
+			return getNote();
+		case ModelPackage.ISCRIZIONE__IS_NOLEGGIO:
+			return getIsNoleggio();
+		case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
+			return getMaterialeNoleggiato();
+		case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
+			return getIsIscrizioneOk();
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
+			return getQuotaNoleggio();
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
+			return getIsCertificatoMedico();
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
+			return getIsCertificatoMedicoOk();
+		case ModelPackage.ISCRIZIONE__IS_QUOTA_VERSATA_OK:
+			return getIsQuotaVersataOk();
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO_DA_VERSARE:
+			return getQuotaNoleggioDaVersare();
+		case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
+			return getTotaleDaVersare();
+		case ModelPackage.ISCRIZIONE__DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE:
+			return getDifferenzaTotaleVersatoTotaleDaVersare();
+		case ModelPackage.ISCRIZIONE__MESSAGGI_ERRORE:
+			return getMessaggiErrore();
+		case ModelPackage.ISCRIZIONE__ALLIEVO:
+			if (resolve)
+				return getAllievo();
+			return basicGetAllievo();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE:
+			setIsModuloIscrizione((Boolean) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_CONSENSO_INFORMATO:
+			setIsConsensoInformato((Boolean) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_NUOVO_ALLIEVO:
+			setIsNuovoAllievo((Boolean) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO:
+			setDataScadenzaCertificatoMedico((Date) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO:
+			setIsBollinoAnnoCorso((Boolean) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__CAPARRA:
+			setCaparra((Float) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__SALDO:
+			setSaldo((Float) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__DOCUMENTI:
+			getDocumenti().clear();
+			getDocumenti().addAll((Collection<? extends Documento>) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__ID:
+			setId((Long) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__NOTE:
+			setNote((String) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
+			getMaterialeNoleggiato().clear();
+			getMaterialeNoleggiato().addAll((Collection<? extends MaterialeNoleggiato>) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
+			setQuotaNoleggio((Float) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
+			setIsCertificatoMedico((Boolean) newValue);
+			return;
+		case ModelPackage.ISCRIZIONE__ALLIEVO:
+			setAllievo((Allievo) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE:
+			setIsModuloIscrizione(IS_MODULO_ISCRIZIONE_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_CONSENSO_INFORMATO:
+			setIsConsensoInformato(IS_CONSENSO_INFORMATO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_NUOVO_ALLIEVO:
+			setIsNuovoAllievo(IS_NUOVO_ALLIEVO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO:
+			setDataScadenzaCertificatoMedico(DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO:
+			setIsBollinoAnnoCorso(IS_BOLLINO_ANNO_CORSO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__CAPARRA:
+			setCaparra(CAPARRA_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__SALDO:
+			setSaldo(SALDO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__DOCUMENTI:
+			getDocumenti().clear();
+			return;
+		case ModelPackage.ISCRIZIONE__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__NOTE:
+			setNote(NOTE_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
+			getMaterialeNoleggiato().clear();
+			return;
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
+			setQuotaNoleggio(QUOTA_NOLEGGIO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
+			setIsCertificatoMedico(IS_CERTIFICATO_MEDICO_EDEFAULT);
+			return;
+		case ModelPackage.ISCRIZIONE__ALLIEVO:
+			setAllievo((Allievo) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE:
+			return IS_MODULO_ISCRIZIONE_EDEFAULT == null ? isModuloIscrizione != null
+					: !IS_MODULO_ISCRIZIONE_EDEFAULT.equals(isModuloIscrizione);
+		case ModelPackage.ISCRIZIONE__IS_CONSENSO_INFORMATO:
+			return IS_CONSENSO_INFORMATO_EDEFAULT == null ? isConsensoInformato != null
+					: !IS_CONSENSO_INFORMATO_EDEFAULT.equals(isConsensoInformato);
+		case ModelPackage.ISCRIZIONE__IS_NUOVO_ALLIEVO:
+			return IS_NUOVO_ALLIEVO_EDEFAULT == null ? isNuovoAllievo != null
+					: !IS_NUOVO_ALLIEVO_EDEFAULT.equals(isNuovoAllievo);
+		case ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO:
+			return DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT == null ? dataScadenzaCertificatoMedico != null
+					: !DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT.equals(dataScadenzaCertificatoMedico);
+		case ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO:
+			return IS_BOLLINO_ANNO_CORSO_EDEFAULT == null ? isBollinoAnnoCorso != null
+					: !IS_BOLLINO_ANNO_CORSO_EDEFAULT.equals(isBollinoAnnoCorso);
+		case ModelPackage.ISCRIZIONE__CAPARRA:
+			return CAPARRA_EDEFAULT == null ? caparra != null : !CAPARRA_EDEFAULT.equals(caparra);
+		case ModelPackage.ISCRIZIONE__SALDO:
+			return SALDO_EDEFAULT == null ? saldo != null : !SALDO_EDEFAULT.equals(saldo);
+		case ModelPackage.ISCRIZIONE__TOTALE_VERSATO:
+			return TOTALE_VERSATO_EDEFAULT == null ? getTotaleVersato() != null
+					: !TOTALE_VERSATO_EDEFAULT.equals(getTotaleVersato());
+		case ModelPackage.ISCRIZIONE__DOCUMENTI:
+			return documenti != null && !documenti.isEmpty();
+		case ModelPackage.ISCRIZIONE__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case ModelPackage.ISCRIZIONE__NOTE:
+			return NOTE_EDEFAULT == null ? note != null : !NOTE_EDEFAULT.equals(note);
+		case ModelPackage.ISCRIZIONE__IS_NOLEGGIO:
+			return IS_NOLEGGIO_EDEFAULT == null ? getIsNoleggio() != null
+					: !IS_NOLEGGIO_EDEFAULT.equals(getIsNoleggio());
+		case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
+			return materialeNoleggiato != null && !materialeNoleggiato.isEmpty();
+		case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
+			return IS_ISCRIZIONE_OK_EDEFAULT == null ? getIsIscrizioneOk() != null
+					: !IS_ISCRIZIONE_OK_EDEFAULT.equals(getIsIscrizioneOk());
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
+			return QUOTA_NOLEGGIO_EDEFAULT == null ? quotaNoleggio != null
+					: !QUOTA_NOLEGGIO_EDEFAULT.equals(quotaNoleggio);
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
+			return IS_CERTIFICATO_MEDICO_EDEFAULT == null ? isCertificatoMedico != null
+					: !IS_CERTIFICATO_MEDICO_EDEFAULT.equals(isCertificatoMedico);
+		case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
+			return IS_CERTIFICATO_MEDICO_OK_EDEFAULT == null ? getIsCertificatoMedicoOk() != null
+					: !IS_CERTIFICATO_MEDICO_OK_EDEFAULT.equals(getIsCertificatoMedicoOk());
+		case ModelPackage.ISCRIZIONE__IS_QUOTA_VERSATA_OK:
+			return IS_QUOTA_VERSATA_OK_EDEFAULT == null ? getIsQuotaVersataOk() != null
+					: !IS_QUOTA_VERSATA_OK_EDEFAULT.equals(getIsQuotaVersataOk());
+		case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO_DA_VERSARE:
+			return QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT == null ? getQuotaNoleggioDaVersare() != null
+					: !QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT.equals(getQuotaNoleggioDaVersare());
+		case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
+			return TOTALE_DA_VERSARE_EDEFAULT == null ? getTotaleDaVersare() != null
+					: !TOTALE_DA_VERSARE_EDEFAULT.equals(getTotaleDaVersare());
+		case ModelPackage.ISCRIZIONE__DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE:
+			return DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE_EDEFAULT == null
+					? getDifferenzaTotaleVersatoTotaleDaVersare() != null
+					: !DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE_EDEFAULT
+							.equals(getDifferenzaTotaleVersatoTotaleDaVersare());
+		case ModelPackage.ISCRIZIONE__MESSAGGI_ERRORE:
+			return !getMessaggiErrore().isEmpty();
+		case ModelPackage.ISCRIZIONE__ALLIEVO:
+			return allievo != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (isModuloIscrizione: ");
+		result.append(isModuloIscrizione);
+		result.append(", isConsensoInformato: ");
+		result.append(isConsensoInformato);
+		result.append(", isNuovoAllievo: ");
+		result.append(isNuovoAllievo);
+		result.append(", dataScadenzaCertificatoMedico: ");
+		result.append(dataScadenzaCertificatoMedico);
+		result.append(", isBollinoAnnoCorso: ");
+		result.append(isBollinoAnnoCorso);
+		result.append(", caparra: ");
+		result.append(caparra);
+		result.append(", saldo: ");
+		result.append(saldo);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", note: ");
+		result.append(note);
+		result.append(", quotaNoleggio: ");
+		result.append(quotaNoleggio);
+		result.append(", isCertificatoMedico: ");
+		result.append(isCertificatoMedico);
+		result.append(')');
+		return result.toString();
+	}
+
+} //IscrizioneImpl
