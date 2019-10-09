@@ -14,6 +14,7 @@ Require-Bundle: org.eclipse.ui,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: it.caicividale.corsicai.model,
  it.caicividale.corsicai.model.impl,
+ it.caicividale.corsicai.model.sharedresources,
  it.caicividale.corsicai.model.util
 Automatic-Module-Name: it.caicividale.corsicai.model
 Bundle-ActivationPolicy: lazy

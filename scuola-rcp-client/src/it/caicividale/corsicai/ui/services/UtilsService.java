@@ -1,6 +1,10 @@
 package it.caicividale.corsicai.ui.services;
 
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -77,10 +81,14 @@ public class UtilsService {
 		return DATE_TIME_FORMATTER.format(date);
 	}
 
-	public static int getYearsBetween(Date date1, Date date2) {
-		org.joda.time.DateTime jodaDate1 = new org.joda.time.DateTime(date1);
-		org.joda.time.DateTime jodaDate2 = new org.joda.time.DateTime(date2);
+	public static long getYearsBetween(Date date1, Date date2) {
+		LocalDateTime date1LocalDateTime = Instant.ofEpochMilli(date1.getTime()).atZone(ZoneId.systemDefault())
+				.toLocalDateTime();
+		LocalDateTime date2LocalDateTime = Instant.ofEpochMilli(date2.getTime()).atZone(ZoneId.systemDefault())
+				.toLocalDateTime();
 
-		return org.joda.time.Years.yearsBetween(jodaDate1, jodaDate2).getYears();
+		long diff = ChronoUnit.YEARS.between(date1LocalDateTime, date2LocalDateTime);
+
+		return diff;
 	}
 }

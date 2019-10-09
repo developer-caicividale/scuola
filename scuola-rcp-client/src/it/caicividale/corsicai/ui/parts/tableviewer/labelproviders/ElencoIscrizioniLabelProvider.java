@@ -220,7 +220,7 @@ public class ElencoIscrizioniLabelProvider extends CellLabelProvider {
 		Date dataCorso = modelManager.getCorsoObservable().getValue().getDataInizio();
 		String etaString = "";
 		if (dataNascita != null && dataCorso != null) {
-			int eta = UtilsService.getYearsBetween(dataNascita, dataCorso);
+			long eta = UtilsService.getYearsBetween(dataNascita, dataCorso);
 			etaString = " (" + sessoString + eta + ")";
 		}
 		text = Optional.ofNullable(allievo.getCognome()).orElse("").toUpperCase() + " "

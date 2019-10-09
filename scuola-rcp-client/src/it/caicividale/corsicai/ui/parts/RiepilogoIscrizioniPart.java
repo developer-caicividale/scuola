@@ -76,7 +76,7 @@ public class RiepilogoIscrizioniPart implements IMyPart {
 		// Content e label provider
 		ObservableListContentProvider listContentProviderNoleggio = new ObservableListContentProvider();
 		tableViewerElencoIscrizioni.setContentProvider(listContentProviderNoleggio);
-		tableViewerElencoIscrizioni.setInput(modelManager.getNoleggioObservableList());
+		// tableViewerElencoIscrizioni.setInput(modelManager.getNoleggioObservableList());
 
 		UpdateValueStrategy modelToTargetNumeroAllievi2 = new ConverterUpdateValueStrategy(
 				new Corso2NumeroAllieviStringConverter());

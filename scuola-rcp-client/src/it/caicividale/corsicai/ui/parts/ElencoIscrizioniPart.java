@@ -140,7 +140,7 @@ public class ElencoIscrizioniPart implements IMyPart {
 		// Content e label provider
 		ObservableListContentProvider listContentProviderNoleggio = new ObservableListContentProvider();
 		tableViewerRiepilogoNoleggio.setContentProvider(listContentProviderNoleggio);
-		tableViewerRiepilogoNoleggio.setInput(modelManager.getNoleggioObservableList());
+		// tableViewerRiepilogoNoleggio.setInput(modelManager.getNoleggioObservableList());
 
 		UpdateValueStrategy modelToTargetNumeroAllievi2 = new ConverterUpdateValueStrategy(
 				new Corso2NumeroAllieviStringConverter());

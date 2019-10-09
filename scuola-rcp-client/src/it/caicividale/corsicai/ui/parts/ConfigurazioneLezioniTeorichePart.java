@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import it.caicividale.corsicai.services.ServiceManager;
+import it.caicividale.corsicai.ui.rest.ServiceManager;
 import it.caicividale.corsicai.ui.services.ModelManager;
 
 public class ConfigurazioneLezioniTeorichePart implements IMyPart {

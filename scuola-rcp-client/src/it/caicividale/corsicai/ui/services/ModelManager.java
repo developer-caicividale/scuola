@@ -1,4 +1,4 @@
-package it.caicividale.corsicai.ui.services
+package it.caicividale.corsicai.ui.services;
 
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
@@ -12,7 +12,7 @@ import it.caicividale.corsicai.model.DizMateriale;
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.Istruttore;
 import it.caicividale.corsicai.model.Persona;
-import it.caicividale.corsicai.model.beans.RiepilogoNoleggioBean;
+import it.caicividale.corsicai.ui.rest.ServiceManager;
 import lombok.Data;
 
 @Data
@@ -42,9 +42,9 @@ public class ModelManager {
 	private final IObservableList<DizMateriale> elencoDizMaterialeObservableList = WritableList
 			.withElementType(DizMateriale.class);
 
-	// riepilogo materiale noleggiato
-	private final IObservableList<RiepilogoNoleggioBean> noleggioObservableList = WritableList
-			.withElementType(RiepilogoNoleggioBean.class);
+//	// riepilogo materiale noleggiato
+//	private final IObservableList<RiepilogoNoleggioBean> noleggioObservableList = WritableList
+//			.withElementType(RiepilogoNoleggioBean.class);
 
 	// elenco delle iscrizioni del corso
 	private final IObservableList<Istruttore> elencoIstruttoriObservableList = WritableList
@@ -133,9 +133,9 @@ public class ModelManager {
 		if (corso.getIscrizioni() != null) {
 			elencoIscrizioneObservableList.addAll(corso.getIscrizioni());
 		}
-		if (corso.getListRiepilogonoleggio() != null) {
-			noleggioObservableList.clear();
-			noleggioObservableList.addAll(corso.getListRiepilogonoleggio());
-		}
+//		if (corso.getListRiepilogonoleggio() != null) {
+//			noleggioObservableList.clear();
+//			noleggioObservableList.addAll(corso.getListRiepilogonoleggio());
+//		}
 	}
 }

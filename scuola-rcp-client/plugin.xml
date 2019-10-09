@@ -7,10 +7,10 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
-            name="scuolarcpclient">
+            name="scuola-rcp-client">
          <property
-               name="applicationCSS"
-               value="platform:/plugin/scuola-rcp-client/css/default.css">
+               name="appName"
+               value="scuola-rcp-client">
          </property>
       </product>
    </extension>

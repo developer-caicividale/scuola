@@ -31,7 +31,7 @@ import it.caicividale.corsicai.model.Allievo;
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.Persona;
-import it.caicividale.corsicai.services.ServiceManager;
+import it.caicividale.corsicai.ui.rest.ServiceManager;
 import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.services.UtilsService;
 
