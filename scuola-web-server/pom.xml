@@ -1,0 +1,501 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>scuola-web-server</groupId>
+	<artifactId>server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+
+		<!-- spring -->
+		<spring.version>5.1.9.RELEASE</spring.version>
+		<spring-security.version>5.1.6.RELEASE</spring-security.version>
+		<spring-data.version>Lovelace-SR10</spring-data.version>
+
+
+
+
+		<jackson.version>2.10.0</jackson.version>
+
+		<lombok.version>1.18.8</lombok.version>
+		<findbugs.version>3.0.1</findbugs.version>
+
+		<jsonpath.version>2.4.0</jsonpath.version>
+
+		<org.aspectj.version>1.9.4</org.aspectj.version>
+
+
+		<c3p0.version>0.9.5.2</c3p0.version>
+		<org.glassfish.javax.el.version>3.0.1-b09</org.glassfish.javax.el.version>
+
+		<SCXML.version>0.9</SCXML.version>
+
+		<!-- OKKIO: VERIFICARE L'INSTALLAIZONE DI LOMBOK DELL'IDE http://jnb.ociweb.com/jnb/jnbJan2010.html -->
+		<lombok.version>1.16.16</lombok.version>
+
+		<!-- DB -->
+		<mysql.version>8.0.17</mysql.version>
+		<hibernate.version>5.4.1.Final</hibernate.version>
+		<hibernate.validator>5.4.1.Final</hibernate.validator>
+		<hsqldb.version>2.4.0</hsqldb.version>
+
+		<!-- logging -->
+		<logback-classic.version>1.2.3</logback-classic.version>
+		<org.slf4j.version>1.7.28</org.slf4j.version>
+
+		<!-- test -->
+		<junit.version>4.12</junit.version>
+		<org.mockito.version>1.10.19</org.mockito.version>
+		<org.powermock.version>1.7.3</org.powermock.version>
+
+
+		<jstl.version>1.2.1</jstl.version>
+		<tld.version>1.1.2</tld.version>
+		<servlets.version>3.1.0</servlets.version>
+		<jsp.version>2.3.1</jsp.version>
+
+
+		<!-- build -->
+		<maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
+		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<maven.war.plugin.version>2.6</maven.war.plugin.version>
+		<cxf.version>3.2.4</cxf.version>
+
+		<org.jvnet.jaxb2_commons.version>1.11.1</org.jvnet.jaxb2_commons.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<url>http://maven.insiel.it/nexus/content/repositories/releases</url>
+		</repository>
+
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-releasetrain</artifactId>
+				<version>${spring-data.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring-security.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<!-- versione dipendente dal BOM -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj.version}</version>
+		</dependency>
+
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback-classic.version}</version>
+		</dependency>
+
+
+		<!-- JSTL Dependency -->
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>${tld.version}</version>
+		</dependency>
+
+		<!-- Servlet Dependency -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlets.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSP Dependency -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>${jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${org.mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>${org.powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>${org.powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+
+		<!-- Hibernate Core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Hibernate-C3P0 Integration -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Hibernate-java8 Integration -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-java8</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- c3p0 -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
+
+		<!-- Hibernate Validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics</artifactId>
+			<version>${org.jvnet.jaxb2_commons.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>${org.glassfish.javax.el.version}</version>
+		</dependency>
+
+
+
+		<!-- Mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+
+
+		<!-- OKKIO: VERIFICARE L'INSTALLAIZONE DI LOMBOK DELL'IDE http://jnb.ociweb.com/jnb/jnbJan2010.html -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Supporto a jta -->
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.esotericsoftware</groupId>
+			<artifactId>kryo</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		
+		<!-- progetto emf -->
+		<dependency>
+			<groupId>it.cai.cividale</groupId>
+			<artifactId>scuola-rcp-emf</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+
+					<resources>
+						<resource>
+							<directory>src/main/resources</directory>
+							<filtering>true</filtering>
+						</resource>
+						<resource>
+							<directory>src/test/resources</directory>
+							<filtering>true</filtering>
+						</resource>
+					</resources>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<warName>${project.name}</warName>
+
+					<webResources>
+						<!-- <resource> <directory>src/main/java</directory> <include>/**</include> 
+							<targetPath>WEB-INF/classes</targetPath> </resource> <resource> <directory>src/main/resources/conf</directory> 
+							<include>/**</include> <targetPath>WEB-INF/classes/conf</targetPath> </resource> -->
+
+						<resource>
+							<directory>src/main/webapp</directory>
+							<include>/**</include>
+							<targetPath>/</targetPath>
+						</resource>
+						<resource>
+							<directory>src/main/webapp/WEB-INF/views</directory>
+							<include>/**</include>
+							<targetPath>/WEB-INF/views</targetPath>
+						</resource>
+
+
+					</webResources>
+					<archive>
+						<manifestEntries>
+							<Dependencies>org.apache.httpcomponents export</Dependencies>
+						</manifestEntries>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+					</archive>
+					<packagingExcludes>
+
+						WEB-INF/classes/logback.xml,
+						WEB-INF/classes/META-INF/context.xml
+
+					</packagingExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<configuration>
+					<mainClass>org.test.int1.Main</mainClass>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

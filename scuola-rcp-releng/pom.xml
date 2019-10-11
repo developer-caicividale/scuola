@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.cai.cividale</groupId>
 	<artifactId>scuola-rcp-releng</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Scuoòla CAI Cividale</name>
+	<name>Scuola CAI Cividale</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -119,11 +119,11 @@
 		</pluginManagement>
 	</build>
 	<modules>
-		<module>../org.eclipse.jface.nl1</module>
+		<!--<module>../org.eclipse.jface.nl1</module>
 		<module>../org.eclipse.ui.workbench.nl1</module>
-		<module>../org.eclipse.core.commands</module>
-
-
+		<module>../org.eclipse.core.commands</module>-->
+		<module>../scuola-rcp-emf</module>
+		<module>../scuola-rcp-client</module>
 		<!--  <module>../scuola-rcp-feature</module>-->
 	</modules>
 </project>
