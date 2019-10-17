@@ -1,4 +1,4 @@
-package it.caicividale.corsicai.ui.services;
+package it.caicividale.corsicai.model;
 
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
@@ -7,12 +7,7 @@ import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 
-import it.caicividale.corsicai.model.Corso;
-import it.caicividale.corsicai.model.DizMateriale;
-import it.caicividale.corsicai.model.Iscrizione;
-import it.caicividale.corsicai.model.Istruttore;
-import it.caicividale.corsicai.model.Persona;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import lombok.Data;
 
 @Data

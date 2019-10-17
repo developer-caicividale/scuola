@@ -34,11 +34,11 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
 import it.caicividale.corsicai.model.Corso;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import it.caicividale.corsicai.ui.databinding.converters.Corso2IdCorsoConverter;
 import it.caicividale.corsicai.ui.parts.treeviewer.contentproviders.ElencoCorsiTreeContentProvider;
 import it.caicividale.corsicai.ui.parts.treeviewer.labelproviders.TreeviewCorsiLabelProvider;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 
 public class TreeviewPartCorsi implements IMyPart {

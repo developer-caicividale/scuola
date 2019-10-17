@@ -35,10 +35,10 @@ import org.eclipse.swt.widgets.Text;
 
 import it.caicividale.corsicai.model.DizMateriale;
 import it.caicividale.corsicai.model.MaterialeNoleggiato;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.ui.databinding.converters.Short2StringConverter;
 import it.caicividale.corsicai.ui.databinding.converters.String2ShortConverter;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 import it.caicividale.corsicai.ui.validators.ObjectNotNullValidator;
 import it.caicividale.corsicai.ui.widgetvalueproperty.LocalDateSelectionProperty;

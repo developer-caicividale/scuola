@@ -1,4 +1,4 @@
-package it.caicividale.corsicai.ui.rest;
+package it.caicividale.corsicai.services.rest;
 
 import java.util.Collection;
 import java.util.List;

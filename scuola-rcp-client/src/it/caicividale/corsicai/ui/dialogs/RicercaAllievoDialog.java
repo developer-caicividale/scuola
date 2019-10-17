@@ -29,11 +29,11 @@ import org.eclipse.wb.swt.ResourceManager;
 
 import it.caicividale.corsicai.model.Allievo;
 import it.caicividale.corsicai.model.Iscrizione;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.Persona;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.util.UtilsService;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 
 public class RicercaAllievoDialog extends TitleAreaDialog {
 

@@ -7,8 +7,8 @@ import org.eclipse.jface.viewers.ViewerCell;
 
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.MaterialeNoleggiato;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 public class MaterialeNoleggiatoLabelProvider extends CellLabelProvider {
 

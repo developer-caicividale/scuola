@@ -7,8 +7,8 @@ import org.eclipse.core.databinding.validation.ValidationStatus;
 import org.eclipse.core.runtime.IStatus;
 
 import it.caicividale.corsicai.model.Corso;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 public class DataScadenzaCertificatoValidator implements IValidator {
 

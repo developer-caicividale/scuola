@@ -13,10 +13,10 @@ import org.eclipse.swt.widgets.Shell;
 
 import it.caicividale.corsicai.model.Corso;
 import it.caicividale.corsicai.model.ModelFactory;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import it.caicividale.corsicai.ui.dialogs.CorsoDialog;
 import it.caicividale.corsicai.ui.parts.TreeviewPartCorsi;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.utils.PartsUtils;
 
 public class NuovoCorsoHandler {

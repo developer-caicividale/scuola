@@ -22,10 +22,10 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import it.caicividale.corsicai.ui.cccalendar.CEvent;
 import it.caicividale.corsicai.ui.cccalendar.CEventItemBuilder;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
 
 public class ConfigurazioneCalendarioLezioniPart implements IMyPart {
 

@@ -5,9 +5,9 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.ViewerCell;
 
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.VoceDiSpesa;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 public class BilancioUsciteLabelProvider extends CellLabelProvider {
 

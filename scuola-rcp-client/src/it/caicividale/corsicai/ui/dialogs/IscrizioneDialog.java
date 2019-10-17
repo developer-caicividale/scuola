@@ -64,6 +64,7 @@ import it.caicividale.corsicai.model.ESesso;
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.MaterialeNoleggiato;
 import it.caicividale.corsicai.model.ModelFactory;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.valueobject.EMail;
 import it.caicividale.corsicai.model.valueobject.NumeroCellulare;
@@ -76,7 +77,6 @@ import it.caicividale.corsicai.ui.decorationupdaters.OkKoControlDecoratorUpdater
 import it.caicividale.corsicai.ui.parts.PartDefaults;
 import it.caicividale.corsicai.ui.parts.tableviewer.labelproviders.MaterialeNoleggiatoLabelProvider;
 import it.caicividale.corsicai.ui.parts.tableviewer.sorters.EObjectTableColumnSorter;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 import it.caicividale.corsicai.ui.utils.EmfUtils;
 import it.caicividale.corsicai.ui.validators.BooleanWarningValidator;

@@ -5,6 +5,7 @@ package it.caicividale.corsicai.model.impl;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -28,11 +29,12 @@ import it.caicividale.corsicai.model.Istruttore;
 import it.caicividale.corsicai.model.LezionePratica;
 import it.caicividale.corsicai.model.LezioneTeorica;
 import it.caicividale.corsicai.model.MaterialeNoleggiato;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.Persona;
+import it.caicividale.corsicai.model.beans.RiepilogoNoleggioBean;
 import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object

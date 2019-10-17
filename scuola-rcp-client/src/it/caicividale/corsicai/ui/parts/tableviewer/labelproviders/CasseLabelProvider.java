@@ -5,8 +5,8 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.ViewerCell;
 
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.RipartizioneCassa;
-import it.caicividale.corsicai.ui.services.ModelManager;
 
 public class CasseLabelProvider extends CellLabelProvider {
 

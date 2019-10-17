@@ -2,7 +2,7 @@ package it.caicividale.corsicai.ui.databinding.converters;
 
 import java.util.Date;
 
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 public class Date2StringConverter extends GenericsConverter<Date, String> {
 

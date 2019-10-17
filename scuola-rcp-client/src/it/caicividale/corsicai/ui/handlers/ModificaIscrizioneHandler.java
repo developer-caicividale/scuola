@@ -15,9 +15,9 @@ import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
 
 import it.caicividale.corsicai.model.Iscrizione;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import it.caicividale.corsicai.ui.dialogs.IscrizioneDialog;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.utils.EmfUtils;
 import it.caicividale.corsicai.ui.utils.PartsUtils;
 

@@ -13,8 +13,8 @@ import org.eclipse.swt.widgets.Display;
 import it.caicividale.corsicai.model.Allievo;
 import it.caicividale.corsicai.model.ESesso;
 import it.caicividale.corsicai.model.Iscrizione;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 public class ElencoIscrizioniLabelProvider extends CellLabelProvider {
 	private static final long serialVersionUID = 1771645478589522736L;

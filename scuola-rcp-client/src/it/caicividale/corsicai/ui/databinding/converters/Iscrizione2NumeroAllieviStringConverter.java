@@ -1,7 +1,7 @@
 package it.caicividale.corsicai.ui.databinding.converters;
 
 import it.caicividale.corsicai.model.Iscrizione;
-import it.caicividale.corsicai.ui.services.ModelManager;
+import it.caicividale.corsicai.model.ModelManager;
 
 public class Iscrizione2NumeroAllieviStringConverter extends GenericsConverter<Iscrizione, String> {
 	private final ModelManager modelManager = ModelManager.getInstance();

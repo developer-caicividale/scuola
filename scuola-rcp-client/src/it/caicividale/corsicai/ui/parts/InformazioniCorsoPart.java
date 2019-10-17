@@ -28,6 +28,7 @@ import org.eclipse.swt.widgets.Text;
 
 import it.caicividale.corsicai.model.Corso;
 import it.caicividale.corsicai.model.Istruttore;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.Persona;
 import it.caicividale.corsicai.ui.databinding.converters.Corso2ImageConverter;
@@ -35,7 +36,6 @@ import it.caicividale.corsicai.ui.databinding.converters.Date2StringConverter;
 import it.caicividale.corsicai.ui.databinding.converters.DizCatalogoCorsi2StringConverter;
 import it.caicividale.corsicai.ui.databinding.converters.PersonaNomeCognome2StringConverter;
 import it.caicividale.corsicai.ui.databinding.converters.Soldi2StringConverter;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 
 public class InformazioniCorsoPart {

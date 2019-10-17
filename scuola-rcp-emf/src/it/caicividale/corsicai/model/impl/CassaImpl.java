@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import it.caicividale.corsicai.model.Cassa;
 import it.caicividale.corsicai.model.Corso;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.RipartizioneCassa;
 import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
-import it.caicividale.corsicai.ui.services.ModelManager;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object

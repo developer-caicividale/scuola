@@ -21,10 +21,10 @@ import it.caicividale.corsicai.model.Allievo;
 import it.caicividale.corsicai.model.Corso;
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.MaterialeNoleggiato;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
-import it.caicividale.corsicai.ui.services.ModelManager;
-import it.caicividale.corsicai.ui.services.UtilsService;
+import it.caicividale.corsicai.model.util.UtilsService;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object

@@ -7,7 +7,7 @@ import org.eclipse.e4.ui.model.application.ui.advanced.MPerspective;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 
-import it.caicividale.corsicai.ui.services.ModelManager;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.ui.utils.PartsUtils;
 
 public class RefreshPerspective {

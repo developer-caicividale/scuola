@@ -26,10 +26,10 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import it.caicividale.corsicai.model.Corso;
+import it.caicividale.corsicai.model.ModelManager;
+import it.caicividale.corsicai.services.rest.ServiceManager;
 import it.caicividale.corsicai.ui.databinding.converters.Corso2IdCorsoConverter;
 import it.caicividale.corsicai.ui.parts.tableviewer.labelproviders.ElencoIscrizioniLabelProvider;
-import it.caicividale.corsicai.ui.rest.ServiceManager;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 
 public class ConfigurazioneLezioniPratichePart implements IMyPart {

@@ -14,7 +14,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
 
 import it.caicividale.corsicai.model.Corso;
-import it.caicividale.corsicai.ui.services.ModelManager;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.ui.services.StampeManager;
 
 public class StampaSchedaCorsoHandler {

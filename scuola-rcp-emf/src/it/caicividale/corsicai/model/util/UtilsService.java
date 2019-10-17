@@ -1,4 +1,4 @@
-package it.caicividale.corsicai.ui.services;
+package it.caicividale.corsicai.model.util;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;

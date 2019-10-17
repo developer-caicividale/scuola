@@ -41,6 +41,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import it.caicividale.corsicai.model.Corso;
 import it.caicividale.corsicai.model.Iscrizione;
+import it.caicividale.corsicai.model.ModelManager;
 import it.caicividale.corsicai.model.ModelPackage;
 import it.caicividale.corsicai.ui.databinding.converters.Corso2NumeroAllieviStringConverter;
 import it.caicividale.corsicai.ui.databinding.converters.Integer2StringConverter;
@@ -50,7 +51,6 @@ import it.caicividale.corsicai.ui.parts.tableviewer.filters.ElencoIscrizioniOkFi
 import it.caicividale.corsicai.ui.parts.tableviewer.labelproviders.ElencoIscrizioniLabelProvider;
 import it.caicividale.corsicai.ui.parts.tableviewer.labelproviders.RiepilogoMaterialeNoleggiatoLabelProvider;
 import it.caicividale.corsicai.ui.parts.tableviewer.sorters.EObjectTableColumnSorter;
-import it.caicividale.corsicai.ui.services.ModelManager;
 import it.caicividale.corsicai.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 
 public class ElencoIscrizioniPart implements IMyPart {
