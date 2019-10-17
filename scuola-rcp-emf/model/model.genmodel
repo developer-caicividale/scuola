@@ -15,11 +15,6 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ESesso/MASCHIO"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ESesso/FEMMINA"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ETipoDocumento">
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETipoDocumento/CONSENSO_INFORMATO"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETipoDocumento/MODULO_ISCRIZIONE"/>
-      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETipoDocumento/CERTIFICATO_MEDICO"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ETitoloIstruttore">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_SEZIONALE"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_ALPINISMO"/>
@@ -28,6 +23,8 @@
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_NAZIONALE_ALPINISMO"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_NAZIONALE_SCIALPINISMO"/>
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ASPIRANTE_ISTRUTTORE"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_ARRAMPICATA_LIBERA"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ETitoloIstruttore/ISTRUTTORE_NAZIONALE_ARRAMPICATA_LIBERA"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//TipoEsitoValutazione">
       <genEnumLiterals ecoreEnumLiteral="model.ecore#//TipoEsitoValutazione/OTTIMO"/>
@@ -56,7 +53,6 @@
     </genEnums>
     <genDataTypes ecoreDataType="model.ecore#//NumeroCellulare"/>
     <genDataTypes ecoreDataType="model.ecore#//EMail"/>
-    <genDataTypes ecoreDataType="model.ecore#//DizMateriaValutazione"/>
     <genClasses ecoreClass="model.ecore#//Persona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nome"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/cognome"/>
@@ -75,13 +71,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/isStaffScuola"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Allievo">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Allievo/valutazioni"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Allievo/isDiploma"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Corso">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/anno"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/quotaIscrizione"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/quotaCaparra"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioni"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/isModulo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/direttore"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/vicedirettore"/>
@@ -106,11 +101,8 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviConNoleggio"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/listRiepilogonoleggio"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/moduli"/>
-    </genClasses>
-    <genClasses ecoreClass="model.ecore#//Documento">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Documento/tipoDocumento"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Documento/documento"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Documento/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniPratiche"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniTeoriche"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Iscrizione">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isModuloIscrizione"/>
@@ -121,7 +113,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/caparra"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/saldo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/totaleVersato"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/documenti"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/note"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isNoleggio"/>
@@ -150,24 +141,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//LezioneTeorica/Docente"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//LezionePratica">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LezionePratica/staffIstruttoriLezione"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//LezionePratica/luogoRitrovo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LezionePratica/squadre"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Istruttore">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Istruttore/titolo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Istruttore/valutazioni"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Istruttore/isAttivo"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Squadra">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/capiSquadra"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/capoSquadra"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/allieviInSquadra"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Squadra/id"/>
-    </genClasses>
-    <genClasses ecoreClass="model.ecore#//Valutazione">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Valutazione/materiaValutazione"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Valutazione/tipoEsitoValutazione"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Valutazione/istruttoriValutatori"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Valutazione/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Squadra/nome"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/staffSquadra"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Bilancio">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bilancio/id"/>
@@ -182,7 +168,7 @@
     <genClasses ecoreClass="model.ecore#//Cassa">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/totale"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Cassa/ripartizioneCassa"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Cassa/ripartizioniCassa"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/nota"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/differenzaTotaleCasseEAvanzo"/>
     </genClasses>
@@ -192,8 +178,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RipartizioneCassa/id"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//PresenzaLezione">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PresenzaLezione/allievoPresente"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PresenzaLezione/istruttorePresente"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PresenzaLezione/allieviPresenti"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//PresenzaLezione/istruttoriPresenti"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//PresenzaLezione/id"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//DizMateriale">

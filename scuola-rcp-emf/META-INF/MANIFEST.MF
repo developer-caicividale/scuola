@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: scuola-rcp-emf;singleton:=true
+Bundle-SymbolicName: it.caicividale.corsicai.model;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -10,7 +10,8 @@ Bundle-Activator: it.caicividale.corsicai.model.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.18.0";visibility:=reexport,
- org.eclipse.emf.ecore.xmi;bundle-version="2.16.0"
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0",
+ org.eclipse.core.databinding.observable
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: it.caicividale.corsicai.model,
  it.caicividale.corsicai.model.impl,
@@ -18,3 +19,4 @@ Export-Package: it.caicividale.corsicai.model,
  it.caicividale.corsicai.model.util
 Automatic-Module-Name: it.caicividale.corsicai.model
 Bundle-ActivationPolicy: lazy
+Import-Package: it.caicividale.corsicai.ui.services

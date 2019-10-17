@@ -35,8 +35,8 @@
   <eClassifiers xsi:type="ecore:EDataType" name="NumeroCellulare" instanceClassName="it.caicividale.corsicai.model.valueobject.NumeroCellulare"/>
   <eClassifiers xsi:type="ecore:EDataType" name="EMail" instanceClassName="it.caicividale.corsicai.model.valueobject.EMail"/>
   <eClassifiers xsi:type="ecore:EClass" name="Allievo" eSuperTypes="#//Persona">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valutazioni" upperBound="-1"
-        eType="#//Valutazione"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDiploma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Corso">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="anno" ordered="false" unique="false"
@@ -46,8 +46,6 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quotaCaparra" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lezioni" lowerBound="1"
-        upperBound="-1" eType="#//Lezione"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isModulo" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
@@ -98,18 +96,10 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="moduli" upperBound="-1"
         eType="#//Corso"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Documento">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDocumento" lowerBound="1"
-        eType="#//ETipoDocumento"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="documento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
-        iD="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ETipoDocumento">
-    <eLiterals name="CONSENSO_INFORMATO" literal="CI"/>
-    <eLiterals name="MODULO_ISCRIZIONE" value="1" literal="MI"/>
-    <eLiterals name="CERTIFICATO_MEDICO" value="2" literal="CM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lezioniPratiche" upperBound="-1"
+        eType="#//LezionePratica"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lezioniTeoriche" upperBound="-1"
+        eType="#//LezioneTeorica"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Iscrizione">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isModuloIscrizione" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
@@ -127,8 +117,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleVersato" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="documenti" upperBound="-1"
-        eType="#//Documento"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -185,15 +173,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Docente" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LezionePratica" eSuperTypes="#//Lezione">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="staffIstruttoriLezione"
-        lowerBound="1" upperBound="-1" eType="#//Istruttore"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="luogoRitrovo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="squadre" lowerBound="1"
+        upperBound="-1" eType="#//Squadra"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Istruttore" eSuperTypes="#//Persona">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titolo" lowerBound="1"
         eType="#//ETitoloIstruttore"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valutazioni" lowerBound="1"
-        upperBound="-1" eType="#//Valutazione" eOpposite="#//Valutazione/istruttoriValutatori"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAttivo" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="true"/>
@@ -206,29 +192,25 @@
     <eLiterals name="ISTRUTTORE_NAZIONALE_ALPINISMO" value="4" literal="INA"/>
     <eLiterals name="ISTRUTTORE_NAZIONALE_SCIALPINISMO" value="5" literal="INSA"/>
     <eLiterals name="ASPIRANTE_ISTRUTTORE" value="6" literal="ASP"/>
+    <eLiterals name="ISTRUTTORE_ARRAMPICATA_LIBERA" value="7" literal="IAL"/>
+    <eLiterals name="ISTRUTTORE_NAZIONALE_ARRAMPICATA_LIBERA" value="8" literal="INAL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Squadra">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="capiSquadra" lowerBound="1"
-        upperBound="-1" eType="#//Istruttore"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capoSquadra" lowerBound="1"
+        eType="#//Istruttore"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allieviInSquadra" lowerBound="1"
         upperBound="-1" eType="#//Allievo"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staffSquadra" upperBound="-1"
+        eType="#//Istruttore"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoEsitoValutazione">
     <eLiterals name="OTTIMO" literal="O"/>
     <eLiterals name="BUONO" value="1" literal="B"/>
     <eLiterals name="SUFFICIENTE" value="2" literal="S"/>
     <eLiterals name="INSUFFICIENTE" value="3" literal="I"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="DizMateriaValutazione" instanceClassName="java.lang.String"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Valutazione">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="materiaValutazione" eType="#//DizMateriaValutazione"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoEsitoValutazione" eType="#//TipoEsitoValutazione"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="istruttoriValutatori" upperBound="-1"
-        eType="#//Istruttore" eOpposite="#//Istruttore/valutazioni"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
-        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Bilancio">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
@@ -258,7 +240,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totale" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ripartizioneCassa" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ripartizioniCassa" upperBound="-1"
         eType="#//RipartizioneCassa"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="differenzaTotaleCasseEAvanzo"
@@ -272,9 +254,9 @@
         iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PresenzaLezione">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allievoPresente" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allieviPresenti" upperBound="-1"
         eType="#//Allievo"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="istruttorePresente" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="istruttoriPresenti" upperBound="-1"
         eType="#//Istruttore"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
         iD="true"/>

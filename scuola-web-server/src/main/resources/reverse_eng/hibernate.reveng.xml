@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="scuolacai" match-name="allievo"/>
+  <table-filter match-catalog="scuolacai" match-name="allievo_valutazioni"/>
+  <table-filter match-catalog="scuolacai" match-name="bilancio"/>
+  <table-filter match-catalog="scuolacai" match-name="bilancio_vocidispesa"/>
+  <table-filter match-catalog="scuolacai" match-name="cassa"/>
+  <table-filter match-catalog="scuolacai" match-name="cassa_ripartizionecassa"/>
+  <table-filter match-catalog="scuolacai" match-name="corso"/>
+  <table-filter match-catalog="scuolacai" match-name="corso_iscrizioni"/>
+  <table-filter match-catalog="scuolacai" match-name="corso_lezioni"/>
+  <table-filter match-catalog="scuolacai" match-name="corso_moduli"/>
+  <table-filter match-catalog="scuolacai" match-name="corso_staffistruttori"/>
+  <table-filter match-catalog="scuolacai" match-name="dizmateriale"/>
+  <table-filter match-catalog="scuolacai" match-name="documento"/>
+  <table-filter match-catalog="scuolacai" match-name="documento_documento"/>
+  <table-filter match-catalog="scuolacai" match-name="iscrizione"/>
+  <table-filter match-catalog="scuolacai" match-name="iscrizione_documenti"/>
+  <table-filter match-catalog="scuolacai" match-name="iscrizione_materialenoleggiato"/>
+  <table-filter match-catalog="scuolacai" match-name="istruttore"/>
+  <table-filter match-catalog="scuolacai" match-name="istruttore_valutazioni"/>
+  <table-filter match-catalog="scuolacai" match-name="lezione"/>
+  <table-filter match-catalog="scuolacai" match-name="lezionepratica"/>
+  <table-filter match-catalog="scuolacai" match-name="lezionepratica_staffistruttorilezione"/>
+  <table-filter match-catalog="scuolacai" match-name="lezioneteorica"/>
+  <table-filter match-catalog="scuolacai" match-name="materialenoleggiato"/>
+  <table-filter match-catalog="scuolacai" match-name="persona"/>
+  <table-filter match-catalog="scuolacai" match-name="presenzalezione"/>
+  <table-filter match-catalog="scuolacai" match-name="presenzalezione_allievopresente"/>
+  <table-filter match-catalog="scuolacai" match-name="presenzalezione_istruttorepresente"/>
+  <table-filter match-catalog="scuolacai" match-name="ripartizionecassa"/>
+  <table-filter match-catalog="scuolacai" match-name="squadra"/>
+  <table-filter match-catalog="scuolacai" match-name="squadra_allieviinsquadra"/>
+  <table-filter match-catalog="scuolacai" match-name="squadra_capisquadra"/>
+  <table-filter match-catalog="scuolacai" match-name="valutazione"/>
+  <table-filter match-catalog="scuolacai" match-name="valutazione_istruttorivalutatori"/>
+  <table-filter match-catalog="scuolacai" match-name="vocedispesa"/>
+</hibernate-reverse-engineering>

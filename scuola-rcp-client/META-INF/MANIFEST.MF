@@ -27,7 +27,12 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
  org.apache.commons.io;bundle-version="2.6.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: scuola-rcp-client
-Import-Package: javax.annotation;version="0.0.0",
+Import-Package: it.caicividale.corsicai.model,
+ it.caicividale.corsicai.model.impl,
+ it.caicividale.corsicai.model.sharedresources,
+ it.caicividale.corsicai.model.util,
+ it.caicividale.corsicai.ui.services,
+ javax.annotation;version="0.0.0",
  javax.servlet;version="3.1.0",
  javax.servlet.http;version="3.1.0"
 Bundle-ActivationPolicy: lazy
@@ -57,3 +62,4 @@ Bundle-ClassPath: .,
  lib/spring-core-5.0.4.RELEASE.jar,
  lib/spring-web-5.0.4.RELEASE.jar,
  lib/jasperreports-6.6.0.jar
+Export-Package: it.caicividale.corsicai.ui.services

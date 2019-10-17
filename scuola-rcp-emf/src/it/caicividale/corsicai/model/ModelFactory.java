@@ -13,183 +13,165 @@ import org.eclipse.emf.ecore.EFactory;
  * @generated
  */
 public interface ModelFactory extends EFactory {
-	/**
-	 * The singleton instance of the factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	ModelFactory eINSTANCE = it.caicividale.corsicai.model.impl.ModelFactoryImpl.init();
+    /**
+     * The singleton instance of the factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    ModelFactory eINSTANCE = it.caicividale.corsicai.model.impl.ModelFactoryImpl.init();
 
-	/**
-	 * Returns a new object of class '<em>Persona</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Persona</em>'.
-	 * @generated
-	 */
-	Persona createPersona();
+    /**
+     * Returns a new object of class '<em>Persona</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Persona</em>'.
+     * @generated
+     */
+    Persona createPersona();
 
-	/**
-	 * Returns a new object of class '<em>Allievo</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Allievo</em>'.
-	 * @generated
-	 */
-	Allievo createAllievo();
+    /**
+     * Returns a new object of class '<em>Allievo</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Allievo</em>'.
+     * @generated
+     */
+    Allievo createAllievo();
 
-	/**
-	 * Returns a new object of class '<em>Corso</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Corso</em>'.
-	 * @generated
-	 */
-	Corso createCorso();
+    /**
+     * Returns a new object of class '<em>Corso</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Corso</em>'.
+     * @generated
+     */
+    Corso createCorso();
 
-	/**
-	 * Returns a new object of class '<em>Documento</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Documento</em>'.
-	 * @generated
-	 */
-	Documento createDocumento();
+    /**
+     * Returns a new object of class '<em>Iscrizione</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Iscrizione</em>'.
+     * @generated
+     */
+    Iscrizione createIscrizione();
 
-	/**
-	 * Returns a new object of class '<em>Iscrizione</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Iscrizione</em>'.
-	 * @generated
-	 */
-	Iscrizione createIscrizione();
+    /**
+     * Returns a new object of class '<em>Lezione</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lezione</em>'.
+     * @generated
+     */
+    Lezione createLezione();
 
-	/**
-	 * Returns a new object of class '<em>Lezione</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lezione</em>'.
-	 * @generated
-	 */
-	Lezione createLezione();
+    /**
+     * Returns a new object of class '<em>Lezione Teorica</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lezione Teorica</em>'.
+     * @generated
+     */
+    LezioneTeorica createLezioneTeorica();
 
-	/**
-	 * Returns a new object of class '<em>Lezione Teorica</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lezione Teorica</em>'.
-	 * @generated
-	 */
-	LezioneTeorica createLezioneTeorica();
+    /**
+     * Returns a new object of class '<em>Lezione Pratica</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Lezione Pratica</em>'.
+     * @generated
+     */
+    LezionePratica createLezionePratica();
 
-	/**
-	 * Returns a new object of class '<em>Lezione Pratica</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Lezione Pratica</em>'.
-	 * @generated
-	 */
-	LezionePratica createLezionePratica();
+    /**
+     * Returns a new object of class '<em>Istruttore</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Istruttore</em>'.
+     * @generated
+     */
+    Istruttore createIstruttore();
 
-	/**
-	 * Returns a new object of class '<em>Istruttore</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Istruttore</em>'.
-	 * @generated
-	 */
-	Istruttore createIstruttore();
+    /**
+     * Returns a new object of class '<em>Squadra</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Squadra</em>'.
+     * @generated
+     */
+    Squadra createSquadra();
 
-	/**
-	 * Returns a new object of class '<em>Squadra</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Squadra</em>'.
-	 * @generated
-	 */
-	Squadra createSquadra();
+    /**
+     * Returns a new object of class '<em>Bilancio</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Bilancio</em>'.
+     * @generated
+     */
+    Bilancio createBilancio();
 
-	/**
-	 * Returns a new object of class '<em>Valutazione</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Valutazione</em>'.
-	 * @generated
-	 */
-	Valutazione createValutazione();
+    /**
+     * Returns a new object of class '<em>Cassa</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Cassa</em>'.
+     * @generated
+     */
+    Cassa createCassa();
 
-	/**
-	 * Returns a new object of class '<em>Bilancio</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bilancio</em>'.
-	 * @generated
-	 */
-	Bilancio createBilancio();
+    /**
+     * Returns a new object of class '<em>Ripartizione Cassa</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Ripartizione Cassa</em>'.
+     * @generated
+     */
+    RipartizioneCassa createRipartizioneCassa();
 
-	/**
-	 * Returns a new object of class '<em>Cassa</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cassa</em>'.
-	 * @generated
-	 */
-	Cassa createCassa();
+    /**
+     * Returns a new object of class '<em>Presenza Lezione</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Presenza Lezione</em>'.
+     * @generated
+     */
+    PresenzaLezione createPresenzaLezione();
 
-	/**
-	 * Returns a new object of class '<em>Ripartizione Cassa</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ripartizione Cassa</em>'.
-	 * @generated
-	 */
-	RipartizioneCassa createRipartizioneCassa();
+    /**
+     * Returns a new object of class '<em>Diz Materiale</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Diz Materiale</em>'.
+     * @generated
+     */
+    DizMateriale createDizMateriale();
 
-	/**
-	 * Returns a new object of class '<em>Presenza Lezione</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Presenza Lezione</em>'.
-	 * @generated
-	 */
-	PresenzaLezione createPresenzaLezione();
+    /**
+     * Returns a new object of class '<em>Materiale Noleggiato</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Materiale Noleggiato</em>'.
+     * @generated
+     */
+    MaterialeNoleggiato createMaterialeNoleggiato();
 
-	/**
-	 * Returns a new object of class '<em>Diz Materiale</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Diz Materiale</em>'.
-	 * @generated
-	 */
-	DizMateriale createDizMateriale();
+    /**
+     * Returns a new object of class '<em>Voce Di Spesa</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Voce Di Spesa</em>'.
+     * @generated
+     */
+    VoceDiSpesa createVoceDiSpesa();
 
-	/**
-	 * Returns a new object of class '<em>Materiale Noleggiato</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Materiale Noleggiato</em>'.
-	 * @generated
-	 */
-	MaterialeNoleggiato createMaterialeNoleggiato();
-
-	/**
-	 * Returns a new object of class '<em>Voce Di Spesa</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Voce Di Spesa</em>'.
-	 * @generated
-	 */
-	VoceDiSpesa createVoceDiSpesa();
-
-	/**
-	 * Returns the package supported by this factory.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the package supported by this factory.
-	 * @generated
-	 */
-	ModelPackage getModelPackage();
+    /**
+     * Returns the package supported by this factory.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the package supported by this factory.
+     * @generated
+     */
+    ModelPackage getModelPackage();
 
 } //ModelFactory
