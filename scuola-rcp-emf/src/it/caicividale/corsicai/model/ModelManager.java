@@ -1,5 +1,7 @@
 package it.caicividale.corsicai.model;
 
+import java.time.LocalDate;
+
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
@@ -93,10 +95,13 @@ public class ModelManager {
 
     public void loadElencoCorsiAnnoSelected() {
 	Integer anno = annoCorsiObservable.getValue();
-	if (anno != null) {
-	    elencoCorsiItemsObservableList.clear();
-	    elencoCorsiItemsObservableList.addAll(serviceManager.getElencoCorsi(anno));
+	if (anno == null) {
+	    anno = LocalDate.now().getYear();
 	}
+
+	elencoCorsiItemsObservableList.clear();
+	elencoCorsiItemsObservableList.addAll(serviceManager.getElencoCorsi(anno));
+
     }
 
     public void caricamentoCorsi() {

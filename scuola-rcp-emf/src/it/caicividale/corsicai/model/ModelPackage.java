@@ -1956,6 +1956,80 @@ public interface ModelPackage extends EPackage {
     int VOCE_DI_SPESA_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link it.caicividale.corsicai.model.impl.ElencoCorsiImpl <em>Elenco Corsi</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.caicividale.corsicai.model.impl.ElencoCorsiImpl
+     * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getElencoCorsi()
+     * @generated
+     */
+    int ELENCO_CORSI = 16;
+
+    /**
+     * The feature id for the '<em><b>Elenco Corsi</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_CORSI__ELENCO_CORSI = 0;
+
+    /**
+     * The number of structural features of the '<em>Elenco Corsi</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_CORSI_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Elenco Corsi</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_CORSI_OPERATION_COUNT = 0;
+
+    /**
+     * The meta object id for the '{@link it.caicividale.corsicai.model.impl.ElencoIscrizioniImpl <em>Elenco Iscrizioni</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.caicividale.corsicai.model.impl.ElencoIscrizioniImpl
+     * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getElencoIscrizioni()
+     * @generated
+     */
+    int ELENCO_ISCRIZIONI = 17;
+
+    /**
+     * The feature id for the '<em><b>Elenco Iscrizioni</b></em>' reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI = 0;
+
+    /**
+     * The number of structural features of the '<em>Elenco Iscrizioni</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_ISCRIZIONI_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Elenco Iscrizioni</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_ISCRIZIONI_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link it.caicividale.corsicai.model.ESesso <em>ESesso</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1963,7 +2037,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESesso()
      * @generated
      */
-    int ESESSO = 16;
+    int ESESSO = 18;
 
     /**
      * The meta object id for the '{@link it.caicividale.corsicai.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
@@ -1973,7 +2047,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETitoloIstruttore()
      * @generated
      */
-    int ETITOLO_ISTRUTTORE = 17;
+    int ETITOLO_ISTRUTTORE = 19;
 
     /**
      * The meta object id for the '{@link it.caicividale.corsicai.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
@@ -1983,7 +2057,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
      * @generated
      */
-    int TIPO_ESITO_VALUTAZIONE = 18;
+    int TIPO_ESITO_VALUTAZIONE = 20;
 
     /**
      * The meta object id for the '{@link it.caicividale.corsicai.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
@@ -1993,7 +2067,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESiglaCorso()
      * @generated
      */
-    int ESIGLA_CORSO = 19;
+    int ESIGLA_CORSO = 21;
 
     /**
      * The meta object id for the '{@link it.caicividale.corsicai.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
@@ -2003,7 +2077,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
      * @generated
      */
-    int ETIPO_VOCE_DI_SPESA = 20;
+    int ETIPO_VOCE_DI_SPESA = 22;
 
     /**
      * The meta object id for the '<em>Numero Cellulare</em>' data type.
@@ -2013,7 +2087,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getNumeroCellulare()
      * @generated
      */
-    int NUMERO_CELLULARE = 21;
+    int NUMERO_CELLULARE = 23;
 
     /**
      * The meta object id for the '<em>EMail</em>' data type.
@@ -2023,7 +2097,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getEMail()
      * @generated
      */
-    int EMAIL = 22;
+    int EMAIL = 24;
 
     /**
      * Returns the meta object for class '{@link it.caicividale.corsicai.model.Persona <em>Persona</em>}'.
@@ -3473,6 +3547,48 @@ public interface ModelPackage extends EPackage {
     EAttribute getVoceDiSpesa_Data();
 
     /**
+     * Returns the meta object for class '{@link it.caicividale.corsicai.model.ElencoCorsi <em>Elenco Corsi</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Elenco Corsi</em>'.
+     * @see it.caicividale.corsicai.model.ElencoCorsi
+     * @generated
+     */
+    EClass getElencoCorsi();
+
+    /**
+     * Returns the meta object for the reference list '{@link it.caicividale.corsicai.model.ElencoCorsi#getElencoCorsi <em>Elenco Corsi</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Elenco Corsi</em>'.
+     * @see it.caicividale.corsicai.model.ElencoCorsi#getElencoCorsi()
+     * @see #getElencoCorsi()
+     * @generated
+     */
+    EReference getElencoCorsi_ElencoCorsi();
+
+    /**
+     * Returns the meta object for class '{@link it.caicividale.corsicai.model.ElencoIscrizioni <em>Elenco Iscrizioni</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Elenco Iscrizioni</em>'.
+     * @see it.caicividale.corsicai.model.ElencoIscrizioni
+     * @generated
+     */
+    EClass getElencoIscrizioni();
+
+    /**
+     * Returns the meta object for the reference list '{@link it.caicividale.corsicai.model.ElencoIscrizioni#getElencoIscrizioni <em>Elenco Iscrizioni</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference list '<em>Elenco Iscrizioni</em>'.
+     * @see it.caicividale.corsicai.model.ElencoIscrizioni#getElencoIscrizioni()
+     * @see #getElencoIscrizioni()
+     * @generated
+     */
+    EReference getElencoIscrizioni_ElencoIscrizioni();
+
+    /**
      * Returns the meta object for enum '{@link it.caicividale.corsicai.model.ESesso <em>ESesso</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3568,1171 +3684,1207 @@ public interface ModelPackage extends EPackage {
      */
     interface Literals {
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.PersonaImpl <em>Persona</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.PersonaImpl <em>Persona</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.PersonaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getPersona()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.PersonaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getPersona()
+		 * @generated
+		 */
 	EClass PERSONA = eINSTANCE.getPersona();
 
 	/**
-	 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__NOME = eINSTANCE.getPersona_Nome();
 
 	/**
-	 * The meta object literal for the '<em><b>Cognome</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cognome</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__COGNOME = eINSTANCE.getPersona_Cognome();
 
 	/**
-	 * The meta object literal for the '<em><b>Sesso</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Sesso</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__SESSO = eINSTANCE.getPersona_Sesso();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Cellulare</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Cellulare</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__NUMERO_CELLULARE = eINSTANCE.getPersona_NumeroCellulare();
 
 	/**
-	 * The meta object literal for the '<em><b>EMail</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>EMail</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__EMAIL = eINSTANCE.getPersona_EMail();
 
 	/**
-	 * The meta object literal for the '<em><b>Residenza Via</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Residenza Via</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__RESIDENZA_VIA = eINSTANCE.getPersona_ResidenzaVia();
 
 	/**
-	 * The meta object literal for the '<em><b>Residenza Citta</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Residenza Citta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__RESIDENZA_CITTA = eINSTANCE.getPersona_ResidenzaCitta();
 
 	/**
-	 * The meta object literal for the '<em><b>Residenza Provincia</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Residenza Provincia</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__RESIDENZA_PROVINCIA = eINSTANCE.getPersona_ResidenzaProvincia();
 
 	/**
-	 * The meta object literal for the '<em><b>Residenza Cap</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Residenza Cap</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__RESIDENZA_CAP = eINSTANCE.getPersona_ResidenzaCap();
 
 	/**
-	 * The meta object literal for the '<em><b>Nascita Data</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nascita Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__NASCITA_DATA = eINSTANCE.getPersona_NascitaData();
 
 	/**
-	 * The meta object literal for the '<em><b>Nascita Citta</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nascita Citta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__NASCITA_CITTA = eINSTANCE.getPersona_NascitaCitta();
 
 	/**
-	 * The meta object literal for the '<em><b>Nascita Provincia</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nascita Provincia</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__NASCITA_PROVINCIA = eINSTANCE.getPersona_NascitaProvincia();
 
 	/**
-	 * The meta object literal for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__SEZIONE_CAI_APPARTENENZA = eINSTANCE.getPersona_SezioneCaiAppartenenza();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__ID = eINSTANCE.getPersona_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Staff Scuola</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Staff Scuola</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PERSONA__IS_STAFF_SCUOLA = eINSTANCE.getPersona_IsStaffScuola();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.AllievoImpl <em>Allievo</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.AllievoImpl <em>Allievo</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.AllievoImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getAllievo()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.AllievoImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getAllievo()
+		 * @generated
+		 */
 	EClass ALLIEVO = eINSTANCE.getAllievo();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Diploma</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Diploma</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ALLIEVO__IS_DIPLOMA = eINSTANCE.getAllievo_IsDiploma();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.CorsoImpl <em>Corso</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.CorsoImpl <em>Corso</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.CorsoImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getCorso()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.CorsoImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getCorso()
+		 * @generated
+		 */
 	EClass CORSO = eINSTANCE.getCorso();
 
 	/**
-	 * The meta object literal for the '<em><b>Anno</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Anno</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__ANNO = eINSTANCE.getCorso_Anno();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota Iscrizione</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota Iscrizione</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__QUOTA_ISCRIZIONE = eINSTANCE.getCorso_QuotaIscrizione();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota Caparra</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota Caparra</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__QUOTA_CAPARRA = eINSTANCE.getCorso_QuotaCaparra();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Modulo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Modulo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__IS_MODULO = eINSTANCE.getCorso_IsModulo();
 
 	/**
-	 * The meta object literal for the '<em><b>Direttore</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Direttore</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__DIRETTORE = eINSTANCE.getCorso_Direttore();
 
 	/**
-	 * The meta object literal for the '<em><b>Vicedirettore</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Vicedirettore</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__VICEDIRETTORE = eINSTANCE.getCorso_Vicedirettore();
 
 	/**
-	 * The meta object literal for the '<em><b>Segretario</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Segretario</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__SEGRETARIO = eINSTANCE.getCorso_Segretario();
 
 	/**
-	 * The meta object literal for the '<em><b>Testo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Testo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__TESTO = eINSTANCE.getCorso_Testo();
 
 	/**
-	 * The meta object literal for the '<em><b>Bilancio</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Bilancio</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__BILANCIO = eINSTANCE.getCorso_Bilancio();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__ID = eINSTANCE.getCorso_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Cassa</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Cassa</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__CASSA = eINSTANCE.getCorso_Cassa();
 
 	/**
-	 * The meta object literal for the '<em><b>Iscrizioni</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Iscrizioni</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__ISCRIZIONI = eINSTANCE.getCorso_Iscrizioni();
 
 	/**
-	 * The meta object literal for the '<em><b>Data Inizio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Inizio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__DATA_INIZIO = eINSTANCE.getCorso_DataInizio();
 
 	/**
-	 * The meta object literal for the '<em><b>Data Fine</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Fine</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__DATA_FINE = eINSTANCE.getCorso_DataFine();
 
 	/**
-	 * The meta object literal for the '<em><b>Staff Istruttori</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Staff Istruttori</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__STAFF_ISTRUTTORI = eINSTANCE.getCorso_StaffIstruttori();
 
 	/**
-	 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NOME = eINSTANCE.getCorso_Nome();
 
 	/**
-	 * The meta object literal for the '<em><b>Sigla</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Sigla</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__SIGLA = eINSTANCE.getCorso_Sigla();
 
 	/**
-	 * The meta object literal for the '<em><b>Equipaggiamento</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Equipaggiamento</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__EQUIPAGGIAMENTO = eINSTANCE.getCorso_Equipaggiamento();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI = eINSTANCE.getCorso_NumeroAllievi();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Iscrizione Ok</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Iscrizione Ok</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_ISCRIZIONE_OK = eINSTANCE.getCorso_NumeroAllieviIscrizioneOk();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Iscrizione Ko</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Iscrizione Ko</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_ISCRIZIONE_KO = eINSTANCE.getCorso_NumeroAllieviIscrizioneKo();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Nuovi Iscritti</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Nuovi Iscritti</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_NUOVI_ISCRITTI = eINSTANCE.getCorso_NumeroAllieviNuoviIscritti();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Maschi</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Maschi</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_MASCHI = eINSTANCE.getCorso_NumeroAllieviMaschi();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Femmine</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Femmine</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_FEMMINE = eINSTANCE.getCorso_NumeroAllieviFemmine();
 
 	/**
-	 * The meta object literal for the '<em><b>Numero Allievi Con Noleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Numero Allievi Con Noleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO = eINSTANCE.getCorso_NumeroAllieviConNoleggio();
 
 	/**
-	 * The meta object literal for the '<em><b>List Riepilogonoleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>List Riepilogonoleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CORSO__LIST_RIEPILOGONOLEGGIO = eINSTANCE.getCorso_ListRiepilogonoleggio();
 
 	/**
-	 * The meta object literal for the '<em><b>Moduli</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Moduli</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__MODULI = eINSTANCE.getCorso_Moduli();
 
 	/**
-	 * The meta object literal for the '<em><b>Lezioni Pratiche</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Lezioni Pratiche</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__LEZIONI_PRATICHE = eINSTANCE.getCorso_LezioniPratiche();
 
 	/**
-	 * The meta object literal for the '<em><b>Lezioni Teoriche</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Lezioni Teoriche</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CORSO__LEZIONI_TEORICHE = eINSTANCE.getCorso_LezioniTeoriche();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.IscrizioneImpl <em>Iscrizione</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.IscrizioneImpl <em>Iscrizione</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.IscrizioneImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getIscrizione()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.IscrizioneImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getIscrizione()
+		 * @generated
+		 */
 	EClass ISCRIZIONE = eINSTANCE.getIscrizione();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Modulo Iscrizione</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Modulo Iscrizione</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_MODULO_ISCRIZIONE = eINSTANCE.getIscrizione_IsModuloIscrizione();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Consenso Informato</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Consenso Informato</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_CONSENSO_INFORMATO = eINSTANCE.getIscrizione_IsConsensoInformato();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Nuovo Allievo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Nuovo Allievo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_NUOVO_ALLIEVO = eINSTANCE.getIscrizione_IsNuovoAllievo();
 
 	/**
-	 * The meta object literal for the '<em><b>Data Scadenza Certificato Medico</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Scadenza Certificato Medico</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO = eINSTANCE
 		.getIscrizione_DataScadenzaCertificatoMedico();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Bollino Anno Corso</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Bollino Anno Corso</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_BOLLINO_ANNO_CORSO = eINSTANCE.getIscrizione_IsBollinoAnnoCorso();
 
 	/**
-	 * The meta object literal for the '<em><b>Caparra</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Caparra</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__CAPARRA = eINSTANCE.getIscrizione_Caparra();
 
 	/**
-	 * The meta object literal for the '<em><b>Saldo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Saldo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__SALDO = eINSTANCE.getIscrizione_Saldo();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Versato</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Versato</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__TOTALE_VERSATO = eINSTANCE.getIscrizione_TotaleVersato();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__ID = eINSTANCE.getIscrizione_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Note</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Note</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__NOTE = eINSTANCE.getIscrizione_Note();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Noleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Noleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_NOLEGGIO = eINSTANCE.getIscrizione_IsNoleggio();
 
 	/**
-	 * The meta object literal for the '<em><b>Materiale Noleggiato</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Materiale Noleggiato</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference ISCRIZIONE__MATERIALE_NOLEGGIATO = eINSTANCE.getIscrizione_MaterialeNoleggiato();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Iscrizione Ok</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Iscrizione Ok</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_ISCRIZIONE_OK = eINSTANCE.getIscrizione_IsIscrizioneOk();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota Noleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota Noleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__QUOTA_NOLEGGIO = eINSTANCE.getIscrizione_QuotaNoleggio();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Certificato Medico</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Certificato Medico</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_CERTIFICATO_MEDICO = eINSTANCE.getIscrizione_IsCertificatoMedico();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Certificato Medico Ok</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Certificato Medico Ok</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK = eINSTANCE.getIscrizione_IsCertificatoMedicoOk();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Quota Versata Ok</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Quota Versata Ok</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__IS_QUOTA_VERSATA_OK = eINSTANCE.getIscrizione_IsQuotaVersataOk();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota Noleggio Da Versare</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota Noleggio Da Versare</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__QUOTA_NOLEGGIO_DA_VERSARE = eINSTANCE.getIscrizione_QuotaNoleggioDaVersare();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Da Versare</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Da Versare</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__TOTALE_DA_VERSARE = eINSTANCE.getIscrizione_TotaleDaVersare();
 
 	/**
-	 * The meta object literal for the '<em><b>Differenza Totale Versato Totale Da Versare</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Differenza Totale Versato Totale Da Versare</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE = eINSTANCE
 		.getIscrizione_DifferenzaTotaleVersatoTotaleDaVersare();
 
 	/**
-	 * The meta object literal for the '<em><b>Messaggi Errore</b></em>' attribute list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Messaggi Errore</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISCRIZIONE__MESSAGGI_ERRORE = eINSTANCE.getIscrizione_MessaggiErrore();
 
 	/**
-	 * The meta object literal for the '<em><b>Allievo</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Allievo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference ISCRIZIONE__ALLIEVO = eINSTANCE.getIscrizione_Allievo();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezioneImpl <em>Lezione</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezioneImpl <em>Lezione</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.LezioneImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezione()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.LezioneImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezione()
+		 * @generated
+		 */
 	EClass LEZIONE = eINSTANCE.getLezione();
 
 	/**
-	 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__TITOLO = eINSTANCE.getLezione_Titolo();
 
 	/**
-	 * The meta object literal for the '<em><b>Data Svolgimento</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Svolgimento</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__DATA_SVOLGIMENTO = eINSTANCE.getLezione_DataSvolgimento();
 
 	/**
-	 * The meta object literal for the '<em><b>Luogo Svolgimento</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Luogo Svolgimento</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__LUOGO_SVOLGIMENTO = eINSTANCE.getLezione_LuogoSvolgimento();
 
 	/**
-	 * The meta object literal for the '<em><b>Durata</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Durata</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__DURATA = eINSTANCE.getLezione_Durata();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__ID = eINSTANCE.getLezione_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Presenza Lezione</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Presenza Lezione</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference LEZIONE__PRESENZA_LEZIONE = eINSTANCE.getLezione_PresenzaLezione();
 
 	/**
-	 * The meta object literal for the '<em><b>Argomenti Trattati</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Argomenti Trattati</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE__ARGOMENTI_TRATTATI = eINSTANCE.getLezione_ArgomentiTrattati();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezioneTeoricaImpl <em>Lezione Teorica</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezioneTeoricaImpl <em>Lezione Teorica</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.LezioneTeoricaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezioneTeorica()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.LezioneTeoricaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezioneTeorica()
+		 * @generated
+		 */
 	EClass LEZIONE_TEORICA = eINSTANCE.getLezioneTeorica();
 
 	/**
-	 * The meta object literal for the '<em><b>Docente</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Docente</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE_TEORICA__DOCENTE = eINSTANCE.getLezioneTeorica_Docente();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezionePraticaImpl <em>Lezione Pratica</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.LezionePraticaImpl <em>Lezione Pratica</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.LezionePraticaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezionePratica()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.LezionePraticaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getLezionePratica()
+		 * @generated
+		 */
 	EClass LEZIONE_PRATICA = eINSTANCE.getLezionePratica();
 
 	/**
-	 * The meta object literal for the '<em><b>Luogo Ritrovo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Luogo Ritrovo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute LEZIONE_PRATICA__LUOGO_RITROVO = eINSTANCE.getLezionePratica_LuogoRitrovo();
 
 	/**
-	 * The meta object literal for the '<em><b>Squadre</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Squadre</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference LEZIONE_PRATICA__SQUADRE = eINSTANCE.getLezionePratica_Squadre();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.IstruttoreImpl <em>Istruttore</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.IstruttoreImpl <em>Istruttore</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.IstruttoreImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getIstruttore()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.IstruttoreImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getIstruttore()
+		 * @generated
+		 */
 	EClass ISTRUTTORE = eINSTANCE.getIstruttore();
 
 	/**
-	 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISTRUTTORE__TITOLO = eINSTANCE.getIstruttore_Titolo();
 
 	/**
-	 * The meta object literal for the '<em><b>Is Attivo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Is Attivo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute ISTRUTTORE__IS_ATTIVO = eINSTANCE.getIstruttore_IsAttivo();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.SquadraImpl <em>Squadra</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.SquadraImpl <em>Squadra</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.SquadraImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getSquadra()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.SquadraImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getSquadra()
+		 * @generated
+		 */
 	EClass SQUADRA = eINSTANCE.getSquadra();
 
 	/**
-	 * The meta object literal for the '<em><b>Capo Squadra</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Capo Squadra</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference SQUADRA__CAPO_SQUADRA = eINSTANCE.getSquadra_CapoSquadra();
 
 	/**
-	 * The meta object literal for the '<em><b>Allievi In Squadra</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Allievi In Squadra</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference SQUADRA__ALLIEVI_IN_SQUADRA = eINSTANCE.getSquadra_AllieviInSquadra();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute SQUADRA__ID = eINSTANCE.getSquadra_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute SQUADRA__NOME = eINSTANCE.getSquadra_Nome();
 
 	/**
-	 * The meta object literal for the '<em><b>Staff Squadra</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Staff Squadra</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference SQUADRA__STAFF_SQUADRA = eINSTANCE.getSquadra_StaffSquadra();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.BilancioImpl <em>Bilancio</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.BilancioImpl <em>Bilancio</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.BilancioImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getBilancio()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.BilancioImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getBilancio()
+		 * @generated
+		 */
 	EClass BILANCIO = eINSTANCE.getBilancio();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__ID = eINSTANCE.getBilancio_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Voci Di Spesa</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Voci Di Spesa</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference BILANCIO__VOCI_DI_SPESA = eINSTANCE.getBilancio_VociDiSpesa();
 
 	/**
-	 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__NOTA = eINSTANCE.getBilancio_Nota();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Entrate</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Entrate</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__TOTALE_ENTRATE = eINSTANCE.getBilancio_TotaleEntrate();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Uscite</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Uscite</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__TOTALE_USCITE = eINSTANCE.getBilancio_TotaleUscite();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Iscrizioni</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Iscrizioni</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__TOTALE_ISCRIZIONI = eINSTANCE.getBilancio_TotaleIscrizioni();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale Entrate Con Iscrizioni</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale Entrate Con Iscrizioni</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__TOTALE_ENTRATE_CON_ISCRIZIONI = eINSTANCE.getBilancio_TotaleEntrateConIscrizioni();
 
 	/**
-	 * The meta object literal for the '<em><b>Avanzo Corso</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Avanzo Corso</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute BILANCIO__AVANZO_CORSO = eINSTANCE.getBilancio_AvanzoCorso();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.CassaImpl <em>Cassa</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.CassaImpl <em>Cassa</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.CassaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getCassa()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.CassaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getCassa()
+		 * @generated
+		 */
 	EClass CASSA = eINSTANCE.getCassa();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CASSA__ID = eINSTANCE.getCassa_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Totale</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Totale</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CASSA__TOTALE = eINSTANCE.getCassa_Totale();
 
 	/**
-	 * The meta object literal for the '<em><b>Ripartizioni Cassa</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Ripartizioni Cassa</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference CASSA__RIPARTIZIONI_CASSA = eINSTANCE.getCassa_RipartizioniCassa();
 
 	/**
-	 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CASSA__NOTA = eINSTANCE.getCassa_Nota();
 
 	/**
-	 * The meta object literal for the '<em><b>Differenza Totale Casse EAvanzo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Differenza Totale Casse EAvanzo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute CASSA__DIFFERENZA_TOTALE_CASSE_EAVANZO = eINSTANCE.getCassa_DifferenzaTotaleCasseEAvanzo();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.RipartizioneCassaImpl <em>Ripartizione Cassa</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.RipartizioneCassaImpl <em>Ripartizione Cassa</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.RipartizioneCassaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getRipartizioneCassa()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.RipartizioneCassaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getRipartizioneCassa()
+		 * @generated
+		 */
 	EClass RIPARTIZIONE_CASSA = eINSTANCE.getRipartizioneCassa();
 
 	/**
-	 * The meta object literal for the '<em><b>Sede</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Sede</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute RIPARTIZIONE_CASSA__SEDE = eINSTANCE.getRipartizioneCassa_Sede();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute RIPARTIZIONE_CASSA__QUOTA = eINSTANCE.getRipartizioneCassa_Quota();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute RIPARTIZIONE_CASSA__ID = eINSTANCE.getRipartizioneCassa_Id();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.PresenzaLezioneImpl <em>Presenza Lezione</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.PresenzaLezioneImpl <em>Presenza Lezione</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.PresenzaLezioneImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getPresenzaLezione()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.PresenzaLezioneImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getPresenzaLezione()
+		 * @generated
+		 */
 	EClass PRESENZA_LEZIONE = eINSTANCE.getPresenzaLezione();
 
 	/**
-	 * The meta object literal for the '<em><b>Allievi Presenti</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Allievi Presenti</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference PRESENZA_LEZIONE__ALLIEVI_PRESENTI = eINSTANCE.getPresenzaLezione_AllieviPresenti();
 
 	/**
-	 * The meta object literal for the '<em><b>Istruttori Presenti</b></em>' reference list feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Istruttori Presenti</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference PRESENZA_LEZIONE__ISTRUTTORI_PRESENTI = eINSTANCE.getPresenzaLezione_IstruttoriPresenti();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute PRESENZA_LEZIONE__ID = eINSTANCE.getPresenzaLezione_Id();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.DizMaterialeImpl <em>Diz Materiale</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.DizMaterialeImpl <em>Diz Materiale</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.DizMaterialeImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getDizMateriale()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.DizMaterialeImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getDizMateriale()
+		 * @generated
+		 */
 	EClass DIZ_MATERIALE = eINSTANCE.getDizMateriale();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute DIZ_MATERIALE__ID = eINSTANCE.getDizMateriale_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nome</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute DIZ_MATERIALE__NOME = eINSTANCE.getDizMateriale_Nome();
 
 	/**
-	 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute DIZ_MATERIALE__NOTA = eINSTANCE.getDizMateriale_Nota();
 
 	/**
-	 * The meta object literal for the '<em><b>Quota Noleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quota Noleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute DIZ_MATERIALE__QUOTA_NOLEGGIO = eINSTANCE.getDizMateriale_QuotaNoleggio();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.MaterialeNoleggiatoImpl <em>Materiale Noleggiato</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.MaterialeNoleggiatoImpl <em>Materiale Noleggiato</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.MaterialeNoleggiatoImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getMaterialeNoleggiato()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.MaterialeNoleggiatoImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getMaterialeNoleggiato()
+		 * @generated
+		 */
 	EClass MATERIALE_NOLEGGIATO = eINSTANCE.getMaterialeNoleggiato();
 
 	/**
-	 * The meta object literal for the '<em><b>Materiale</b></em>' reference feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Materiale</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EReference MATERIALE_NOLEGGIATO__MATERIALE = eINSTANCE.getMaterialeNoleggiato_Materiale();
 
 	/**
-	 * The meta object literal for the '<em><b>Quantita</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Quantita</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute MATERIALE_NOLEGGIATO__QUANTITA = eINSTANCE.getMaterialeNoleggiato_Quantita();
 
 	/**
-	 * The meta object literal for the '<em><b>Data Noleggio</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data Noleggio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute MATERIALE_NOLEGGIATO__DATA_NOLEGGIO = eINSTANCE.getMaterialeNoleggiato_DataNoleggio();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute MATERIALE_NOLEGGIATO__ID = eINSTANCE.getMaterialeNoleggiato_Id();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.VoceDiSpesaImpl <em>Voce Di Spesa</em>}' class.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.VoceDiSpesaImpl <em>Voce Di Spesa</em>}' class.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.impl.VoceDiSpesaImpl
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getVoceDiSpesa()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.impl.VoceDiSpesaImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getVoceDiSpesa()
+		 * @generated
+		 */
 	EClass VOCE_DI_SPESA = eINSTANCE.getVoceDiSpesa();
 
 	/**
-	 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Titolo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__TITOLO = eINSTANCE.getVoceDiSpesa_Titolo();
 
 	/**
-	 * The meta object literal for the '<em><b>Valore</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Valore</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__VALORE = eINSTANCE.getVoceDiSpesa_Valore();
 
 	/**
-	 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__TIPO = eINSTANCE.getVoceDiSpesa_Tipo();
 
 	/**
-	 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__ID = eINSTANCE.getVoceDiSpesa_Id();
 
 	/**
-	 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nota</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__NOTA = eINSTANCE.getVoceDiSpesa_Nota();
 
 	/**
-	 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		 * @generated
+		 */
 	EAttribute VOCE_DI_SPESA__DATA = eINSTANCE.getVoceDiSpesa_Data();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.ESesso <em>ESesso</em>}' enum.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.ElencoCorsiImpl <em>Elenco Corsi</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.caicividale.corsicai.model.impl.ElencoCorsiImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getElencoCorsi()
+		 * @generated
+		 */
+	EClass ELENCO_CORSI = eINSTANCE.getElencoCorsi();
+
+	/**
+		 * The meta object literal for the '<em><b>Elenco Corsi</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference ELENCO_CORSI__ELENCO_CORSI = eINSTANCE.getElencoCorsi_ElencoCorsi();
+
+	/**
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.impl.ElencoIscrizioniImpl <em>Elenco Iscrizioni</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.caicividale.corsicai.model.impl.ElencoIscrizioniImpl
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getElencoIscrizioni()
+		 * @generated
+		 */
+	EClass ELENCO_ISCRIZIONI = eINSTANCE.getElencoIscrizioni();
+
+	/**
+		 * The meta object literal for the '<em><b>Elenco Iscrizioni</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI = eINSTANCE.getElencoIscrizioni_ElencoIscrizioni();
+
+	/**
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.ESesso <em>ESesso</em>}' enum.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.ESesso
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESesso()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.ESesso
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESesso()
+		 * @generated
+		 */
 	EEnum ESESSO = eINSTANCE.getESesso();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.ETitoloIstruttore
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETitoloIstruttore()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.ETitoloIstruttore
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETitoloIstruttore()
+		 * @generated
+		 */
 	EEnum ETITOLO_ISTRUTTORE = eINSTANCE.getETitoloIstruttore();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.TipoEsitoValutazione
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.TipoEsitoValutazione
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
+		 * @generated
+		 */
 	EEnum TIPO_ESITO_VALUTAZIONE = eINSTANCE.getTipoEsitoValutazione();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.ESiglaCorso
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESiglaCorso()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.ESiglaCorso
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getESiglaCorso()
+		 * @generated
+		 */
 	EEnum ESIGLA_CORSO = eINSTANCE.getESiglaCorso();
 
 	/**
-	 * The meta object literal for the '{@link it.caicividale.corsicai.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link it.caicividale.corsicai.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.ETipoVoceDiSpesa
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.ETipoVoceDiSpesa
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
+		 * @generated
+		 */
 	EEnum ETIPO_VOCE_DI_SPESA = eINSTANCE.getETipoVoceDiSpesa();
 
 	/**
-	 * The meta object literal for the '<em>Numero Cellulare</em>' data type.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em>Numero Cellulare</em>' data type.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.valueobject.NumeroCellulare
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getNumeroCellulare()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.valueobject.NumeroCellulare
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getNumeroCellulare()
+		 * @generated
+		 */
 	EDataType NUMERO_CELLULARE = eINSTANCE.getNumeroCellulare();
 
 	/**
-	 * The meta object literal for the '<em>EMail</em>' data type.
-	 * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em>EMail</em>' data type.
+		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see it.caicividale.corsicai.model.valueobject.EMail
-	 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getEMail()
-	 * @generated
-	 */
+		 * @see it.caicividale.corsicai.model.valueobject.EMail
+		 * @see it.caicividale.corsicai.model.impl.ModelPackageImpl#getEMail()
+		 * @generated
+		 */
 	EDataType EMAIL = eINSTANCE.getEMail();
 
     }

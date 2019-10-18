@@ -147,6 +147,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	@Override
+	public Adapter caseElencoCorsi(ElencoCorsi object) {
+	    return createElencoCorsiAdapter();
+	}
+
+	@Override
+	public Adapter caseElencoIscrizioni(ElencoIscrizioni object) {
+	    return createElencoIscrizioniAdapter();
+	}
+
+	@Override
 	public Adapter defaultCase(EObject object) {
 	    return createEObjectAdapter();
 	}
@@ -386,6 +396,34 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createVoceDiSpesaAdapter() {
+	return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link it.caicividale.corsicai.model.ElencoCorsi <em>Elenco Corsi</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see it.caicividale.corsicai.model.ElencoCorsi
+     * @generated
+     */
+    public Adapter createElencoCorsiAdapter() {
+	return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link it.caicividale.corsicai.model.ElencoIscrizioni <em>Elenco Iscrizioni</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see it.caicividale.corsicai.model.ElencoIscrizioni
+     * @generated
+     */
+    public Adapter createElencoIscrizioniAdapter() {
 	return null;
     }
 

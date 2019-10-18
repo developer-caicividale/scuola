@@ -91,6 +91,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return (EObject) createMaterialeNoleggiato();
 	case ModelPackage.VOCE_DI_SPESA:
 	    return (EObject) createVoceDiSpesa();
+	case ModelPackage.ELENCO_CORSI:
+	    return (EObject) createElencoCorsi();
+	case ModelPackage.ELENCO_ISCRIZIONI:
+	    return (EObject) createElencoIscrizioni();
 	default:
 	    throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 	}
@@ -324,6 +328,28 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
     public VoceDiSpesa createVoceDiSpesa() {
 	VoceDiSpesaImpl voceDiSpesa = new VoceDiSpesaImpl();
 	return voceDiSpesa;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ElencoCorsi createElencoCorsi() {
+	ElencoCorsiImpl elencoCorsi = new ElencoCorsiImpl();
+	return elencoCorsi;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ElencoIscrizioni createElencoIscrizioni() {
+	ElencoIscrizioniImpl elencoIscrizioni = new ElencoIscrizioniImpl();
+	return elencoIscrizioni;
     }
 
     /**

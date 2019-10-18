@@ -186,6 +186,20 @@ public class ModelSwitch<T> extends Switch<T> {
 		result = defaultCase(theEObject);
 	    return result;
 	}
+	case ModelPackage.ELENCO_CORSI: {
+	    ElencoCorsi elencoCorsi = (ElencoCorsi) theEObject;
+	    T result = caseElencoCorsi(elencoCorsi);
+	    if (result == null)
+		result = defaultCase(theEObject);
+	    return result;
+	}
+	case ModelPackage.ELENCO_ISCRIZIONI: {
+	    ElencoIscrizioni elencoIscrizioni = (ElencoIscrizioni) theEObject;
+	    T result = caseElencoIscrizioni(elencoIscrizioni);
+	    if (result == null)
+		result = defaultCase(theEObject);
+	    return result;
+	}
 	default:
 	    return defaultCase(theEObject);
 	}
@@ -428,6 +442,36 @@ public class ModelSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseVoceDiSpesa(VoceDiSpesa object) {
+	return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Elenco Corsi</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Elenco Corsi</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseElencoCorsi(ElencoCorsi object) {
+	return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Elenco Iscrizioni</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Elenco Iscrizioni</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseElencoIscrizioni(ElencoIscrizioni object) {
 	return null;
     }
 

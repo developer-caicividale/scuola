@@ -25,16 +25,11 @@ import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getId
- * <em>Id</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getTotale
- * <em>Totale</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getRipartizioniCassa
- * <em>Ripartizioni Cassa</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getNota
- * <em>Nota</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getDifferenzaTotaleCasseEAvanzo
- * <em>Differenza Totale Casse EAvanzo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getId <em>Id</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getTotale <em>Totale</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getRipartizioniCassa <em>Ripartizioni Cassa</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getNota <em>Nota</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CassaImpl#getDifferenzaTotaleCasseEAvanzo <em>Differenza Totale Casse EAvanzo</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,7 +58,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
     /**
      * The default value of the '{@link #getTotale() <em>Totale</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getTotale()
      * @generated
      * @ordered
@@ -71,9 +65,8 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
     protected static final float TOTALE_EDEFAULT = 0.0F;
 
     /**
-     * The cached value of the '{@link #getRipartizioniCassa() <em>Ripartizioni
-     * Cassa</em>}' reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getRipartizioniCassa() <em>Ripartizioni Cassa</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getRipartizioniCassa()
      * @generated
      * @ordered
@@ -101,10 +94,9 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
     protected String nota = NOTA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getDifferenzaTotaleCasseEAvanzo()
-     * <em>Differenza Totale Casse EAvanzo</em>}' attribute. <!-- begin-user-doc -->
+     * The default value of the '{@link #getDifferenzaTotaleCasseEAvanzo() <em>Differenza Totale Casse EAvanzo</em>}' attribute.
+     * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * 
      * @see #getDifferenzaTotaleCasseEAvanzo()
      * @generated
      * @ordered
@@ -113,7 +105,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CassaImpl() {
@@ -122,7 +113,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -132,7 +122,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -142,7 +131,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -174,7 +162,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -188,7 +175,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -198,7 +184,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -211,20 +196,17 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
     public float getDifferenzaTotaleCasseEAvanzo() {
-	// TODO: implement this method to return the 'Differenza Totale Casse EAvanzo'
-	// attribute
+	// TODO: implement this method to return the 'Differenza Totale Casse EAvanzo' attribute
 	// Ensure that you remove @generated or mark it @generated NOT
 	throw new UnsupportedOperationException();
     }
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -246,7 +228,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -269,7 +250,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -290,7 +270,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -312,7 +291,6 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

@@ -28,22 +28,14 @@ import it.caicividale.corsicai.model.root.ExternalizableEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getId
- * <em>Id</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getVociDiSpesa
- * <em>Voci Di Spesa</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getNota
- * <em>Nota</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleEntrate
- * <em>Totale Entrate</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleUscite
- * <em>Totale Uscite</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleIscrizioni
- * <em>Totale Iscrizioni</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleEntrateConIscrizioni
- * <em>Totale Entrate Con Iscrizioni</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getAvanzoCorso
- * <em>Avanzo Corso</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getId <em>Id</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getVociDiSpesa <em>Voci Di Spesa</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getNota <em>Nota</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleEntrate <em>Totale Entrate</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleUscite <em>Totale Uscite</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleIscrizioni <em>Totale Iscrizioni</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getTotaleEntrateConIscrizioni <em>Totale Entrate Con Iscrizioni</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.BilancioImpl#getAvanzoCorso <em>Avanzo Corso</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,9 +62,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected Long id = ID_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getVociDiSpesa() <em>Voci Di Spesa</em>}'
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getVociDiSpesa() <em>Voci Di Spesa</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getVociDiSpesa()
      * @generated
      * @ordered
@@ -100,9 +91,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected String nota = NOTA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getTotaleEntrate() <em>Totale
-     * Entrate</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getTotaleEntrate() <em>Totale Entrate</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleEntrate()
      * @generated
      * @ordered
@@ -110,9 +100,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected static final float TOTALE_ENTRATE_EDEFAULT = 0.0F;
 
     /**
-     * The default value of the '{@link #getTotaleUscite() <em>Totale Uscite</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getTotaleUscite() <em>Totale Uscite</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleUscite()
      * @generated
      * @ordered
@@ -120,9 +109,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected static final float TOTALE_USCITE_EDEFAULT = 0.0F;
 
     /**
-     * The default value of the '{@link #getTotaleIscrizioni() <em>Totale
-     * Iscrizioni</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getTotaleIscrizioni() <em>Totale Iscrizioni</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleIscrizioni()
      * @generated
      * @ordered
@@ -130,10 +118,9 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected static final float TOTALE_ISCRIZIONI_EDEFAULT = 0.0F;
 
     /**
-     * The default value of the '{@link #getTotaleEntrateConIscrizioni() <em>Totale
-     * Entrate Con Iscrizioni</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getTotaleEntrateConIscrizioni() <em>Totale Entrate Con Iscrizioni</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getTotaleEntrateConIscrizioni()
      * @generated
      * @ordered
@@ -141,9 +128,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected static final float TOTALE_ENTRATE_CON_ISCRIZIONI_EDEFAULT = 0.0F;
 
     /**
-     * The default value of the '{@link #getAvanzoCorso() <em>Avanzo Corso</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getAvanzoCorso() <em>Avanzo Corso</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getAvanzoCorso()
      * @generated
      * @ordered
@@ -152,7 +138,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected BilancioImpl() {
@@ -161,7 +146,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -171,7 +155,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -181,7 +164,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -194,7 +176,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -208,7 +189,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -218,7 +198,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -319,7 +298,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -347,7 +325,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -370,7 +347,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -391,7 +367,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -419,7 +394,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

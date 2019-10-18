@@ -166,6 +166,24 @@ public interface ModelFactory extends EFactory {
     VoceDiSpesa createVoceDiSpesa();
 
     /**
+     * Returns a new object of class '<em>Elenco Corsi</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Elenco Corsi</em>'.
+     * @generated
+     */
+    ElencoCorsi createElencoCorsi();
+
+    /**
+     * Returns a new object of class '<em>Elenco Iscrizioni</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Elenco Iscrizioni</em>'.
+     * @generated
+     */
+    ElencoIscrizioni createElencoIscrizioni();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

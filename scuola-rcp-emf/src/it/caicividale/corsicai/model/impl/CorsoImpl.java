@@ -43,64 +43,35 @@ import it.caicividale.corsicai.model.util.UtilsService;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getAnno
- * <em>Anno</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getQuotaIscrizione
- * <em>Quota Iscrizione</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getQuotaCaparra
- * <em>Quota Caparra</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getIsModulo <em>Is
- * Modulo</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDirettore
- * <em>Direttore</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getVicedirettore
- * <em>Vicedirettore</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getSegretario
- * <em>Segretario</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getTesto
- * <em>Testo</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getBilancio
- * <em>Bilancio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getId
- * <em>Id</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getCassa
- * <em>Cassa</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getIscrizioni
- * <em>Iscrizioni</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDataInizio
- * <em>Data Inizio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDataFine <em>Data
- * Fine</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getStaffIstruttori
- * <em>Staff Istruttori</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNome
- * <em>Nome</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getSigla
- * <em>Sigla</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getEquipaggiamento
- * <em>Equipaggiamento</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllievi
- * <em>Numero Allievi</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviIscrizioneOk
- * <em>Numero Allievi Iscrizione Ok</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviIscrizioneKo
- * <em>Numero Allievi Iscrizione Ko</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviNuoviIscritti
- * <em>Numero Allievi Nuovi Iscritti</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviMaschi
- * <em>Numero Allievi Maschi</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviFemmine
- * <em>Numero Allievi Femmine</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviConNoleggio
- * <em>Numero Allievi Con Noleggio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getListRiepilogonoleggio
- * <em>List Riepilogonoleggio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getModuli
- * <em>Moduli</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getLezioniPratiche
- * <em>Lezioni Pratiche</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getLezioniTeoriche
- * <em>Lezioni Teoriche</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getAnno <em>Anno</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getQuotaIscrizione <em>Quota Iscrizione</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getQuotaCaparra <em>Quota Caparra</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getIsModulo <em>Is Modulo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDirettore <em>Direttore</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getVicedirettore <em>Vicedirettore</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getSegretario <em>Segretario</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getTesto <em>Testo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getBilancio <em>Bilancio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getId <em>Id</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getCassa <em>Cassa</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getIscrizioni <em>Iscrizioni</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDataInizio <em>Data Inizio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getDataFine <em>Data Fine</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getStaffIstruttori <em>Staff Istruttori</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNome <em>Nome</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getSigla <em>Sigla</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getEquipaggiamento <em>Equipaggiamento</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllievi <em>Numero Allievi</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviIscrizioneOk <em>Numero Allievi Iscrizione Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviIscrizioneKo <em>Numero Allievi Iscrizione Ko</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviNuoviIscritti <em>Numero Allievi Nuovi Iscritti</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviMaschi <em>Numero Allievi Maschi</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviFemmine <em>Numero Allievi Femmine</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getNumeroAllieviConNoleggio <em>Numero Allievi Con Noleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getListRiepilogonoleggio <em>List Riepilogonoleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getModuli <em>Moduli</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getLezioniPratiche <em>Lezioni Pratiche</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.CorsoImpl#getLezioniTeoriche <em>Lezioni Teoriche</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,9 +88,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer ANNO_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getQuotaIscrizione() <em>Quota
-     * Iscrizione</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getQuotaIscrizione() <em>Quota Iscrizione</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaIscrizione()
      * @generated
      * @ordered
@@ -127,9 +97,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Float QUOTA_ISCRIZIONE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getQuotaIscrizione() <em>Quota
-     * Iscrizione</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getQuotaIscrizione() <em>Quota Iscrizione</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaIscrizione()
      * @generated
      * @ordered
@@ -137,9 +106,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Float quotaIscrizione = QUOTA_ISCRIZIONE_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getQuotaCaparra() <em>Quota Caparra</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getQuotaCaparra() <em>Quota Caparra</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaCaparra()
      * @generated
      * @ordered
@@ -147,9 +115,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Float QUOTA_CAPARRA_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getQuotaCaparra() <em>Quota Caparra</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getQuotaCaparra() <em>Quota Caparra</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaCaparra()
      * @generated
      * @ordered
@@ -157,9 +124,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Float quotaCaparra = QUOTA_CAPARRA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsModulo() <em>Is Modulo</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsModulo() <em>Is Modulo</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsModulo()
      * @generated
      * @ordered
@@ -167,9 +133,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Boolean IS_MODULO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsModulo() <em>Is Modulo</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsModulo() <em>Is Modulo</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsModulo()
      * @generated
      * @ordered
@@ -177,9 +142,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Boolean isModulo = IS_MODULO_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getDirettore() <em>Direttore</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getDirettore() <em>Direttore</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDirettore()
      * @generated
      * @ordered
@@ -187,9 +151,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Istruttore direttore;
 
     /**
-     * The cached value of the '{@link #getVicedirettore() <em>Vicedirettore</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getVicedirettore() <em>Vicedirettore</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getVicedirettore()
      * @generated
      * @ordered
@@ -197,9 +160,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Istruttore vicedirettore;
 
     /**
-     * The cached value of the '{@link #getSegretario() <em>Segretario</em>}'
-     * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getSegretario() <em>Segretario</em>}' reference.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getSegretario()
      * @generated
      * @ordered
@@ -229,7 +191,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     /**
      * The cached value of the '{@link #getBilancio() <em>Bilancio</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getBilancio()
      * @generated
      * @ordered
@@ -267,9 +228,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Cassa cassa;
 
     /**
-     * The cached value of the '{@link #getIscrizioni() <em>Iscrizioni</em>}'
-     * reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIscrizioni() <em>Iscrizioni</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIscrizioni()
      * @generated
      * @ordered
@@ -277,9 +237,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected EList<Iscrizione> iscrizioni;
 
     /**
-     * The default value of the '{@link #getDataInizio() <em>Data Inizio</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getDataInizio() <em>Data Inizio</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDataInizio()
      * @generated
      * @ordered
@@ -287,9 +246,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Date DATA_INIZIO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getDataInizio() <em>Data Inizio</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getDataInizio() <em>Data Inizio</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDataInizio()
      * @generated
      * @ordered
@@ -297,9 +255,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Date dataInizio = DATA_INIZIO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getDataFine() <em>Data Fine</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getDataFine() <em>Data Fine</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDataFine()
      * @generated
      * @ordered
@@ -307,9 +264,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Date DATA_FINE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getDataFine() <em>Data Fine</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getDataFine() <em>Data Fine</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDataFine()
      * @generated
      * @ordered
@@ -368,10 +324,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected ESiglaCorso sigla = SIGLA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getEquipaggiamento()
-     * <em>Equipaggiamento</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getEquipaggiamento() <em>Equipaggiamento</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getEquipaggiamento()
      * @generated
      * @ordered
@@ -379,10 +334,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final String EQUIPAGGIAMENTO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getEquipaggiamento()
-     * <em>Equipaggiamento</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The cached value of the '{@link #getEquipaggiamento() <em>Equipaggiamento</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getEquipaggiamento()
      * @generated
      * @ordered
@@ -390,9 +344,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected String equipaggiamento = EQUIPAGGIAMENTO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getNumeroAllievi() <em>Numero
-     * Allievi</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getNumeroAllievi() <em>Numero Allievi</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getNumeroAllievi()
      * @generated
      * @ordered
@@ -400,10 +353,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getNumeroAllieviIscrizioneOk() <em>Numero
-     * Allievi Iscrizione Ok</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getNumeroAllieviIscrizioneOk() <em>Numero Allievi Iscrizione Ok</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getNumeroAllieviIscrizioneOk()
      * @generated
      * @ordered
@@ -411,10 +363,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_ISCRIZIONE_OK_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getNumeroAllieviIscrizioneKo() <em>Numero
-     * Allievi Iscrizione Ko</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getNumeroAllieviIscrizioneKo() <em>Numero Allievi Iscrizione Ko</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getNumeroAllieviIscrizioneKo()
      * @generated
      * @ordered
@@ -422,10 +373,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_ISCRIZIONE_KO_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getNumeroAllieviNuoviIscritti() <em>Numero
-     * Allievi Nuovi Iscritti</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getNumeroAllieviNuoviIscritti() <em>Numero Allievi Nuovi Iscritti</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getNumeroAllieviNuoviIscritti()
      * @generated
      * @ordered
@@ -433,9 +383,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_NUOVI_ISCRITTI_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getNumeroAllieviMaschi() <em>Numero Allievi
-     * Maschi</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getNumeroAllieviMaschi() <em>Numero Allievi Maschi</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getNumeroAllieviMaschi()
      * @generated
      * @ordered
@@ -454,10 +403,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_FEMMINE_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getNumeroAllieviConNoleggio() <em>Numero
-     * Allievi Con Noleggio</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getNumeroAllieviConNoleggio() <em>Numero Allievi Con Noleggio</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getNumeroAllieviConNoleggio()
      * @generated
      * @ordered
@@ -465,9 +413,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_CON_NOLEGGIO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getModuli() <em>Moduli</em>}' reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getModuli() <em>Moduli</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getModuli()
      * @generated
      * @ordered
@@ -475,9 +422,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected EList<Corso> moduli;
 
     /**
-     * The cached value of the '{@link #getLezioniPratiche() <em>Lezioni
-     * Pratiche</em>}' reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getLezioniPratiche() <em>Lezioni Pratiche</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getLezioniPratiche()
      * @generated
      * @ordered
@@ -485,9 +431,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected EList<LezionePratica> lezioniPratiche;
 
     /**
-     * The cached value of the '{@link #getLezioniTeoriche() <em>Lezioni
-     * Teoriche</em>}' reference list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getLezioniTeoriche() <em>Lezioni Teoriche</em>}' reference list.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getLezioniTeoriche()
      * @generated
      * @ordered
@@ -496,7 +441,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected CorsoImpl() {
@@ -505,7 +449,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -528,7 +471,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -538,7 +480,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -552,7 +493,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -562,7 +502,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -576,7 +515,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -586,7 +524,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -600,7 +537,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -619,7 +555,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Istruttore basicGetDirettore() {
@@ -628,7 +563,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -642,7 +576,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -661,7 +594,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Istruttore basicGetVicedirettore() {
@@ -670,7 +602,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -684,7 +615,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -703,7 +633,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Persona basicGetSegretario() {
@@ -712,7 +641,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -726,7 +654,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -736,7 +663,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -749,7 +675,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -768,7 +693,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Bilancio basicGetBilancio() {
@@ -777,7 +701,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -790,7 +713,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -800,7 +722,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -813,7 +734,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -832,7 +752,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Cassa basicGetCassa() {
@@ -841,7 +760,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -854,7 +772,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -867,7 +784,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -877,7 +793,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -891,7 +806,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -901,7 +815,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -915,7 +828,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -929,7 +841,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -939,7 +850,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -952,7 +862,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -962,7 +871,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -975,7 +883,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -985,7 +892,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1157,7 +1063,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1170,7 +1075,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1184,7 +1088,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1198,7 +1101,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1278,7 +1180,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1356,7 +1257,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1428,7 +1328,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1507,7 +1406,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

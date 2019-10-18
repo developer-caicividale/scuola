@@ -202,5 +202,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VoceDiSpesa/nota"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VoceDiSpesa/data"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//ElencoCorsi">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoCorsi/elencoCorsi"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ElencoIscrizioni">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoIscrizioni/elencoIscrizioni"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

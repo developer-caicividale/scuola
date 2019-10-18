@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Implementation-Title: SAR
+Implementation-Version: 1.0.0-BUILD-SNAPSHOT
+Archiver-Version: Plexus Archiver
+Built-By: 913725
+Implementation-Vendor-Id: caicividale
+Class-Path: lib/spring-context-4.2.4.RELEASE.jar lib/spring-aop-4.2.4.
+ RELEASE.jar lib/spring-beans-4.2.4.RELEASE.jar lib/spring-core-4.2.4.
+ RELEASE.jar lib/spring-expression-4.2.4.RELEASE.jar lib/spring-webmvc
+ -4.2.4.RELEASE.jar lib/spring-web-4.2.4.RELEASE.jar lib/spring-tx-4.2
+ .4.RELEASE.jar lib/spring-jdbc-4.2.4.RELEASE.jar lib/spring-test-4.2.
+ 4.RELEASE.jar lib/spring-oxm-4.2.4.RELEASE.jar lib/spring-ws-core-2.2
+ .4.RELEASE.jar lib/commons-logging-1.1.3.jar lib/spring-xml-2.2.4.REL
+ EASE.jar lib/spring-ws-security-2.2.4.RELEASE.jar lib/spring-security
+ -core-3.2.7.RELEASE.jar lib/spring-security-web-4.0.3.RELEASE.jar lib
+ /aopalliance-1.0.jar lib/dozer-5.5.1.jar lib/commons-beanutils-1.9.1.
+ jar lib/commons-collections-3.2.1.jar lib/slf4j-api-1.7.5.jar lib/doz
+ er-spring-5.5.1.jar lib/jackson-databind-2.2.3.jar lib/jackson-annota
+ tions-2.2.3.jar lib/jackson-core-2.2.3.jar lib/aspectjrt-1.8.6.jar li
+ b/aspectjweaver-1.8.6.jar lib/jcl-over-slf4j-1.7.21.jar lib/logback-c
+ lassic-1.1.7.jar lib/javax.inject-1.jar lib/javax.servlet-api-3.1.0.j
+ ar lib/jsp-api-2.0.jar lib/jstl-1.2.jar lib/httpclient-4.5.1.jar lib/
+ httpcore-4.4.3.jar lib/commons-codec-1.9.jar lib/logback-core-1.1.7.j
+ ar lib/commons-lang3-3.3.2.jar lib/mybatis-spring-1.2.5.jar lib/mybat
+ is-3.3.1.jar lib/mybatis-typehandlers-jsr310-1.0.0.jar
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_77
+Dependencies: org.apache.httpcomponents export
+

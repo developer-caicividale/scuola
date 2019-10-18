@@ -38,8 +38,9 @@
         <children xsi:type="basic:PartSashContainer" xmi:id="_wqXgYMiAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.partsashcontainer.configurazione" containerData="Treeview corso e info corso" horizontal="true">
           <children xsi:type="basic:PartSashContainer" xmi:id="_wqXgYciAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.partsashcontainer.sx.configurazione" containerData="30">
             <children xsi:type="basic:PartStack" xmi:id="_wqXgYsiAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.partstack.elencocorsiconfigurazione" containerData="35" selectedElement="_wqXgY8iAEeiK0IvhMVnJVw">
-              <children xsi:type="basic:Part" xmi:id="_wqXgY8iAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.part.treeviewcorsi" containerData="" accessibilityPhrase="Elenco corsi" contributionURI="bundleclass://it.caicividale.corsicai.ui/it.caicividale.corsicai.ui.parts.TreeviewPartCorsi" label="Elenco corsi" iconURI="platform:/plugin/it.caicividale.corsicai.ui/icons/address_book32x32.png" tooltip="Elenco corsi">
+              <children xsi:type="basic:Part" xmi:id="_wqXgY8iAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.part.treeviewcorsi" containerData="60" accessibilityPhrase="Elenco corsi" contributionURI="bundleclass://it.caicividale.corsicai.ui/it.caicividale.corsicai.ui.parts.TreeviewPartCorsi" label="Elenco corsi" iconURI="platform:/plugin/it.caicividale.corsicai.ui/icons/address_book32x32.png" tooltip="Elenco corsi">
                 <toolbar xmi:id="_wqXgZMiAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.toolbar.corsiconfigurazione">
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_Wq-jUPDzEemzc4NmqPQuxA" elementId="scuola-rcp-client.toolbarseparator.0"/>
                   <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgZciAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.handledtoolitem.nuovocorso" accessibilityPhrase="Nuovo Corso" label="Nuovo Corso" iconURI="platform:/plugin/it.caicividale.corsicai.ui/icons/edit_add24x24.png" tooltip="Nuovo Corso" command="_XNQ88MToEeioIeCjR_kDMA"/>
                   <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgaMiAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.handledtoolitem.modificacorso" accessibilityPhrase="Modifica Corso" label="Modifica Corso" iconURI="platform:/plugin/it.caicividale.corsicai.ui/icons/modifica24x24.png" tooltip="Modifica Corso" command="_mjWWIMToEeioIeCjR_kDMA"/>
                   <children xsi:type="menu:ToolBarSeparator" xmi:id="_wqXgaciAEeiK0IvhMVnJVw" elementId="it.caicividale.corsicai.ui.toolbarseparator.4"/>
@@ -133,7 +134,7 @@
   <commands xmi:id="_NmQlMJcvEeiVMZCCPdwYSg" elementId="it.caicividale.corsicai.ui.command.filtroiscrizioniok" commandName="filtroiscrizioniok"/>
   <commands xmi:id="_WJcuQJcvEeiVMZCCPdwYSg" elementId="it.caicividale.corsicai.ui.command.filtroiscrizioniko" commandName="filtroiscrizioniko"/>
   <commands xmi:id="_oDmQoL_1EeiIqJe2qtoO4w" elementId="it.caicividale.corsicai.ui.command.stampaiscrizione" commandName="stampaiscrizione" description="stampaiscrizione"/>
-  <commands xmi:id="_XNQ88MToEeioIeCjR_kDMA" elementId="it.caicividale.corsicai.ui.command.nuovocorso" commandName="nuovocorso" description="nuovocorso"/>
+  <commands xmi:id="_XNQ88MToEeioIeCjR_kDMA" elementId="it.caicividale.corsicai.ui.command.nuovocorso" commandName="nuovocorso" description="crea un nuovo corso"/>
   <commands xmi:id="_mjWWIMToEeioIeCjR_kDMA" elementId="it.caicividale.corsicai.ui.command.modificacorso" commandName="modificacorso" description="modificacorso"/>
   <commands xmi:id="_uMUSoMToEeioIeCjR_kDMA" elementId="it.caicividale.corsicai.ui.command.cancellacorso" commandName="cancellacorso" description="cancellacorso"/>
   <commands xmi:id="_mmzLYMTrEeioIeCjR_kDMA" elementId="it.caicividale.corsicai.ui.command.stampaschedacorso" commandName="stampaschedacorso" description="stampaschedacorso"/>

@@ -309,4 +309,12 @@
     <eLiterals name="ENTRATA"/>
     <eLiterals name="USCITA" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElencoCorsi">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elencoCorsi" upperBound="-1"
+        eType="#//Corso"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElencoIscrizioni">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elencoIscrizioni" upperBound="-1"
+        eType="#//Iscrizione"/>
+  </eClassifiers>
 </ecore:EPackage>

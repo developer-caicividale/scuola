@@ -33,59 +33,36 @@ import it.caicividale.corsicai.model.util.UtilsService;
  * The following features are implemented:
  * </p>
  * <ul>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsModuloIscrizione
- * <em>Is Modulo Iscrizione</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsConsensoInformato
- * <em>Is Consenso Informato</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNuovoAllievo
- * <em>Is Nuovo Allievo</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDataScadenzaCertificatoMedico
- * <em>Data Scadenza Certificato Medico</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsBollinoAnnoCorso
- * <em>Is Bollino Anno Corso</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getCaparra
- * <em>Caparra</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getSaldo
- * <em>Saldo</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleVersato
- * <em>Totale Versato</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getId
- * <em>Id</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getNote
- * <em>Note</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNoleggio
- * <em>Is Noleggio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMaterialeNoleggiato
- * <em>Materiale Noleggiato</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsIscrizioneOk
- * <em>Is Iscrizione Ok</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggio
- * <em>Quota Noleggio</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedico
- * <em>Is Certificato Medico</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedicoOk
- * <em>Is Certificato Medico Ok</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsQuotaVersataOk
- * <em>Is Quota Versata Ok</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggioDaVersare
- * <em>Quota Noleggio Da Versare</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleDaVersare
- * <em>Totale Da Versare</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDifferenzaTotaleVersatoTotaleDaVersare
- * <em>Differenza Totale Versato Totale Da Versare</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMessaggiErrore
- * <em>Messaggi Errore</em>}</li>
- * <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getAllievo
- * <em>Allievo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsModuloIscrizione <em>Is Modulo Iscrizione</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsConsensoInformato <em>Is Consenso Informato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNuovoAllievo <em>Is Nuovo Allievo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDataScadenzaCertificatoMedico <em>Data Scadenza Certificato Medico</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsBollinoAnnoCorso <em>Is Bollino Anno Corso</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getCaparra <em>Caparra</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getSaldo <em>Saldo</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleVersato <em>Totale Versato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getId <em>Id</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getNote <em>Note</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsNoleggio <em>Is Noleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggio <em>Quota Noleggio</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedico <em>Is Certificato Medico</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsCertificatoMedicoOk <em>Is Certificato Medico Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getIsQuotaVersataOk <em>Is Quota Versata Ok</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getQuotaNoleggioDaVersare <em>Quota Noleggio Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getTotaleDaVersare <em>Totale Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getDifferenzaTotaleVersatoTotaleDaVersare <em>Differenza Totale Versato Totale Da Versare</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getMessaggiErrore <em>Messaggi Errore</em>}</li>
+ *   <li>{@link it.caicividale.corsicai.model.impl.IscrizioneImpl#getAllievo <em>Allievo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizione {
     /**
-     * The default value of the '{@link #getIsModuloIscrizione() <em>Is Modulo
-     * Iscrizione</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsModuloIscrizione() <em>Is Modulo Iscrizione</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsModuloIscrizione()
      * @generated
      * @ordered
@@ -93,9 +70,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_MODULO_ISCRIZIONE_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsModuloIscrizione() <em>Is Modulo
-     * Iscrizione</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsModuloIscrizione() <em>Is Modulo Iscrizione</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsModuloIscrizione()
      * @generated
      * @ordered
@@ -103,9 +79,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Boolean isModuloIscrizione = IS_MODULO_ISCRIZIONE_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsConsensoInformato() <em>Is Consenso
-     * Informato</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsConsensoInformato() <em>Is Consenso Informato</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsConsensoInformato()
      * @generated
      * @ordered
@@ -113,9 +88,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_CONSENSO_INFORMATO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsConsensoInformato() <em>Is Consenso
-     * Informato</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsConsensoInformato() <em>Is Consenso Informato</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsConsensoInformato()
      * @generated
      * @ordered
@@ -123,9 +97,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Boolean isConsensoInformato = IS_CONSENSO_INFORMATO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo
-     * Allievo</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo Allievo</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsNuovoAllievo()
      * @generated
      * @ordered
@@ -133,9 +106,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_NUOVO_ALLIEVO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo
-     * Allievo</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsNuovoAllievo() <em>Is Nuovo Allievo</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsNuovoAllievo()
      * @generated
      * @ordered
@@ -143,10 +115,9 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Boolean isNuovoAllievo = IS_NUOVO_ALLIEVO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data
-     * Scadenza Certificato Medico</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data Scadenza Certificato Medico</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getDataScadenzaCertificatoMedico()
      * @generated
      * @ordered
@@ -154,10 +125,9 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Date DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data
-     * Scadenza Certificato Medico</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The cached value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data Scadenza Certificato Medico</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getDataScadenzaCertificatoMedico()
      * @generated
      * @ordered
@@ -165,9 +135,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Date dataScadenzaCertificatoMedico = DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno
-     * Corso</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno Corso</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsBollinoAnnoCorso()
      * @generated
      * @ordered
@@ -175,9 +144,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_BOLLINO_ANNO_CORSO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno
-     * Corso</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno Corso</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsBollinoAnnoCorso()
      * @generated
      * @ordered
@@ -187,7 +155,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     /**
      * The default value of the '{@link #getCaparra() <em>Caparra</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getCaparra()
      * @generated
      * @ordered
@@ -197,7 +164,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     /**
      * The cached value of the '{@link #getCaparra() <em>Caparra</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getCaparra()
      * @generated
      * @ordered
@@ -225,9 +191,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Float saldo = SALDO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getTotaleVersato() <em>Totale
-     * Versato</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getTotaleVersato() <em>Totale Versato</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleVersato()
      * @generated
      * @ordered
@@ -275,9 +240,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected String note = NOTE_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsNoleggio() <em>Is Noleggio</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsNoleggio() <em>Is Noleggio</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsNoleggio()
      * @generated
      * @ordered
@@ -296,9 +260,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected EList<MaterialeNoleggiato> materialeNoleggiato;
 
     /**
-     * The default value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione
-     * Ok</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione Ok</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsIscrizioneOk()
      * @generated
      * @ordered
@@ -306,9 +269,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_ISCRIZIONE_OK_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The default value of the '{@link #getQuotaNoleggio() <em>Quota
-     * Noleggio</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaNoleggio()
      * @generated
      * @ordered
@@ -316,9 +278,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Float QUOTA_NOLEGGIO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}'
-     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaNoleggio()
      * @generated
      * @ordered
@@ -326,9 +287,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Float quotaNoleggio = QUOTA_NOLEGGIO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsCertificatoMedico() <em>Is Certificato
-     * Medico</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsCertificatoMedico() <em>Is Certificato Medico</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsCertificatoMedico()
      * @generated
      * @ordered
@@ -336,9 +296,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_CERTIFICATO_MEDICO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsCertificatoMedico() <em>Is Certificato
-     * Medico</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The cached value of the '{@link #getIsCertificatoMedico() <em>Is Certificato Medico</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsCertificatoMedico()
      * @generated
      * @ordered
@@ -346,10 +305,9 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected Boolean isCertificatoMedico = IS_CERTIFICATO_MEDICO_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getIsCertificatoMedicoOk() <em>Is
-     * Certificato Medico Ok</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getIsCertificatoMedicoOk() <em>Is Certificato Medico Ok</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getIsCertificatoMedicoOk()
      * @generated
      * @ordered
@@ -357,9 +315,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_CERTIFICATO_MEDICO_OK_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The default value of the '{@link #getIsQuotaVersataOk() <em>Is Quota Versata
-     * Ok</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getIsQuotaVersataOk() <em>Is Quota Versata Ok</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsQuotaVersataOk()
      * @generated
      * @ordered
@@ -367,10 +324,9 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_QUOTA_VERSATA_OK_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The default value of the '{@link #getQuotaNoleggioDaVersare() <em>Quota
-     * Noleggio Da Versare</em>}' attribute. <!-- begin-user-doc --> <!--
+     * The default value of the '{@link #getQuotaNoleggioDaVersare() <em>Quota Noleggio Da Versare</em>}' attribute.
+     * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
      * @see #getQuotaNoleggioDaVersare()
      * @generated
      * @ordered
@@ -378,9 +334,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Float QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT = null;
 
     /**
-     * The default value of the '{@link #getTotaleDaVersare() <em>Totale Da
-     * Versare</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
+     * The default value of the '{@link #getTotaleDaVersare() <em>Totale Da Versare</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleDaVersare()
      * @generated
      * @ordered
@@ -401,7 +356,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     /**
      * The cached value of the '{@link #getAllievo() <em>Allievo</em>}' reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @see #getAllievo()
      * @generated
      * @ordered
@@ -410,7 +364,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     protected IscrizioneImpl() {
@@ -419,7 +372,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -429,7 +381,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -439,7 +390,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -453,7 +403,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -463,7 +412,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -477,7 +425,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -487,7 +434,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -501,7 +447,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -511,7 +456,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -526,7 +470,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -536,7 +479,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -550,7 +492,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -560,7 +501,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -574,7 +514,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -584,7 +523,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -609,7 +547,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -619,7 +556,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -632,7 +568,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -642,7 +577,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -667,7 +601,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -707,7 +640,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -717,7 +649,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -731,7 +662,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -741,7 +671,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -883,7 +812,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -902,7 +830,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     public Allievo basicGetAllievo() {
@@ -911,7 +838,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -925,7 +851,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -983,7 +908,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @SuppressWarnings("unchecked")
@@ -1036,7 +960,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1087,7 +1010,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override
@@ -1160,7 +1082,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
      * @generated
      */
     @Override

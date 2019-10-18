@@ -11,6 +11,8 @@ import it.caicividale.corsicai.model.ESesso;
 import it.caicividale.corsicai.model.ESiglaCorso;
 import it.caicividale.corsicai.model.ETipoVoceDiSpesa;
 import it.caicividale.corsicai.model.ETitoloIstruttore;
+import it.caicividale.corsicai.model.ElencoCorsi;
+import it.caicividale.corsicai.model.ElencoIscrizioni;
 import it.caicividale.corsicai.model.Iscrizione;
 import it.caicividale.corsicai.model.Istruttore;
 import it.caicividale.corsicai.model.Lezione;
@@ -156,6 +158,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EClass voceDiSpesaEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass elencoCorsiEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass elencoIscrizioniEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1606,6 +1622,46 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EClass getElencoCorsi() {
+	return elencoCorsiEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EReference getElencoCorsi_ElencoCorsi() {
+	return (EReference) elencoCorsiEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EClass getElencoIscrizioni() {
+	return elencoIscrizioniEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EReference getElencoIscrizioni_ElencoIscrizioni() {
+	return (EReference) elencoIscrizioniEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public EEnum getESesso() {
 	return eSessoEEnum;
     }
@@ -1848,6 +1904,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEAttribute(voceDiSpesaEClass, VOCE_DI_SPESA__ID);
 	createEAttribute(voceDiSpesaEClass, VOCE_DI_SPESA__NOTA);
 	createEAttribute(voceDiSpesaEClass, VOCE_DI_SPESA__DATA);
+
+	elencoCorsiEClass = createEClass(ELENCO_CORSI);
+	createEReference(elencoCorsiEClass, ELENCO_CORSI__ELENCO_CORSI);
+
+	elencoIscrizioniEClass = createEClass(ELENCO_ISCRIZIONI);
+	createEReference(elencoIscrizioniEClass, ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI);
 
 	// Create enums
 	eSessoEEnum = createEEnum(ESESSO);
@@ -2243,6 +2305,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getVoceDiSpesa_Data(), ecorePackage.getEDate(), "data", null, 1, 1, VoceDiSpesa.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(elencoCorsiEClass, ElencoCorsi.class, "ElencoCorsi", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEReference(getElencoCorsi_ElencoCorsi(), this.getCorso(), null, "elencoCorsi", null, 0, -1,
+		ElencoCorsi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(elencoIscrizioniEClass, ElencoIscrizioni.class, "ElencoIscrizioni", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEReference(getElencoIscrizioni_ElencoIscrizioni(), this.getIscrizione(), null, "elencoIscrizioni", null, 0,
+		-1, ElencoIscrizioni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	// Initialize enums and add enum literals
 	initEEnum(eSessoEEnum, ESesso.class, "ESesso");
