@@ -568,7 +568,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_jur_JO_UEeeTXYZPrO7Puw" name="it.caicividale.corsicai.model.valueobject.NumeroCellulare" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_jur_JO_UEeeTXYZPrO7Puw" name="it.caicividale.scuola.emf.model.valueobject.NumeroCellulare" tooltipText="">
         <target xmi:type="ecore:EDataType" href="model.ecore#//NumeroCellulare"/>
         <semanticElements xmi:type="ecore:EDataType" href="model.ecore#//NumeroCellulare"/>
         <decorations xmi:type="viewpoint:Decoration" uid="_jur_Je_UEeeTXYZPrO7Puw">
@@ -591,7 +591,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EDataType']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DbpDQO_WEeeTXYZPrO7Puw" name="it.caicividale.corsicai.model.valueobject.EMail" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DbpDQO_WEeeTXYZPrO7Puw" name="it.caicividale.scuola.emf.model.valueobject.EMail" tooltipText="">
         <target xmi:type="ecore:EDataType" href="model.ecore#//EMail"/>
         <semanticElements xmi:type="ecore:EDataType" href="model.ecore#//EMail"/>
         <decorations xmi:type="viewpoint:Decoration" uid="_DbpDQu_WEeeTXYZPrO7Puw">

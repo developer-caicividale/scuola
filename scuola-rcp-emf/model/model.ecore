@@ -32,8 +32,8 @@
     <eLiterals name="MASCHIO" literal="M"/>
     <eLiterals name="FEMMINA" value="1" literal="F"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="NumeroCellulare" instanceClassName="it.caicividale.corsicai.model.valueobject.NumeroCellulare"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="EMail" instanceClassName="it.caicividale.corsicai.model.valueobject.EMail"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="NumeroCellulare" instanceClassName="it.caicividale.scuola.emf.model.valueobject.NumeroCellulare"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EMail" instanceClassName="it.caicividale.scuola.emf.model.valueobject.EMail"/>
   <eClassifiers xsi:type="ecore:EClass" name="Allievo" eSuperTypes="#//Persona">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDiploma" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="false"/>

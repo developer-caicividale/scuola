@@ -60,7 +60,13 @@
 		<jsp.version>2.3.1</jsp.version>
 
 		<org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
-	
+
+		<!-- automatically run annotation processors within the incremental compilation 
+		vedi :
+		https://mapstruct.org/documentation/ide-support/
+		https://manios.org/2017/08/09/configure-eclipse-in-order-to-build-mapstruct-in-java-projects
+		-->
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
 
 		<!-- build -->
 		<maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
@@ -398,14 +404,14 @@
 
 		<dependency>
 			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct-jdk8</artifactId>
+			<artifactId>mapstruct</artifactId>
 			<version>${org.mapstruct.version}</version>
 		</dependency>
 
 		<!-- progetto emf -->
 		<dependency>
 			<groupId>it.cai.cividale</groupId>
-			<artifactId>scuola-rcp-emf</artifactId>
+			<artifactId>it.cai.cividale.scuola.emf</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
@@ -425,6 +431,14 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
+					</annotationProcessorPaths>
+					<generatedSourcesDirectory>${project.build.directory}/generated-sources</generatedSourcesDirectory>
 					<compilerArgument>-Xlint:all</compilerArgument>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>

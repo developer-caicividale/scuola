@@ -1,0 +1,130 @@
+!SESSION 2019-10-21 16:57:28.974 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho2887927666532389755secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho2887927666532389755secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 16:57:28.975
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 16:57:28.980
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:01:07.725 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1226860118087743166secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1226860118087743166secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:01:07.726
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:01:07.733
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:36:58.073 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho8562896052108364383secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho8562896052108364383secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:36:58.073
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:36:58.117
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:38:25.105 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho226126906677096529secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho226126906677096529secure_storage -debug -consoleLog
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:38:25.107
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:38:25.113
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:42:36.692 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho5458944016095779401secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho5458944016095779401secure_storage -debug -consoleLog
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:42:36.695
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:42:36.702
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:43:22.094 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1870843384668793041secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1870843384668793041secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:43:22.095
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:43:22.102
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:52:15.839 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho952176791799909457secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho952176791799909457secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:52:15.840
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:52:15.849
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 17:53:29.755 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1874084027344651391secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho1874084027344651391secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:53:29.755
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 17:53:29.763
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 18:05:53.721 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho5461235283927607289secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho5461235283927607289secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 18:05:53.722
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 18:05:53.731
+!MESSAGE System property http.proxyPort is not set but should be 8046.
+!SESSION 2019-10-21 18:07:30.838 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_152
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho6381000066693067643secure_storage
+Command-line arguments:  -eclipse.keyring C:\Users\913725\AppData\Local\Temp\tycho6381000066693067643secure_storage
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 18:07:30.838
+!MESSAGE System property http.proxyHost is not set but should be proxy-bc.insiel.it.
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-21 18:07:30.845
+!MESSAGE System property http.proxyPort is not set but should be 8046.

@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Scuola-rcp-client
-Bundle-SymbolicName: it.caicividale.corsicai.ui;singleton:=true
+Bundle-SymbolicName: it.caicividale.scuola.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: it.caicividale.corsicai.ui.Activator
+Bundle-Activator: it.caicividale.scuola.ui.Activator
 Require-Bundle: javax.inject;bundle-version="0.0.0",
  org.eclipse.swt;bundle-version="0.0.0",
  org.eclipse.e4.ui.model.workbench;bundle-version="0.0.0",
@@ -24,7 +24,7 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
  org.eclipse.e4.core.services;bundle-version="2.1.400",
  org.eclipse.emf.databinding;bundle-version="1.5.0",
  org.apache.commons.io;bundle-version="2.6.0",
- it.caicividale.corsicai.model;bundle-version="1.0.0"
+ it.caicividale.scuola.emf;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: scuola-rcp-client
 Import-Package: javax.annotation;version="0.0.0",
@@ -34,4 +34,4 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  lib/lombok.jar,
  lib/jasperreports-6.6.0.jar
-Export-Package: it.caicividale.corsicai.ui.services
+Export-Package: it.caicividale.scuola.ui.services

@@ -2,18 +2,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>scuola-rcp-client</artifactId>
+	<artifactId>it.caicividale.scuola.ui</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	
-	<parent>
-		<groupId>it.cai.cividale</groupId>
-		<artifactId>scuola-rcp-releng</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../scuola-rcp-releng/pom.xml</relativePath>
-	</parent>
+	
 	
 	
 
 	
+	<parent>
+		<groupId>it.cai.cividale</groupId>
+		<artifactId>it.cai.cividale.scuola.relang</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../scuola-rcp-releng</relativePath>
+	</parent>
 </project>
 

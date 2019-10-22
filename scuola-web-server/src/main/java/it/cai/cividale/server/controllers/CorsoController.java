@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.cai.cividale.server.services.CorsoService;
 import it.cai.cividale.server.web.ResponseEntityUtils;
-import it.caicividale.corsicai.model.ElencoCorsi;
-import it.caicividale.corsicai.model.sharedresources.RestResources;
+import it.caicividale.scuola.emf.model.ElencoCorsi;
+import it.caicividale.scuola.emf.model.sharedresources.RestResources;
 
 @RestController
 public class CorsoController {

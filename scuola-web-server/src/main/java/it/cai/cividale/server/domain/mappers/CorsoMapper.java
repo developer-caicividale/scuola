@@ -7,9 +7,10 @@ import it.cai.cividale.server.domain.Corso;
 
 @Mapper
 public interface CorsoMapper {
+
     CorsoMapper INSTANCE = Mappers.getMapper(CorsoMapper.class);
 
-    Corso corsoDomainToCorsoModel(it.caicividale.corsicai.model.Corso corsoModel);
+    Corso corsoDomainToCorsoModel(it.caicividale.scuola.emf.model.Corso corsoModel);
 
-    it.caicividale.corsicai.model.Corso corsoModelToCorsoDomain(Corso corsoModel);
+    it.caicividale.scuola.emf.model.Corso corsoModelToCorsoDomain(Corso corsoDomain);
 }
