@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.window.main" selectedElement="_Zzq4YF23EeiJIKXlXpiC1Q" label="Gestione corsi - scuola CAI Cividale &quot;V. VUATTOLO&quot;" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/scuola_alpinismo_16x16.png" width="500" height="400">
+    <tags>shellMaximized</tags>
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_Zzq4YF23EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.perspectivestack.0" selectedElement="_bYMmMF23EeiJIKXlXpiC1Q">
+      <children xsi:type="advanced:Perspective" xmi:id="_bYMmMF23EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.perspective.corsi" selectedElement="_s3Xy0F23EeiJIKXlXpiC1Q" label="corsi" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/applications_office 32x32.png" tooltip="corsi">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_s3Xy0F23EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.partsashcontainer.corsi" containerData="Treeview corso e info corso" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_C-h5UF6LEeiTYYmByPSNCw" elementId="it.caicividale.scuola.ui.partsashcontainer.sx.corsi" containerData="30">
+            <children xsi:type="basic:PartStack" xmi:id="_aJzisHVsEeiqgIc0cedN0A" elementId="it.caicividale.scuola.ui.partstack.elencocorsi" containerData="35">
+              <children xsi:type="basic:Part" xmi:id="_O1bMsF24EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.part.treeviewcorsi" containerData="" accessibilityPhrase="Elenco corsi" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.TreeviewPartCorsi" label="Elenco corsi" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/address_book32x32.png" tooltip="Elenco corsi"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="___VqwHY4Eeioo_KZ7xHpqg" elementId="it.caicividale.scuola.ui.partstack.infocorso" containerData="65">
+              <children xsi:type="basic:Part" xmi:id="_PBkNYF6LEeiTYYmByPSNCw" elementId="it.caicividale.scuola.ui.part.infocorso" containerData="" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.InformazioniCorsoPart" label="Informazioni corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/info 32x32.png" tooltip="Informazioni corso"/>
+            </children>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_PAKyMF26EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.partsashcontainer.1" containerData="70">
+            <children xsi:type="basic:PartStack" xmi:id="_zWk14G5VEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.partstack.0" containerData="60">
+              <children xsi:type="basic:Part" xmi:id="_a0U8wF26EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.part.iscrizioni" containerData="60" accessibilityPhrase="Iscrizioni" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.ElencoIscrizioniPart" label="Iscrizioni" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/folder_documents32x32.png" tooltip="Iscrizioni">
+                <toolbar xmi:id="_7fgpsG5GEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar">
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_cWatQL_0EeiIqJe2qtoO4w" elementId="it.caicividale.scuola.ui.toolbarseparator.3"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_DxjmYJcuEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.filtroiscrizioniok" accessibilityPhrase="Filtro iscrizioni OK" label="Filtro iscrizioni OK" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/good24x24.png" tooltip="Filtra le iscrizioni corrette" type="Check" command="_NmQlMJcvEeiVMZCCPdwYSg"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_yEAxIJcuEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.filtroiscrizioniko" accessibilityPhrase="Filtro iscrizioni KO" label="Filtro iscrizioni KO" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/fail24x24.png" tooltip="Filtra le iscrizioni con errori" type="Check" command="_WJcuQJcvEeiVMZCCPdwYSg"/>
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_88dW0JctEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.toolbarseparator.1"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_jP2DML_0EeiIqJe2qtoO4w" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.stampaiscrizione" accessibilityPhrase="stampa iscrizione" label="stampa iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/printer24x24.png" tooltip="stampa iscrizione" command="_oDmQoL_1EeiIqJe2qtoO4w"/>
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_9GiT0G70EeiNddvTTM8VUw" elementId="it.caicividale.scuola.ui.toolbarseparator.0"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_Vp-xgG5SEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.nuovaiscrizione" accessibilityPhrase="Nuova iscrizione" label="Nuova iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/edit_add24x24.png" tooltip="Nuova iscrizione" command="_zW0i8G5UEeiDxJ1Ohr-a8w"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_-JkeIG70EeiNddvTTM8VUw" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.modificaiscrizione" accessibilityPhrase="Modifica iscrizione" label="Modifica iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/modifica24x24.png" tooltip="Modifica i dati dell'iscrizione" command="_33kfIG71EeiNddvTTM8VUw"/>
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_9WUBQJctEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.toolbarseparator.2"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_874qoG5SEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.cancellaiscrizione" accessibilityPhrase="Elimina iscrizione" label="Elimina iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/trash_red24x24.png" tooltip="Elimina iscrizione" command="_FbY7oG5VEeiDxJ1Ohr-a8w"/>
+                </toolbar>
+              </children>
+              <children xsi:type="basic:Part" xmi:id="_yRPTIF26EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.part.bilancio" containerData="90" accessibilityPhrase="Bilancio" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.BilancioPart" label="Bilancio" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/euro32x32.png" tooltip="Bilancio"/>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_7hyEUMZbEeiEJoinjK8BBg" elementId="it.caicividale.scuola.ui.perspective.configurazione" label="Configurazione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/settings32x32.png" tooltip="Configurazione">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_wqXgYMiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partsashcontainer.configurazione" containerData="Treeview corso e info corso" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_wqXgYciAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partsashcontainer.sx.configurazione" containerData="30">
+            <children xsi:type="basic:PartStack" xmi:id="_wqXgYsiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partstack.elencocorsiconfigurazione" containerData="35" selectedElement="_wqXgY8iAEeiK0IvhMVnJVw">
+              <children xsi:type="basic:Part" xmi:id="_wqXgY8iAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.part.treeviewcorsi" containerData="60" accessibilityPhrase="Elenco corsi" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.TreeviewPartCorsi" label="Elenco corsi" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/address_book32x32.png" tooltip="Elenco corsi">
+                <toolbar xmi:id="_wqXgZMiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.toolbar.corsiconfigurazione">
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_Wq-jUPDzEemzc4NmqPQuxA" elementId="scuola-rcp-client.toolbarseparator.0"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgZciAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.handledtoolitem.nuovocorso" accessibilityPhrase="Nuovo Corso" label="Nuovo Corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/edit_add24x24.png" tooltip="Nuovo Corso" command="_XNQ88MToEeioIeCjR_kDMA"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgaMiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.handledtoolitem.modificacorso" accessibilityPhrase="Modifica Corso" label="Modifica Corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/modifica24x24.png" tooltip="Modifica Corso" command="_mjWWIMToEeioIeCjR_kDMA"/>
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_wqXgaciAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.toolbarseparator.4"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgasiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.handledtoolitem.cancellacorso" accessibilityPhrase="Cancella corso" label="Cancella corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/trash_red24x24.png" tooltip="Cancella corso" command="_uMUSoMToEeioIeCjR_kDMA"/>
+                  <children xsi:type="menu:ToolBarSeparator" xmi:id="_wqXga8iAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.toolbarseparator.5"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgbMiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.handledtoolitem.ricaricaelencocorsiconfigurazione" label="Ricarica elenco corsi" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/refresh32x32.png" tooltip="Ricarica elenco corsi" command="_zBk9sMfjEeiVX-3m0peqXA"/>
+                </toolbar>
+              </children>
+              <children xsi:type="basic:Part" xmi:id="_ArEc4MZdEeiEJoinjK8BBg" elementId="it.caicividale.scuola.ui.part.configurazione.elencoistruttori" accessibilityPhrase="Elenco istruttori" label="Elenco istruttori" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/people32x32.png" tooltip="Elenco istruttori"/>
+            </children>
+            <children xsi:type="basic:PartStack" xmi:id="_wqXgbciAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partstack.infocorso" containerData="65">
+              <children xsi:type="basic:Part" xmi:id="_wqXgbsiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.part.infocorso" containerData="" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.InformazioniCorsoPart" label="Informazioni corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/info 32x32.png" tooltip="Informazioni corso">
+                <toolbar xmi:id="_wqXgb8iAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.toolbar.1">
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_wqXgcMiAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.handledtoolitem.stampaschedacorso" accessibilityPhrase="Stampa scheda corso" label="Stampa scheda corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/printer24x24.png" tooltip="Stampa scheda corso" command="_mmzLYMTrEeioIeCjR_kDMA"/>
+                </toolbar>
+              </children>
+            </children>
+          </children>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_wqXgcciAEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partsashcontainer.1" containerData="70">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_oHq5sNFLEeiJ39yYLA-6hw" elementId="it.caicividale.scuola.ui.partsashcontainer.0">
+              <children xsi:type="basic:PartStack" xmi:id="_pcCEkNFLEeiJ39yYLA-6hw" elementId="it.caicividale.scuola.ui.partstack.1" containerData="50" selectedElement="_iS688MyiEei0l4Hd1d5Iog">
+                <children xsi:type="basic:Part" xmi:id="_iS688MyiEei0l4Hd1d5Iog" elementId="it.caicividale.scuola.ui.part.configurazione.elencolezioniteoriche" accessibilityPhrase="Lezioni teoriche corso" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.ConfigurazioneLezioniTeorichePart" label="Lezioni teoriche corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/config_date24x24.png" tooltip="Lezioni teoriche corso">
+                  <toolbar xmi:id="_C5jsINIuEeiXc8EBtABLMA" elementId="it.caicividale.scuola.ui.toolbar.0"/>
+                </children>
+                <children xsi:type="basic:Part" xmi:id="_5xZAQMynEei0l4Hd1d5Iog" elementId="it.caicividale.scuola.ui.part.configurazione.elencouscite" accessibilityPhrase="Uscite corso" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.ConfigurazioneLezioniPratichePart" label="Uscite corso" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/config_date24x24.png" tooltip="Uscite corso"/>
+              </children>
+              <children xsi:type="basic:PartStack" xmi:id="_OQhs8MiBEeiK0IvhMVnJVw" elementId="it.caicividale.scuola.ui.partstack.0" containerData="50">
+                <children xsi:type="basic:Part" xmi:id="_tF-mwNFLEeiJ39yYLA-6hw" elementId="it.caicividale.scuola.ui.part.calendariolezioni" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.ConfigurazioneCalendarioLezioniPart" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/config_date24x24.png"/>
+              </children>
+            </children>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_ZZEyEMiqEeiJW9r56lpEYA" elementId="it.caicividale.scuola.ui.menu.0">
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_bht5kMiqEeiJW9r56lpEYA" elementId="it.caicividale.scuola.ui.handledmenuitem.popola" label="popola" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+    </mainMenu>
+    <trimBars xmi:id="_4McrsMcVEeiT-vStQiZZFg" elementId="it.caicividale.scuola.ui.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_nssK4MeoEeiYxq6z3yD5Qw" elementId="it.caicividale.scuola.ui.toolbar.4">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pO16IMeoEeiYxq6z3yD5Qw" elementId="it.caicividale.scuola.ui.handledtoolitem.switchperspective" label="Gestione corsi" tooltip="Gestione corsi" selected="true" type="Radio" command="_ay2CgMcXEeiT-vStQiZZFg">
+          <parameters xmi:id="_1AuMwMeoEeiYxq6z3yD5Qw" elementId="it.caicividale.scuola.ui.parameter.perspective.commandparameter" name="it.caicividale.scuola.ui.parameter.commandparameter.idperspective" value="it.caicividale.scuola.ui.perspective.corsi"/>
+        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_pwo_oMeoEeiYxq6z3yD5Qw" elementId="it.caicividale.scuola.ui.handledtoolitem.switchperspective" label="Configurazione" tooltip="Configurazione" type="Radio" command="_ay2CgMcXEeiT-vStQiZZFg">
+          <parameters xmi:id="_BDT04MepEeiYxq6z3yD5Qw" elementId="it.caicividale.scuola.ui.parameter.perspective.commandparameter" name="it.caicividale.scuola.ui.parameter.commandparameter.idperspective" value="it.caicividale.scuola.ui.perspective.configurazione"/>
+        </children>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_6wlLfcgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.handler.quitCommand" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.QuitHandler" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLgcgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.handler.apriCorsohandler" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.ApriCorsoHandler" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLhMgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.handler.saveCommand" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.SaveHandler" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_6wlLh8gZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.handler.aboutCommand" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.AboutHandler" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  <handlers xmi:id="_GFj0APSFEeeRU5JSVeh0sw" elementId="it.caicividale.scuola.ui.handler.openPart" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.OpenPart" command="_B8rTEPSFEeeRU5JSVeh0sw"/>
+  <handlers xmi:id="_NH24EG5VEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.handler.nuovaiscrizione" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.NuovaIscrizioneHandler" command="_zW0i8G5UEeiDxJ1Ohr-a8w"/>
+  <handlers xmi:id="_bAs3MG5VEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.handler.cancellaiscrizione" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.CancellaIscrizioneHandler" command="_FbY7oG5VEeiDxJ1Ohr-a8w"/>
+  <handlers xmi:id="_9iW3sG71EeiNddvTTM8VUw" elementId="it.caicividale.scuola.ui.handler.modificaiscrizione" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.ModificaIscrizioneHandler" command="_33kfIG71EeiNddvTTM8VUw"/>
+  <handlers xmi:id="_Zvx7wJcvEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.handler.filtroiscrizioniok" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.FiltroIscrizioniOkHandler" command="_NmQlMJcvEeiVMZCCPdwYSg"/>
+  <handlers xmi:id="_o5makJcvEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.handler.filtroiscrizioniko" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.FiltroIscrizioniKoHandler" command="_WJcuQJcvEeiVMZCCPdwYSg"/>
+  <handlers xmi:id="_sTIMIL_1EeiIqJe2qtoO4w" elementId="it.caicividale.scuola.ui.handler.stampaiscrizione" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.StampaIscrizioneHandler" command="_oDmQoL_1EeiIqJe2qtoO4w"/>
+  <handlers xmi:id="_0U2XIMToEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.handler.nuovocorso" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.NuovoCorsoHandler" command="_XNQ88MToEeioIeCjR_kDMA"/>
+  <handlers xmi:id="_hcxBYMTpEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.handler.modificacorso" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.ModificaCorsoHandler" command="_mjWWIMToEeioIeCjR_kDMA"/>
+  <handlers xmi:id="_oBX94MTpEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.handler.cancellacorso" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.CancellaCorsoHandler" command="_uMUSoMToEeioIeCjR_kDMA"/>
+  <handlers xmi:id="_rrYfkMTrEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.handler.0" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.StampaSchedaCorsoHandler" command="_mmzLYMTrEeioIeCjR_kDMA"/>
+  <handlers xmi:id="_gu2wEMV5EeiPqZCOTUeLQQ" elementId="it.caicividale.scuola.ui.handler.nuovaattivita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.NuovaAttivitaHandler" command="_jZHo0MV3EeiPqZCOTUeLQQ"/>
+  <handlers xmi:id="_ve9FMMcXEeiT-vStQiZZFg" elementId="it.caicividale.scuola.ui.handler.switchperspective" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.SwitchPerspectiveHandler" command="_ay2CgMcXEeiT-vStQiZZFg"/>
+  <handlers xmi:id="_5OPUQMfjEeiVX-3m0peqXA" elementId="it.caicividale.scuola.ui.handler.refreshelencocorsi" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.RefreshPerspective" command="_zBk9sMfjEeiVX-3m0peqXA"/>
+  <handlers xmi:id="_6SeE0NBcEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilancionuovoentrata" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioNuovaEntrataHandler" command="_xEU6QNBcEeiEE76twq75zQ"/>
+  <handlers xmi:id="_rooasNBpEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciomodificaentrata" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioModificaEntrataHandler" command="_ok0rcNBpEeiEE76twq75zQ"/>
+  <handlers xmi:id="_0LInQNBpEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciocancellaentrata" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilanciCancellaEntrataHandler" command="_w7LSYNBpEeiEE76twq75zQ"/>
+  <handlers xmi:id="_-IdDoNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilancionuovouscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioNuovaUscitaHandler" command="_y0O9YNB3EeiEE76twq75zQ"/>
+  <handlers xmi:id="_Ip63QNB4EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciomodificauscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioModificaUscitaHandler" command="_2Ru_ANB3EeiEE76twq75zQ"/>
+  <handlers xmi:id="_OCihwNB4EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciocancellauscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioCancellaUscitaHandler" command="_6gNKkNB3EeiEE76twq75zQ"/>
+  <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
+    <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLhcgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1s" keySequence="M1+S" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
+    <bindings xmi:id="_6wlLiMgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1a" keySequence="M1+A" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
+  </bindingTables>
+  <rootContext xmi:id="_6wlLecgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_6wlLesgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_6wlLe8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_6wlLfMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_6wlLgMgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.apriCorsoCommand" commandName="apriCorsoCommand" description="apre la gesiotn di un corso"/>
+  <commands xmi:id="_6wlLg8gZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_6wlLhsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_B8rTEPSFEeeRU5JSVeh0sw" elementId="it.caicividale.scuola.ui.command.openPartCommand" commandName="openPartCommand"/>
+  <commands xmi:id="_zW0i8G5UEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.command.nuovaiscrizione" commandName="nuovaiscrizione" description="crea un nuova iscrizione"/>
+  <commands xmi:id="_FbY7oG5VEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.command.cancellaiscrizione" commandName="cancellaiscrizione" description="cancella un'iscrizione"/>
+  <commands xmi:id="_33kfIG71EeiNddvTTM8VUw" elementId="it.caicividale.scuola.ui.command.modificaiscrizione" commandName="modificaiscrizione" description="modifica iscrizione"/>
+  <commands xmi:id="_NmQlMJcvEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.command.filtroiscrizioniok" commandName="filtroiscrizioniok"/>
+  <commands xmi:id="_WJcuQJcvEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.command.filtroiscrizioniko" commandName="filtroiscrizioniko"/>
+  <commands xmi:id="_oDmQoL_1EeiIqJe2qtoO4w" elementId="it.caicividale.scuola.ui.command.stampaiscrizione" commandName="stampaiscrizione" description="stampaiscrizione"/>
+  <commands xmi:id="_XNQ88MToEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.command.nuovocorso" commandName="nuovocorso" description="crea un nuovo corso"/>
+  <commands xmi:id="_mjWWIMToEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.command.modificacorso" commandName="modificacorso" description="modificacorso"/>
+  <commands xmi:id="_uMUSoMToEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.command.cancellacorso" commandName="cancellacorso" description="cancellacorso"/>
+  <commands xmi:id="_mmzLYMTrEeioIeCjR_kDMA" elementId="it.caicividale.scuola.ui.command.stampaschedacorso" commandName="stampaschedacorso" description="stampaschedacorso"/>
+  <commands xmi:id="_jZHo0MV3EeiPqZCOTUeLQQ" elementId="it.caicividale.scuola.ui.command.nuovo" commandName="nuova attività" description="nuova attività"/>
+  <commands xmi:id="_ay2CgMcXEeiT-vStQiZZFg" elementId="it.caicividale.scuola.ui.command.switchperspective" commandName="switch Perspective">
+    <parameters xmi:id="_iEx_EMcXEeiT-vStQiZZFg" elementId="it.caicividale.scuola.ui.parameter.commandparameter.idperspective" name="idperspective" optional="false"/>
+  </commands>
+  <commands xmi:id="_zBk9sMfjEeiVX-3m0peqXA" elementId="it.caicividale.scuola.ui.command.refreshelencocorsi" commandName="refresh elenco corsi"/>
+  <commands xmi:id="_xEU6QNBcEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilancionuovoentrata" commandName="bilancionuovoentrata" description="bilancionuovoentrata"/>
+  <commands xmi:id="_ok0rcNBpEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciomodificaentrata" commandName="bilanciomodificaentrata" description="bilanciomodificaentrata"/>
+  <commands xmi:id="_w7LSYNBpEeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciocancellaentrata" commandName="bilanciocancellaentrata" description="bilanciocancellaentrata"/>
+  <commands xmi:id="_y0O9YNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilancionuovouscita" commandName="bilancionuovouscita" description="bilancionuovouscita"/>
+  <commands xmi:id="_2Ru_ANB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciomodificauscita" commandName="bilanciomodificauscita" description="bilanciomodificauscita"/>
+  <commands xmi:id="_6gNKkNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciocancellauscita" commandName="bilanciocancellauscita" description="bilanciocancellauscita"/>
+  <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_6wlLdcgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_6wlLdsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_6wlLd8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_6wlLeMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

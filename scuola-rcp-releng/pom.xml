@@ -9,7 +9,9 @@
 
 	<name>Scuola CAI Cividale</name>
 
-	<!-- https://www.youtube.com/watch?v=93r6rOZ5Fkk  -->
+	<!--
+	esempio tycho 
+	https://www.youtube.com/watch?v=93r6rOZ5Fkk  -->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -77,7 +79,7 @@
 				<artifactId>tycho-compiler-plugin</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
-					<encoding>${project-build-sourceEncoding}</encoding>
+					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			
@@ -168,8 +170,12 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	
 	<modules>
 		<module>../scuola-rcp-emf</module>
+		<module>
+			../../../../workspace/2019-06/rap_rcp/scuolacai/it.caicividale.scuola.features
+		</module>
 		<module>../scuola-rcp-client</module>
 	</modules>
 </project>
