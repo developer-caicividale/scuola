@@ -409,7 +409,7 @@
 		</dependency>
 
 		<!-- progetto emf -->
-		<dependency>
+		<dependency> 
 			<groupId>it.cai.cividale</groupId>
 			<artifactId>it.cai.cividale.scuola.emf</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
