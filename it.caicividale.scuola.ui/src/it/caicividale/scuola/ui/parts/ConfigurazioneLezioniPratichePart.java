@@ -26,8 +26,8 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import it.caicividale.scuola.emf.model.Corso;
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.databinding.converters.Corso2IdCorsoConverter;
 import it.caicividale.scuola.ui.parts.tableviewer.labelproviders.ElencoIscrizioniLabelProvider;
 import it.caicividale.scuola.ui.updatevaluestrategy.ConverterUpdateValueStrategy;

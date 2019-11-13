@@ -16,8 +16,8 @@ import org.eclipse.swt.widgets.Shell;
 import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.ModelFactory;
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.dialogs.IscrizioneDialog;
 import it.caicividale.scuola.ui.utils.PartsUtils;
 

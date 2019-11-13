@@ -3,10 +3,10 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
     modelDirectory="/it.caicividale.scuola.emf/src" creationIcons="false"
     editDirectory="/it.caicividale.scuola.emf.edit/src" editorDirectory="/it.caicividale.scuola.emf.editor/src"
-    modelPluginID="it.caicividale.scuola.emf.model" modelName="Model" rootExtendsInterface="it.caicividale.scuola.emf.model.root.ExternalizableEObject"
-    rootExtendsClass="it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    modelPluginID="it.caicividale.scuola.emf.model" modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" suppressContainment="true"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true"
+    oSGiCompatible="true">
   <foreignModel>model.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Model" basePackage="it.caicividale.scuola.emf" disposableProviderFactory="true"
@@ -53,6 +53,8 @@
     </genEnums>
     <genDataTypes ecoreDataType="model.ecore#//NumeroCellulare"/>
     <genDataTypes ecoreDataType="model.ecore#//EMail"/>
+    <genDataTypes ecoreDataType="model.ecore#//ELocalDate"/>
+    <genDataTypes ecoreDataType="model.ecore#//ELocalDateTime"/>
     <genClasses ecoreClass="model.ecore#//Persona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nome"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/cognome"/>
@@ -78,17 +80,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/quotaIscrizione"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/quotaCaparra"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/isModulo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/direttore"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/vicedirettore"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/segretario"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/direttore"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/viceDirettore"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/segretario"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/testo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/bilancio"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/bilancio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/id"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/cassa"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/iscrizioni"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/cassa"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/dataInizio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/dataFine"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/staffIstruttori"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/staffIstruttori"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/nome"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/sigla"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/equipaggiamento"/>
@@ -100,9 +101,10 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviFemmine"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviConNoleggio"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/listRiepilogonoleggio"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/moduli"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniPratiche"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniTeoriche"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/moduli"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniPratiche"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniTeoriche"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/iscrizioni"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Iscrizione">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isModuloIscrizione"/>
@@ -116,7 +118,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/note"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isNoleggio"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/materialeNoleggiato"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/materialeNoleggiato"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isIscrizioneOk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/quotaNoleggio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isCertificatoMedico"/>
@@ -126,7 +128,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/totaleDaVersare"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/differenzaTotaleVersatoTotaleDaVersare"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/messaggiErrore"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/allievo"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/allievo"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Lezione">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/titolo"/>
@@ -134,7 +136,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/luogoSvolgimento"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/durata"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/id"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Lezione/presenzaLezione"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Lezione/presenzaLezione"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/argomentiTrattati"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//LezioneTeorica">
@@ -142,22 +144,22 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//LezionePratica">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//LezionePratica/luogoRitrovo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LezionePratica/squadre"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LezionePratica/squadre"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Istruttore">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Istruttore/titolo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Istruttore/isAttivo"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Squadra">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/capoSquadra"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/allieviInSquadra"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/capoSquadra"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/allieviInSquadra"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Squadra/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Squadra/nome"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/staffSquadra"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Squadra/staffSquadra"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Bilancio">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bilancio/id"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Bilancio/vociDiSpesa"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Bilancio/vociDiSpesa"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bilancio/nota"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bilancio/totaleEntrate"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Bilancio/totaleUscite"/>
@@ -168,7 +170,7 @@
     <genClasses ecoreClass="model.ecore#//Cassa">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/totale"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Cassa/ripartizioniCassa"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Cassa/ripartizioniCassa"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/nota"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Cassa/differenzaTotaleCasseEAvanzo"/>
     </genClasses>
@@ -189,7 +191,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizMateriale/quotaNoleggio"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//MaterialeNoleggiato">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//MaterialeNoleggiato/materiale"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//MaterialeNoleggiato/materiale"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MaterialeNoleggiato/quantita"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MaterialeNoleggiato/dataNoleggio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MaterialeNoleggiato/id"/>
@@ -203,10 +205,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//VoceDiSpesa/data"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//ElencoCorsi">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoCorsi/elencoCorsi"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoCorsi/elencoCorsi"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//ElencoIscrizioni">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoIscrizioni/elencoIscrizioni"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoIscrizioni/elencoIscrizioni"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ElencoMateriali">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoMateriali/elencoMateriali"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

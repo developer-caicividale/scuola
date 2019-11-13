@@ -2,9 +2,8 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import java.time.LocalDate;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,27 +22,26 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getMaterialeNoleggiato()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface MaterialeNoleggiato extends ExternalizableEObject {
+public interface MaterialeNoleggiato extends EObject {
     /**
-     * Returns the value of the '<em><b>Materiale</b></em>' reference.
+     * Returns the value of the '<em><b>Materiale</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Materiale</em>' reference.
+     * @return the value of the '<em>Materiale</em>' containment reference.
      * @see #setMateriale(DizMateriale)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getMaterialeNoleggiato_Materiale()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     DizMateriale getMateriale();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.MaterialeNoleggiato#getMateriale <em>Materiale</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.MaterialeNoleggiato#getMateriale <em>Materiale</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Materiale</em>' reference.
+     * @param value the new value of the '<em>Materiale</em>' containment reference.
      * @see #getMateriale()
      * @generated
      */
@@ -76,12 +74,12 @@ public interface MaterialeNoleggiato extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Noleggio</em>' attribute.
-     * @see #setDataNoleggio(Date)
+     * @see #setDataNoleggio(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getMaterialeNoleggiato_DataNoleggio()
-     * @model required="true"
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate" required="true"
      * @generated
      */
-    Date getDataNoleggio();
+    LocalDate getDataNoleggio();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.MaterialeNoleggiato#getDataNoleggio <em>Data Noleggio</em>}' attribute.
@@ -91,7 +89,7 @@ public interface MaterialeNoleggiato extends ExternalizableEObject {
      * @see #getDataNoleggio()
      * @generated
      */
-    void setDataNoleggio(Date value);
+    void setDataNoleggio(LocalDate value);
 
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.

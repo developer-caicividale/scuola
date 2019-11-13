@@ -8,12 +8,11 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.ModelPackage;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +27,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class ElencoCorsiImpl extends ExternalizableEObjectImpl implements ElencoCorsi {
+public class ElencoCorsiImpl extends MinimalEObjectImpl.Container implements ElencoCorsi {
     /**
-     * The cached value of the '{@link #getElencoCorsi() <em>Elenco Corsi</em>}' reference list.
+     * The cached value of the '{@link #getElencoCorsi() <em>Elenco Corsi</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getElencoCorsi()
@@ -66,7 +65,7 @@ public class ElencoCorsiImpl extends ExternalizableEObjectImpl implements Elenco
     @Override
     public EList<Corso> getElencoCorsi() {
 	if (elencoCorsi == null) {
-	    elencoCorsi = new EObjectResolvingEList<Corso>(Corso.class, this, ModelPackage.ELENCO_CORSI__ELENCO_CORSI);
+	    elencoCorsi = new EObjectEList<Corso>(Corso.class, this, ModelPackage.ELENCO_CORSI__ELENCO_CORSI);
 	}
 	return elencoCorsi;
     }

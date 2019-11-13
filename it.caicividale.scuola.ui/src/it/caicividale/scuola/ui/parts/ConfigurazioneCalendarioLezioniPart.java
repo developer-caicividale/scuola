@@ -22,8 +22,8 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.cccalendar.CEvent;
 import it.caicividale.scuola.ui.cccalendar.CEventItemBuilder;
 

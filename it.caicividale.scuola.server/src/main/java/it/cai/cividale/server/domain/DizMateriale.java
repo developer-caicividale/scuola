@@ -29,7 +29,7 @@ public class DizMateriale implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private int id;
+    private Long id;
 
     @Column(name = "nome", nullable = false)
     private String nome;
@@ -37,7 +37,7 @@ public class DizMateriale implements Serializable {
     @Column(name = "nota")
     private String nota;
 
-    @Column(name = "quotanoleggio", nullable = false, precision = 12, scale = 0)
-    private float quotanoleggio;
+    @Column(name = "quota_noleggio", nullable = false, precision = 12, scale = 0)
+    private float quotaNoleggio;
 
 }

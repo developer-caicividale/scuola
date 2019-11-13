@@ -11,8 +11,8 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
 
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.dialogs.CorsoDialog;
 import it.caicividale.scuola.ui.utils.PartsUtils;
 

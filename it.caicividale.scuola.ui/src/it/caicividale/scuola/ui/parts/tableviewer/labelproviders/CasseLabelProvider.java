@@ -5,7 +5,7 @@ import org.eclipse.jface.viewers.ColumnViewerToolTipSupport;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.ViewerCell;
 
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.emf.model.RipartizioneCassa;
 
 public class CasseLabelProvider extends CellLabelProvider {

@@ -41,7 +41,7 @@ import org.eclipse.wb.swt.SWTResourceManager;
 
 import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.Iscrizione;
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.ui.databinding.converters.Corso2NumeroAllieviStringConverter;
 import it.caicividale.scuola.ui.databinding.converters.Integer2StringConverter;

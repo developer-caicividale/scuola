@@ -184,6 +184,15 @@ public interface ModelFactory extends EFactory {
     ElencoIscrizioni createElencoIscrizioni();
 
     /**
+     * Returns a new object of class '<em>Elenco Materiali</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Elenco Materiali</em>'.
+     * @generated
+     */
+    ElencoMateriali createElencoMateriali();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

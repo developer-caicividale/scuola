@@ -12,13 +12,13 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.PresenzaLezione;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +35,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class PresenzaLezioneImpl extends ExternalizableEObjectImpl implements PresenzaLezione {
+public class PresenzaLezioneImpl extends MinimalEObjectImpl.Container implements PresenzaLezione {
     /**
      * The cached value of the '{@link #getAllieviPresenti() <em>Allievi Presenti</em>}' reference list.
      * <!-- begin-user-doc -->

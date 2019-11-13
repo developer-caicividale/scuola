@@ -10,16 +10,12 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.Bilancio;
-import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.ETipoVoceDiSpesa;
-import it.caicividale.scuola.emf.model.Iscrizione;
-import it.caicividale.scuola.emf.model.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.VoceDiSpesa;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object
@@ -40,7 +36,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio {
+public class BilancioImpl extends MinimalEObjectImpl.Container implements Bilancio {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -62,7 +58,7 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     protected Long id = ID_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getVociDiSpesa() <em>Voci Di Spesa</em>}' reference list.
+     * The cached value of the '{@link #getVociDiSpesa() <em>Voci Di Spesa</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getVociDiSpesa()
      * @generated
@@ -116,6 +112,16 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
      * @ordered
      */
     protected static final float TOTALE_ISCRIZIONI_EDEFAULT = 0.0F;
+
+    /**
+     * The cached value of the '{@link #getTotaleIscrizioni() <em>Totale Iscrizioni</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTotaleIscrizioni()
+     * @generated
+     * @ordered
+     */
+    protected float totaleIscrizioni = TOTALE_ISCRIZIONI_EDEFAULT;
 
     /**
      * The default value of the '{@link #getTotaleEntrateConIscrizioni() <em>Totale Entrate Con Iscrizioni</em>}' attribute.
@@ -181,8 +187,7 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     @Override
     public EList<VoceDiSpesa> getVociDiSpesa() {
 	if (vociDiSpesa == null) {
-	    vociDiSpesa = new EObjectResolvingEList<VoceDiSpesa>(VoceDiSpesa.class, this,
-		    ModelPackage.BILANCIO__VOCI_DI_SPESA);
+	    vociDiSpesa = new EObjectEList<VoceDiSpesa>(VoceDiSpesa.class, this, ModelPackage.BILANCIO__VOCI_DI_SPESA);
 	}
 	return vociDiSpesa;
     }
@@ -216,10 +221,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     @Override
     public float getTotaleEntrate() {
 	Float totale = 0F;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null && corso.getBilancio() != null && !corso.getBilancio().getVociDiSpesa().isEmpty()) {
-	    List<VoceDiSpesa> vociDiSpesa = corso.getBilancio().getVociDiSpesa();
+	if (getVociDiSpesa() != null && getVociDiSpesa().isEmpty()) {
+	    List<VoceDiSpesa> vociDiSpesa = getVociDiSpesa();
 	    List<VoceDiSpesa> vociDiSpesaEntrate = vociDiSpesa.stream()
 		    .filter(v -> v.getTipo().equals(ETipoVoceDiSpesa.ENTRATA)).collect(Collectors.toList());
 	    for (VoceDiSpesa voceDiSpesa : vociDiSpesaEntrate) {
@@ -239,10 +242,8 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
     @Override
     public float getTotaleUscite() {
 	Float totale = 0F;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null && corso.getBilancio() != null && !corso.getBilancio().getVociDiSpesa().isEmpty()) {
-	    List<VoceDiSpesa> vociDiSpesa = corso.getBilancio().getVociDiSpesa();
+	if (getVociDiSpesa() != null && !getVociDiSpesa().isEmpty()) {
+	    List<VoceDiSpesa> vociDiSpesa = getVociDiSpesa();
 	    List<VoceDiSpesa> vociDiSpesaUscite = vociDiSpesa.stream()
 		    .filter(v -> v.getTipo().equals(ETipoVoceDiSpesa.USCITA)).collect(Collectors.toList());
 	    for (VoceDiSpesa voceDiSpesa : vociDiSpesaUscite) {
@@ -251,25 +252,6 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 	}
 	System.out.println("Totale uscite:" + totale);
 
-	return totale;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
-     */
-    public float getTotaleIscrizioni() {
-	Float totale = 0F;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null && corso.getBilancio() != null && !corso.getIscrizioni().isEmpty()) {
-	    List<Iscrizione> iscrizioni = corso.getIscrizioni();
-	    for (Iscrizione iscrizione : iscrizioni) {
-		totale += iscrizione.getTotaleVersato();
-	    }
-	}
-	System.out.println("Totale iscrizioni:" + totale);
 	return totale;
     }
 
@@ -341,6 +323,9 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 	case ModelPackage.BILANCIO__NOTA:
 	    setNota((String) newValue);
 	    return;
+	case ModelPackage.BILANCIO__TOTALE_ISCRIZIONI:
+	    setTotaleIscrizioni((Float) newValue);
+	    return;
 	}
 	super.eSet(featureID, newValue);
     }
@@ -360,6 +345,9 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 	    return;
 	case ModelPackage.BILANCIO__NOTA:
 	    setNota(NOTA_EDEFAULT);
+	    return;
+	case ModelPackage.BILANCIO__TOTALE_ISCRIZIONI:
+	    setTotaleIscrizioni(TOTALE_ISCRIZIONI_EDEFAULT);
 	    return;
 	}
 	super.eUnset(featureID);
@@ -383,7 +371,7 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 	case ModelPackage.BILANCIO__TOTALE_USCITE:
 	    return getTotaleUscite() != TOTALE_USCITE_EDEFAULT;
 	case ModelPackage.BILANCIO__TOTALE_ISCRIZIONI:
-	    return getTotaleIscrizioni() != TOTALE_ISCRIZIONI_EDEFAULT;
+	    return totaleIscrizioni != TOTALE_ISCRIZIONI_EDEFAULT;
 	case ModelPackage.BILANCIO__TOTALE_ENTRATE_CON_ISCRIZIONI:
 	    return getTotaleEntrateConIscrizioni() != TOTALE_ENTRATE_CON_ISCRIZIONI_EDEFAULT;
 	case ModelPackage.BILANCIO__AVANZO_CORSO:
@@ -406,8 +394,30 @@ public class BilancioImpl extends ExternalizableEObjectImpl implements Bilancio 
 	result.append(id);
 	result.append(", nota: ");
 	result.append(nota);
+	result.append(", totaleIscrizioni: ");
+	result.append(totaleIscrizioni);
 	result.append(')');
 	return result.toString();
+    }
+
+    @Override
+    public float getTotaleIscrizioni() {
+	// TODO Auto-generated method stub
+	return 0;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setTotaleIscrizioni(float newTotaleIscrizioni) {
+	float oldTotaleIscrizioni = totaleIscrizioni;
+	totaleIscrizioni = newTotaleIscrizioni;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BILANCIO__TOTALE_ISCRIZIONI,
+		    oldTotaleIscrizioni, totaleIscrizioni));
     }
 
 } // BilancioImpl

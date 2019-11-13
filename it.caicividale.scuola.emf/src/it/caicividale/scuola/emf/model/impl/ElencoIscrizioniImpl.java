@@ -8,12 +8,11 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.ElencoIscrizioni;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.ModelPackage;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +27,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class ElencoIscrizioniImpl extends ExternalizableEObjectImpl implements ElencoIscrizioni {
+public class ElencoIscrizioniImpl extends MinimalEObjectImpl.Container implements ElencoIscrizioni {
     /**
-     * The cached value of the '{@link #getElencoIscrizioni() <em>Elenco Iscrizioni</em>}' reference list.
+     * The cached value of the '{@link #getElencoIscrizioni() <em>Elenco Iscrizioni</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getElencoIscrizioni()
@@ -66,7 +65,7 @@ public class ElencoIscrizioniImpl extends ExternalizableEObjectImpl implements E
     @Override
     public EList<Iscrizione> getElencoIscrizioni() {
 	if (elencoIscrizioni == null) {
-	    elencoIscrizioni = new EObjectResolvingEList<Iscrizione>(Iscrizione.class, this,
+	    elencoIscrizioni = new EObjectEList<Iscrizione>(Iscrizione.class, this,
 		    ModelPackage.ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI);
 	}
 	return elencoIscrizioni;

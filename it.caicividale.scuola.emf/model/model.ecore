@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://corsicai.caicividale.it/hibernate/" nsPrefix="T">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://it.caicividale.scuola.emf.model" nsPrefix="it.caicividale.scuola.emf.model">
   <eClassifiers xsi:type="ecore:EClass" name="Persona">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cognome" lowerBound="1"
@@ -17,7 +17,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="residenzaCap" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nascitaData" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="#//ELocalDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nascitaCitta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nascitaProvincia" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sezioneCaiAppartenenza"
@@ -50,23 +50,24 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="direttore" lowerBound="1"
-        eType="#//Istruttore"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vicedirettore" eType="#//Istruttore"/>
+        eType="#//Istruttore" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viceDirettore" eType="#//Istruttore"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="segretario" lowerBound="1"
-        eType="#//Persona"/>
+        eType="#//Persona" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bilancio" eType="#//Bilancio"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bilancio" eType="#//Bilancio"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cassa" eType="#//Cassa"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="iscrizioni" upperBound="-1"
-        eType="#//Iscrizione"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cassa" eType="#//Cassa"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataInizio" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="#//ELocalDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataFine" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="#//ELocalDate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="staffIstruttori" upperBound="-1"
-        eType="#//Istruttore"/>
+        eType="#//Istruttore" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sigla" lowerBound="1" eType="#//ESiglaCorso"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="equipaggiamento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -95,11 +96,13 @@
         ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="moduli" upperBound="-1"
-        eType="#//Corso"/>
+        eType="#//Corso" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lezioniPratiche" upperBound="-1"
-        eType="#//LezionePratica"/>
+        eType="#//LezionePratica" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lezioniTeoriche" upperBound="-1"
-        eType="#//LezioneTeorica"/>
+        eType="#//LezioneTeorica" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iscrizioni" upperBound="-1"
+        eType="#//Iscrizione" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Iscrizione">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isModuloIscrizione" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
@@ -109,7 +112,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isNuovoAllievo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataScadenzaCertificatoMedico"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="#//ELocalDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBollinoAnnoCorso" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="caparra" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
@@ -125,7 +128,7 @@
         changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="materialeNoleggiato" upperBound="-1"
-        eType="#//MaterialeNoleggiato"/>
+        eType="#//MaterialeNoleggiato" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIscrizioneOk" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
@@ -134,9 +137,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCertificatoMedico" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCertificatoMedicoOk"
-        ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
-        changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
-        derived="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isQuotaVersataOk" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
@@ -144,9 +146,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quotaNoleggioDaVersare"
         ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleDaVersare" ordered="false"
-        unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
-        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleDaVersare" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="differenzaTotaleVersatoTotaleDaVersare"
         ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"
         changeable="false" volatile="true" transient="true" derived="true"/>
@@ -154,18 +154,18 @@
         unique="false" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allievo" lowerBound="1"
-        eType="#//Allievo"/>
+        eType="#//Allievo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lezione">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titolo" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSvolgimento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSvolgimento" eType="#//ELocalDateTime"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="luogoSvolgimento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="durata" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="presenzaLezione" lowerBound="1"
-        eType="#//PresenzaLezione"/>
+        eType="#//PresenzaLezione" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="argomentiTrattati" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -175,7 +175,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="LezionePratica" eSuperTypes="#//Lezione">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="luogoRitrovo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="squadre" lowerBound="1"
-        upperBound="-1" eType="#//Squadra"/>
+        upperBound="-1" eType="#//Squadra" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Istruttore" eSuperTypes="#//Persona">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titolo" lowerBound="1"
@@ -197,14 +197,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Squadra">
     <eStructuralFeatures xsi:type="ecore:EReference" name="capoSquadra" lowerBound="1"
-        eType="#//Istruttore"/>
+        eType="#//Istruttore" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allieviInSquadra" lowerBound="1"
-        upperBound="-1" eType="#//Allievo"/>
+        upperBound="-1" eType="#//Allievo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nome" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="staffSquadra" upperBound="-1"
-        eType="#//Istruttore"/>
+        eType="#//Istruttore" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoEsitoValutazione">
     <eLiterals name="OTTIMO" literal="O"/>
@@ -216,7 +216,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vociDiSpesa" upperBound="-1"
-        eType="#//VoceDiSpesa"/>
+        eType="#//VoceDiSpesa" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleEntrate" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
@@ -224,9 +224,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleUscite" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleIscrizioni" ordered="false"
-        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        changeable="false" volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleIscrizioni" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="totaleEntrateConIscrizioni"
         ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
@@ -241,7 +240,7 @@
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ripartizioniCassa" upperBound="-1"
-        eType="#//RipartizioneCassa"/>
+        eType="#//RipartizioneCassa" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="differenzaTotaleCasseEAvanzo"
         ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
@@ -271,11 +270,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MaterialeNoleggiato">
     <eStructuralFeatures xsi:type="ecore:EReference" name="materiale" lowerBound="1"
-        eType="#//DizMateriale"/>
+        eType="#//DizMateriale" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantita" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EShort"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataNoleggio" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+        eType="#//ELocalDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"
         iD="true"/>
   </eClassifiers>
@@ -303,7 +302,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nota" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" lowerBound="1" eType="#//ELocalDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ETipoVoceDiSpesa">
     <eLiterals name="ENTRATA"/>
@@ -311,10 +310,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElencoCorsi">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elencoCorsi" upperBound="-1"
-        eType="#//Corso"/>
+        eType="#//Corso" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElencoIscrizioni">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elencoIscrizioni" upperBound="-1"
-        eType="#//Iscrizione"/>
+        eType="#//Iscrizione" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ELocalDate" instanceClassName="java.time.LocalDate"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="ELocalDateTime" instanceClassName="java.time.LocalDateTime"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElencoMateriali">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elencoMateriali" upperBound="-1"
+        eType="#//DizMateriale" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -2,7 +2,7 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,10 +21,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getDizMateriale()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface DizMateriale extends ExternalizableEObject {
+public interface DizMateriale extends EObject {
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc -->

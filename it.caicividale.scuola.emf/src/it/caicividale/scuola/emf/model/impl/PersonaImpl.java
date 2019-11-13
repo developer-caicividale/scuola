@@ -2,20 +2,19 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import it.caicividale.scuola.emf.model.ESesso;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.Persona;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
+import java.time.LocalDate;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +43,7 @@ import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
  *
  * @generated
  */
-public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
+public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona {
     /**
      * The default value of the '{@link #getNome() <em>Nome</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -233,7 +232,7 @@ public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
      * @generated
      * @ordered
      */
-    protected static final Date NASCITA_DATA_EDEFAULT = null;
+    protected static final LocalDate NASCITA_DATA_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getNascitaData() <em>Nascita Data</em>}' attribute.
@@ -243,7 +242,7 @@ public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
      * @generated
      * @ordered
      */
-    protected Date nascitaData = NASCITA_DATA_EDEFAULT;
+    protected LocalDate nascitaData = NASCITA_DATA_EDEFAULT;
 
     /**
      * The default value of the '{@link #getNascitaCitta() <em>Nascita Citta</em>}' attribute.
@@ -582,7 +581,7 @@ public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
      * @generated
      */
     @Override
-    public Date getNascitaData() {
+    public LocalDate getNascitaData() {
 	return nascitaData;
     }
 
@@ -592,8 +591,8 @@ public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
      * @generated
      */
     @Override
-    public void setNascitaData(Date newNascitaData) {
-	Date oldNascitaData = nascitaData;
+    public void setNascitaData(LocalDate newNascitaData) {
+	LocalDate oldNascitaData = nascitaData;
 	nascitaData = newNascitaData;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__NASCITA_DATA, oldNascitaData,
@@ -797,7 +796,7 @@ public class PersonaImpl extends ExternalizableEObjectImpl implements Persona {
 	    setResidenzaCap((String) newValue);
 	    return;
 	case ModelPackage.PERSONA__NASCITA_DATA:
-	    setNascitaData((Date) newValue);
+	    setNascitaData((LocalDate) newValue);
 	    return;
 	case ModelPackage.PERSONA__NASCITA_CITTA:
 	    setNascitaCitta((String) newValue);

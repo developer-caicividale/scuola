@@ -9,18 +9,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.Squadra;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,9 +35,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
+public class SquadraImpl extends MinimalEObjectImpl.Container implements Squadra {
     /**
-     * The cached value of the '{@link #getCapoSquadra() <em>Capo Squadra</em>}' reference.
+     * The cached value of the '{@link #getCapoSquadra() <em>Capo Squadra</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getCapoSquadra()
@@ -51,7 +47,7 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
     protected Istruttore capoSquadra;
 
     /**
-     * The cached value of the '{@link #getAllieviInSquadra() <em>Allievi In Squadra</em>}' reference list.
+     * The cached value of the '{@link #getAllieviInSquadra() <em>Allievi In Squadra</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getAllieviInSquadra()
@@ -101,7 +97,7 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
     protected String nome = NOME_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getStaffSquadra() <em>Staff Squadra</em>}' reference list.
+     * The cached value of the '{@link #getStaffSquadra() <em>Staff Squadra</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getStaffSquadra()
@@ -136,24 +132,6 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
      */
     @Override
     public Istruttore getCapoSquadra() {
-	if (capoSquadra != null && ((EObject) capoSquadra).eIsProxy()) {
-	    InternalEObject oldCapoSquadra = (InternalEObject) capoSquadra;
-	    capoSquadra = (Istruttore) eResolveProxy(oldCapoSquadra);
-	    if (capoSquadra != oldCapoSquadra) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.SQUADRA__CAPO_SQUADRA,
-			    oldCapoSquadra, capoSquadra));
-	    }
-	}
-	return capoSquadra;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public Istruttore basicGetCapoSquadra() {
 	return capoSquadra;
     }
 
@@ -179,8 +157,7 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
     @Override
     public EList<Allievo> getAllieviInSquadra() {
 	if (allieviInSquadra == null) {
-	    allieviInSquadra = new EObjectResolvingEList<Allievo>(Allievo.class, this,
-		    ModelPackage.SQUADRA__ALLIEVI_IN_SQUADRA);
+	    allieviInSquadra = new EObjectEList<Allievo>(Allievo.class, this, ModelPackage.SQUADRA__ALLIEVI_IN_SQUADRA);
 	}
 	return allieviInSquadra;
     }
@@ -239,8 +216,7 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
     @Override
     public EList<Istruttore> getStaffSquadra() {
 	if (staffSquadra == null) {
-	    staffSquadra = new EObjectResolvingEList<Istruttore>(Istruttore.class, this,
-		    ModelPackage.SQUADRA__STAFF_SQUADRA);
+	    staffSquadra = new EObjectEList<Istruttore>(Istruttore.class, this, ModelPackage.SQUADRA__STAFF_SQUADRA);
 	}
 	return staffSquadra;
     }
@@ -254,9 +230,7 @@ public class SquadraImpl extends ExternalizableEObjectImpl implements Squadra {
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 	switch (featureID) {
 	case ModelPackage.SQUADRA__CAPO_SQUADRA:
-	    if (resolve)
-		return getCapoSquadra();
-	    return basicGetCapoSquadra();
+	    return getCapoSquadra();
 	case ModelPackage.SQUADRA__ALLIEVI_IN_SQUADRA:
 	    return getAllieviInSquadra();
 	case ModelPackage.SQUADRA__ID:

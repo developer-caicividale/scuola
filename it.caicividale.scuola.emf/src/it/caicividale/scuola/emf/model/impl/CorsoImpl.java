@@ -2,9 +2,9 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,12 +12,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import it.caicividale.scuola.emf.model.Bilancio;
 import it.caicividale.scuola.emf.model.Cassa;
 import it.caicividale.scuola.emf.model.Corso;
@@ -29,11 +27,9 @@ import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.LezionePratica;
 import it.caicividale.scuola.emf.model.LezioneTeorica;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
-import it.caicividale.scuola.emf.model.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.Persona;
 import it.caicividale.scuola.emf.model.beans.RiepilogoNoleggioBean;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 import it.caicividale.scuola.emf.model.util.UtilsService;
 
 /**
@@ -48,13 +44,12 @@ import it.caicividale.scuola.emf.model.util.UtilsService;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getQuotaCaparra <em>Quota Caparra</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getIsModulo <em>Is Modulo</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getDirettore <em>Direttore</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getVicedirettore <em>Vicedirettore</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getViceDirettore <em>Vice Direttore</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getSegretario <em>Segretario</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getTesto <em>Testo</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getBilancio <em>Bilancio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getCassa <em>Cassa</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getIscrizioni <em>Iscrizioni</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getDataInizio <em>Data Inizio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getDataFine <em>Data Fine</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getStaffIstruttori <em>Staff Istruttori</em>}</li>
@@ -72,11 +67,12 @@ import it.caicividale.scuola.emf.model.util.UtilsService;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getModuli <em>Moduli</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getLezioniPratiche <em>Lezioni Pratiche</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getLezioniTeoriche <em>Lezioni Teoriche</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getIscrizioni <em>Iscrizioni</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
+public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
     /**
      * The default value of the '{@link #getAnno() <em>Anno</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -142,7 +138,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Boolean isModulo = IS_MODULO_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getDirettore() <em>Direttore</em>}' reference.
+     * The cached value of the '{@link #getDirettore() <em>Direttore</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDirettore()
      * @generated
@@ -151,16 +147,17 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Istruttore direttore;
 
     /**
-     * The cached value of the '{@link #getVicedirettore() <em>Vicedirettore</em>}' reference.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @see #getVicedirettore()
+     * The cached value of the '{@link #getViceDirettore() <em>Vice Direttore</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getViceDirettore()
      * @generated
      * @ordered
      */
-    protected Istruttore vicedirettore;
+    protected Istruttore viceDirettore;
 
     /**
-     * The cached value of the '{@link #getSegretario() <em>Segretario</em>}' reference.
+     * The cached value of the '{@link #getSegretario() <em>Segretario</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getSegretario()
      * @generated
@@ -189,7 +186,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected String testo = TESTO_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getBilancio() <em>Bilancio</em>}' reference.
+     * The cached value of the '{@link #getBilancio() <em>Bilancio</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getBilancio()
      * @generated
@@ -228,22 +225,13 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected Cassa cassa;
 
     /**
-     * The cached value of the '{@link #getIscrizioni() <em>Iscrizioni</em>}' reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @see #getIscrizioni()
-     * @generated
-     * @ordered
-     */
-    protected EList<Iscrizione> iscrizioni;
-
-    /**
      * The default value of the '{@link #getDataInizio() <em>Data Inizio</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getDataInizio()
      * @generated
      * @ordered
      */
-    protected static final Date DATA_INIZIO_EDEFAULT = null;
+    protected static final LocalDate DATA_INIZIO_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDataInizio() <em>Data Inizio</em>}' attribute.
@@ -252,7 +240,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      * @ordered
      */
-    protected Date dataInizio = DATA_INIZIO_EDEFAULT;
+    protected LocalDate dataInizio = DATA_INIZIO_EDEFAULT;
 
     /**
      * The default value of the '{@link #getDataFine() <em>Data Fine</em>}' attribute.
@@ -261,7 +249,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      * @ordered
      */
-    protected static final Date DATA_FINE_EDEFAULT = null;
+    protected static final LocalDate DATA_FINE_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDataFine() <em>Data Fine</em>}' attribute.
@@ -270,7 +258,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      * @ordered
      */
-    protected Date dataFine = DATA_FINE_EDEFAULT;
+    protected LocalDate dataFine = DATA_FINE_EDEFAULT;
 
     /**
      * The cached value of the '{@link #getStaffIstruttori() <em>Staff
@@ -413,7 +401,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected static final Integer NUMERO_ALLIEVI_CON_NOLEGGIO_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getModuli() <em>Moduli</em>}' reference list.
+     * The cached value of the '{@link #getModuli() <em>Moduli</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getModuli()
      * @generated
@@ -422,7 +410,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected EList<Corso> moduli;
 
     /**
-     * The cached value of the '{@link #getLezioniPratiche() <em>Lezioni Pratiche</em>}' reference list.
+     * The cached value of the '{@link #getLezioniPratiche() <em>Lezioni Pratiche</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getLezioniPratiche()
      * @generated
@@ -431,13 +419,23 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     protected EList<LezionePratica> lezioniPratiche;
 
     /**
-     * The cached value of the '{@link #getLezioniTeoriche() <em>Lezioni Teoriche</em>}' reference list.
+     * The cached value of the '{@link #getLezioniTeoriche() <em>Lezioni Teoriche</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getLezioniTeoriche()
      * @generated
      * @ordered
      */
     protected EList<LezioneTeorica> lezioniTeoriche;
+
+    /**
+     * The cached value of the '{@link #getIscrizioni() <em>Iscrizioni</em>}' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIscrizioni()
+     * @generated
+     * @ordered
+     */
+    protected EList<Iscrizione> iscrizioni;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -541,23 +539,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     @Override
     public Istruttore getDirettore() {
-	if (direttore != null && ((EObject) direttore).eIsProxy()) {
-	    InternalEObject oldDirettore = (InternalEObject) direttore;
-	    direttore = (Istruttore) eResolveProxy(oldDirettore);
-	    if (direttore != oldDirettore) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CORSO__DIRETTORE,
-			    oldDirettore, direttore));
-	    }
-	}
-	return direttore;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Istruttore basicGetDirettore() {
 	return direttore;
     }
 
@@ -575,42 +556,27 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public Istruttore getVicedirettore() {
-	if (vicedirettore != null && ((EObject) vicedirettore).eIsProxy()) {
-	    InternalEObject oldVicedirettore = (InternalEObject) vicedirettore;
-	    vicedirettore = (Istruttore) eResolveProxy(oldVicedirettore);
-	    if (vicedirettore != oldVicedirettore) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CORSO__VICEDIRETTORE,
-			    oldVicedirettore, vicedirettore));
-	    }
-	}
-	return vicedirettore;
+    public Istruttore getViceDirettore() {
+	return viceDirettore;
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Istruttore basicGetVicedirettore() {
-	return vicedirettore;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
-    public void setVicedirettore(Istruttore newVicedirettore) {
-	Istruttore oldVicedirettore = vicedirettore;
-	vicedirettore = newVicedirettore;
+    public void setViceDirettore(Istruttore newViceDirettore) {
+	Istruttore oldViceDirettore = viceDirettore;
+	viceDirettore = newViceDirettore;
 	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CORSO__VICEDIRETTORE, oldVicedirettore,
-		    vicedirettore));
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CORSO__VICE_DIRETTORE, oldViceDirettore,
+		    viceDirettore));
     }
 
     /**
@@ -619,23 +585,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     @Override
     public Persona getSegretario() {
-	if (segretario != null && ((EObject) segretario).eIsProxy()) {
-	    InternalEObject oldSegretario = (InternalEObject) segretario;
-	    segretario = (Persona) eResolveProxy(oldSegretario);
-	    if (segretario != oldSegretario) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CORSO__SEGRETARIO,
-			    oldSegretario, segretario));
-	    }
-	}
-	return segretario;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Persona basicGetSegretario() {
 	return segretario;
     }
 
@@ -679,23 +628,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     @Override
     public Bilancio getBilancio() {
-	if (bilancio != null && ((EObject) bilancio).eIsProxy()) {
-	    InternalEObject oldBilancio = (InternalEObject) bilancio;
-	    bilancio = (Bilancio) eResolveProxy(oldBilancio);
-	    if (bilancio != oldBilancio) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CORSO__BILANCIO, oldBilancio,
-			    bilancio));
-	    }
-	}
-	return bilancio;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Bilancio basicGetBilancio() {
 	return bilancio;
     }
 
@@ -738,23 +670,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     @Override
     public Cassa getCassa() {
-	if (cassa != null && ((EObject) cassa).eIsProxy()) {
-	    InternalEObject oldCassa = (InternalEObject) cassa;
-	    cassa = (Cassa) eResolveProxy(oldCassa);
-	    if (cassa != oldCassa) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CORSO__CASSA, oldCassa,
-			    cassa));
-	    }
-	}
-	return cassa;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Cassa basicGetCassa() {
 	return cassa;
     }
 
@@ -771,13 +686,14 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
      * @generated
      */
     @Override
     public EList<Iscrizione> getIscrizioni() {
 	if (iscrizioni == null) {
-	    iscrizioni = new EObjectResolvingEList<Iscrizione>(Iscrizione.class, this, ModelPackage.CORSO__ISCRIZIONI);
+	    iscrizioni = new EObjectEList<Iscrizione>(Iscrizione.class, this, ModelPackage.CORSO__ISCRIZIONI);
 	}
 	return iscrizioni;
     }
@@ -787,7 +703,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      */
     @Override
-    public Date getDataInizio() {
+    public LocalDate getDataInizio() {
 	return dataInizio;
     }
 
@@ -796,8 +712,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      */
     @Override
-    public void setDataInizio(Date newDataInizio) {
-	Date oldDataInizio = dataInizio;
+    public void setDataInizio(LocalDate newDataInizio) {
+	LocalDate oldDataInizio = dataInizio;
 	dataInizio = newDataInizio;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CORSO__DATA_INIZIO, oldDataInizio,
@@ -809,7 +725,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      */
     @Override
-    public Date getDataFine() {
+    public LocalDate getDataFine() {
 	return dataFine;
     }
 
@@ -818,8 +734,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      * @generated
      */
     @Override
-    public void setDataFine(Date newDataFine) {
-	Date oldDataFine = dataFine;
+    public void setDataFine(LocalDate newDataFine) {
+	LocalDate oldDataFine = dataFine;
 	dataFine = newDataFine;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CORSO__DATA_FINE, oldDataFine,
@@ -833,7 +749,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     @Override
     public EList<Istruttore> getStaffIstruttori() {
 	if (staffIstruttori == null) {
-	    staffIstruttori = new EObjectResolvingEList<Istruttore>(Istruttore.class, this,
+	    staffIstruttori = new EObjectEList<Istruttore>(Istruttore.class, this,
 		    ModelPackage.CORSO__STAFF_ISTRUTTORI);
 	}
 	return staffIstruttori;
@@ -910,8 +826,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllievi() {
 	Integer numeroAllievi = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllievi = corso.getIscrizioni().size();
 	}
@@ -926,8 +843,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviIscrizioneOk() {
 	Integer numeroAllieviOk = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviOk = corso.getIscrizioni().stream().filter(i -> i.getIsIscrizioneOk())
 		    .collect(Collectors.toList()).size();
@@ -943,8 +861,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviIscrizioneKo() {
 	Integer numeroAllieviKo = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviKo = corso.getIscrizioni().stream().filter(i -> !i.getIsIscrizioneOk())
 		    .collect(Collectors.toList()).size();
@@ -960,8 +879,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviNuoviIscritti() {
 	Integer numeroNuoviIscritti = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroNuoviIscritti = corso.getIscrizioni().stream().filter(i -> i.getIsNuovoAllievo())
 		    .collect(Collectors.toList()).size();
@@ -977,8 +897,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviMaschi() {
 	Integer numeroAllieviMaschi = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviMaschi = corso.getIscrizioni().stream()
 		    .filter(i -> ESesso.MASCHIO.equals(i.getAllievo().getSesso())).collect(Collectors.toList()).size();
@@ -994,8 +915,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviFemmine() {
 	Integer numeroAllievefemmine = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	//	ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllievefemmine = corso.getIscrizioni().stream()
 		    .filter(i -> ESesso.FEMMINA.equals(i.getAllievo().getSesso())).collect(Collectors.toList()).size();
@@ -1011,8 +933,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
      */
     public Integer getNumeroAllieviConNoleggio() {
 	Integer numeroAllieviConNoleggio = 0;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviConNoleggio = corso.getIscrizioni().stream().filter(i -> i.getIsNoleggio())
 		    .collect(Collectors.toList()).size();
@@ -1030,8 +953,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	EList<RiepilogoNoleggioBean> listRiepilogoNoleggioBean = new BasicEList<RiepilogoNoleggioBean>();
 
 	List<MaterialeNoleggiato> listaMaterialeNoleggiato = new ArrayList<>();
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
+	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null && !corso.getIscrizioni().isEmpty()) {
 	    for (Iscrizione iscrizione : corso.getIscrizioni()) {
 		if (iscrizione.getIsNoleggio()) {
@@ -1039,7 +963,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 		}
 	    }
 	    if (!listaMaterialeNoleggiato.isEmpty()) {
-		List<DizMateriale> materiali = modelManager.getElencoDizMaterialeObservableList();
+		List<DizMateriale> materiali = listaMaterialeNoleggiato.stream().map(MaterialeNoleggiato::getMateriale)
+			.collect(Collectors.toList());
+
 		for (DizMateriale dizMateriale : materiali) {
 		    List<MaterialeNoleggiato> singoloMateriale = listaMaterialeNoleggiato.stream()
 			    .filter(m -> m.getMateriale().getId().equals(dizMateriale.getId()))
@@ -1068,7 +994,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     @Override
     public EList<Corso> getModuli() {
 	if (moduli == null) {
-	    moduli = new EObjectResolvingEList<Corso>(Corso.class, this, ModelPackage.CORSO__MODULI);
+	    moduli = new EObjectEList<Corso>(Corso.class, this, ModelPackage.CORSO__MODULI);
 	}
 	return moduli;
     }
@@ -1080,7 +1006,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     @Override
     public EList<LezionePratica> getLezioniPratiche() {
 	if (lezioniPratiche == null) {
-	    lezioniPratiche = new EObjectResolvingEList<LezionePratica>(LezionePratica.class, this,
+	    lezioniPratiche = new EObjectEList<LezionePratica>(LezionePratica.class, this,
 		    ModelPackage.CORSO__LEZIONI_PRATICHE);
 	}
 	return lezioniPratiche;
@@ -1093,7 +1019,7 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
     @Override
     public EList<LezioneTeorica> getLezioniTeoriche() {
 	if (lezioniTeoriche == null) {
-	    lezioniTeoriche = new EObjectResolvingEList<LezioneTeorica>(LezioneTeorica.class, this,
+	    lezioniTeoriche = new EObjectEList<LezioneTeorica>(LezioneTeorica.class, this,
 		    ModelPackage.CORSO__LEZIONI_TEORICHE);
 	}
 	return lezioniTeoriche;
@@ -1115,31 +1041,19 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	case ModelPackage.CORSO__IS_MODULO:
 	    return getIsModulo();
 	case ModelPackage.CORSO__DIRETTORE:
-	    if (resolve)
-		return getDirettore();
-	    return basicGetDirettore();
-	case ModelPackage.CORSO__VICEDIRETTORE:
-	    if (resolve)
-		return getVicedirettore();
-	    return basicGetVicedirettore();
+	    return getDirettore();
+	case ModelPackage.CORSO__VICE_DIRETTORE:
+	    return getViceDirettore();
 	case ModelPackage.CORSO__SEGRETARIO:
-	    if (resolve)
-		return getSegretario();
-	    return basicGetSegretario();
+	    return getSegretario();
 	case ModelPackage.CORSO__TESTO:
 	    return getTesto();
 	case ModelPackage.CORSO__BILANCIO:
-	    if (resolve)
-		return getBilancio();
-	    return basicGetBilancio();
+	    return getBilancio();
 	case ModelPackage.CORSO__ID:
 	    return getId();
 	case ModelPackage.CORSO__CASSA:
-	    if (resolve)
-		return getCassa();
-	    return basicGetCassa();
-	case ModelPackage.CORSO__ISCRIZIONI:
-	    return getIscrizioni();
+	    return getCassa();
 	case ModelPackage.CORSO__DATA_INIZIO:
 	    return getDataInizio();
 	case ModelPackage.CORSO__DATA_FINE:
@@ -1174,6 +1088,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    return getLezioniPratiche();
 	case ModelPackage.CORSO__LEZIONI_TEORICHE:
 	    return getLezioniTeoriche();
+	case ModelPackage.CORSO__ISCRIZIONI:
+	    return getIscrizioni();
 	}
 	return super.eGet(featureID, resolve, coreType);
     }
@@ -1198,8 +1114,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	case ModelPackage.CORSO__DIRETTORE:
 	    setDirettore((Istruttore) newValue);
 	    return;
-	case ModelPackage.CORSO__VICEDIRETTORE:
-	    setVicedirettore((Istruttore) newValue);
+	case ModelPackage.CORSO__VICE_DIRETTORE:
+	    setViceDirettore((Istruttore) newValue);
 	    return;
 	case ModelPackage.CORSO__SEGRETARIO:
 	    setSegretario((Persona) newValue);
@@ -1216,15 +1132,11 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	case ModelPackage.CORSO__CASSA:
 	    setCassa((Cassa) newValue);
 	    return;
-	case ModelPackage.CORSO__ISCRIZIONI:
-	    getIscrizioni().clear();
-	    getIscrizioni().addAll((Collection<? extends Iscrizione>) newValue);
-	    return;
 	case ModelPackage.CORSO__DATA_INIZIO:
-	    setDataInizio((Date) newValue);
+	    setDataInizio((LocalDate) newValue);
 	    return;
 	case ModelPackage.CORSO__DATA_FINE:
-	    setDataFine((Date) newValue);
+	    setDataFine((LocalDate) newValue);
 	    return;
 	case ModelPackage.CORSO__STAFF_ISTRUTTORI:
 	    getStaffIstruttori().clear();
@@ -1251,6 +1163,10 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    getLezioniTeoriche().clear();
 	    getLezioniTeoriche().addAll((Collection<? extends LezioneTeorica>) newValue);
 	    return;
+	case ModelPackage.CORSO__ISCRIZIONI:
+	    getIscrizioni().clear();
+	    getIscrizioni().addAll((Collection<? extends Iscrizione>) newValue);
+	    return;
 	}
 	super.eSet(featureID, newValue);
     }
@@ -1274,8 +1190,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	case ModelPackage.CORSO__DIRETTORE:
 	    setDirettore((Istruttore) null);
 	    return;
-	case ModelPackage.CORSO__VICEDIRETTORE:
-	    setVicedirettore((Istruttore) null);
+	case ModelPackage.CORSO__VICE_DIRETTORE:
+	    setViceDirettore((Istruttore) null);
 	    return;
 	case ModelPackage.CORSO__SEGRETARIO:
 	    setSegretario((Persona) null);
@@ -1291,9 +1207,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    return;
 	case ModelPackage.CORSO__CASSA:
 	    setCassa((Cassa) null);
-	    return;
-	case ModelPackage.CORSO__ISCRIZIONI:
-	    getIscrizioni().clear();
 	    return;
 	case ModelPackage.CORSO__DATA_INIZIO:
 	    setDataInizio(DATA_INIZIO_EDEFAULT);
@@ -1322,6 +1235,9 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	case ModelPackage.CORSO__LEZIONI_TEORICHE:
 	    getLezioniTeoriche().clear();
 	    return;
+	case ModelPackage.CORSO__ISCRIZIONI:
+	    getIscrizioni().clear();
+	    return;
 	}
 	super.eUnset(featureID);
     }
@@ -1344,8 +1260,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    return IS_MODULO_EDEFAULT == null ? isModulo != null : !IS_MODULO_EDEFAULT.equals(isModulo);
 	case ModelPackage.CORSO__DIRETTORE:
 	    return direttore != null;
-	case ModelPackage.CORSO__VICEDIRETTORE:
-	    return vicedirettore != null;
+	case ModelPackage.CORSO__VICE_DIRETTORE:
+	    return viceDirettore != null;
 	case ModelPackage.CORSO__SEGRETARIO:
 	    return segretario != null;
 	case ModelPackage.CORSO__TESTO:
@@ -1356,8 +1272,6 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 	case ModelPackage.CORSO__CASSA:
 	    return cassa != null;
-	case ModelPackage.CORSO__ISCRIZIONI:
-	    return iscrizioni != null && !iscrizioni.isEmpty();
 	case ModelPackage.CORSO__DATA_INIZIO:
 	    return DATA_INIZIO_EDEFAULT == null ? dataInizio != null : !DATA_INIZIO_EDEFAULT.equals(dataInizio);
 	case ModelPackage.CORSO__DATA_FINE:
@@ -1400,6 +1314,8 @@ public class CorsoImpl extends ExternalizableEObjectImpl implements Corso {
 	    return lezioniPratiche != null && !lezioniPratiche.isEmpty();
 	case ModelPackage.CORSO__LEZIONI_TEORICHE:
 	    return lezioniTeoriche != null && !lezioniTeoriche.isEmpty();
+	case ModelPackage.CORSO__ISCRIZIONI:
+	    return iscrizioni != null && !iscrizioni.isEmpty();
 	}
 	return super.eIsSet(featureID);
     }

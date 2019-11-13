@@ -21,7 +21,9 @@
 
 
 		<jackson.version>2.10.0</jackson.version>
-
+		<emfjson.version>1.3.0</emfjson.version>
+		
+		<!-- OKKIO: VERIFICARE L'INSTALLAIZONE DI LOMBOK DELL'IDE http://jnb.ociweb.com/jnb/jnbJan2010.html -->
 		<lombok.version>1.18.8</lombok.version>
 		<findbugs.version>3.0.1</findbugs.version>
 
@@ -35,8 +37,8 @@
 
 		<SCXML.version>0.9</SCXML.version>
 
-		<!-- OKKIO: VERIFICARE L'INSTALLAIZONE DI LOMBOK DELL'IDE http://jnb.ociweb.com/jnb/jnbJan2010.html -->
-		<lombok.version>1.16.16</lombok.version>
+
+
 
 		<!-- DB -->
 		<mysql.version>8.0.17</mysql.version>
@@ -59,18 +61,12 @@
 		<servlets.version>3.1.0</servlets.version>
 		<jsp.version>2.3.1</jsp.version>
 
-		<org.mapstruct.version>1.3.1.Final</org.mapstruct.version>
+		<modelMapper.version>2.3.0</modelMapper.version>
 
-		<!-- automatically run annotation processors within the incremental compilation 
-		vedi :
-		https://mapstruct.org/documentation/ide-support/
-		https://manios.org/2017/08/09/configure-eclipse-in-order-to-build-mapstruct-in-java-projects
-		-->
-		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
 
 		<!-- build -->
 		<maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
-		<maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+		<maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
 		<maven.war.plugin.version>2.6</maven.war.plugin.version>
 		<cxf.version>3.2.4</cxf.version>
 
@@ -215,6 +211,13 @@
 			<artifactId>jackson-datatype-jsr310</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.emfjson</groupId>
+			<artifactId>emfjson-jackson</artifactId>
+			<version>${emfjson.version}</version>
+		</dependency>
+
 
 		<!-- AspectJ -->
 		<dependency>
@@ -403,13 +406,14 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-			<version>${org.mapstruct.version}</version>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>${modelMapper.version}</version>
 		</dependency>
 
+
 		<!-- progetto emf -->
-		<dependency> 
+		<dependency>
 			<groupId>it.caicividale.scuola</groupId>
 			<artifactId>it.caicividale.scuola.emf</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
@@ -431,17 +435,6 @@
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${org.mapstruct.version}</version>
-						</path>
-					</annotationProcessorPaths>
-					<generatedSourcesDirectory>${project.build.directory}/generated-sources</generatedSourcesDirectory>
-					<compilerArgument>-Xlint:all</compilerArgument>
-					<showWarnings>true</showWarnings>
-					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
 
@@ -482,11 +475,7 @@
 							<include>/**</include>
 							<targetPath>/</targetPath>
 						</resource>
-						<resource>
-							<directory>src/main/webapp/WEB-INF/views</directory>
-							<include>/**</include>
-							<targetPath>/WEB-INF/views</targetPath>
-						</resource>
+
 
 
 					</webResources>

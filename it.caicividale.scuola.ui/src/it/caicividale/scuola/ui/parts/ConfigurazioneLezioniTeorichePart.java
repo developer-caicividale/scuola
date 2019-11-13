@@ -19,8 +19,8 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 
 public class ConfigurazioneLezioniTeorichePart implements IMyPart {
 

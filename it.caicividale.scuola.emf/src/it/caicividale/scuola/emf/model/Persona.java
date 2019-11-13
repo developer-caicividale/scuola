@@ -2,11 +2,10 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
+import java.time.LocalDate;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,10 +35,9 @@ import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Persona extends ExternalizableEObject {
+public interface Persona extends EObject {
     /**
      * Returns the value of the '<em><b>Nome</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -246,12 +244,12 @@ public interface Persona extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Nascita Data</em>' attribute.
-     * @see #setNascitaData(Date)
+     * @see #setNascitaData(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_NascitaData()
-     * @model required="true"
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate" required="true"
      * @generated
      */
-    Date getNascitaData();
+    LocalDate getNascitaData();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getNascitaData <em>Nascita Data</em>}' attribute.
@@ -261,7 +259,7 @@ public interface Persona extends ExternalizableEObject {
      * @see #getNascitaData()
      * @generated
      */
-    void setNascitaData(Date value);
+    void setNascitaData(LocalDate value);
 
     /**
      * Returns the value of the '<em><b>Nascita Citta</b></em>' attribute.

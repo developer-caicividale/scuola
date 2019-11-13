@@ -2,20 +2,16 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
 import it.caicividale.scuola.emf.model.ModelPackage;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
+import java.time.LocalDate;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,9 +29,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implements MaterialeNoleggiato {
+public class MaterialeNoleggiatoImpl extends MinimalEObjectImpl.Container implements MaterialeNoleggiato {
     /**
-     * The cached value of the '{@link #getMateriale() <em>Materiale</em>}' reference.
+     * The cached value of the '{@link #getMateriale() <em>Materiale</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getMateriale()
@@ -72,7 +68,7 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
      * @generated
      * @ordered
      */
-    protected static final Date DATA_NOLEGGIO_EDEFAULT = null;
+    protected static final LocalDate DATA_NOLEGGIO_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDataNoleggio() <em>Data Noleggio</em>}' attribute.
@@ -82,7 +78,7 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
      * @generated
      * @ordered
      */
-    protected Date dataNoleggio = DATA_NOLEGGIO_EDEFAULT;
+    protected LocalDate dataNoleggio = DATA_NOLEGGIO_EDEFAULT;
 
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -130,24 +126,6 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
      */
     @Override
     public DizMateriale getMateriale() {
-	if (materiale != null && ((EObject) materiale).eIsProxy()) {
-	    InternalEObject oldMateriale = (InternalEObject) materiale;
-	    materiale = (DizMateriale) eResolveProxy(oldMateriale);
-	    if (materiale != oldMateriale) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-			    ModelPackage.MATERIALE_NOLEGGIATO__MATERIALE, oldMateriale, materiale));
-	    }
-	}
-	return materiale;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public DizMateriale basicGetMateriale() {
 	return materiale;
     }
 
@@ -195,7 +173,7 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
      * @generated
      */
     @Override
-    public Date getDataNoleggio() {
+    public LocalDate getDataNoleggio() {
 	return dataNoleggio;
     }
 
@@ -205,8 +183,8 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
      * @generated
      */
     @Override
-    public void setDataNoleggio(Date newDataNoleggio) {
-	Date oldDataNoleggio = dataNoleggio;
+    public void setDataNoleggio(LocalDate newDataNoleggio) {
+	LocalDate oldDataNoleggio = dataNoleggio;
 	dataNoleggio = newDataNoleggio;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MATERIALE_NOLEGGIATO__DATA_NOLEGGIO,
@@ -245,9 +223,7 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 	switch (featureID) {
 	case ModelPackage.MATERIALE_NOLEGGIATO__MATERIALE:
-	    if (resolve)
-		return getMateriale();
-	    return basicGetMateriale();
+	    return getMateriale();
 	case ModelPackage.MATERIALE_NOLEGGIATO__QUANTITA:
 	    return getQuantita();
 	case ModelPackage.MATERIALE_NOLEGGIATO__DATA_NOLEGGIO:
@@ -273,7 +249,7 @@ public class MaterialeNoleggiatoImpl extends ExternalizableEObjectImpl implement
 	    setQuantita((Short) newValue);
 	    return;
 	case ModelPackage.MATERIALE_NOLEGGIATO__DATA_NOLEGGIO:
-	    setDataNoleggio((Date) newValue);
+	    setDataNoleggio((LocalDate) newValue);
 	    return;
 	case ModelPackage.MATERIALE_NOLEGGIATO__ID:
 	    setId((Long) newValue);

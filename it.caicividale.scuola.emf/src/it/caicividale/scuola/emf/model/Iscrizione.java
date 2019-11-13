@@ -2,11 +2,10 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
+import java.time.LocalDate;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,10 +42,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Iscrizione extends ExternalizableEObject {
+public interface Iscrizione extends EObject {
     /**
      * Returns the value of the '<em><b>Is Modulo Iscrizione</b></em>' attribute.
      * The default value is <code>"False"</code>.
@@ -121,12 +119,12 @@ public interface Iscrizione extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Scadenza Certificato Medico</em>' attribute.
-     * @see #setDataScadenzaCertificatoMedico(Date)
+     * @see #setDataScadenzaCertificatoMedico(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_DataScadenzaCertificatoMedico()
-     * @model
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate"
      * @generated
      */
-    Date getDataScadenzaCertificatoMedico();
+    LocalDate getDataScadenzaCertificatoMedico();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getDataScadenzaCertificatoMedico <em>Data Scadenza Certificato Medico</em>}' attribute.
@@ -136,7 +134,7 @@ public interface Iscrizione extends ExternalizableEObject {
      * @see #getDataScadenzaCertificatoMedico()
      * @generated
      */
-    void setDataScadenzaCertificatoMedico(Date value);
+    void setDataScadenzaCertificatoMedico(LocalDate value);
 
     /**
      * Returns the value of the '<em><b>Is Bollino Anno Corso</b></em>' attribute.
@@ -273,13 +271,13 @@ public interface Iscrizione extends ExternalizableEObject {
     Boolean getIsNoleggio();
 
     /**
-     * Returns the value of the '<em><b>Materiale Noleggiato</b></em>' reference list.
+     * Returns the value of the '<em><b>Materiale Noleggiato</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.MaterialeNoleggiato}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Materiale Noleggiato</em>' reference list.
+     * @return the value of the '<em>Materiale Noleggiato</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_MaterialeNoleggiato()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<MaterialeNoleggiato> getMaterialeNoleggiato();
@@ -347,11 +345,22 @@ public interface Iscrizione extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Is Certificato Medico Ok</em>' attribute.
+     * @see #setIsCertificatoMedicoOk(Boolean)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_IsCertificatoMedicoOk()
-     * @model default="False" unique="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model default="False"
      * @generated
      */
     Boolean getIsCertificatoMedicoOk();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getIsCertificatoMedicoOk <em>Is Certificato Medico Ok</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Certificato Medico Ok</em>' attribute.
+     * @see #getIsCertificatoMedicoOk()
+     * @generated
+     */
+    void setIsCertificatoMedicoOk(Boolean value);
 
     /**
      * Returns the value of the '<em><b>Is Quota Versata Ok</b></em>' attribute.
@@ -381,11 +390,22 @@ public interface Iscrizione extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Totale Da Versare</em>' attribute.
+     * @see #setTotaleDaVersare(Float)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_TotaleDaVersare()
-     * @model unique="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model
      * @generated
      */
     Float getTotaleDaVersare();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getTotaleDaVersare <em>Totale Da Versare</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Totale Da Versare</em>' attribute.
+     * @see #getTotaleDaVersare()
+     * @generated
+     */
+    void setTotaleDaVersare(Float value);
 
     /**
      * Returns the value of the '<em><b>Differenza Totale Versato Totale Da Versare</b></em>' attribute.
@@ -411,22 +431,22 @@ public interface Iscrizione extends ExternalizableEObject {
     EList<String> getMessaggiErrore();
 
     /**
-     * Returns the value of the '<em><b>Allievo</b></em>' reference.
+     * Returns the value of the '<em><b>Allievo</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Allievo</em>' reference.
+     * @return the value of the '<em>Allievo</em>' containment reference.
      * @see #setAllievo(Allievo)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_Allievo()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     Allievo getAllievo();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getAllievo <em>Allievo</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getAllievo <em>Allievo</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Allievo</em>' reference.
+     * @param value the new value of the '<em>Allievo</em>' containment reference.
      * @see #getAllievo()
      * @generated
      */

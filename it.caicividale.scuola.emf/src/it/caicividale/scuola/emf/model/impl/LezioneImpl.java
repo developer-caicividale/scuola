@@ -2,20 +2,16 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import it.caicividale.scuola.emf.model.Lezione;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.PresenzaLezione;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
+import java.time.LocalDateTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +32,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
+public class LezioneImpl extends MinimalEObjectImpl.Container implements Lezione {
     /**
      * The default value of the '{@link #getTitolo() <em>Titolo</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -65,7 +61,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
      * @generated
      * @ordered
      */
-    protected static final Date DATA_SVOLGIMENTO_EDEFAULT = null;
+    protected static final LocalDateTime DATA_SVOLGIMENTO_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDataSvolgimento() <em>Data Svolgimento</em>}' attribute.
@@ -75,7 +71,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
      * @generated
      * @ordered
      */
-    protected Date dataSvolgimento = DATA_SVOLGIMENTO_EDEFAULT;
+    protected LocalDateTime dataSvolgimento = DATA_SVOLGIMENTO_EDEFAULT;
 
     /**
      * The default value of the '{@link #getLuogoSvolgimento() <em>Luogo Svolgimento</em>}' attribute.
@@ -138,7 +134,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
     protected Long id = ID_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getPresenzaLezione() <em>Presenza Lezione</em>}' reference.
+     * The cached value of the '{@link #getPresenzaLezione() <em>Presenza Lezione</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getPresenzaLezione()
@@ -215,7 +211,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
      * @generated
      */
     @Override
-    public Date getDataSvolgimento() {
+    public LocalDateTime getDataSvolgimento() {
 	return dataSvolgimento;
     }
 
@@ -225,8 +221,8 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
      * @generated
      */
     @Override
-    public void setDataSvolgimento(Date newDataSvolgimento) {
-	Date oldDataSvolgimento = dataSvolgimento;
+    public void setDataSvolgimento(LocalDateTime newDataSvolgimento) {
+	LocalDateTime oldDataSvolgimento = dataSvolgimento;
 	dataSvolgimento = newDataSvolgimento;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.LEZIONE__DATA_SVOLGIMENTO,
@@ -310,24 +306,6 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
      */
     @Override
     public PresenzaLezione getPresenzaLezione() {
-	if (presenzaLezione != null && ((EObject) presenzaLezione).eIsProxy()) {
-	    InternalEObject oldPresenzaLezione = (InternalEObject) presenzaLezione;
-	    presenzaLezione = (PresenzaLezione) eResolveProxy(oldPresenzaLezione);
-	    if (presenzaLezione != oldPresenzaLezione) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.LEZIONE__PRESENZA_LEZIONE,
-			    oldPresenzaLezione, presenzaLezione));
-	    }
-	}
-	return presenzaLezione;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    public PresenzaLezione basicGetPresenzaLezione() {
 	return presenzaLezione;
     }
 
@@ -388,9 +366,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
 	case ModelPackage.LEZIONE__ID:
 	    return getId();
 	case ModelPackage.LEZIONE__PRESENZA_LEZIONE:
-	    if (resolve)
-		return getPresenzaLezione();
-	    return basicGetPresenzaLezione();
+	    return getPresenzaLezione();
 	case ModelPackage.LEZIONE__ARGOMENTI_TRATTATI:
 	    return getArgomentiTrattati();
 	}
@@ -409,7 +385,7 @@ public class LezioneImpl extends ExternalizableEObjectImpl implements Lezione {
 	    setTitolo((String) newValue);
 	    return;
 	case ModelPackage.LEZIONE__DATA_SVOLGIMENTO:
-	    setDataSvolgimento((Date) newValue);
+	    setDataSvolgimento((LocalDateTime) newValue);
 	    return;
 	case ModelPackage.LEZIONE__LUOGO_SVOLGIMENTO:
 	    setLuogoSvolgimento((String) newValue);

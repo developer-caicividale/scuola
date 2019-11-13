@@ -4,7 +4,7 @@ import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.ViewerCell;
 
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 
 public class RiepilogoMaterialeNoleggiatoLabelProvider extends CellLabelProvider {
 

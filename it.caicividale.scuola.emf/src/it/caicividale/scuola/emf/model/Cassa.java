@@ -4,7 +4,7 @@ package it.caicividale.scuola.emf.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,10 +24,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getCassa()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Cassa extends ExternalizableEObject {
+public interface Cassa extends EObject {
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -62,13 +61,13 @@ public interface Cassa extends ExternalizableEObject {
     float getTotale();
 
     /**
-     * Returns the value of the '<em><b>Ripartizioni Cassa</b></em>' reference list.
+     * Returns the value of the '<em><b>Ripartizioni Cassa</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.RipartizioneCassa}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Ripartizioni Cassa</em>' reference list.
+     * @return the value of the '<em>Ripartizioni Cassa</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCassa_RipartizioniCassa()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<RipartizioneCassa> getRipartizioniCassa();

@@ -10,7 +10,7 @@ import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
 
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.ui.parts.ElencoIscrizioniPart;
 
 public class FiltroIscrizioniKoHandler {

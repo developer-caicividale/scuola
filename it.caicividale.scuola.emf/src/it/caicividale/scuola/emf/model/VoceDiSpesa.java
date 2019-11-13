@@ -2,9 +2,8 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import java.time.LocalDate;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,10 +24,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getVoceDiSpesa()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface VoceDiSpesa extends ExternalizableEObject {
+public interface VoceDiSpesa extends EObject {
     /**
      * Returns the value of the '<em><b>Titolo</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -147,12 +145,12 @@ public interface VoceDiSpesa extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data</em>' attribute.
-     * @see #setData(Date)
+     * @see #setData(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getVoceDiSpesa_Data()
-     * @model required="true"
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate" required="true"
      * @generated
      */
-    Date getData();
+    LocalDate getData();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.VoceDiSpesa#getData <em>Data</em>}' attribute.
@@ -162,6 +160,6 @@ public interface VoceDiSpesa extends ExternalizableEObject {
      * @see #getData()
      * @generated
      */
-    void setData(Date value);
+    void setData(LocalDate value);
 
 } // VoceDiSpesa

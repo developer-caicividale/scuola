@@ -4,7 +4,7 @@ package it.caicividale.scuola.emf.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getPresenzaLezione()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface PresenzaLezione extends ExternalizableEObject {
+public interface PresenzaLezione extends EObject {
     /**
      * Returns the value of the '<em><b>Allievi Presenti</b></em>' reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Allievo}.

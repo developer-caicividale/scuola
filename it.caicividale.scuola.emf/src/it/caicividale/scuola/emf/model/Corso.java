@@ -2,11 +2,10 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
+import java.time.LocalDate;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,13 +21,12 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getQuotaCaparra <em>Quota Caparra</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getIsModulo <em>Is Modulo</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getDirettore <em>Direttore</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Corso#getVicedirettore <em>Vicedirettore</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Corso#getViceDirettore <em>Vice Direttore</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getSegretario <em>Segretario</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getTesto <em>Testo</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getBilancio <em>Bilancio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getCassa <em>Cassa</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Corso#getIscrizioni <em>Iscrizioni</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getDataInizio <em>Data Inizio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getDataFine <em>Data Fine</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getStaffIstruttori <em>Staff Istruttori</em>}</li>
@@ -46,14 +44,14 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getModuli <em>Moduli</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getLezioniPratiche <em>Lezioni Pratiche</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getLezioniTeoriche <em>Lezioni Teoriche</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Corso#getIscrizioni <em>Iscrizioni</em>}</li>
  * </ul>
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Corso extends ExternalizableEObject {
+public interface Corso extends EObject {
     /**
      * Returns the value of the '<em><b>Anno</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -133,66 +131,66 @@ public interface Corso extends ExternalizableEObject {
     void setIsModulo(Boolean value);
 
     /**
-     * Returns the value of the '<em><b>Direttore</b></em>' reference.
+     * Returns the value of the '<em><b>Direttore</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Direttore</em>' reference.
+     * @return the value of the '<em>Direttore</em>' containment reference.
      * @see #setDirettore(Istruttore)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Direttore()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     Istruttore getDirettore();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getDirettore <em>Direttore</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getDirettore <em>Direttore</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Direttore</em>' reference.
+     * @param value the new value of the '<em>Direttore</em>' containment reference.
      * @see #getDirettore()
      * @generated
      */
     void setDirettore(Istruttore value);
 
     /**
-     * Returns the value of the '<em><b>Vicedirettore</b></em>' reference.
+     * Returns the value of the '<em><b>Vice Direttore</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Vicedirettore</em>' reference.
-     * @see #setVicedirettore(Istruttore)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Vicedirettore()
-     * @model
+     * @return the value of the '<em>Vice Direttore</em>' containment reference.
+     * @see #setViceDirettore(Istruttore)
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_ViceDirettore()
+     * @model containment="true"
      * @generated
      */
-    Istruttore getVicedirettore();
+    Istruttore getViceDirettore();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getVicedirettore <em>Vicedirettore</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getViceDirettore <em>Vice Direttore</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Vicedirettore</em>' reference.
-     * @see #getVicedirettore()
+     * @param value the new value of the '<em>Vice Direttore</em>' containment reference.
+     * @see #getViceDirettore()
      * @generated
      */
-    void setVicedirettore(Istruttore value);
+    void setViceDirettore(Istruttore value);
 
     /**
-     * Returns the value of the '<em><b>Segretario</b></em>' reference.
+     * Returns the value of the '<em><b>Segretario</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Segretario</em>' reference.
+     * @return the value of the '<em>Segretario</em>' containment reference.
      * @see #setSegretario(Persona)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Segretario()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     Persona getSegretario();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getSegretario <em>Segretario</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getSegretario <em>Segretario</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Segretario</em>' reference.
+     * @param value the new value of the '<em>Segretario</em>' containment reference.
      * @see #getSegretario()
      * @generated
      */
@@ -221,22 +219,22 @@ public interface Corso extends ExternalizableEObject {
     void setTesto(String value);
 
     /**
-     * Returns the value of the '<em><b>Bilancio</b></em>' reference.
+     * Returns the value of the '<em><b>Bilancio</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Bilancio</em>' reference.
+     * @return the value of the '<em>Bilancio</em>' containment reference.
      * @see #setBilancio(Bilancio)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Bilancio()
-     * @model
+     * @model containment="true"
      * @generated
      */
     Bilancio getBilancio();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getBilancio <em>Bilancio</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getBilancio <em>Bilancio</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Bilancio</em>' reference.
+     * @param value the new value of the '<em>Bilancio</em>' containment reference.
      * @see #getBilancio()
      * @generated
      */
@@ -265,35 +263,35 @@ public interface Corso extends ExternalizableEObject {
     void setId(Long value);
 
     /**
-     * Returns the value of the '<em><b>Cassa</b></em>' reference.
+     * Returns the value of the '<em><b>Cassa</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Cassa</em>' reference.
+     * @return the value of the '<em>Cassa</em>' containment reference.
      * @see #setCassa(Cassa)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Cassa()
-     * @model
+     * @model containment="true"
      * @generated
      */
     Cassa getCassa();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getCassa <em>Cassa</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getCassa <em>Cassa</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Cassa</em>' reference.
+     * @param value the new value of the '<em>Cassa</em>' containment reference.
      * @see #getCassa()
      * @generated
      */
     void setCassa(Cassa value);
 
     /**
-     * Returns the value of the '<em><b>Iscrizioni</b></em>' reference list.
+     * Returns the value of the '<em><b>Iscrizioni</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Iscrizione}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Iscrizioni</em>' reference list.
+     * @return the value of the '<em>Iscrizioni</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Iscrizioni()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<Iscrizione> getIscrizioni();
@@ -303,12 +301,12 @@ public interface Corso extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Inizio</em>' attribute.
-     * @see #setDataInizio(Date)
+     * @see #setDataInizio(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_DataInizio()
-     * @model required="true"
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate" required="true"
      * @generated
      */
-    Date getDataInizio();
+    LocalDate getDataInizio();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getDataInizio <em>Data Inizio</em>}' attribute.
@@ -318,19 +316,19 @@ public interface Corso extends ExternalizableEObject {
      * @see #getDataInizio()
      * @generated
      */
-    void setDataInizio(Date value);
+    void setDataInizio(LocalDate value);
 
     /**
      * Returns the value of the '<em><b>Data Fine</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Fine</em>' attribute.
-     * @see #setDataFine(Date)
+     * @see #setDataFine(LocalDate)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_DataFine()
-     * @model required="true"
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate" required="true"
      * @generated
      */
-    Date getDataFine();
+    LocalDate getDataFine();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.Corso#getDataFine <em>Data Fine</em>}' attribute.
@@ -340,16 +338,16 @@ public interface Corso extends ExternalizableEObject {
      * @see #getDataFine()
      * @generated
      */
-    void setDataFine(Date value);
+    void setDataFine(LocalDate value);
 
     /**
-     * Returns the value of the '<em><b>Staff Istruttori</b></em>' reference list.
+     * Returns the value of the '<em><b>Staff Istruttori</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Istruttore}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Staff Istruttori</em>' reference list.
+     * @return the value of the '<em>Staff Istruttori</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_StaffIstruttori()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<Istruttore> getStaffIstruttori();
@@ -512,37 +510,37 @@ public interface Corso extends ExternalizableEObject {
     EList getListRiepilogonoleggio();
 
     /**
-     * Returns the value of the '<em><b>Moduli</b></em>' reference list.
+     * Returns the value of the '<em><b>Moduli</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Corso}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Moduli</em>' reference list.
+     * @return the value of the '<em>Moduli</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_Moduli()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<Corso> getModuli();
 
     /**
-     * Returns the value of the '<em><b>Lezioni Pratiche</b></em>' reference list.
+     * Returns the value of the '<em><b>Lezioni Pratiche</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.LezionePratica}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Lezioni Pratiche</em>' reference list.
+     * @return the value of the '<em>Lezioni Pratiche</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_LezioniPratiche()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<LezionePratica> getLezioniPratiche();
 
     /**
-     * Returns the value of the '<em><b>Lezioni Teoriche</b></em>' reference list.
+     * Returns the value of the '<em><b>Lezioni Teoriche</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.LezioneTeorica}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Lezioni Teoriche</em>' reference list.
+     * @return the value of the '<em>Lezioni Teoriche</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_LezioniTeoriche()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<LezioneTeorica> getLezioniTeoriche();

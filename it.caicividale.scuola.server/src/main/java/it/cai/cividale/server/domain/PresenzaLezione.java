@@ -29,7 +29,7 @@ public class PresenzaLezione implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private int id;
+    private Long id;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Istruttore> istruttoriPresenti = new ArrayList<>();

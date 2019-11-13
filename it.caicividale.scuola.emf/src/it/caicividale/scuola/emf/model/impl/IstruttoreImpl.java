@@ -3,9 +3,7 @@
 package it.caicividale.scuola.emf.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import it.caicividale.scuola.emf.model.ETitoloIstruttore;
@@ -13,9 +11,8 @@ import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Istruttore</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object
+ * '<em><b>Istruttore</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
@@ -29,8 +26,7 @@ import it.caicividale.scuola.emf.model.ModelPackage;
 public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     /**
      * The default value of the '{@link #getTitolo() <em>Titolo</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTitolo()
      * @generated
      * @ordered
@@ -39,8 +35,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
 
     /**
      * The cached value of the '{@link #getTitolo() <em>Titolo</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTitolo()
      * @generated
      * @ordered
@@ -49,8 +44,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
 
     /**
      * The default value of the '{@link #getIsAttivo() <em>Is Attivo</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsAttivo()
      * @generated
      * @ordered
@@ -59,8 +53,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
 
     /**
      * The cached value of the '{@link #getIsAttivo() <em>Is Attivo</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsAttivo()
      * @generated
      * @ordered
@@ -68,8 +61,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     protected Boolean isAttivo = IS_ATTIVO_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     protected IstruttoreImpl() {
@@ -77,8 +69,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -87,8 +78,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -97,8 +87,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -110,8 +99,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -120,8 +108,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -134,8 +121,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -150,8 +136,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -168,8 +153,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -186,8 +170,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -202,8 +185,7 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -220,4 +202,4 @@ public class IstruttoreImpl extends PersonaImpl implements Istruttore {
 	return result.toString();
     }
 
-} //IstruttoreImpl
+} // IstruttoreImpl

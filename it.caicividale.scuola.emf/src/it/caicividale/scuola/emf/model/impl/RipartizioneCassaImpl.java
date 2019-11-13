@@ -8,9 +8,9 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.RipartizioneCassa;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +27,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class RipartizioneCassaImpl extends ExternalizableEObjectImpl implements RipartizioneCassa {
+public class RipartizioneCassaImpl extends MinimalEObjectImpl.Container implements RipartizioneCassa {
     /**
      * The default value of the '{@link #getSede() <em>Sede</em>}' attribute.
      * <!-- begin-user-doc -->

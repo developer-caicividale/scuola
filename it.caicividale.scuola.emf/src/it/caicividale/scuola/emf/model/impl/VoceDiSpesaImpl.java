@@ -2,18 +2,17 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import it.caicividale.scuola.emf.model.ETipoVoceDiSpesa;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.VoceDiSpesa;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
+import java.time.LocalDate;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDiSpesa {
+public class VoceDiSpesaImpl extends MinimalEObjectImpl.Container implements VoceDiSpesa {
     /**
      * The default value of the '{@link #getTitolo() <em>Titolo</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -142,7 +141,7 @@ public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDi
      * @generated
      * @ordered
      */
-    protected static final Date DATA_EDEFAULT = null;
+    protected static final LocalDate DATA_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getData() <em>Data</em>}' attribute.
@@ -152,7 +151,7 @@ public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDi
      * @generated
      * @ordered
      */
-    protected Date data = DATA_EDEFAULT;
+    protected LocalDate data = DATA_EDEFAULT;
 
     /**
      * <!-- begin-user-doc -->
@@ -296,7 +295,7 @@ public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDi
      * @generated
      */
     @Override
-    public Date getData() {
+    public LocalDate getData() {
 	return data;
     }
 
@@ -306,8 +305,8 @@ public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDi
      * @generated
      */
     @Override
-    public void setData(Date newData) {
-	Date oldData = data;
+    public void setData(LocalDate newData) {
+	LocalDate oldData = data;
 	data = newData;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.VOCE_DI_SPESA__DATA, oldData, data));
@@ -361,7 +360,7 @@ public class VoceDiSpesaImpl extends ExternalizableEObjectImpl implements VoceDi
 	    setNota((String) newValue);
 	    return;
 	case ModelPackage.VOCE_DI_SPESA__DATA:
-	    setData((Date) newValue);
+	    setData((LocalDate) newValue);
 	    return;
 	}
 	super.eSet(featureID, newValue);

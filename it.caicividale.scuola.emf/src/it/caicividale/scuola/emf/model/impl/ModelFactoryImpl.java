@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import it.caicividale.scuola.emf.model.*;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,41 +61,43 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
     public EObject create(EClass eClass) {
 	switch (eClass.getClassifierID()) {
 	case ModelPackage.PERSONA:
-	    return (EObject) createPersona();
+	    return createPersona();
 	case ModelPackage.ALLIEVO:
-	    return (EObject) createAllievo();
+	    return createAllievo();
 	case ModelPackage.CORSO:
-	    return (EObject) createCorso();
+	    return createCorso();
 	case ModelPackage.ISCRIZIONE:
-	    return (EObject) createIscrizione();
+	    return createIscrizione();
 	case ModelPackage.LEZIONE:
-	    return (EObject) createLezione();
+	    return createLezione();
 	case ModelPackage.LEZIONE_TEORICA:
-	    return (EObject) createLezioneTeorica();
+	    return createLezioneTeorica();
 	case ModelPackage.LEZIONE_PRATICA:
-	    return (EObject) createLezionePratica();
+	    return createLezionePratica();
 	case ModelPackage.ISTRUTTORE:
-	    return (EObject) createIstruttore();
+	    return createIstruttore();
 	case ModelPackage.SQUADRA:
-	    return (EObject) createSquadra();
+	    return createSquadra();
 	case ModelPackage.BILANCIO:
-	    return (EObject) createBilancio();
+	    return createBilancio();
 	case ModelPackage.CASSA:
-	    return (EObject) createCassa();
+	    return createCassa();
 	case ModelPackage.RIPARTIZIONE_CASSA:
-	    return (EObject) createRipartizioneCassa();
+	    return createRipartizioneCassa();
 	case ModelPackage.PRESENZA_LEZIONE:
-	    return (EObject) createPresenzaLezione();
+	    return createPresenzaLezione();
 	case ModelPackage.DIZ_MATERIALE:
-	    return (EObject) createDizMateriale();
+	    return createDizMateriale();
 	case ModelPackage.MATERIALE_NOLEGGIATO:
-	    return (EObject) createMaterialeNoleggiato();
+	    return createMaterialeNoleggiato();
 	case ModelPackage.VOCE_DI_SPESA:
-	    return (EObject) createVoceDiSpesa();
+	    return createVoceDiSpesa();
 	case ModelPackage.ELENCO_CORSI:
-	    return (EObject) createElencoCorsi();
+	    return createElencoCorsi();
 	case ModelPackage.ELENCO_ISCRIZIONI:
-	    return (EObject) createElencoIscrizioni();
+	    return createElencoIscrizioni();
+	case ModelPackage.ELENCO_MATERIALI:
+	    return createElencoMateriali();
 	default:
 	    throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 	}
@@ -121,6 +125,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return createNumeroCellulareFromString(eDataType, initialValue);
 	case ModelPackage.EMAIL:
 	    return createEMailFromString(eDataType, initialValue);
+	case ModelPackage.ELOCAL_DATE:
+	    return createELocalDateFromString(eDataType, initialValue);
+	case ModelPackage.ELOCAL_DATE_TIME:
+	    return createELocalDateTimeFromString(eDataType, initialValue);
 	default:
 	    throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 	}
@@ -148,6 +156,10 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return convertNumeroCellulareToString(eDataType, instanceValue);
 	case ModelPackage.EMAIL:
 	    return convertEMailToString(eDataType, instanceValue);
+	case ModelPackage.ELOCAL_DATE:
+	    return convertELocalDateToString(eDataType, instanceValue);
+	case ModelPackage.ELOCAL_DATE_TIME:
+	    return convertELocalDateTimeToString(eDataType, instanceValue);
 	default:
 	    throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 	}
@@ -356,6 +368,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
+    public ElencoMateriali createElencoMateriali() {
+	ElencoMaterialiImpl elencoMateriali = new ElencoMaterialiImpl();
+	return elencoMateriali;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     public ESesso createESessoFromString(EDataType eDataType, String initialValue) {
 	ESesso result = ESesso.get(initialValue);
 	if (result == null)
@@ -494,6 +517,42 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
      * @generated
      */
     public String convertEMailToString(EDataType eDataType, Object instanceValue) {
+	return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LocalDate createELocalDateFromString(EDataType eDataType, String initialValue) {
+	return (LocalDate) super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertELocalDateToString(EDataType eDataType, Object instanceValue) {
+	return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public LocalDateTime createELocalDateTimeFromString(EDataType eDataType, String initialValue) {
+	return (LocalDateTime) super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertELocalDateTimeToString(EDataType eDataType, Object instanceValue) {
 	return super.convertToString(eDataType, instanceValue);
     }
 

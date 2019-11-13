@@ -2,6 +2,9 @@ package it.caicividale.scuola.emf.model.valueobject;
 
 import java.util.regex.Pattern;
 
+import lombok.Value;
+
+@Value
 public class NumeroCellulare implements ValueObject {
 
     private static final long serialVersionUID = -991120825882438852L;

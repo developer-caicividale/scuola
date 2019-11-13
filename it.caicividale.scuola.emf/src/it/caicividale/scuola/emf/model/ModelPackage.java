@@ -40,7 +40,7 @@ public interface ModelPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    String eNS_URI = "http://corsicai.caicividale.it/hibernate/";
+    String eNS_URI = "http://it.caicividale.scuola.emf.model";
 
     /**
      * The package namespace name.
@@ -48,7 +48,7 @@ public interface ModelPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    String eNS_PREFIX = "T";
+    String eNS_PREFIX = "it.caicividale.scuola.emf.model";
 
     /**
      * The singleton instance of the package.
@@ -440,7 +440,7 @@ public interface ModelPackage extends EPackage {
     int CORSO__IS_MODULO = 3;
 
     /**
-     * The feature id for the '<em><b>Direttore</b></em>' reference.
+     * The feature id for the '<em><b>Direttore</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -449,16 +449,16 @@ public interface ModelPackage extends EPackage {
     int CORSO__DIRETTORE = 4;
 
     /**
-     * The feature id for the '<em><b>Vicedirettore</b></em>' reference.
+     * The feature id for the '<em><b>Vice Direttore</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__VICEDIRETTORE = 5;
+    int CORSO__VICE_DIRETTORE = 5;
 
     /**
-     * The feature id for the '<em><b>Segretario</b></em>' reference.
+     * The feature id for the '<em><b>Segretario</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -476,7 +476,7 @@ public interface ModelPackage extends EPackage {
     int CORSO__TESTO = 7;
 
     /**
-     * The feature id for the '<em><b>Bilancio</b></em>' reference.
+     * The feature id for the '<em><b>Bilancio</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -494,7 +494,7 @@ public interface ModelPackage extends EPackage {
     int CORSO__ID = 9;
 
     /**
-     * The feature id for the '<em><b>Cassa</b></em>' reference.
+     * The feature id for the '<em><b>Cassa</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -503,22 +503,13 @@ public interface ModelPackage extends EPackage {
     int CORSO__CASSA = 10;
 
     /**
-     * The feature id for the '<em><b>Iscrizioni</b></em>' reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int CORSO__ISCRIZIONI = 11;
-
-    /**
      * The feature id for the '<em><b>Data Inizio</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__DATA_INIZIO = 12;
+    int CORSO__DATA_INIZIO = 11;
 
     /**
      * The feature id for the '<em><b>Data Fine</b></em>' attribute.
@@ -527,16 +518,16 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__DATA_FINE = 13;
+    int CORSO__DATA_FINE = 12;
 
     /**
-     * The feature id for the '<em><b>Staff Istruttori</b></em>' reference list.
+     * The feature id for the '<em><b>Staff Istruttori</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__STAFF_ISTRUTTORI = 14;
+    int CORSO__STAFF_ISTRUTTORI = 13;
 
     /**
      * The feature id for the '<em><b>Nome</b></em>' attribute.
@@ -545,7 +536,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NOME = 15;
+    int CORSO__NOME = 14;
 
     /**
      * The feature id for the '<em><b>Sigla</b></em>' attribute.
@@ -554,7 +545,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__SIGLA = 16;
+    int CORSO__SIGLA = 15;
 
     /**
      * The feature id for the '<em><b>Equipaggiamento</b></em>' attribute.
@@ -563,7 +554,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__EQUIPAGGIAMENTO = 17;
+    int CORSO__EQUIPAGGIAMENTO = 16;
 
     /**
      * The feature id for the '<em><b>Numero Allievi</b></em>' attribute.
@@ -572,7 +563,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI = 18;
+    int CORSO__NUMERO_ALLIEVI = 17;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Iscrizione Ok</b></em>' attribute.
@@ -581,7 +572,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_ISCRIZIONE_OK = 19;
+    int CORSO__NUMERO_ALLIEVI_ISCRIZIONE_OK = 18;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Iscrizione Ko</b></em>' attribute.
@@ -590,7 +581,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_ISCRIZIONE_KO = 20;
+    int CORSO__NUMERO_ALLIEVI_ISCRIZIONE_KO = 19;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Nuovi Iscritti</b></em>' attribute.
@@ -599,7 +590,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_NUOVI_ISCRITTI = 21;
+    int CORSO__NUMERO_ALLIEVI_NUOVI_ISCRITTI = 20;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Maschi</b></em>' attribute.
@@ -608,7 +599,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_MASCHI = 22;
+    int CORSO__NUMERO_ALLIEVI_MASCHI = 21;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Femmine</b></em>' attribute.
@@ -617,7 +608,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_FEMMINE = 23;
+    int CORSO__NUMERO_ALLIEVI_FEMMINE = 22;
 
     /**
      * The feature id for the '<em><b>Numero Allievi Con Noleggio</b></em>' attribute.
@@ -626,7 +617,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO = 24;
+    int CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO = 23;
 
     /**
      * The feature id for the '<em><b>List Riepilogonoleggio</b></em>' attribute.
@@ -635,34 +626,43 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int CORSO__LIST_RIEPILOGONOLEGGIO = 25;
+    int CORSO__LIST_RIEPILOGONOLEGGIO = 24;
 
     /**
-     * The feature id for the '<em><b>Moduli</b></em>' reference list.
+     * The feature id for the '<em><b>Moduli</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__MODULI = 26;
+    int CORSO__MODULI = 25;
 
     /**
-     * The feature id for the '<em><b>Lezioni Pratiche</b></em>' reference list.
+     * The feature id for the '<em><b>Lezioni Pratiche</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__LEZIONI_PRATICHE = 27;
+    int CORSO__LEZIONI_PRATICHE = 26;
 
     /**
-     * The feature id for the '<em><b>Lezioni Teoriche</b></em>' reference list.
+     * The feature id for the '<em><b>Lezioni Teoriche</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__LEZIONI_TEORICHE = 28;
+    int CORSO__LEZIONI_TEORICHE = 27;
+
+    /**
+     * The feature id for the '<em><b>Iscrizioni</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int CORSO__ISCRIZIONI = 28;
 
     /**
      * The number of structural features of the '<em>Corso</em>' class.
@@ -792,7 +792,7 @@ public interface ModelPackage extends EPackage {
     int ISCRIZIONE__IS_NOLEGGIO = 10;
 
     /**
-     * The feature id for the '<em><b>Materiale Noleggiato</b></em>' reference list.
+     * The feature id for the '<em><b>Materiale Noleggiato</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -882,7 +882,7 @@ public interface ModelPackage extends EPackage {
     int ISCRIZIONE__MESSAGGI_ERRORE = 20;
 
     /**
-     * The feature id for the '<em><b>Allievo</b></em>' reference.
+     * The feature id for the '<em><b>Allievo</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -964,7 +964,7 @@ public interface ModelPackage extends EPackage {
     int LEZIONE__ID = 4;
 
     /**
-     * The feature id for the '<em><b>Presenza Lezione</b></em>' reference.
+     * The feature id for the '<em><b>Presenza Lezione</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1055,7 +1055,7 @@ public interface ModelPackage extends EPackage {
     int LEZIONE_TEORICA__ID = LEZIONE__ID;
 
     /**
-     * The feature id for the '<em><b>Presenza Lezione</b></em>' reference.
+     * The feature id for the '<em><b>Presenza Lezione</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1155,7 +1155,7 @@ public interface ModelPackage extends EPackage {
     int LEZIONE_PRATICA__ID = LEZIONE__ID;
 
     /**
-     * The feature id for the '<em><b>Presenza Lezione</b></em>' reference.
+     * The feature id for the '<em><b>Presenza Lezione</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1182,7 +1182,7 @@ public interface ModelPackage extends EPackage {
     int LEZIONE_PRATICA__LUOGO_RITROVO = LEZIONE_FEATURE_COUNT + 0;
 
     /**
-     * The feature id for the '<em><b>Squadre</b></em>' reference list.
+     * The feature id for the '<em><b>Squadre</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1400,7 +1400,7 @@ public interface ModelPackage extends EPackage {
     int SQUADRA = 8;
 
     /**
-     * The feature id for the '<em><b>Capo Squadra</b></em>' reference.
+     * The feature id for the '<em><b>Capo Squadra</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1409,7 +1409,7 @@ public interface ModelPackage extends EPackage {
     int SQUADRA__CAPO_SQUADRA = 0;
 
     /**
-     * The feature id for the '<em><b>Allievi In Squadra</b></em>' reference list.
+     * The feature id for the '<em><b>Allievi In Squadra</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1436,7 +1436,7 @@ public interface ModelPackage extends EPackage {
     int SQUADRA__NOME = 3;
 
     /**
-     * The feature id for the '<em><b>Staff Squadra</b></em>' reference list.
+     * The feature id for the '<em><b>Staff Squadra</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1482,7 +1482,7 @@ public interface ModelPackage extends EPackage {
     int BILANCIO__ID = 0;
 
     /**
-     * The feature id for the '<em><b>Voci Di Spesa</b></em>' reference list.
+     * The feature id for the '<em><b>Voci Di Spesa</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1591,7 +1591,7 @@ public interface ModelPackage extends EPackage {
     int CASSA__TOTALE = 1;
 
     /**
-     * The feature id for the '<em><b>Ripartizioni Cassa</b></em>' reference list.
+     * The feature id for the '<em><b>Ripartizioni Cassa</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1820,7 +1820,7 @@ public interface ModelPackage extends EPackage {
     int MATERIALE_NOLEGGIATO = 14;
 
     /**
-     * The feature id for the '<em><b>Materiale</b></em>' reference.
+     * The feature id for the '<em><b>Materiale</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1966,7 +1966,7 @@ public interface ModelPackage extends EPackage {
     int ELENCO_CORSI = 16;
 
     /**
-     * The feature id for the '<em><b>Elenco Corsi</b></em>' reference list.
+     * The feature id for the '<em><b>Elenco Corsi</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -2003,7 +2003,7 @@ public interface ModelPackage extends EPackage {
     int ELENCO_ISCRIZIONI = 17;
 
     /**
-     * The feature id for the '<em><b>Elenco Iscrizioni</b></em>' reference list.
+     * The feature id for the '<em><b>Elenco Iscrizioni</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -2030,6 +2030,43 @@ public interface ModelPackage extends EPackage {
     int ELENCO_ISCRIZIONI_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link it.caicividale.scuola.emf.model.impl.ElencoMaterialiImpl <em>Elenco Materiali</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.caicividale.scuola.emf.model.impl.ElencoMaterialiImpl
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getElencoMateriali()
+     * @generated
+     */
+    int ELENCO_MATERIALI = 18;
+
+    /**
+     * The feature id for the '<em><b>Elenco Materiali</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_MATERIALI__ELENCO_MATERIALI = 0;
+
+    /**
+     * The number of structural features of the '<em>Elenco Materiali</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_MATERIALI_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Elenco Materiali</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_MATERIALI_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2037,7 +2074,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESesso()
      * @generated
      */
-    int ESESSO = 18;
+    int ESESSO = 19;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
@@ -2047,7 +2084,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETitoloIstruttore()
      * @generated
      */
-    int ETITOLO_ISTRUTTORE = 19;
+    int ETITOLO_ISTRUTTORE = 20;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
@@ -2057,7 +2094,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
      * @generated
      */
-    int TIPO_ESITO_VALUTAZIONE = 20;
+    int TIPO_ESITO_VALUTAZIONE = 21;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
@@ -2067,7 +2104,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESiglaCorso()
      * @generated
      */
-    int ESIGLA_CORSO = 21;
+    int ESIGLA_CORSO = 22;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
@@ -2077,7 +2114,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
      * @generated
      */
-    int ETIPO_VOCE_DI_SPESA = 22;
+    int ETIPO_VOCE_DI_SPESA = 23;
 
     /**
      * The meta object id for the '<em>Numero Cellulare</em>' data type.
@@ -2087,7 +2124,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getNumeroCellulare()
      * @generated
      */
-    int NUMERO_CELLULARE = 23;
+    int NUMERO_CELLULARE = 24;
 
     /**
      * The meta object id for the '<em>EMail</em>' data type.
@@ -2097,7 +2134,27 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getEMail()
      * @generated
      */
-    int EMAIL = 24;
+    int EMAIL = 25;
+
+    /**
+     * The meta object id for the '<em>ELocal Date</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see java.time.LocalDate
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDate()
+     * @generated
+     */
+    int ELOCAL_DATE = 26;
+
+    /**
+     * The meta object id for the '<em>ELocal Date Time</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see java.time.LocalDateTime
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDateTime()
+     * @generated
+     */
+    int ELOCAL_DATE_TIME = 27;
 
     /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Persona <em>Persona</em>}'.
@@ -2350,10 +2407,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_IsModulo();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Corso#getDirettore <em>Direttore</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Corso#getDirettore <em>Direttore</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Direttore</em>'.
+     * @return the meta object for the containment reference '<em>Direttore</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getDirettore()
      * @see #getCorso()
      * @generated
@@ -2361,21 +2418,21 @@ public interface ModelPackage extends EPackage {
     EReference getCorso_Direttore();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Corso#getVicedirettore <em>Vicedirettore</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Corso#getViceDirettore <em>Vice Direttore</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Vicedirettore</em>'.
-     * @see it.caicividale.scuola.emf.model.Corso#getVicedirettore()
+     * @return the meta object for the containment reference '<em>Vice Direttore</em>'.
+     * @see it.caicividale.scuola.emf.model.Corso#getViceDirettore()
      * @see #getCorso()
      * @generated
      */
-    EReference getCorso_Vicedirettore();
+    EReference getCorso_ViceDirettore();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Corso#getSegretario <em>Segretario</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Corso#getSegretario <em>Segretario</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Segretario</em>'.
+     * @return the meta object for the containment reference '<em>Segretario</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getSegretario()
      * @see #getCorso()
      * @generated
@@ -2394,10 +2451,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_Testo();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Corso#getBilancio <em>Bilancio</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Corso#getBilancio <em>Bilancio</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Bilancio</em>'.
+     * @return the meta object for the containment reference '<em>Bilancio</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getBilancio()
      * @see #getCorso()
      * @generated
@@ -2416,10 +2473,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_Id();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Corso#getCassa <em>Cassa</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Corso#getCassa <em>Cassa</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Cassa</em>'.
+     * @return the meta object for the containment reference '<em>Cassa</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getCassa()
      * @see #getCorso()
      * @generated
@@ -2427,10 +2484,10 @@ public interface ModelPackage extends EPackage {
     EReference getCorso_Cassa();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Corso#getIscrizioni <em>Iscrizioni</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getIscrizioni <em>Iscrizioni</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Iscrizioni</em>'.
+     * @return the meta object for the containment reference list '<em>Iscrizioni</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getIscrizioni()
      * @see #getCorso()
      * @generated
@@ -2460,10 +2517,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_DataFine();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Corso#getStaffIstruttori <em>Staff Istruttori</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getStaffIstruttori <em>Staff Istruttori</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Staff Istruttori</em>'.
+     * @return the meta object for the containment reference list '<em>Staff Istruttori</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getStaffIstruttori()
      * @see #getCorso()
      * @generated
@@ -2592,10 +2649,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_ListRiepilogonoleggio();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Corso#getModuli <em>Moduli</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getModuli <em>Moduli</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Moduli</em>'.
+     * @return the meta object for the containment reference list '<em>Moduli</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getModuli()
      * @see #getCorso()
      * @generated
@@ -2603,10 +2660,10 @@ public interface ModelPackage extends EPackage {
     EReference getCorso_Moduli();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Corso#getLezioniPratiche <em>Lezioni Pratiche</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getLezioniPratiche <em>Lezioni Pratiche</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Lezioni Pratiche</em>'.
+     * @return the meta object for the containment reference list '<em>Lezioni Pratiche</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getLezioniPratiche()
      * @see #getCorso()
      * @generated
@@ -2614,10 +2671,10 @@ public interface ModelPackage extends EPackage {
     EReference getCorso_LezioniPratiche();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Corso#getLezioniTeoriche <em>Lezioni Teoriche</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getLezioniTeoriche <em>Lezioni Teoriche</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Lezioni Teoriche</em>'.
+     * @return the meta object for the containment reference list '<em>Lezioni Teoriche</em>'.
      * @see it.caicividale.scuola.emf.model.Corso#getLezioniTeoriche()
      * @see #getCorso()
      * @generated
@@ -2756,10 +2813,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getIscrizione_IsNoleggio();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Materiale Noleggiato</em>'.
+     * @return the meta object for the containment reference list '<em>Materiale Noleggiato</em>'.
      * @see it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato()
      * @see #getIscrizione()
      * @generated
@@ -2866,10 +2923,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getIscrizione_MessaggiErrore();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Iscrizione#getAllievo <em>Allievo</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Iscrizione#getAllievo <em>Allievo</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Allievo</em>'.
+     * @return the meta object for the containment reference '<em>Allievo</em>'.
      * @see it.caicividale.scuola.emf.model.Iscrizione#getAllievo()
      * @see #getIscrizione()
      * @generated
@@ -2942,10 +2999,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getLezione_Id();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Lezione#getPresenzaLezione <em>Presenza Lezione</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Lezione#getPresenzaLezione <em>Presenza Lezione</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Presenza Lezione</em>'.
+     * @return the meta object for the containment reference '<em>Presenza Lezione</em>'.
      * @see it.caicividale.scuola.emf.model.Lezione#getPresenzaLezione()
      * @see #getLezione()
      * @generated
@@ -3006,10 +3063,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getLezionePratica_LuogoRitrovo();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.LezionePratica#getSquadre <em>Squadre</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.LezionePratica#getSquadre <em>Squadre</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Squadre</em>'.
+     * @return the meta object for the containment reference list '<em>Squadre</em>'.
      * @see it.caicividale.scuola.emf.model.LezionePratica#getSquadre()
      * @see #getLezionePratica()
      * @generated
@@ -3059,10 +3116,10 @@ public interface ModelPackage extends EPackage {
     EClass getSquadra();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.Squadra#getCapoSquadra <em>Capo Squadra</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Squadra#getCapoSquadra <em>Capo Squadra</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Capo Squadra</em>'.
+     * @return the meta object for the containment reference '<em>Capo Squadra</em>'.
      * @see it.caicividale.scuola.emf.model.Squadra#getCapoSquadra()
      * @see #getSquadra()
      * @generated
@@ -3070,10 +3127,10 @@ public interface ModelPackage extends EPackage {
     EReference getSquadra_CapoSquadra();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Squadra#getAllieviInSquadra <em>Allievi In Squadra</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Squadra#getAllieviInSquadra <em>Allievi In Squadra</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Allievi In Squadra</em>'.
+     * @return the meta object for the containment reference list '<em>Allievi In Squadra</em>'.
      * @see it.caicividale.scuola.emf.model.Squadra#getAllieviInSquadra()
      * @see #getSquadra()
      * @generated
@@ -3103,10 +3160,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getSquadra_Nome();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Squadra#getStaffSquadra <em>Staff Squadra</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Squadra#getStaffSquadra <em>Staff Squadra</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Staff Squadra</em>'.
+     * @return the meta object for the containment reference list '<em>Staff Squadra</em>'.
      * @see it.caicividale.scuola.emf.model.Squadra#getStaffSquadra()
      * @see #getSquadra()
      * @generated
@@ -3135,10 +3192,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getBilancio_Id();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Bilancio#getVociDiSpesa <em>Voci Di Spesa</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Bilancio#getVociDiSpesa <em>Voci Di Spesa</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Voci Di Spesa</em>'.
+     * @return the meta object for the containment reference list '<em>Voci Di Spesa</em>'.
      * @see it.caicividale.scuola.emf.model.Bilancio#getVociDiSpesa()
      * @see #getBilancio()
      * @generated
@@ -3244,10 +3301,10 @@ public interface ModelPackage extends EPackage {
     EAttribute getCassa_Totale();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.Cassa#getRipartizioniCassa <em>Ripartizioni Cassa</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Cassa#getRipartizioniCassa <em>Ripartizioni Cassa</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Ripartizioni Cassa</em>'.
+     * @return the meta object for the containment reference list '<em>Ripartizioni Cassa</em>'.
      * @see it.caicividale.scuola.emf.model.Cassa#getRipartizioniCassa()
      * @see #getCassa()
      * @generated
@@ -3427,10 +3484,10 @@ public interface ModelPackage extends EPackage {
     EClass getMaterialeNoleggiato();
 
     /**
-     * Returns the meta object for the reference '{@link it.caicividale.scuola.emf.model.MaterialeNoleggiato#getMateriale <em>Materiale</em>}'.
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.MaterialeNoleggiato#getMateriale <em>Materiale</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference '<em>Materiale</em>'.
+     * @return the meta object for the containment reference '<em>Materiale</em>'.
      * @see it.caicividale.scuola.emf.model.MaterialeNoleggiato#getMateriale()
      * @see #getMaterialeNoleggiato()
      * @generated
@@ -3557,10 +3614,10 @@ public interface ModelPackage extends EPackage {
     EClass getElencoCorsi();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.ElencoCorsi#getElencoCorsi <em>Elenco Corsi</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.ElencoCorsi#getElencoCorsi <em>Elenco Corsi</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Elenco Corsi</em>'.
+     * @return the meta object for the containment reference list '<em>Elenco Corsi</em>'.
      * @see it.caicividale.scuola.emf.model.ElencoCorsi#getElencoCorsi()
      * @see #getElencoCorsi()
      * @generated
@@ -3578,15 +3635,36 @@ public interface ModelPackage extends EPackage {
     EClass getElencoIscrizioni();
 
     /**
-     * Returns the meta object for the reference list '{@link it.caicividale.scuola.emf.model.ElencoIscrizioni#getElencoIscrizioni <em>Elenco Iscrizioni</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.ElencoIscrizioni#getElencoIscrizioni <em>Elenco Iscrizioni</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the reference list '<em>Elenco Iscrizioni</em>'.
+     * @return the meta object for the containment reference list '<em>Elenco Iscrizioni</em>'.
      * @see it.caicividale.scuola.emf.model.ElencoIscrizioni#getElencoIscrizioni()
      * @see #getElencoIscrizioni()
      * @generated
      */
     EReference getElencoIscrizioni_ElencoIscrizioni();
+
+    /**
+     * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.ElencoMateriali <em>Elenco Materiali</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Elenco Materiali</em>'.
+     * @see it.caicividale.scuola.emf.model.ElencoMateriali
+     * @generated
+     */
+    EClass getElencoMateriali();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.ElencoMateriali#getElencoMateriali <em>Elenco Materiali</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Elenco Materiali</em>'.
+     * @see it.caicividale.scuola.emf.model.ElencoMateriali#getElencoMateriali()
+     * @see #getElencoMateriali()
+     * @generated
+     */
+    EReference getElencoMateriali_ElencoMateriali();
 
     /**
      * Returns the meta object for enum '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}'.
@@ -3659,6 +3737,28 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EDataType getEMail();
+
+    /**
+     * Returns the meta object for data type '{@link java.time.LocalDate <em>ELocal Date</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>ELocal Date</em>'.
+     * @see java.time.LocalDate
+     * @model instanceClass="java.time.LocalDate"
+     * @generated
+     */
+    EDataType getELocalDate();
+
+    /**
+     * Returns the meta object for data type '{@link java.time.LocalDateTime <em>ELocal Date Time</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>ELocal Date Time</em>'.
+     * @see java.time.LocalDateTime
+     * @model instanceClass="java.time.LocalDateTime"
+     * @generated
+     */
+    EDataType getELocalDateTime();
 
     /**
      * Returns the factory that creates the instances of the model.
@@ -3874,7 +3974,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__IS_MODULO = eINSTANCE.getCorso_IsModulo();
 
 	/**
-		 * The meta object literal for the '<em><b>Direttore</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Direttore</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -3882,15 +3982,15 @@ public interface ModelPackage extends EPackage {
 	EReference CORSO__DIRETTORE = eINSTANCE.getCorso_Direttore();
 
 	/**
-		 * The meta object literal for the '<em><b>Vicedirettore</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Vice Direttore</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-	EReference CORSO__VICEDIRETTORE = eINSTANCE.getCorso_Vicedirettore();
+	EReference CORSO__VICE_DIRETTORE = eINSTANCE.getCorso_ViceDirettore();
 
 	/**
-		 * The meta object literal for the '<em><b>Segretario</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Segretario</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -3906,7 +4006,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__TESTO = eINSTANCE.getCorso_Testo();
 
 	/**
-		 * The meta object literal for the '<em><b>Bilancio</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Bilancio</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -3922,7 +4022,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__ID = eINSTANCE.getCorso_Id();
 
 	/**
-		 * The meta object literal for the '<em><b>Cassa</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Cassa</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -3930,9 +4030,9 @@ public interface ModelPackage extends EPackage {
 	EReference CORSO__CASSA = eINSTANCE.getCorso_Cassa();
 
 	/**
-		 * The meta object literal for the '<em><b>Iscrizioni</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Iscrizioni</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 	EReference CORSO__ISCRIZIONI = eINSTANCE.getCorso_Iscrizioni();
@@ -3954,7 +4054,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__DATA_FINE = eINSTANCE.getCorso_DataFine();
 
 	/**
-		 * The meta object literal for the '<em><b>Staff Istruttori</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Staff Istruttori</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4050,7 +4150,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__LIST_RIEPILOGONOLEGGIO = eINSTANCE.getCorso_ListRiepilogonoleggio();
 
 	/**
-		 * The meta object literal for the '<em><b>Moduli</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Moduli</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4058,7 +4158,7 @@ public interface ModelPackage extends EPackage {
 	EReference CORSO__MODULI = eINSTANCE.getCorso_Moduli();
 
 	/**
-		 * The meta object literal for the '<em><b>Lezioni Pratiche</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Lezioni Pratiche</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4066,7 +4166,7 @@ public interface ModelPackage extends EPackage {
 	EReference CORSO__LEZIONI_PRATICHE = eINSTANCE.getCorso_LezioniPratiche();
 
 	/**
-		 * The meta object literal for the '<em><b>Lezioni Teoriche</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Lezioni Teoriche</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4173,7 +4273,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute ISCRIZIONE__IS_NOLEGGIO = eINSTANCE.getIscrizione_IsNoleggio();
 
 	/**
-		 * The meta object literal for the '<em><b>Materiale Noleggiato</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Materiale Noleggiato</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4254,7 +4354,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute ISCRIZIONE__MESSAGGI_ERRORE = eINSTANCE.getIscrizione_MessaggiErrore();
 
 	/**
-		 * The meta object literal for the '<em><b>Allievo</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Allievo</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4312,7 +4412,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute LEZIONE__ID = eINSTANCE.getLezione_Id();
 
 	/**
-		 * The meta object literal for the '<em><b>Presenza Lezione</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Presenza Lezione</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4364,7 +4464,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute LEZIONE_PRATICA__LUOGO_RITROVO = eINSTANCE.getLezionePratica_LuogoRitrovo();
 
 	/**
-		 * The meta object literal for the '<em><b>Squadre</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Squadre</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4408,7 +4508,7 @@ public interface ModelPackage extends EPackage {
 	EClass SQUADRA = eINSTANCE.getSquadra();
 
 	/**
-		 * The meta object literal for the '<em><b>Capo Squadra</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Capo Squadra</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4416,7 +4516,7 @@ public interface ModelPackage extends EPackage {
 	EReference SQUADRA__CAPO_SQUADRA = eINSTANCE.getSquadra_CapoSquadra();
 
 	/**
-		 * The meta object literal for the '<em><b>Allievi In Squadra</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Allievi In Squadra</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4440,7 +4540,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute SQUADRA__NOME = eINSTANCE.getSquadra_Nome();
 
 	/**
-		 * The meta object literal for the '<em><b>Staff Squadra</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Staff Squadra</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4466,7 +4566,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute BILANCIO__ID = eINSTANCE.getBilancio_Id();
 
 	/**
-		 * The meta object literal for the '<em><b>Voci Di Spesa</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Voci Di Spesa</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4548,7 +4648,7 @@ public interface ModelPackage extends EPackage {
 	EAttribute CASSA__TOTALE = eINSTANCE.getCassa_Totale();
 
 	/**
-		 * The meta object literal for the '<em><b>Ripartizioni Cassa</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Ripartizioni Cassa</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4692,7 +4792,7 @@ public interface ModelPackage extends EPackage {
 	EClass MATERIALE_NOLEGGIATO = eINSTANCE.getMaterialeNoleggiato();
 
 	/**
-		 * The meta object literal for the '<em><b>Materiale</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Materiale</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
@@ -4792,7 +4892,7 @@ public interface ModelPackage extends EPackage {
 	EClass ELENCO_CORSI = eINSTANCE.getElencoCorsi();
 
 	/**
-		 * The meta object literal for the '<em><b>Elenco Corsi</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Elenco Corsi</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4810,12 +4910,30 @@ public interface ModelPackage extends EPackage {
 	EClass ELENCO_ISCRIZIONI = eINSTANCE.getElencoIscrizioni();
 
 	/**
-		 * The meta object literal for the '<em><b>Elenco Iscrizioni</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Elenco Iscrizioni</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 	EReference ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI = eINSTANCE.getElencoIscrizioni_ElencoIscrizioni();
+
+	/**
+		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.impl.ElencoMaterialiImpl <em>Elenco Materiali</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.caicividale.scuola.emf.model.impl.ElencoMaterialiImpl
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getElencoMateriali()
+		 * @generated
+		 */
+	EClass ELENCO_MATERIALI = eINSTANCE.getElencoMateriali();
+
+	/**
+		 * The meta object literal for the '<em><b>Elenco Materiali</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference ELENCO_MATERIALI__ELENCO_MATERIALI = eINSTANCE.getElencoMateriali_ElencoMateriali();
 
 	/**
 		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.
@@ -4886,6 +5004,26 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EDataType EMAIL = eINSTANCE.getEMail();
+
+	/**
+		 * The meta object literal for the '<em>ELocal Date</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.time.LocalDate
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDate()
+		 * @generated
+		 */
+	EDataType ELOCAL_DATE = eINSTANCE.getELocalDate();
+
+	/**
+		 * The meta object literal for the '<em>ELocal Date Time</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.time.LocalDateTime
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDateTime()
+		 * @generated
+		 */
+	EDataType ELOCAL_DATE_TIME = eINSTANCE.getELocalDateTime();
 
     }
 

@@ -22,6 +22,7 @@ import it.caicividale.scuola.emf.model.ETipoVoceDiSpesa;
 import it.caicividale.scuola.emf.model.ETitoloIstruttore;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.ElencoIscrizioni;
+import it.caicividale.scuola.emf.model.ElencoMateriali;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.Lezione;
@@ -38,6 +39,8 @@ import it.caicividale.scuola.emf.model.TipoEsitoValutazione;
 import it.caicividale.scuola.emf.model.VoceDiSpesa;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * <!-- begin-user-doc -->
@@ -177,6 +180,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * <!-- end-user-doc -->
      * @generated
      */
+    private EClass elencoMaterialiEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
     private EEnum eSessoEEnum = null;
 
     /**
@@ -220,6 +230,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EDataType eMailEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType eLocalDateEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType eLocalDateTimeEDataType = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -531,7 +555,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EReference getCorso_Vicedirettore() {
+    public EReference getCorso_ViceDirettore() {
 	return (EReference) corsoEClass.getEStructuralFeatures().get(5);
     }
 
@@ -592,7 +616,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EReference getCorso_Iscrizioni() {
-	return (EReference) corsoEClass.getEStructuralFeatures().get(11);
+	return (EReference) corsoEClass.getEStructuralFeatures().get(28);
     }
 
     /**
@@ -602,7 +626,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_DataInizio() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(12);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(11);
     }
 
     /**
@@ -612,7 +636,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_DataFine() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(13);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(12);
     }
 
     /**
@@ -622,7 +646,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EReference getCorso_StaffIstruttori() {
-	return (EReference) corsoEClass.getEStructuralFeatures().get(14);
+	return (EReference) corsoEClass.getEStructuralFeatures().get(13);
     }
 
     /**
@@ -632,7 +656,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_Nome() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(15);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(14);
     }
 
     /**
@@ -642,7 +666,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_Sigla() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(16);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(15);
     }
 
     /**
@@ -652,7 +676,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_Equipaggiamento() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(17);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(16);
     }
 
     /**
@@ -662,7 +686,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllievi() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(18);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(17);
     }
 
     /**
@@ -672,7 +696,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviIscrizioneOk() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(19);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(18);
     }
 
     /**
@@ -682,7 +706,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviIscrizioneKo() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(20);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(19);
     }
 
     /**
@@ -692,7 +716,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviNuoviIscritti() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(21);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(20);
     }
 
     /**
@@ -702,7 +726,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviMaschi() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(22);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(21);
     }
 
     /**
@@ -712,7 +736,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviFemmine() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(23);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(22);
     }
 
     /**
@@ -722,7 +746,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_NumeroAllieviConNoleggio() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(24);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(23);
     }
 
     /**
@@ -732,7 +756,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EAttribute getCorso_ListRiepilogonoleggio() {
-	return (EAttribute) corsoEClass.getEStructuralFeatures().get(25);
+	return (EAttribute) corsoEClass.getEStructuralFeatures().get(24);
     }
 
     /**
@@ -742,7 +766,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EReference getCorso_Moduli() {
-	return (EReference) corsoEClass.getEStructuralFeatures().get(26);
+	return (EReference) corsoEClass.getEStructuralFeatures().get(25);
     }
 
     /**
@@ -752,7 +776,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EReference getCorso_LezioniPratiche() {
-	return (EReference) corsoEClass.getEStructuralFeatures().get(27);
+	return (EReference) corsoEClass.getEStructuralFeatures().get(26);
     }
 
     /**
@@ -762,7 +786,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      */
     @Override
     public EReference getCorso_LezioniTeoriche() {
-	return (EReference) corsoEClass.getEStructuralFeatures().get(28);
+	return (EReference) corsoEClass.getEStructuralFeatures().get(27);
     }
 
     /**
@@ -1661,6 +1685,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EClass getElencoMateriali() {
+	return elencoMaterialiEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EReference getElencoMateriali_ElencoMateriali() {
+	return (EReference) elencoMaterialiEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public EEnum getESesso() {
 	return eSessoEEnum;
     }
@@ -1731,6 +1775,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EDataType getELocalDate() {
+	return eLocalDateEDataType;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EDataType getELocalDateTime() {
+	return eLocalDateTimeEDataType;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public ModelFactory getModelFactory() {
 	return (ModelFactory) getEFactoryInstance();
     }
@@ -1781,13 +1845,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEAttribute(corsoEClass, CORSO__QUOTA_CAPARRA);
 	createEAttribute(corsoEClass, CORSO__IS_MODULO);
 	createEReference(corsoEClass, CORSO__DIRETTORE);
-	createEReference(corsoEClass, CORSO__VICEDIRETTORE);
+	createEReference(corsoEClass, CORSO__VICE_DIRETTORE);
 	createEReference(corsoEClass, CORSO__SEGRETARIO);
 	createEAttribute(corsoEClass, CORSO__TESTO);
 	createEReference(corsoEClass, CORSO__BILANCIO);
 	createEAttribute(corsoEClass, CORSO__ID);
 	createEReference(corsoEClass, CORSO__CASSA);
-	createEReference(corsoEClass, CORSO__ISCRIZIONI);
 	createEAttribute(corsoEClass, CORSO__DATA_INIZIO);
 	createEAttribute(corsoEClass, CORSO__DATA_FINE);
 	createEReference(corsoEClass, CORSO__STAFF_ISTRUTTORI);
@@ -1805,6 +1868,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEReference(corsoEClass, CORSO__MODULI);
 	createEReference(corsoEClass, CORSO__LEZIONI_PRATICHE);
 	createEReference(corsoEClass, CORSO__LEZIONI_TEORICHE);
+	createEReference(corsoEClass, CORSO__ISCRIZIONI);
 
 	iscrizioneEClass = createEClass(ISCRIZIONE);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__IS_MODULO_ISCRIZIONE);
@@ -1910,6 +1974,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	elencoIscrizioniEClass = createEClass(ELENCO_ISCRIZIONI);
 	createEReference(elencoIscrizioniEClass, ELENCO_ISCRIZIONI__ELENCO_ISCRIZIONI);
 
+	elencoMaterialiEClass = createEClass(ELENCO_MATERIALI);
+	createEReference(elencoMaterialiEClass, ELENCO_MATERIALI__ELENCO_MATERIALI);
+
 	// Create enums
 	eSessoEEnum = createEEnum(ESESSO);
 	eTitoloIstruttoreEEnum = createEEnum(ETITOLO_ISTRUTTORE);
@@ -1920,6 +1987,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	// Create data types
 	numeroCellulareEDataType = createEDataType(NUMERO_CELLULARE);
 	eMailEDataType = createEDataType(EMAIL);
+	eLocalDateEDataType = createEDataType(ELOCAL_DATE);
+	eLocalDateTimeEDataType = createEDataType(ELOCAL_DATE_TIME);
     }
 
     /**
@@ -1979,7 +2048,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getPersona_ResidenzaCap(), ecorePackage.getEString(), "residenzaCap", null, 1, 1, Persona.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_NascitaData(), ecorePackage.getEDate(), "nascitaData", null, 1, 1, Persona.class,
+	initEAttribute(getPersona_NascitaData(), this.getELocalDate(), "nascitaData", null, 1, 1, Persona.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getPersona_NascitaCitta(), ecorePackage.getEString(), "nascitaCitta", null, 0, 1, Persona.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2011,33 +2080,30 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getCorso_IsModulo(), ecorePackage.getEBooleanObject(), "isModulo", "False", 1, 1, Corso.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_Direttore(), this.getIstruttore(), null, "direttore", null, 1, 1, Corso.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEReference(getCorso_Vicedirettore(), this.getIstruttore(), null, "vicedirettore", null, 0, 1, Corso.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+	initEReference(getCorso_ViceDirettore(), this.getIstruttore(), null, "viceDirettore", null, 0, 1, Corso.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_Segretario(), this.getPersona(), null, "segretario", null, 1, 1, Corso.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getCorso_Testo(), ecorePackage.getEString(), "testo", null, 0, 1, Corso.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_Bilancio(), this.getBilancio(), null, "bilancio", null, 0, 1, Corso.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getCorso_Id(), ecorePackage.getELongObject(), "id", null, 1, 1, Corso.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_Cassa(), this.getCassa(), null, "cassa", null, 0, 1, Corso.class, !IS_TRANSIENT,
-		!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+		!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 		IS_ORDERED);
-	initEReference(getCorso_Iscrizioni(), this.getIscrizione(), null, "iscrizioni", null, 0, -1, Corso.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getCorso_DataInizio(), ecorePackage.getEDate(), "dataInizio", null, 1, 1, Corso.class,
+	initEAttribute(getCorso_DataInizio(), this.getELocalDate(), "dataInizio", null, 1, 1, Corso.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getCorso_DataFine(), ecorePackage.getEDate(), "dataFine", null, 1, 1, Corso.class, !IS_TRANSIENT,
+	initEAttribute(getCorso_DataFine(), this.getELocalDate(), "dataFine", null, 1, 1, Corso.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_StaffIstruttori(), this.getIstruttore(), null, "staffIstruttori", null, 0, -1,
-		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getCorso_Nome(), ecorePackage.getEString(), "nome", null, 1, 1, Corso.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2071,14 +2137,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		Corso.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED,
 		!IS_ORDERED);
 	initEReference(getCorso_Moduli(), this.getCorso(), null, "moduli", null, 0, -1, Corso.class, !IS_TRANSIENT,
-		!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+		!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 		IS_ORDERED);
 	initEReference(getCorso_LezioniPratiche(), this.getLezionePratica(), null, "lezioniPratiche", null, 0, -1,
-		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getCorso_LezioniTeoriche(), this.getLezioneTeorica(), null, "lezioniTeoriche", null, 0, -1,
-		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Corso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEReference(getCorso_Iscrizioni(), this.getIscrizione(), null, "iscrizioni", null, 0, -1, Corso.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(iscrizioneEClass, Iscrizione.class, "Iscrizione", !IS_ABSTRACT, !IS_INTERFACE,
 		IS_GENERATED_INSTANCE_CLASS);
@@ -2091,7 +2160,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getIscrizione_IsNuovoAllievo(), ecorePackage.getEBooleanObject(), "isNuovoAllievo", "False", 0,
 		1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);
-	initEAttribute(getIscrizione_DataScadenzaCertificatoMedico(), ecorePackage.getEDate(),
+	initEAttribute(getIscrizione_DataScadenzaCertificatoMedico(), this.getELocalDate(),
 		"dataScadenzaCertificatoMedico", null, 0, 1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE,
 		IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsBollinoAnnoCorso(), ecorePackage.getEBooleanObject(), "isBollinoAnnoCorso",
@@ -2112,8 +2181,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 		IS_DERIVED, !IS_ORDERED);
 	initEReference(getIscrizione_MaterialeNoleggiato(), this.getMaterialeNoleggiato(), null, "materialeNoleggiato",
-		null, 0, -1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-		IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		null, 0, -1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsIscrizioneOk(), ecorePackage.getEBooleanObject(), "isIscrizioneOk", "False", 1,
 		1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 		IS_DERIVED, !IS_ORDERED);
@@ -2124,8 +2193,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		"False", 0, 1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsCertificatoMedicoOk(), ecorePackage.getEBooleanObject(), "isCertificatoMedicoOk",
-		"False", 0, 1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-		!IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+		"False", 0, 1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsQuotaVersataOk(), ecorePackage.getEBooleanObject(), "isQuotaVersataOk", "False",
 		0, 1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 		IS_DERIVED, !IS_ORDERED);
@@ -2133,8 +2202,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		null, 0, 1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 		!IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 	initEAttribute(getIscrizione_TotaleDaVersare(), ecorePackage.getEFloatObject(), "totaleDaVersare", null, 0, 1,
-		Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-		IS_DERIVED, !IS_ORDERED);
+		Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_DifferenzaTotaleVersatoTotaleDaVersare(), ecorePackage.getEFloatObject(),
 		"differenzaTotaleVersatoTotaleDaVersare", null, 0, 1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE,
 		!IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -2142,13 +2211,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 		IS_DERIVED, !IS_ORDERED);
 	initEReference(getIscrizione_Allievo(), this.getAllievo(), null, "allievo", null, 1, 1, Iscrizione.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(lezioneEClass, Lezione.class, "Lezione", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	initEAttribute(getLezione_Titolo(), ecorePackage.getEString(), "titolo", null, 1, 1, Lezione.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getLezione_DataSvolgimento(), ecorePackage.getEDate(), "dataSvolgimento", null, 0, 1,
+	initEAttribute(getLezione_DataSvolgimento(), this.getELocalDateTime(), "dataSvolgimento", null, 0, 1,
 		Lezione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getLezione_LuogoSvolgimento(), ecorePackage.getEString(), "luogoSvolgimento", null, 0, 1,
@@ -2159,7 +2228,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getLezione_Id(), ecorePackage.getELongObject(), "id", null, 1, 1, Lezione.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getLezione_PresenzaLezione(), this.getPresenzaLezione(), null, "presenzaLezione", null, 1, 1,
-		Lezione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Lezione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getLezione_ArgomentiTrattati(), ecorePackage.getEString(), "argomentiTrattati", null, 1, 1,
 		Lezione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -2177,7 +2246,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		LezionePratica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);
 	initEReference(getLezionePratica_Squadre(), this.getSquadra(), null, "squadre", null, 1, -1,
-		LezionePratica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		LezionePratica.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(istruttoreEClass, Istruttore.class, "Istruttore", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2190,17 +2259,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 	initEClass(squadraEClass, Squadra.class, "Squadra", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	initEReference(getSquadra_CapoSquadra(), this.getIstruttore(), null, "capoSquadra", null, 1, 1, Squadra.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getSquadra_AllieviInSquadra(), this.getAllievo(), null, "allieviInSquadra", null, 1, -1,
-		Squadra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Squadra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getSquadra_Id(), ecorePackage.getELongObject(), "id", null, 1, 1, Squadra.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getSquadra_Nome(), ecorePackage.getEString(), "nome", null, 0, 1, Squadra.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getSquadra_StaffSquadra(), this.getIstruttore(), null, "staffSquadra", null, 0, -1,
-		Squadra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Squadra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(bilancioEClass, Bilancio.class, "Bilancio", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2208,7 +2277,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getBilancio_Id(), ecorePackage.getELongObject(), "id", null, 1, 1, Bilancio.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEReference(getBilancio_VociDiSpesa(), this.getVoceDiSpesa(), null, "vociDiSpesa", null, 0, -1,
-		Bilancio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		Bilancio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getBilancio_Nota(), ecorePackage.getEString(), "nota", null, 0, 1, Bilancio.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2218,8 +2287,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getBilancio_TotaleUscite(), ecorePackage.getEFloat(), "totaleUscite", null, 1, 1, Bilancio.class,
 		IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 	initEAttribute(getBilancio_TotaleIscrizioni(), ecorePackage.getEFloat(), "totaleIscrizioni", null, 1, 1,
-		Bilancio.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-		IS_DERIVED, !IS_ORDERED);
+		Bilancio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getBilancio_TotaleEntrateConIscrizioni(), ecorePackage.getEFloat(), "totaleEntrateConIscrizioni",
 		null, 1, 1, Bilancio.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 		!IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
@@ -2232,7 +2301,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getCassa_Totale(), ecorePackage.getEFloat(), "totale", null, 1, 1, Cassa.class, IS_TRANSIENT,
 		IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
 	initEReference(getCassa_RipartizioniCassa(), this.getRipartizioneCassa(), null, "ripartizioniCassa", null, 0,
-		-1, Cassa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		-1, Cassa.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getCassa_Nota(), ecorePackage.getEString(), "nota", null, 0, 1, Cassa.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2278,12 +2347,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEClass(materialeNoleggiatoEClass, MaterialeNoleggiato.class, "MaterialeNoleggiato", !IS_ABSTRACT,
 		!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	initEReference(getMaterialeNoleggiato_Materiale(), this.getDizMateriale(), null, "materiale", null, 1, 1,
-		MaterialeNoleggiato.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-		IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		MaterialeNoleggiato.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getMaterialeNoleggiato_Quantita(), ecorePackage.getEShort(), "quantita", null, 1, 1,
 		MaterialeNoleggiato.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getMaterialeNoleggiato_DataNoleggio(), ecorePackage.getEDate(), "dataNoleggio", null, 1, 1,
+	initEAttribute(getMaterialeNoleggiato_DataNoleggio(), this.getELocalDate(), "dataNoleggio", null, 1, 1,
 		MaterialeNoleggiato.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 		IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getMaterialeNoleggiato_Id(), ecorePackage.getELong(), "id", null, 1, 1,
@@ -2302,20 +2371,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getVoceDiSpesa_Nota(), ecorePackage.getEString(), "nota", null, 0, 1, VoceDiSpesa.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getVoceDiSpesa_Data(), ecorePackage.getEDate(), "data", null, 1, 1, VoceDiSpesa.class,
+	initEAttribute(getVoceDiSpesa_Data(), this.getELocalDate(), "data", null, 1, 1, VoceDiSpesa.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(elencoCorsiEClass, ElencoCorsi.class, "ElencoCorsi", !IS_ABSTRACT, !IS_INTERFACE,
 		IS_GENERATED_INSTANCE_CLASS);
 	initEReference(getElencoCorsi_ElencoCorsi(), this.getCorso(), null, "elencoCorsi", null, 0, -1,
-		ElencoCorsi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		ElencoCorsi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(elencoIscrizioniEClass, ElencoIscrizioni.class, "ElencoIscrizioni", !IS_ABSTRACT, !IS_INTERFACE,
 		IS_GENERATED_INSTANCE_CLASS);
 	initEReference(getElencoIscrizioni_ElencoIscrizioni(), this.getIscrizione(), null, "elencoIscrizioni", null, 0,
-		-1, ElencoIscrizioni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-		IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		-1, ElencoIscrizioni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(elencoMaterialiEClass, ElencoMateriali.class, "ElencoMateriali", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEReference(getElencoMateriali_ElencoMateriali(), this.getDizMateriale(), null, "elencoMateriali", null, 0,
+		-1, ElencoMateriali.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	// Initialize enums and add enum literals
 	initEEnum(eSessoEEnum, ESesso.class, "ESesso");
@@ -2362,6 +2437,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEDataType(numeroCellulareEDataType, NumeroCellulare.class, "NumeroCellulare", IS_SERIALIZABLE,
 		!IS_GENERATED_INSTANCE_CLASS);
 	initEDataType(eMailEDataType, EMail.class, "EMail", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+	initEDataType(eLocalDateEDataType, LocalDate.class, "ELocalDate", IS_SERIALIZABLE,
+		!IS_GENERATED_INSTANCE_CLASS);
+	initEDataType(eLocalDateTimeEDataType, LocalDateTime.class, "ELocalDateTime", IS_SERIALIZABLE,
+		!IS_GENERATED_INSTANCE_CLASS);
 
 	// Create resource
 	createResource(eNS_URI);

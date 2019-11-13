@@ -7,7 +7,7 @@ import org.eclipse.jface.viewers.ViewerCell;
 
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.emf.model.util.UtilsService;
 
 public class MaterialeNoleggiatoLabelProvider extends CellLabelProvider {

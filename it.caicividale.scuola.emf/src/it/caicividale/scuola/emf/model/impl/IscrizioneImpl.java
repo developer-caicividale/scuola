@@ -2,9 +2,9 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,19 +12,13 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.Allievo;
-import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
-import it.caicividale.scuola.emf.model.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
-import it.caicividale.scuola.emf.model.util.UtilsService;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object
@@ -59,7 +53,7 @@ import it.caicividale.scuola.emf.model.util.UtilsService;
  *
  * @generated
  */
-public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizione {
+public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscrizione {
     /**
      * The default value of the '{@link #getIsModuloIscrizione() <em>Is Modulo Iscrizione</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -122,7 +116,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      * @generated
      * @ordered
      */
-    protected static final Date DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT = null;
+    protected static final LocalDate DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT = null;
 
     /**
      * The cached value of the '{@link #getDataScadenzaCertificatoMedico() <em>Data Scadenza Certificato Medico</em>}' attribute.
@@ -132,7 +126,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      * @generated
      * @ordered
      */
-    protected Date dataScadenzaCertificatoMedico = DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT;
+    protected LocalDate dataScadenzaCertificatoMedico = DATA_SCADENZA_CERTIFICATO_MEDICO_EDEFAULT;
 
     /**
      * The default value of the '{@link #getIsBollinoAnnoCorso() <em>Is Bollino Anno Corso</em>}' attribute.
@@ -315,6 +309,16 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Boolean IS_CERTIFICATO_MEDICO_OK_EDEFAULT = Boolean.FALSE;
 
     /**
+     * The cached value of the '{@link #getIsCertificatoMedicoOk() <em>Is Certificato Medico Ok</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIsCertificatoMedicoOk()
+     * @generated
+     * @ordered
+     */
+    protected Boolean isCertificatoMedicoOk = IS_CERTIFICATO_MEDICO_OK_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getIsQuotaVersataOk() <em>Is Quota Versata Ok</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIsQuotaVersataOk()
@@ -343,6 +347,16 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Float TOTALE_DA_VERSARE_EDEFAULT = null;
 
     /**
+     * The cached value of the '{@link #getTotaleDaVersare() <em>Totale Da Versare</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getTotaleDaVersare()
+     * @generated
+     * @ordered
+     */
+    protected Float totaleDaVersare = TOTALE_DA_VERSARE_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getDifferenzaTotaleVersatoTotaleDaVersare()
      * <em>Differenza Totale Versato Totale Da Versare</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -354,7 +368,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     protected static final Float DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getAllievo() <em>Allievo</em>}' reference.
+     * The cached value of the '{@link #getAllievo() <em>Allievo</em>}' containment reference.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getAllievo()
      * @generated
@@ -450,7 +464,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      * @generated
      */
     @Override
-    public Date getDataScadenzaCertificatoMedico() {
+    public LocalDate getDataScadenzaCertificatoMedico() {
 	return dataScadenzaCertificatoMedico;
     }
 
@@ -459,8 +473,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      * @generated
      */
     @Override
-    public void setDataScadenzaCertificatoMedico(Date newDataScadenzaCertificatoMedico) {
-	Date oldDataScadenzaCertificatoMedico = dataScadenzaCertificatoMedico;
+    public void setDataScadenzaCertificatoMedico(LocalDate newDataScadenzaCertificatoMedico) {
+	LocalDate oldDataScadenzaCertificatoMedico = dataScadenzaCertificatoMedico;
 	dataScadenzaCertificatoMedico = newDataScadenzaCertificatoMedico;
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET,
@@ -606,7 +620,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     @Override
     public EList<MaterialeNoleggiato> getMaterialeNoleggiato() {
 	if (materialeNoleggiato == null) {
-	    materialeNoleggiato = new EObjectResolvingEList<MaterialeNoleggiato>(MaterialeNoleggiato.class, this,
+	    materialeNoleggiato = new EObjectEList<MaterialeNoleggiato>(MaterialeNoleggiato.class, this,
 		    ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO);
 	}
 	return materialeNoleggiato;
@@ -619,18 +633,15 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      */
     public Boolean getIsIscrizioneOk() {
 	Boolean isIscrizioneOk = false;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null) {
-	    // verifico i documenti
-	    if (getIsBollinoAnnoCorso() && getIsConsensoInformato() && getIsModuloIscrizione()) {
-		// verifico il certificato medico
-		if (getIsCertificatoMedicoOk()) {
-		    // verifico le quote di iscrizione
-		    if (getIsQuotaVersataOk()) {
-			isIscrizioneOk = true;
 
-		    }
+	// verifico i documenti
+	if (getIsBollinoAnnoCorso() && getIsConsensoInformato() && getIsModuloIscrizione()) {
+	    // verifico il certificato medico
+	    if (getIsCertificatoMedicoOk()) {
+		// verifico le quote di iscrizione
+		if (getIsQuotaVersataOk()) {
+		    isIscrizioneOk = true;
+
 		}
 	    }
 	}
@@ -683,57 +694,38 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
      */
+    @Override
     public Boolean getIsCertificatoMedicoOk() {
-	Boolean isCertificatoMedicoOk = false;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null) {
-	    if (getIsCertificatoMedico()) {
-		if (getDataScadenzaCertificatoMedico() != null
-			&& UtilsService.isBeforeOrEqual(corso.getDataFine(), getDataScadenzaCertificatoMedico())) {
-		    isCertificatoMedicoOk = true;
-		}
-	    }
-	}
-	System.out.println("Is Certificato Medico Ok:" + isCertificatoMedicoOk);
 	return isCertificatoMedicoOk;
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
      */
+    @Override
+    public void setIsCertificatoMedicoOk(Boolean newIsCertificatoMedicoOk) {
+	Boolean oldIsCertificatoMedicoOk = isCertificatoMedicoOk;
+	isCertificatoMedicoOk = newIsCertificatoMedicoOk;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK,
+		    oldIsCertificatoMedicoOk, isCertificatoMedicoOk));
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Boolean getIsQuotaVersataOk() {
-	Boolean isQuotaVersataOk = false;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null) {
-	    // verifico le quote di iscrizione
-	    if (getTotaleVersato() != null && getTotaleVersato() >= corso.getQuotaIscrizione()) {
-		// verifico il noleggio
-		if (getIsNoleggio()) {
-		    EList<MaterialeNoleggiato> materialeNoleggiatoList = getMaterialeNoleggiato();
-		    Float totaleNoleggio = 0F;
-		    for (MaterialeNoleggiato materialeNoleggiato : materialeNoleggiatoList) {
-			totaleNoleggio += materialeNoleggiato.getMateriale().getQuotaNoleggio();
-		    }
-		    if (getQuotaNoleggio() != null && getQuotaNoleggio() >= totaleNoleggio) {
-			isQuotaVersataOk = true;
-		    }
-
-		} else {
-		    isQuotaVersataOk = true;
-		}
-
-	    }
-	}
-	System.out.println("Is Quota Versata Ok:" + isQuotaVersataOk);
-	return isQuotaVersataOk;
+	// TODO: implement this method to return the 'Is Quota Versata Ok' attribute
+	// Ensure that you remove @generated or mark it @generated NOT
+	throw new UnsupportedOperationException();
     }
 
     /**
@@ -754,19 +746,27 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
     }
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
      */
+    @Override
     public Float getTotaleDaVersare() {
-	Float quota = 0.0F;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null) {
-	    quota = corso.getQuotaIscrizione() + getQuotaNoleggioDaVersare();
-	}
-	System.out.println("Quota Totale Da Versare:" + quota);
-	return quota;
+	return totaleDaVersare;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setTotaleDaVersare(Float newTotaleDaVersare) {
+	Float oldTotaleDaVersare = totaleDaVersare;
+	totaleDaVersare = newTotaleDaVersare;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE,
+		    oldTotaleDaVersare, totaleDaVersare));
     }
 
     /**
@@ -816,23 +816,6 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
      */
     @Override
     public Allievo getAllievo() {
-	if (allievo != null && ((EObject) allievo).eIsProxy()) {
-	    InternalEObject oldAllievo = (InternalEObject) allievo;
-	    allievo = (Allievo) eResolveProxy(oldAllievo);
-	    if (allievo != oldAllievo) {
-		if (eNotificationRequired())
-		    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ISCRIZIONE__ALLIEVO,
-			    oldAllievo, allievo));
-	    }
-	}
-	return allievo;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    public Allievo basicGetAllievo() {
 	return allievo;
     }
 
@@ -899,9 +882,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	case ModelPackage.ISCRIZIONE__MESSAGGI_ERRORE:
 	    return getMessaggiErrore();
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
-	    if (resolve)
-		return getAllievo();
-	    return basicGetAllievo();
+	    return getAllievo();
 	}
 	return super.eGet(featureID, resolve, coreType);
     }
@@ -924,7 +905,7 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	    setIsNuovoAllievo((Boolean) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO:
-	    setDataScadenzaCertificatoMedico((Date) newValue);
+	    setDataScadenzaCertificatoMedico((LocalDate) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__IS_BOLLINO_ANNO_CORSO:
 	    setIsBollinoAnnoCorso((Boolean) newValue);
@@ -950,6 +931,12 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	    return;
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
 	    setIsCertificatoMedico((Boolean) newValue);
+	    return;
+	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
+	    setIsCertificatoMedicoOk((Boolean) newValue);
+	    return;
+	case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
+	    setTotaleDaVersare((Float) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    setAllievo((Allievo) newValue);
@@ -1000,6 +987,12 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	    return;
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
 	    setIsCertificatoMedico(IS_CERTIFICATO_MEDICO_EDEFAULT);
+	    return;
+	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
+	    setIsCertificatoMedicoOk(IS_CERTIFICATO_MEDICO_OK_EDEFAULT);
+	    return;
+	case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
+	    setTotaleDaVersare(TOTALE_DA_VERSARE_EDEFAULT);
 	    return;
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    setAllievo((Allievo) null);
@@ -1056,8 +1049,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	    return IS_CERTIFICATO_MEDICO_EDEFAULT == null ? isCertificatoMedico != null
 		    : !IS_CERTIFICATO_MEDICO_EDEFAULT.equals(isCertificatoMedico);
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
-	    return IS_CERTIFICATO_MEDICO_OK_EDEFAULT == null ? getIsCertificatoMedicoOk() != null
-		    : !IS_CERTIFICATO_MEDICO_OK_EDEFAULT.equals(getIsCertificatoMedicoOk());
+	    return IS_CERTIFICATO_MEDICO_OK_EDEFAULT == null ? isCertificatoMedicoOk != null
+		    : !IS_CERTIFICATO_MEDICO_OK_EDEFAULT.equals(isCertificatoMedicoOk);
 	case ModelPackage.ISCRIZIONE__IS_QUOTA_VERSATA_OK:
 	    return IS_QUOTA_VERSATA_OK_EDEFAULT == null ? getIsQuotaVersataOk() != null
 		    : !IS_QUOTA_VERSATA_OK_EDEFAULT.equals(getIsQuotaVersataOk());
@@ -1065,8 +1058,8 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	    return QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT == null ? getQuotaNoleggioDaVersare() != null
 		    : !QUOTA_NOLEGGIO_DA_VERSARE_EDEFAULT.equals(getQuotaNoleggioDaVersare());
 	case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
-	    return TOTALE_DA_VERSARE_EDEFAULT == null ? getTotaleDaVersare() != null
-		    : !TOTALE_DA_VERSARE_EDEFAULT.equals(getTotaleDaVersare());
+	    return TOTALE_DA_VERSARE_EDEFAULT == null ? totaleDaVersare != null
+		    : !TOTALE_DA_VERSARE_EDEFAULT.equals(totaleDaVersare);
 	case ModelPackage.ISCRIZIONE__DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE:
 	    return DIFFERENZA_TOTALE_VERSATO_TOTALE_DA_VERSARE_EDEFAULT == null
 		    ? getDifferenzaTotaleVersatoTotaleDaVersare() != null
@@ -1112,6 +1105,10 @@ public class IscrizioneImpl extends ExternalizableEObjectImpl implements Iscrizi
 	result.append(quotaNoleggio);
 	result.append(", isCertificatoMedico: ");
 	result.append(isCertificatoMedico);
+	result.append(", isCertificatoMedicoOk: ");
+	result.append(isCertificatoMedicoOk);
+	result.append(", totaleDaVersare: ");
+	result.append(totaleDaVersare);
 	result.append(')');
 	return result.toString();
     }

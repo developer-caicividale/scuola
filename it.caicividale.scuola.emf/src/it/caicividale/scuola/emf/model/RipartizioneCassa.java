@@ -2,7 +2,7 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,10 +20,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getRipartizioneCassa()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface RipartizioneCassa extends ExternalizableEObject {
+public interface RipartizioneCassa extends EObject {
     /**
      * Returns the value of the '<em><b>Sede</b></em>' attribute.
      * <!-- begin-user-doc -->

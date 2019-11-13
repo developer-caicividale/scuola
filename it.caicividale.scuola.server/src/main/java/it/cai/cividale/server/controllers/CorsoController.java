@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.cai.cividale.server.services.CorsoService;
 import it.cai.cividale.server.web.ResponseEntityUtils;
+import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.sharedresources.RestResources;
 
@@ -23,8 +24,16 @@ public class CorsoController {
 
     @GetMapping(value = RestResources.ELENCO_CORSI_ANNO, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ElencoCorsi> getElencoCorsiPerAnno(@PathVariable(required = true) final Integer anno) {
-	corsoService.getElencoCorsiPerAnno(anno);
-	return ResponseEntityUtils.create(null);
+	ElencoCorsi elencoCorsi = corsoService.getElencoCorsiPerAnno(anno);
+
+	return ResponseEntityUtils.create(elencoCorsi);
+    }
+
+    @GetMapping(value = RestResources.CORSO, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Corso> getCorsoById(@PathVariable(required = true) final Long id) {
+	Corso corso = corsoService.getCorsoById(id);
+
+	return ResponseEntityUtils.create(corso);
     }
 
 }

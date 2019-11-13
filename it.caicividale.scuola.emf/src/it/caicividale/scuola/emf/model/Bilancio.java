@@ -4,7 +4,7 @@ package it.caicividale.scuola.emf.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,10 +27,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getBilancio()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Bilancio extends ExternalizableEObject {
+public interface Bilancio extends EObject {
     /**
      * Returns the value of the '<em><b>Id</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -54,13 +53,13 @@ public interface Bilancio extends ExternalizableEObject {
     void setId(Long value);
 
     /**
-     * Returns the value of the '<em><b>Voci Di Spesa</b></em>' reference list.
+     * Returns the value of the '<em><b>Voci Di Spesa</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.VoceDiSpesa}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Voci Di Spesa</em>' reference list.
+     * @return the value of the '<em>Voci Di Spesa</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getBilancio_VociDiSpesa()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<VoceDiSpesa> getVociDiSpesa();
@@ -114,11 +113,22 @@ public interface Bilancio extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Totale Iscrizioni</em>' attribute.
+     * @see #setTotaleIscrizioni(float)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getBilancio_TotaleIscrizioni()
-     * @model unique="false" required="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model required="true"
      * @generated
      */
     float getTotaleIscrizioni();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Bilancio#getTotaleIscrizioni <em>Totale Iscrizioni</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Totale Iscrizioni</em>' attribute.
+     * @see #getTotaleIscrizioni()
+     * @generated
+     */
+    void setTotaleIscrizioni(float value);
 
     /**
      * Returns the value of the '<em><b>Totale Entrate Con Iscrizioni</b></em>' attribute.

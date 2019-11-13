@@ -9,14 +9,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.Cassa;
-import it.caicividale.scuola.emf.model.Corso;
-import it.caicividale.scuola.emf.model.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.RipartizioneCassa;
-import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object
@@ -34,7 +31,7 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObjectImpl;
  *
  * @generated
  */
-public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
+public class CassaImpl extends MinimalEObjectImpl.Container implements Cassa {
     /**
      * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
      * begin-user-doc --> <!-- end-user-doc -->
@@ -65,7 +62,7 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
     protected static final float TOTALE_EDEFAULT = 0.0F;
 
     /**
-     * The cached value of the '{@link #getRipartizioniCassa() <em>Ripartizioni Cassa</em>}' reference list.
+     * The cached value of the '{@link #getRipartizioniCassa() <em>Ripartizioni Cassa</em>}' containment reference list.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getRipartizioniCassa()
      * @generated
@@ -148,10 +145,8 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
      */
     public float getTotale() {
 	Float totale = 0F;
-	ModelManager modelManager = ModelManager.getInstance();
-	Corso corso = modelManager.getCorsoObservable().getValue();
-	if (corso != null && corso.getCassa() != null && !corso.getCassa().getRipartizioniCassa().isEmpty()) {
-	    List<RipartizioneCassa> ripartizioniCassa = corso.getCassa().getRipartizioniCassa();
+	if (getRipartizioniCassa() != null && !getRipartizioniCassa().isEmpty()) {
+	    List<RipartizioneCassa> ripartizioniCassa = getRipartizioniCassa();
 	    for (RipartizioneCassa ripartizioneCassa : ripartizioniCassa) {
 		totale += ripartizioneCassa.getQuota();
 	    }
@@ -167,7 +162,7 @@ public class CassaImpl extends ExternalizableEObjectImpl implements Cassa {
     @Override
     public EList<RipartizioneCassa> getRipartizioniCassa() {
 	if (ripartizioniCassa == null) {
-	    ripartizioniCassa = new EObjectResolvingEList<RipartizioneCassa>(RipartizioneCassa.class, this,
+	    ripartizioniCassa = new EObjectEList<RipartizioneCassa>(RipartizioneCassa.class, this,
 		    ModelPackage.CASSA__RIPARTIZIONI_CASSA);
 	}
 	return ripartizioniCassa;

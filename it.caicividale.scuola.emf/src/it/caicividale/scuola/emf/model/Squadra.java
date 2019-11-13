@@ -4,7 +4,7 @@ package it.caicividale.scuola.emf.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,40 +24,39 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getSquadra()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Squadra extends ExternalizableEObject {
+public interface Squadra extends EObject {
     /**
-     * Returns the value of the '<em><b>Capo Squadra</b></em>' reference.
+     * Returns the value of the '<em><b>Capo Squadra</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Capo Squadra</em>' reference.
+     * @return the value of the '<em>Capo Squadra</em>' containment reference.
      * @see #setCapoSquadra(Istruttore)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getSquadra_CapoSquadra()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     Istruttore getCapoSquadra();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Squadra#getCapoSquadra <em>Capo Squadra</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Squadra#getCapoSquadra <em>Capo Squadra</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Capo Squadra</em>' reference.
+     * @param value the new value of the '<em>Capo Squadra</em>' containment reference.
      * @see #getCapoSquadra()
      * @generated
      */
     void setCapoSquadra(Istruttore value);
 
     /**
-     * Returns the value of the '<em><b>Allievi In Squadra</b></em>' reference list.
+     * Returns the value of the '<em><b>Allievi In Squadra</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Allievo}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Allievi In Squadra</em>' reference list.
+     * @return the value of the '<em>Allievi In Squadra</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getSquadra_AllieviInSquadra()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     EList<Allievo> getAllieviInSquadra();
@@ -107,13 +106,13 @@ public interface Squadra extends ExternalizableEObject {
     void setNome(String value);
 
     /**
-     * Returns the value of the '<em><b>Staff Squadra</b></em>' reference list.
+     * Returns the value of the '<em><b>Staff Squadra</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Istruttore}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Staff Squadra</em>' reference list.
+     * @return the value of the '<em>Staff Squadra</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getSquadra_StaffSquadra()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<Istruttore> getStaffSquadra();

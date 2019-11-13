@@ -44,7 +44,7 @@ import org.eclipse.wb.swt.ResourceManager;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 import it.caicividale.scuola.emf.model.Corso;
-import it.caicividale.scuola.emf.model.ModelManager;
+import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.RipartizioneCassa;
 import it.caicividale.scuola.emf.model.VoceDiSpesa;

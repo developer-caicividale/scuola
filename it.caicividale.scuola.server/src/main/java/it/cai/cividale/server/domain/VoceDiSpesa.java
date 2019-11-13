@@ -29,7 +29,7 @@ public class VoceDiSpesa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private int id;
+    private Long id;
 
     @Column(name = "titolo", nullable = false)
     private String titolo;

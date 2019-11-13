@@ -35,7 +35,7 @@ public class Corso implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
-    private int id;
+    private Long id;
 
     @Column(name = "quota_iscrizione", nullable = false, precision = 12, scale = 0)
     private float quotaIscrizione;

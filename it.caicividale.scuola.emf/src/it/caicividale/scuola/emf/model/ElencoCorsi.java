@@ -4,7 +4,7 @@ package it.caicividale.scuola.emf.model;
 
 import org.eclipse.emf.common.util.EList;
 
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,18 +20,17 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getElencoCorsi()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface ElencoCorsi extends ExternalizableEObject {
+public interface ElencoCorsi extends EObject {
     /**
-     * Returns the value of the '<em><b>Elenco Corsi</b></em>' reference list.
+     * Returns the value of the '<em><b>Elenco Corsi</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Corso}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Elenco Corsi</em>' reference list.
+     * @return the value of the '<em>Elenco Corsi</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getElencoCorsi_ElencoCorsi()
-     * @model
+     * @model containment="true"
      * @generated
      */
     EList<Corso> getElencoCorsi();

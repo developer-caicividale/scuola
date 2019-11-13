@@ -12,8 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
+import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.LezionePratica;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.Squadra;
@@ -54,7 +53,7 @@ public class LezionePraticaImpl extends LezioneImpl implements LezionePratica {
     protected String luogoRitrovo = LUOGO_RITROVO_EDEFAULT;
 
     /**
-     * The cached value of the '{@link #getSquadre() <em>Squadre</em>}' reference list.
+     * The cached value of the '{@link #getSquadre() <em>Squadre</em>}' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see #getSquadre()
@@ -114,7 +113,7 @@ public class LezionePraticaImpl extends LezioneImpl implements LezionePratica {
     @Override
     public EList<Squadra> getSquadre() {
 	if (squadre == null) {
-	    squadre = new EObjectResolvingEList<Squadra>(Squadra.class, this, ModelPackage.LEZIONE_PRATICA__SQUADRE);
+	    squadre = new EObjectEList<Squadra>(Squadra.class, this, ModelPackage.LEZIONE_PRATICA__SQUADRE);
 	}
 	return squadre;
     }

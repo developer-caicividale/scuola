@@ -9,20 +9,20 @@ import org.eclipse.e4.ui.services.IStylingEngine;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.swt.widgets.Shell;
 
-import it.caicividale.scuola.emf.model.ModelManager;
-import it.caicividale.scuola.emf.services.rest.ServiceManager;
+import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.service.ServiceManager;
 
 public class BilanciCancellaEntrataHandler {
-	@Inject
-	@Optional
-	Shell shell;
+    @Inject
+    @Optional
+    Shell shell;
 
-	private ServiceManager serviceManager = ServiceManager.getInstance();
+    private ServiceManager serviceManager = ServiceManager.getInstance();
 
-	@Execute
-	public void execute(EPartService partService, IStylingEngine stylingEngine) {
-		ModelManager modelManager = ModelManager.getInstance();
+    @Execute
+    public void execute(EPartService partService, IStylingEngine stylingEngine) {
+	ModelManager modelManager = ModelManager.getInstance();
 
-	}
+    }
 
 }

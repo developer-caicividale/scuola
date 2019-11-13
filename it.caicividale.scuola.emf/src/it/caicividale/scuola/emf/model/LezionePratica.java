@@ -45,13 +45,13 @@ public interface LezionePratica extends Lezione {
     void setLuogoRitrovo(String value);
 
     /**
-     * Returns the value of the '<em><b>Squadre</b></em>' reference list.
+     * Returns the value of the '<em><b>Squadre</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.Squadra}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Squadre</em>' reference list.
+     * @return the value of the '<em>Squadre</em>' containment reference list.
      * @see it.caicividale.scuola.emf.model.ModelPackage#getLezionePratica_Squadre()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     EList<Squadra> getSquadre();

@@ -2,9 +2,8 @@
  */
 package it.caicividale.scuola.emf.model;
 
-import java.util.Date;
-
-import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
+import java.time.LocalDateTime;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,10 +25,9 @@ import it.caicividale.scuola.emf.model.root.ExternalizableEObject;
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getLezione()
  * @model
- * @extends ExternalizableEObject
  * @generated
  */
-public interface Lezione extends ExternalizableEObject {
+public interface Lezione extends EObject {
     /**
      * Returns the value of the '<em><b>Titolo</b></em>' attribute.
      * <!-- begin-user-doc -->
@@ -57,12 +55,12 @@ public interface Lezione extends ExternalizableEObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Data Svolgimento</em>' attribute.
-     * @see #setDataSvolgimento(Date)
+     * @see #setDataSvolgimento(LocalDateTime)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getLezione_DataSvolgimento()
-     * @model
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDateTime"
      * @generated
      */
-    Date getDataSvolgimento();
+    LocalDateTime getDataSvolgimento();
 
     /**
      * Sets the value of the '{@link it.caicividale.scuola.emf.model.Lezione#getDataSvolgimento <em>Data Svolgimento</em>}' attribute.
@@ -72,7 +70,7 @@ public interface Lezione extends ExternalizableEObject {
      * @see #getDataSvolgimento()
      * @generated
      */
-    void setDataSvolgimento(Date value);
+    void setDataSvolgimento(LocalDateTime value);
 
     /**
      * Returns the value of the '<em><b>Luogo Svolgimento</b></em>' attribute.
@@ -141,22 +139,22 @@ public interface Lezione extends ExternalizableEObject {
     void setId(Long value);
 
     /**
-     * Returns the value of the '<em><b>Presenza Lezione</b></em>' reference.
+     * Returns the value of the '<em><b>Presenza Lezione</b></em>' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Presenza Lezione</em>' reference.
+     * @return the value of the '<em>Presenza Lezione</em>' containment reference.
      * @see #setPresenzaLezione(PresenzaLezione)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getLezione_PresenzaLezione()
-     * @model required="true"
+     * @model containment="true" required="true"
      * @generated
      */
     PresenzaLezione getPresenzaLezione();
 
     /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Lezione#getPresenzaLezione <em>Presenza Lezione</em>}' reference.
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Lezione#getPresenzaLezione <em>Presenza Lezione</em>}' containment reference.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Presenza Lezione</em>' reference.
+     * @param value the new value of the '<em>Presenza Lezione</em>' containment reference.
      * @see #getPresenzaLezione()
      * @generated
      */
