@@ -7,12 +7,24 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
-            name="scuola-rcp-client">
+            name="it.caicividale.scuola.ui">
          <property
                name="appName"
-               value="scuola-rcp-client">
+               value="it.caicividale.scuola.ui">
+         </property>
+         <property
+               name="cssTheme"
+               value="it.caicividale.scuola.ui.css.default">
          </property>
       </product>
+   </extension>
+   <extension
+         point="org.eclipse.e4.ui.css.swt.theme">
+      <theme
+            basestylesheeturi="css/default.css"
+            id="it.caicividale.scuola.ui.css.default"
+            label="Default">
+      </theme>
    </extension>
 
 </plugin>
