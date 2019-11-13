@@ -43,4 +43,14 @@ public class CorsoDaoImpl extends AbstractDaoImpl<Corso> implements CorsoDao {
 	}
     }
 
+    @Override
+    public List<Integer> getElencoAnniCorsi() {
+	@SuppressWarnings("unchecked")
+	List<Integer> anni = sessionFactory.getCurrentSession()
+		.createSQLQuery("SELECT distinct year(data_inizio) FROM scuolacai.corso order by 1 desc")
+		.getResultList();
+
+	return anni;
+    }
+
 }

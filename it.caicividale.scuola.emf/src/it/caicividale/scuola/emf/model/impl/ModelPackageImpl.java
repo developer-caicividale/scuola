@@ -22,6 +22,7 @@ import it.caicividale.scuola.emf.model.ETipoVoceDiSpesa;
 import it.caicividale.scuola.emf.model.ETitoloIstruttore;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.ElencoIscrizioni;
+import it.caicividale.scuola.emf.model.ElencoIstruttori;
 import it.caicividale.scuola.emf.model.ElencoMateriali;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
@@ -181,6 +182,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EClass elencoMaterialiEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass elencoIstruttoriEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1705,6 +1713,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EClass getElencoIstruttori() {
+	return elencoIstruttoriEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EReference getElencoIstruttori_ElencoIstruttori() {
+	return (EReference) elencoIstruttoriEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public EEnum getESesso() {
 	return eSessoEEnum;
     }
@@ -1976,6 +2004,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 	elencoMaterialiEClass = createEClass(ELENCO_MATERIALI);
 	createEReference(elencoMaterialiEClass, ELENCO_MATERIALI__ELENCO_MATERIALI);
+
+	elencoIstruttoriEClass = createEClass(ELENCO_ISTRUTTORI);
+	createEReference(elencoIstruttoriEClass, ELENCO_ISTRUTTORI__ELENCO_ISTRUTTORI);
 
 	// Create enums
 	eSessoEEnum = createEEnum(ESESSO);
@@ -2390,6 +2421,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		IS_GENERATED_INSTANCE_CLASS);
 	initEReference(getElencoMateriali_ElencoMateriali(), this.getDizMateriale(), null, "elencoMateriali", null, 0,
 		-1, ElencoMateriali.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(elencoIstruttoriEClass, ElencoIstruttori.class, "ElencoIstruttori", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEReference(getElencoIstruttori_ElencoIstruttori(), this.getIstruttore(), null, "elencoIstruttori", null, 0,
+		-1, ElencoIstruttori.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	// Initialize enums and add enum literals

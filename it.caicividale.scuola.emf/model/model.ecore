@@ -322,4 +322,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elencoMateriali" upperBound="-1"
         eType="#//DizMateriale" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElencoIstruttori">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elencoIstruttori" upperBound="-1"
+        eType="#//Istruttore" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

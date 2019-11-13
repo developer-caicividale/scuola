@@ -162,6 +162,11 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	@Override
+	public Adapter caseElencoIstruttori(ElencoIstruttori object) {
+	    return createElencoIstruttoriAdapter();
+	}
+
+	@Override
 	public Adapter defaultCase(EObject object) {
 	    return createEObjectAdapter();
 	}
@@ -443,6 +448,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
      * @generated
      */
     public Adapter createElencoMaterialiAdapter() {
+	return null;
+    }
+
+    /**
+     * Creates a new adapter for an object of class '{@link it.caicividale.scuola.emf.model.ElencoIstruttori <em>Elenco Istruttori</em>}'.
+     * <!-- begin-user-doc -->
+     * This default implementation returns null so that we can easily ignore cases;
+     * it's useful to ignore a case when inheritance will catch all the cases anyway.
+     * <!-- end-user-doc -->
+     * @return the new adapter.
+     * @see it.caicividale.scuola.emf.model.ElencoIstruttori
+     * @generated
+     */
+    public Adapter createElencoIstruttoriAdapter() {
 	return null;
     }
 

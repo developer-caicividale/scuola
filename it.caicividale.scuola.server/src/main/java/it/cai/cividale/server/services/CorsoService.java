@@ -40,4 +40,8 @@ public class CorsoService {
 	it.cai.cividale.server.domain.Corso corsoDomain = corsoDao.objectById(id);
 	return corsoMapper.domain2model(corsoDomain);
     }
+
+    public List<Integer> getElencoAnniCorsi() {
+	return corsoDao.getElencoAnniCorsi();
+    }
 }

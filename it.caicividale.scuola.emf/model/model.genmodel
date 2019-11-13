@@ -213,5 +213,8 @@
     <genClasses ecoreClass="model.ecore#//ElencoMateriali">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoMateriali/elencoMateriali"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//ElencoIstruttori">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoIstruttori/elencoIstruttori"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -18,7 +18,7 @@ public class DizionariController {
     private final DizionariService dizionariService;
 
     @GetMapping(value = RestResources.ELENCO_MATERIALI, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<ElencoMateriali> getCorsoById() {
+    public ResponseEntity<ElencoMateriali> getElencoMateriali() {
 	ElencoMateriali elencoMateriali = dizionariService.getElencoMateriali();
 
 	return ResponseEntityUtils.create(elencoMateriali);

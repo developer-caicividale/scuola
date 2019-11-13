@@ -1,6 +1,5 @@
 package it.caicividale.scuola.service;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
+import it.caicividale.scuola.emf.model.ElencoIstruttori;
 import it.caicividale.scuola.emf.model.ElencoMateriali;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
@@ -69,8 +69,8 @@ public class ServiceManager {
     }
 
     public List<Integer> getElencoAnniCorsi() {
-	// TODO Auto-generated method stub
-	return null;
+	List<Integer> anni = restClient.get(url(RestResources.ELENCO_ANNI_CORSI), List.class);
+	return anni;
     }
 
     public List<Corso> getElencoCorsi(Integer anno) {
@@ -90,24 +90,24 @@ public class ServiceManager {
 	return materiali;
     }
 
-    public Collection<? extends Istruttore> getElencoIstruttori(Object object) {
-	// TODO Auto-generated method stub
-	return null;
+    public List<Istruttore> getElencoIstruttori(Object object) {
+	ElencoIstruttori elencoIstruttori = restClient.get(url(RestResources.ELENCO_ISTRUTTORI),
+		ElencoIstruttori.class);
+	List<Istruttore> istruttori = elencoIstruttori.getElencoIstruttori();
+	return istruttori;
     }
 
-    public Collection<? extends Persona> getElencoPersoneInStaff() {
-	// TODO Auto-generated method stub
-	return null;
+    public List<? extends Persona> getElencoPersoneInStaff() {
+	return getElencoIstruttori(null);
     }
 
     public Corso getCorso(Long idCorso) {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	Map<String, Object> query = new HashMap<>();
+	query.put("id", idCorso);
 
-    public void popolaCorsi() {
-	// TODO Auto-generated method stub
+	Corso corso = restClient.get(url(RestResources.CORSO, query), Corso.class);
 
+	return corso;
     }
 
     public void deleteCorso(Corso corso) {
