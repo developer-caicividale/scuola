@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -85,7 +86,7 @@ public class Corso implements Serializable {
     @Column(name = "equipaggiamento")
     private String equipaggiamento;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "corso", fetch = FetchType.EAGER)
     private List<Iscrizione> iscrizioni = new ArrayList<>();
 
     @OneToMany(cascade = CascadeType.ALL)

@@ -69,7 +69,9 @@ import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
 import it.caicividale.scuola.service.ModelManager;
+import it.caicividale.scuola.ui.databinding.converters.Date2LocalDateConverter;
 import it.caicividale.scuola.ui.databinding.converters.Float2StringConverter;
+import it.caicividale.scuola.ui.databinding.converters.LocalDate2DateConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2EmailConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2FloatConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2NumeroCellulareConverter;
@@ -1184,7 +1186,7 @@ public class IscrizioneDialog extends Dialog {
 
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     private void bind2model() {
 	DataBindingContext bindingContext = new DataBindingContext();
 	// if (iscrizioneActualObservable.getValue() == null) {
@@ -1203,9 +1205,13 @@ public class IscrizioneDialog extends Dialog {
 		UpdateValueStrategy.POLICY_UPDATE);
 	target2modelObjectNotNullStrategy.setBeforeSetValidator(new ObjectNotNullValidator());
 
-	UpdateValueStrategy target2modelDataNotNullStrategy = new UpdateValueStrategy(
-		UpdateValueStrategy.POLICY_UPDATE);
+	UpdateValueStrategy target2modelDataNotNullStrategy = new ConverterUpdateValueStrategy(
+		new Date2LocalDateConverter());
 	target2modelDataNotNullStrategy.setBeforeSetValidator(new DataNotNullValidator());
+
+	UpdateValueStrategy model2targetDataNotNullStrategy = new ConverterUpdateValueStrategy(
+		new LocalDate2DateConverter());
+	model2targetDataNotNullStrategy.setBeforeSetValidator(new DataNotNullValidator());
 
 	UpdateValueStrategy target2modelTextSoloLettereStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
@@ -1238,9 +1244,13 @@ public class IscrizioneDialog extends Dialog {
 	UpdateValueStrategy target2modelCheckStrategy = new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE);
 	target2modelCheckStrategy.setBeforeSetValidator(new BooleanWarningValidator());
 
-	UpdateValueStrategy target2modelDataScadenzaCertificatoStrategy = new UpdateValueStrategy(
-		UpdateValueStrategy.POLICY_UPDATE);
+	UpdateValueStrategy target2modelDataScadenzaCertificatoStrategy = new ConverterUpdateValueStrategy(
+		new Date2LocalDateConverter());
 	target2modelDataScadenzaCertificatoStrategy.setBeforeSetValidator(new DataScadenzaCertificatoValidator());
+
+	UpdateValueStrategy model2targetDataScadenzaCertificatoStrategy = new ConverterUpdateValueStrategy(
+		new LocalDate2DateConverter());
+	model2targetDataNotNullStrategy.setBeforeSetValidator(new DataNotNullValidator());
 
 	UpdateValueStrategy target2modelDifferenzaQuotaStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
@@ -1323,7 +1333,7 @@ public class IscrizioneDialog extends Dialog {
 		.observeDetail(iscrizioneActualObservable);
 	ISWTObservableValue dataNascitaDateTimeObservable = localDateSelectionDataNascitaProperty.observe(dataNascita);
 	Binding dataNascitaBinding = bindingContext.bindValue(dataNascitaDateTimeObservable, dataNascitaObservable,
-		target2modelDataNotNullStrategy, null);
+		target2modelDataNotNullStrategy, model2targetDataNotNullStrategy);
 	ControlDecorationSupport.create(dataNascitaBinding, SWT.TOP | SWT.LEFT);
 
 	// comune Nascita
@@ -1422,7 +1432,8 @@ public class IscrizioneDialog extends Dialog {
 	ISWTObservableValue dataScadenzaCertificatoDateTimeObservable = localDateSelectionDataScadenzaCertificatoProperty
 		.observe(dataScadenzaCertificatoMedico);
 	Binding dataScadenzaCertificatoBinding = bindingContext.bindValue(dataScadenzaCertificatoDateTimeObservable,
-		dataScadenzaCertificatoObservable, target2modelDataScadenzaCertificatoStrategy, null);
+		dataScadenzaCertificatoObservable, target2modelDataScadenzaCertificatoStrategy,
+		model2targetDataScadenzaCertificatoStrategy);
 	ControlDecorationSupport.create(dataScadenzaCertificatoBinding, SWT.TOP | SWT.LEFT, (Composite) null,
 		new OkKoControlDecoratorUpdater(16));
 

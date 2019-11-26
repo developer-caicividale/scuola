@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.emfjson.jackson.module.EMFModule;
 import org.emfjson.jackson.resource.JsonResourceFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.http.converter.FormHttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
@@ -46,6 +47,8 @@ import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
 import it.caicividale.scuola.rest.json.deserializer.EMailDeserializer;
 import it.caicividale.scuola.rest.json.deserializer.NumeroCellularelDeserializer;
+import it.caicividale.scuola.rest.json.serializer.EMailSerializer;
+import it.caicividale.scuola.rest.json.serializer.NumeroCellularelSerializer;
 
 public class RestClient {
     private final RestTemplate restTemplate;
@@ -72,6 +75,9 @@ public class RestClient {
 	valueObjectsModule.addDeserializer(NumeroCellulare.class, new NumeroCellularelDeserializer());
 	valueObjectsModule.addDeserializer(EMail.class, new EMailDeserializer());
 
+	valueObjectsModule.addSerializer(NumeroCellulare.class, new NumeroCellularelSerializer());
+	valueObjectsModule.addSerializer(EMail.class, new EMailSerializer());
+
 	objectMapper.registerModules(new EMFModule(), new JavaTimeModule(), valueObjectsModule);
 
 	JsonResourceFactory jsonResourceFactory = new JsonResourceFactory(objectMapper);
@@ -89,8 +95,12 @@ public class RestClient {
 	mappingJackson2HttpMessageConverter.setPrettyPrint(false);
 	mappingJackson2HttpMessageConverter.setObjectMapper(objectMapper);
 
+	mappingJackson2HttpMessageConverter
+		.setSupportedMediaTypes(Collections.singletonList(MediaType.APPLICATION_JSON_UTF8));
+
 	restTemplate = new RestTemplate(Arrays.asList(formHttpMessageConverter, stringHttpMessageConverter,
 		mappingJackson2HttpMessageConverter));
+
 	restTemplate.setErrorHandler(new ResponseErrorHandler() {
 	    @Override
 	    public boolean hasError(ClientHttpResponse response) throws IOException {
@@ -209,7 +219,10 @@ public class RestClient {
 	    Iterator<Entry<String, Object>> iterator = query.entrySet().iterator();
 	    while (iterator.hasNext()) {
 		Entry<String, Object> entry = iterator.next();
-		queryStringBuffer.append(StringUtils.joinWith("=", entry.getKey(), "{" + entry.getKey() + "}"));
+
+		String primoElemento = entry.getKey();
+		String secondoElemento = "{" + primoElemento + "}";
+		queryStringBuffer.append(StringUtils.joinWith("=", primoElemento, secondoElemento));
 		if (iterator.hasNext()) {
 		    queryStringBuffer.append("&");
 		}

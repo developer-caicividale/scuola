@@ -19,6 +19,9 @@ public interface PartDefaults {
     static final int H_DATA = H_TEXT + 6;
     static final int H_LABEL = 20;
 
+    static final int MARGIN_RIGHT = 98;
+    static final int MARGIN_BOTTOM = 98;
+
     static final String CSS_CLASS_READONLY = "readonly";
     static final String CSS_CLASS_ASSISTITO = "assistito";
     static final String CSS_CLASS_NOSOLOGICO = "nosologico";

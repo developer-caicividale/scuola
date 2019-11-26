@@ -1518,7 +1518,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mtFnYf8dEem6MOTXr2R7aA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_zblDEwb7Eeqgh-jgjMZerA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -1606,10 +1606,10 @@
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Pyc9ALzsEeiCN9ZHsq1xmQ" labelColor="39,76,114" labelAlignment="LEFT" description="_t23JEIRHEei1O9OJewzsxA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_pb38MF8_EeiF97L2oxABrA" name="/isIscrizioneOk : EBooleanObject = False" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_pb38MF8_EeiF97L2oxABrA" name="isIscrizioneOk : EBooleanObject = False" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isIscrizioneOk"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isIscrizioneOk"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_pb38MV8_EeiF97L2oxABrA" labelColor="39,76,114" labelAlignment="LEFT" description="_t5tAQO_fEeeTXYZPrO7Puw">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_btQEsQqtEeqFEv3oCgkttA" labelAlignment="LEFT" description="_9A9Xce_YEeeTXYZPrO7Puw">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

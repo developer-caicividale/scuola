@@ -23,8 +23,8 @@ public class ModelManager {
     // corso selezionato
     private final IObservableValue<Corso> corsoObservable = WritableValue.withValueType(Corso.class);
 
-    // id corso selezionato
-    private final IObservableValue<Long> idCorsoObservable = WritableValue.withValueType(Long.class);
+//    // id corso selezionato
+//    private final IObservableValue<Long> idCorsoObservable = WritableValue.withValueType(Long.class);
 
     // anno relativo ai corsi
     private final IObservableValue<Integer> annoCorsiObservable = WritableValue.withValueType(Integer.class);
@@ -75,19 +75,19 @@ public class ModelManager {
 	    }
 	});
 
-	// quando cambia l'ElencoCorsiItem aggiorno il corso
-	idCorsoObservable.addValueChangeListener(new IValueChangeListener<Long>() {
-
-	    @Override
-	    public void handleValueChange(ValueChangeEvent<? extends Long> event) {
-		Long idCorso = (Long) ((IObservableValue) event.getSource()).getValue();
-		if (idCorso != null) {
-		    loadCorso(idCorso);
-		}
-
-	    }
-
-	});
+//	// quando cambia l'ElencoCorsiItem aggiorno il corso
+//	idCorsoObservable.addValueChangeListener(new IValueChangeListener<Long>() {
+//
+//	    @Override
+//	    public void handleValueChange(ValueChangeEvent<? extends Long> event) {
+//		Long idCorso = (Long) ((IObservableValue) event.getSource()).getValue();
+//		if (idCorso != null) {
+//		    loadCorso(idCorso);
+//		}
+//
+//	    }
+//
+//	});
     }
 
     public void loadElencoCorsi(Integer anno) {

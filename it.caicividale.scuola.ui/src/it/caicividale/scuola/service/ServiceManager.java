@@ -15,6 +15,7 @@ import it.caicividale.scuola.emf.model.ElencoMateriali;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.Persona;
+import it.caicividale.scuola.emf.model.impl.IscrizioneImpl;
 import it.caicividale.scuola.emf.model.sharedresources.RestResources;
 import it.caicividale.scuola.rest.RestClient;
 
@@ -111,12 +112,11 @@ public class ServiceManager {
     }
 
     public void deleteCorso(Corso corso) {
-	// TODO Auto-generated method stub
 
     }
 
-    public void update(Corso value) {
-	// TODO Auto-generated method stub
+    public void update(Corso corso) {
+	restClient.post(url(RestResources.CORSO_UPDATE), corso, Corso.class);
 
     }
 
@@ -127,6 +127,14 @@ public class ServiceManager {
 
     public void createCorso(Corso corso) {
 	// TODO Auto-generated method stub
+
+    }
+
+    public void insertIscrizione(Iscrizione iscrizione, Long idCorso) {
+	Map<String, Object> query = new HashMap<>();
+	query.put("idCorso", idCorso);
+
+	restClient.post(url(RestResources.ISCRIZIONE_CREA, query), iscrizione, IscrizioneImpl.class);
 
     }
 }

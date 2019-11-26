@@ -38,6 +38,7 @@ public class CorsoService {
 
     public Corso getCorsoById(Long id) {
 	it.cai.cividale.server.domain.Corso corsoDomain = corsoDao.objectById(id);
+	corsoDomain.getIscrizioni();
 	return corsoMapper.domain2model(corsoDomain);
     }
 

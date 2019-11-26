@@ -14,6 +14,7 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
 
+import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.service.ServiceManager;
@@ -22,46 +23,47 @@ import it.caicividale.scuola.ui.utils.EmfUtils;
 import it.caicividale.scuola.ui.utils.PartsUtils;
 
 public class ModificaIscrizioneHandler {
-	@Inject
-	@Optional
-	private Shell shell;
+    @Inject
+    @Optional
+    private Shell shell;
 
-	public static final String ID = "it.caicividale.scuola.ui.part.iscrizioni";
-	private ServiceManager serviceManager = ServiceManager.getInstance();
+    public static final String ID = "it.caicividale.scuola.ui.part.iscrizioni";
+    private ServiceManager serviceManager = ServiceManager.getInstance();
 
-	@Execute
-	public void execute(EPartService partService, IStylingEngine stylingEngine) {
-		ModelManager modelManager = ModelManager.getInstance();
-		if (modelManager.getCorsoObservable().getValue() != null) {
-			Iscrizione iscrizione = ModelManager.getInstance().getIscrizioneObservable().getValue();
-			Iscrizione iscrizioneOld = EcoreUtil.copy(iscrizione);
-			// int position = IntStream.range(0,
-			// modelManager.getCorsoObservable().getValue().getIscrizioni().size())
-			// .filter(i -> iscrizione.getId() ==
-			// modelManager.getCorsoObservable().getValue().getIscrizioni().get(i).getId()).findFirst().orElse(-1);
+    @Execute
+    public void execute(EPartService partService, IStylingEngine stylingEngine) {
+	ModelManager modelManager = ModelManager.getInstance();
+	Corso corso = modelManager.getCorsoObservable().getValue();
+	if (corso != null) {
+	    Iscrizione iscrizione = ModelManager.getInstance().getIscrizioneObservable().getValue();
+	    iscrizione.setTotaleDaVersare(corso.getQuotaIscrizione());
+	    Iscrizione iscrizioneOld = EcoreUtil.copy(iscrizione);
+	    // int position = IntStream.range(0,
+	    // modelManager.getCorsoObservable().getValue().getIscrizioni().size())
+	    // .filter(i -> iscrizione.getId() ==
+	    // modelManager.getCorsoObservable().getValue().getIscrizioni().get(i).getId()).findFirst().orElse(-1);
 
-			if (iscrizione != null) {
-				int index = EmfUtils.getIndexOfEObject(modelManager.getCorsoObservable().getValue().getIscrizioni(),
-						iscrizione);
-				IscrizioneDialog dialog = new IscrizioneDialog(shell, iscrizione, stylingEngine);
-				if (dialog.open() == Window.OK) {
-					List<Iscrizione> iscrizioni = modelManager.getCorsoObservable().getValue().getIscrizioni();
-					iscrizioni.set(index, iscrizione);
-					serviceManager.update(iscrizione);
+	    if (iscrizione != null) {
+		int index = EmfUtils.getIndexOfEObject(corso.getIscrizioni(), iscrizione);
+		IscrizioneDialog dialog = new IscrizioneDialog(shell, iscrizione, stylingEngine);
+		if (dialog.open() == Window.OK) {
+		    List<Iscrizione> iscrizioni = corso.getIscrizioni();
+		    iscrizioni.set(index, iscrizione);
+		    serviceManager.update(iscrizione);
 
-					modelManager.loadCorso(modelManager.getIdCorsoObservable().getValue());
-					PartsUtils.refreshMyParts(partService);
+		    modelManager.loadCorso(corso.getId());
+		    PartsUtils.refreshMyParts(partService);
 
-				} else {
-					modelManager.getIscrizioneObservable().setValue(iscrizioneOld);
-					modelManager.getCorsoObservable().getValue().getIscrizioni().set(index, iscrizioneOld);
-				}
-			} else {
-				MessageDialog.openError(shell, "Errore", "Selezionare un allievo");
-			}
 		} else {
-			MessageDialog.openError(shell, "Errore", "Selezionare un corso");
+		    modelManager.getIscrizioneObservable().setValue(iscrizioneOld);
+		    corso.getIscrizioni().set(index, iscrizioneOld);
 		}
+	    } else {
+		MessageDialog.openError(shell, "Errore", "Selezionare un allievo");
+	    }
+	} else {
+	    MessageDialog.openError(shell, "Errore", "Selezionare un corso");
 	}
+    }
 
 }

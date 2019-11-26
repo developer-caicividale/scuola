@@ -5,13 +5,10 @@ package it.caicividale.scuola.emf.model.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectEList;
 import it.caicividale.scuola.emf.model.LezionePratica;
 import it.caicividale.scuola.emf.model.ModelPackage;

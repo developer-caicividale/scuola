@@ -7,7 +7,6 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateValueStrategy;
 import org.eclipse.core.databinding.observable.list.IObservableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.e4.core.commands.ECommandService;
@@ -36,10 +35,8 @@ import org.eclipse.swt.widgets.TreeItem;
 import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.service.ServiceManager;
-import it.caicividale.scuola.ui.databinding.converters.Corso2IdCorsoConverter;
 import it.caicividale.scuola.ui.parts.treeviewer.contentproviders.ElencoCorsiTreeContentProvider;
 import it.caicividale.scuola.ui.parts.treeviewer.labelproviders.TreeviewCorsiLabelProvider;
-import it.caicividale.scuola.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 
 public class TreeviewPartCorsi implements IMyPart {
 
@@ -64,6 +61,7 @@ public class TreeviewPartCorsi implements IMyPart {
 
     @PostConstruct
     public void postConstruct(Composite parent) {
+
 	Composite container = new Composite(parent, SWT.NONE);
 	FormLayout layout = new FormLayout();
 	container.setLayout(layout);
@@ -95,6 +93,8 @@ public class TreeviewPartCorsi implements IMyPart {
 	formData = new FormData();
 	formData.top = new FormAttachment(combo, PartDefaults.MARGIN);
 	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.bottom = new FormAttachment(PartDefaults.MARGIN_BOTTOM);
+	formData.right = new FormAttachment(PartDefaults.MARGIN_RIGHT);
 	scrolledComposite.setLayoutData(formData);
 
 	// Composite containerTree = new Composite(scrolledComposite, SWT.NONE);
@@ -129,6 +129,7 @@ public class TreeviewPartCorsi implements IMyPart {
 
     }
 
+    @SuppressWarnings("unchecked")
     private DataBindingContext bindToModel(TreeViewer treeViewerCorsi, ComboViewer comboViewer) {
 
 	DataBindingContext bindingContext = new DataBindingContext();
@@ -163,12 +164,14 @@ public class TreeviewPartCorsi implements IMyPart {
 	treeViewerCorsi.setInput(elencoCorsiItemsObservableList);
 	IViewerObservableValue targetElencoCorsiObservable = ViewersObservables.observeSingleSelection(treeViewerCorsi);
 
-	IObservableValue<Long> idCorsoObservable = modelManager.getIdCorsoObservable();
-	UpdateValueStrategy target2ModelCorsoStrategy = new ConverterUpdateValueStrategy(new Corso2IdCorsoConverter());
-	UpdateValueStrategy model2targetCorsoStrategy = new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE);
+	IObservableValue<Corso> corsoObservable = modelManager.getCorsoObservable();
+//	UpdateValueStrategy target2ModelCorsoStrategy = new ConverterUpdateValueStrategy(new Corso2IdCorsoConverter());
+//	UpdateValueStrategy model2targetCorsoStrategy = new UpdateValueStrategy(UpdateValueStrategy.POLICY_UPDATE);
+//
+//	bindingContext.bindValue(targetElencoCorsiObservable, corsoObservable, target2ModelCorsoStrategy,
+//		model2targetCorsoStrategy);
 
-	bindingContext.bindValue(targetElencoCorsiObservable, idCorsoObservable, target2ModelCorsoStrategy,
-		model2targetCorsoStrategy);
+	bindingContext.bindValue(targetElencoCorsiObservable, corsoObservable);
 
 	return bindingContext;
     }

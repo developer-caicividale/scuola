@@ -7,6 +7,10 @@ public interface RestResources {
 
     final String CORSO = "/corso/{id}";
 
+    final String CORSO_UPDATE = "/corso/update/";
+
+    final String ISCRIZIONE_CREA = "/iscrizione/insert/{idCorso}";
+
     final String ELENCO_MATERIALI = "/dizionari/elenco_materiali";
 
     final String ELENCO_ISTRUTTORI = "/persona/elenco_istruttori";

@@ -263,6 +263,16 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     protected static final Boolean IS_ISCRIZIONE_OK_EDEFAULT = Boolean.FALSE;
 
     /**
+     * The cached value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione Ok</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getIsIscrizioneOk()
+     * @generated
+     * @ordered
+     */
+    protected Boolean isIscrizioneOk = IS_ISCRIZIONE_OK_EDEFAULT;
+
+    /**
      * The default value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaNoleggio()
@@ -310,8 +320,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 
     /**
      * The cached value of the '{@link #getIsCertificatoMedicoOk() <em>Is Certificato Medico Ok</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @see #getIsCertificatoMedicoOk()
      * @generated
      * @ordered
@@ -348,8 +358,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 
     /**
      * The cached value of the '{@link #getTotaleDaVersare() <em>Totale Da Versare</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getTotaleDaVersare()
      * @generated
      * @ordered
@@ -650,6 +659,20 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setIsIscrizioneOk(Boolean newIsIscrizioneOk) {
+	Boolean oldIsIscrizioneOk = isIscrizioneOk;
+	isIscrizioneOk = newIsIscrizioneOk;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK,
+		    oldIsIscrizioneOk, isIscrizioneOk));
+    }
+
+    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -694,8 +717,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -704,8 +726,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -719,13 +740,15 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated NOT
      */
     @Override
     public Boolean getIsQuotaVersataOk() {
-	// TODO: implement this method to return the 'Is Quota Versata Ok' attribute
-	// Ensure that you remove @generated or mark it @generated NOT
-	throw new UnsupportedOperationException();
+	this.eAdapters();
+	// this.
+
+	return true;
     }
 
     /**
@@ -746,8 +769,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -756,8 +778,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -926,6 +947,9 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    getMaterialeNoleggiato().clear();
 	    getMaterialeNoleggiato().addAll((Collection<? extends MaterialeNoleggiato>) newValue);
 	    return;
+	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
+	    setIsIscrizioneOk((Boolean) newValue);
+	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio((Float) newValue);
 	    return;
@@ -981,6 +1005,9 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    return;
 	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
 	    getMaterialeNoleggiato().clear();
+	    return;
+	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
+	    setIsIscrizioneOk(IS_ISCRIZIONE_OK_EDEFAULT);
 	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio(QUOTA_NOLEGGIO_EDEFAULT);
@@ -1040,8 +1067,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
 	    return materialeNoleggiato != null && !materialeNoleggiato.isEmpty();
 	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
-	    return IS_ISCRIZIONE_OK_EDEFAULT == null ? getIsIscrizioneOk() != null
-		    : !IS_ISCRIZIONE_OK_EDEFAULT.equals(getIsIscrizioneOk());
+	    return IS_ISCRIZIONE_OK_EDEFAULT == null ? isIscrizioneOk != null
+		    : !IS_ISCRIZIONE_OK_EDEFAULT.equals(isIscrizioneOk);
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    return QUOTA_NOLEGGIO_EDEFAULT == null ? quotaNoleggio != null
 		    : !QUOTA_NOLEGGIO_EDEFAULT.equals(quotaNoleggio);
@@ -1101,6 +1128,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	result.append(id);
 	result.append(", note: ");
 	result.append(note);
+	result.append(", isIscrizioneOk: ");
+	result.append(isIscrizioneOk);
 	result.append(", quotaNoleggio: ");
 	result.append(quotaNoleggio);
 	result.append(", isCertificatoMedico: ");

@@ -7,13 +7,10 @@ import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelPackage;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectEList;
 
 /**

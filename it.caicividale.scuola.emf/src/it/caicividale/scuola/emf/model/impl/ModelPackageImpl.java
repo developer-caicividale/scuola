@@ -2215,8 +2215,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		null, 0, -1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsIscrizioneOk(), ecorePackage.getEBooleanObject(), "isIscrizioneOk", "False", 1,
-		1, Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
-		IS_DERIVED, !IS_ORDERED);
+		1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_QuotaNoleggio(), ecorePackage.getEFloatObject(), "quotaNoleggio", null, 0, 1,
 		Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);

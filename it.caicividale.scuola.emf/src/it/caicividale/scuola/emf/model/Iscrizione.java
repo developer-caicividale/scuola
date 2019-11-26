@@ -288,11 +288,22 @@ public interface Iscrizione extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Is Iscrizione Ok</em>' attribute.
+     * @see #setIsIscrizioneOk(Boolean)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_IsIscrizioneOk()
-     * @model default="False" unique="false" required="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
+     * @model default="False" required="true"
      * @generated
      */
     Boolean getIsIscrizioneOk();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Is Iscrizione Ok</em>' attribute.
+     * @see #getIsIscrizioneOk()
+     * @generated
+     */
+    void setIsIscrizioneOk(Boolean value);
 
     /**
      * Returns the value of the '<em><b>Quota Noleggio</b></em>' attribute.
