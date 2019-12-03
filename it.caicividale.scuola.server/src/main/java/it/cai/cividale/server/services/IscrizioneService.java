@@ -23,4 +23,13 @@ public class IscrizioneService {
 
 	iscrizioneDao.save(iscrizioneDomain, idCorso);
     }
+
+    public void aggiornaIscrizione(Iscrizione iscrizioneModel, Long idCorso) {
+	it.cai.cividale.server.domain.Iscrizione iscrizioneDomain = mapper.model2domain(iscrizioneModel);
+	it.cai.cividale.server.domain.Corso corso = new it.cai.cividale.server.domain.Corso();
+	corso.setId(idCorso);
+	iscrizioneDomain.setCorso(corso);
+	iscrizioneDao.update(iscrizioneDomain);
+
+    }
 }

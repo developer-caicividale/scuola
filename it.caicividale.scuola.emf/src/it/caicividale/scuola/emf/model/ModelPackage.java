@@ -620,13 +620,13 @@ public interface ModelPackage extends EPackage {
     int CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO = 23;
 
     /**
-     * The feature id for the '<em><b>List Riepilogonoleggio</b></em>' attribute.
+     * The feature id for the '<em><b>List Riepilogo Noleggio</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int CORSO__LIST_RIEPILOGONOLEGGIO = 24;
+    int CORSO__LIST_RIEPILOGO_NOLEGGIO = 24;
 
     /**
      * The feature id for the '<em><b>Moduli</b></em>' containment reference list.
@@ -891,13 +891,22 @@ public interface ModelPackage extends EPackage {
     int ISCRIZIONE__ALLIEVO = 21;
 
     /**
+     * The feature id for the '<em><b>Data Fine Corso</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ISCRIZIONE__DATA_FINE_CORSO = 22;
+
+    /**
      * The number of structural features of the '<em>Iscrizione</em>' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ISCRIZIONE_FEATURE_COUNT = 22;
+    int ISCRIZIONE_FEATURE_COUNT = 23;
 
     /**
      * The number of operations of the '<em>Iscrizione</em>' class.
@@ -2675,15 +2684,15 @@ public interface ModelPackage extends EPackage {
     EAttribute getCorso_NumeroAllieviConNoleggio();
 
     /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Corso#getListRiepilogonoleggio <em>List Riepilogonoleggio</em>}'.
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Corso#getListRiepilogoNoleggio <em>List Riepilogo Noleggio</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>List Riepilogonoleggio</em>'.
-     * @see it.caicividale.scuola.emf.model.Corso#getListRiepilogonoleggio()
+     * @return the meta object for the attribute '<em>List Riepilogo Noleggio</em>'.
+     * @see it.caicividale.scuola.emf.model.Corso#getListRiepilogoNoleggio()
      * @see #getCorso()
      * @generated
      */
-    EAttribute getCorso_ListRiepilogonoleggio();
+    EAttribute getCorso_ListRiepilogoNoleggio();
 
     /**
      * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Corso#getModuli <em>Moduli</em>}'.
@@ -2969,6 +2978,17 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EReference getIscrizione_Allievo();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Iscrizione#getDataFineCorso <em>Data Fine Corso</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Data Fine Corso</em>'.
+     * @see it.caicividale.scuola.emf.model.Iscrizione#getDataFineCorso()
+     * @see #getIscrizione()
+     * @generated
+     */
+    EAttribute getIscrizione_DataFineCorso();
 
     /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Lezione <em>Lezione</em>}'.
@@ -4200,12 +4220,12 @@ public interface ModelPackage extends EPackage {
 	EAttribute CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO = eINSTANCE.getCorso_NumeroAllieviConNoleggio();
 
 	/**
-		 * The meta object literal for the '<em><b>List Riepilogonoleggio</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>List Riepilogo Noleggio</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-	EAttribute CORSO__LIST_RIEPILOGONOLEGGIO = eINSTANCE.getCorso_ListRiepilogonoleggio();
+	EAttribute CORSO__LIST_RIEPILOGO_NOLEGGIO = eINSTANCE.getCorso_ListRiepilogoNoleggio();
 
 	/**
 		 * The meta object literal for the '<em><b>Moduli</b></em>' containment reference list feature.
@@ -4418,6 +4438,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EReference ISCRIZIONE__ALLIEVO = eINSTANCE.getIscrizione_Allievo();
+
+	/**
+		 * The meta object literal for the '<em><b>Data Fine Corso</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute ISCRIZIONE__DATA_FINE_CORSO = eINSTANCE.getIscrizione_DataFineCorso();
 
 	/**
 		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.impl.LezioneImpl <em>Lezione</em>}' class.

@@ -28,6 +28,7 @@ public class CorsoService {
 
 	for (it.cai.cividale.server.domain.Corso corsoDomain : corsiPerAnnoDomain) {
 	    Corso corsoModel = corsoMapper.domain2model(corsoDomain);
+
 	    // Corso corsoModel = corsoMapper.corsoModelToCorsoDomain(corsoDomain);
 	    corsiPerAnnoModel.add(corsoModel);
 	}
@@ -38,7 +39,7 @@ public class CorsoService {
 
     public Corso getCorsoById(Long id) {
 	it.cai.cividale.server.domain.Corso corsoDomain = corsoDao.objectById(id);
-	corsoDomain.getIscrizioni();
+
 	return corsoMapper.domain2model(corsoDomain);
     }
 

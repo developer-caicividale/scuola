@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+
 import it.caicividale.scuola.emf.model.Bilancio;
 import it.caicividale.scuola.emf.model.Cassa;
 import it.caicividale.scuola.emf.model.Corso;
@@ -63,7 +64,7 @@ import it.caicividale.scuola.emf.model.util.UtilsService;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getNumeroAllieviMaschi <em>Numero Allievi Maschi</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getNumeroAllieviFemmine <em>Numero Allievi Femmine</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getNumeroAllieviConNoleggio <em>Numero Allievi Con Noleggio</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getListRiepilogonoleggio <em>List Riepilogonoleggio</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getListRiepilogoNoleggio <em>List Riepilogo Noleggio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getModuli <em>Moduli</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getLezioniPratiche <em>Lezioni Pratiche</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.CorsoImpl#getLezioniTeoriche <em>Lezioni Teoriche</em>}</li>
@@ -148,8 +149,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 
     /**
      * The cached value of the '{@link #getViceDirettore() <em>Vice Direttore</em>}' containment reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getViceDirettore()
      * @generated
      * @ordered
@@ -411,7 +411,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 
     /**
      * The cached value of the '{@link #getLezioniPratiche() <em>Lezioni Pratiche</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @see #getLezioniPratiche()
      * @generated
      * @ordered
@@ -420,7 +421,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 
     /**
      * The cached value of the '{@link #getLezioniTeoriche() <em>Lezioni Teoriche</em>}' containment reference list.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
      * @see #getLezioniTeoriche()
      * @generated
      * @ordered
@@ -429,8 +431,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 
     /**
      * The cached value of the '{@link #getIscrizioni() <em>Iscrizioni</em>}' containment reference list.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getIscrizioni()
      * @generated
      * @ordered
@@ -556,8 +557,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -566,8 +566,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -686,8 +685,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
     @Override
@@ -826,8 +824,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllievi() {
 	Integer numeroAllievi = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllievi = corso.getIscrizioni().size();
@@ -843,8 +841,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllieviIscrizioneOk() {
 	Integer numeroAllieviOk = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviOk = corso.getIscrizioni().stream().filter(i -> i.getIsIscrizioneOk())
@@ -861,8 +859,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllieviIscrizioneKo() {
 	Integer numeroAllieviKo = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviKo = corso.getIscrizioni().stream().filter(i -> !i.getIsIscrizioneOk())
@@ -879,8 +877,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllieviNuoviIscritti() {
 	Integer numeroNuoviIscritti = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroNuoviIscritti = corso.getIscrizioni().stream().filter(i -> i.getIsNuovoAllievo())
@@ -897,8 +895,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllieviMaschi() {
 	Integer numeroAllieviMaschi = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviMaschi = corso.getIscrizioni().stream()
@@ -915,8 +913,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
      */
     public Integer getNumeroAllieviFemmine() {
 	Integer numeroAllievefemmine = 0;
-	//	ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// ModelManager modelManager = ModelManager.getInstance();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllievefemmine = corso.getIscrizioni().stream()
@@ -934,7 +932,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
     public Integer getNumeroAllieviConNoleggio() {
 	Integer numeroAllieviConNoleggio = 0;
 	// ModelManager modelManager = ModelManager.getInstance();
-	//	Corso corso = modelManager.getCorsoObservable().getValue();
+	// Corso corso = modelManager.getCorsoObservable().getValue();
 	Corso corso = this;
 	if (corso != null && corso.getIscrizioni() != null) {
 	    numeroAllieviConNoleggio = corso.getIscrizioni().stream().filter(i -> i.getIsNoleggio())
@@ -942,6 +940,17 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 	}
 	System.out.println("Numero allievi con noleggio:" + numeroAllieviConNoleggio);
 	return numeroAllieviConNoleggio;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EList getListRiepilogoNoleggio() {
+	// TODO: implement this method to return the 'List Riepilogo Noleggio' attribute
+	// Ensure that you remove @generated or mark it @generated NOT
+	throw new UnsupportedOperationException();
     }
 
     /**
@@ -1080,8 +1089,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 	    return getNumeroAllieviFemmine();
 	case ModelPackage.CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO:
 	    return getNumeroAllieviConNoleggio();
-	case ModelPackage.CORSO__LIST_RIEPILOGONOLEGGIO:
-	    return getListRiepilogonoleggio();
+	case ModelPackage.CORSO__LIST_RIEPILOGO_NOLEGGIO:
+	    return getListRiepilogoNoleggio();
 	case ModelPackage.CORSO__MODULI:
 	    return getModuli();
 	case ModelPackage.CORSO__LEZIONI_PRATICHE:
@@ -1306,8 +1315,8 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 	case ModelPackage.CORSO__NUMERO_ALLIEVI_CON_NOLEGGIO:
 	    return NUMERO_ALLIEVI_CON_NOLEGGIO_EDEFAULT == null ? getNumeroAllieviConNoleggio() != null
 		    : !NUMERO_ALLIEVI_CON_NOLEGGIO_EDEFAULT.equals(getNumeroAllieviConNoleggio());
-	case ModelPackage.CORSO__LIST_RIEPILOGONOLEGGIO:
-	    return getListRiepilogonoleggio() != null;
+	case ModelPackage.CORSO__LIST_RIEPILOGO_NOLEGGIO:
+	    return getListRiepilogoNoleggio() != null;
 	case ModelPackage.CORSO__MODULI:
 	    return moduli != null && !moduli.isEmpty();
 	case ModelPackage.CORSO__LEZIONI_PRATICHE:

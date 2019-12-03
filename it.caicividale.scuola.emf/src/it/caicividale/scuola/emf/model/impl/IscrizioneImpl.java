@@ -15,10 +15,12 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectEList;
+
 import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
 import it.caicividale.scuola.emf.model.ModelPackage;
+import it.caicividale.scuola.emf.model.util.UtilsService;
 
 /**
  * <!-- begin-user-doc --> An implementation of the model object
@@ -49,6 +51,7 @@ import it.caicividale.scuola.emf.model.ModelPackage;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getDifferenzaTotaleVersatoTotaleDaVersare <em>Differenza Totale Versato Totale Da Versare</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getMessaggiErrore <em>Messaggi Errore</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getAllievo <em>Allievo</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getDataFineCorso <em>Data Fine Corso</em>}</li>
  * </ul>
  *
  * @generated
@@ -263,16 +266,6 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     protected static final Boolean IS_ISCRIZIONE_OK_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione Ok</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getIsIscrizioneOk()
-     * @generated
-     * @ordered
-     */
-    protected Boolean isIscrizioneOk = IS_ISCRIZIONE_OK_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @see #getQuotaNoleggio()
@@ -317,16 +310,6 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
      * @ordered
      */
     protected static final Boolean IS_CERTIFICATO_MEDICO_OK_EDEFAULT = Boolean.FALSE;
-
-    /**
-     * The cached value of the '{@link #getIsCertificatoMedicoOk() <em>Is Certificato Medico Ok</em>}' attribute.
-     * <!-- begin-user-doc --> <!--
-     * end-user-doc -->
-     * @see #getIsCertificatoMedicoOk()
-     * @generated
-     * @ordered
-     */
-    protected Boolean isCertificatoMedicoOk = IS_CERTIFICATO_MEDICO_OK_EDEFAULT;
 
     /**
      * The default value of the '{@link #getIsQuotaVersataOk() <em>Is Quota Versata Ok</em>}' attribute.
@@ -384,6 +367,24 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
      * @ordered
      */
     protected Allievo allievo;
+
+    /**
+     * The default value of the '{@link #getDataFineCorso() <em>Data Fine Corso</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getDataFineCorso()
+     * @generated
+     * @ordered
+     */
+    protected static final LocalDate DATA_FINE_CORSO_EDEFAULT = null;
+
+    /**
+     * The cached value of the '{@link #getDataFineCorso() <em>Data Fine Corso</em>}' attribute.
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @see #getDataFineCorso()
+     * @generated
+     * @ordered
+     */
+    protected LocalDate dataFineCorso = DATA_FINE_CORSO_EDEFAULT;
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -659,20 +660,6 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setIsIscrizioneOk(Boolean newIsIscrizioneOk) {
-	Boolean oldIsIscrizioneOk = isIscrizioneOk;
-	isIscrizioneOk = newIsIscrizioneOk;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK,
-		    oldIsIscrizioneOk, isIscrizioneOk));
-    }
-
-    /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
      * @generated
      */
@@ -718,24 +705,20 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 
     /**
      * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
+     * 
+     * @generated NOT
      */
     @Override
     public Boolean getIsCertificatoMedicoOk() {
+	Boolean isCertificatoMedicoOk = false;
+	if (getIsCertificatoMedico()) {
+	    if (getDataScadenzaCertificatoMedico() != null
+		    && UtilsService.isBeforeOrEqual(getDataFineCorso(), getDataScadenzaCertificatoMedico())) {
+		isCertificatoMedicoOk = true;
+	    }
+	}
+	System.out.println("Is Certificato Medico Ok:" + isCertificatoMedicoOk);
 	return isCertificatoMedicoOk;
-    }
-
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setIsCertificatoMedicoOk(Boolean newIsCertificatoMedicoOk) {
-	Boolean oldIsCertificatoMedicoOk = isCertificatoMedicoOk;
-	isCertificatoMedicoOk = newIsCertificatoMedicoOk;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK,
-		    oldIsCertificatoMedicoOk, isCertificatoMedicoOk));
     }
 
     /**
@@ -858,6 +841,28 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
      * @generated
      */
     @Override
+    public LocalDate getDataFineCorso() {
+	return dataFineCorso;
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setDataFineCorso(LocalDate newDataFineCorso) {
+	LocalDate oldDataFineCorso = dataFineCorso;
+	dataFineCorso = newDataFineCorso;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ISCRIZIONE__DATA_FINE_CORSO,
+		    oldDataFineCorso, dataFineCorso));
+    }
+
+    /**
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 	switch (featureID) {
 	case ModelPackage.ISCRIZIONE__IS_MODULO_ISCRIZIONE:
@@ -904,6 +909,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    return getMessaggiErrore();
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    return getAllievo();
+	case ModelPackage.ISCRIZIONE__DATA_FINE_CORSO:
+	    return getDataFineCorso();
 	}
 	return super.eGet(featureID, resolve, coreType);
     }
@@ -947,23 +954,20 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    getMaterialeNoleggiato().clear();
 	    getMaterialeNoleggiato().addAll((Collection<? extends MaterialeNoleggiato>) newValue);
 	    return;
-	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
-	    setIsIscrizioneOk((Boolean) newValue);
-	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio((Float) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
 	    setIsCertificatoMedico((Boolean) newValue);
 	    return;
-	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
-	    setIsCertificatoMedicoOk((Boolean) newValue);
-	    return;
 	case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
 	    setTotaleDaVersare((Float) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    setAllievo((Allievo) newValue);
+	    return;
+	case ModelPackage.ISCRIZIONE__DATA_FINE_CORSO:
+	    setDataFineCorso((LocalDate) newValue);
 	    return;
 	}
 	super.eSet(featureID, newValue);
@@ -1006,23 +1010,20 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
 	    getMaterialeNoleggiato().clear();
 	    return;
-	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
-	    setIsIscrizioneOk(IS_ISCRIZIONE_OK_EDEFAULT);
-	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio(QUOTA_NOLEGGIO_EDEFAULT);
 	    return;
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO:
 	    setIsCertificatoMedico(IS_CERTIFICATO_MEDICO_EDEFAULT);
 	    return;
-	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
-	    setIsCertificatoMedicoOk(IS_CERTIFICATO_MEDICO_OK_EDEFAULT);
-	    return;
 	case ModelPackage.ISCRIZIONE__TOTALE_DA_VERSARE:
 	    setTotaleDaVersare(TOTALE_DA_VERSARE_EDEFAULT);
 	    return;
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    setAllievo((Allievo) null);
+	    return;
+	case ModelPackage.ISCRIZIONE__DATA_FINE_CORSO:
+	    setDataFineCorso(DATA_FINE_CORSO_EDEFAULT);
 	    return;
 	}
 	super.eUnset(featureID);
@@ -1067,8 +1068,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
 	    return materialeNoleggiato != null && !materialeNoleggiato.isEmpty();
 	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
-	    return IS_ISCRIZIONE_OK_EDEFAULT == null ? isIscrizioneOk != null
-		    : !IS_ISCRIZIONE_OK_EDEFAULT.equals(isIscrizioneOk);
+	    return IS_ISCRIZIONE_OK_EDEFAULT == null ? getIsIscrizioneOk() != null
+		    : !IS_ISCRIZIONE_OK_EDEFAULT.equals(getIsIscrizioneOk());
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    return QUOTA_NOLEGGIO_EDEFAULT == null ? quotaNoleggio != null
 		    : !QUOTA_NOLEGGIO_EDEFAULT.equals(quotaNoleggio);
@@ -1076,8 +1077,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    return IS_CERTIFICATO_MEDICO_EDEFAULT == null ? isCertificatoMedico != null
 		    : !IS_CERTIFICATO_MEDICO_EDEFAULT.equals(isCertificatoMedico);
 	case ModelPackage.ISCRIZIONE__IS_CERTIFICATO_MEDICO_OK:
-	    return IS_CERTIFICATO_MEDICO_OK_EDEFAULT == null ? isCertificatoMedicoOk != null
-		    : !IS_CERTIFICATO_MEDICO_OK_EDEFAULT.equals(isCertificatoMedicoOk);
+	    return IS_CERTIFICATO_MEDICO_OK_EDEFAULT == null ? getIsCertificatoMedicoOk() != null
+		    : !IS_CERTIFICATO_MEDICO_OK_EDEFAULT.equals(getIsCertificatoMedicoOk());
 	case ModelPackage.ISCRIZIONE__IS_QUOTA_VERSATA_OK:
 	    return IS_QUOTA_VERSATA_OK_EDEFAULT == null ? getIsQuotaVersataOk() != null
 		    : !IS_QUOTA_VERSATA_OK_EDEFAULT.equals(getIsQuotaVersataOk());
@@ -1096,6 +1097,9 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    return !getMessaggiErrore().isEmpty();
 	case ModelPackage.ISCRIZIONE__ALLIEVO:
 	    return allievo != null;
+	case ModelPackage.ISCRIZIONE__DATA_FINE_CORSO:
+	    return DATA_FINE_CORSO_EDEFAULT == null ? dataFineCorso != null
+		    : !DATA_FINE_CORSO_EDEFAULT.equals(dataFineCorso);
 	}
 	return super.eIsSet(featureID);
     }
@@ -1128,16 +1132,14 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	result.append(id);
 	result.append(", note: ");
 	result.append(note);
-	result.append(", isIscrizioneOk: ");
-	result.append(isIscrizioneOk);
 	result.append(", quotaNoleggio: ");
 	result.append(quotaNoleggio);
 	result.append(", isCertificatoMedico: ");
 	result.append(isCertificatoMedico);
-	result.append(", isCertificatoMedicoOk: ");
-	result.append(isCertificatoMedicoOk);
 	result.append(", totaleDaVersare: ");
 	result.append(totaleDaVersare);
+	result.append(", dataFineCorso: ");
+	result.append(dataFineCorso);
 	result.append(')');
 	return result.toString();
     }

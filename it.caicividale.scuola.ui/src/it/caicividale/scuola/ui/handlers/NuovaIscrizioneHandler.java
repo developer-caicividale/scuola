@@ -9,6 +9,7 @@ import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IStylingEngine;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.window.Window;
 import org.eclipse.swt.widgets.Shell;
@@ -36,13 +37,9 @@ public class NuovaIscrizioneHandler {
 	if (corso != null) {
 	    Iscrizione iscrizione = ModelFactory.eINSTANCE.createIscrizione();
 	    iscrizione.setTotaleDaVersare(corso.getQuotaIscrizione());
+	    iscrizione.setDataFineCorso(corso.getDataFine());
 	    Allievo allevo = ModelFactory.eINSTANCE.createAllievo();
 	    iscrizione.setAllievo(allevo);
-
-	    Long idIscrizioneSelezionata = null;
-	    if (modelManager.getIscrizioneObservable().getValue() != null) {
-		idIscrizioneSelezionata = modelManager.getIscrizioneObservable().getValue().getId();
-	    }
 
 	    modelManager.getIscrizioneObservable().setValue(iscrizione);
 
@@ -51,7 +48,10 @@ public class NuovaIscrizioneHandler {
 		List<Iscrizione> iscrizioni = corso.getIscrizioni();
 		iscrizioni.add(iscrizione);
 		serviceManager.insertIscrizione(iscrizione, corso.getId());
-		// PartsUtils.refreshMyParts(partService);
+		// L'ooservabile Corso non reagisce ai cambiamenti della lista iscrizione, forzo
+		// il cambiamento copiando l'oggetto
+		modelManager.getCorsoObservable().setValue(EcoreUtil.copy(corso));
+
 	    } else {
 
 	    }

@@ -4,6 +4,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,6 +24,14 @@ public class IscrizioneController {
     public ResponseEntity<Void> creaIscrizione(@PathVariable(required = true) final Long idCorso,
 	    @RequestBody Iscrizione iscrizione) {
 	iscrizioneService.creaIscrizione(iscrizione, idCorso);
+
+	return ResponseEntityUtils.create(null);
+    }
+
+    @PutMapping(value = RestResources.ISCRIZIONE_UPDATE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Void> aggiornaIscrizione(@PathVariable(required = true) final Long idCorso,
+	    @RequestBody Iscrizione iscrizione) {
+	iscrizioneService.aggiornaIscrizione(iscrizione, idCorso);
 
 	return ResponseEntityUtils.create(null);
     }

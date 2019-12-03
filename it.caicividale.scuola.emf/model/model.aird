@@ -1207,6 +1207,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_OW_rAYUaEeiR5ca21rv_Xw" fontColor="7490599" fontName="Segoe UI" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_OW_rAoUaEeiR5ca21rv_Xw"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_vAyewBA7EeqJ4clygT9CPw" type="3010" element="_u_5G4BA7EeqJ4clygT9CPw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_vAyewRA7EeqJ4clygT9CPw" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_vAyewhA7EeqJ4clygT9CPw"/>
+            </children>
             <children xmi:type="notation:Node" xmi:id="_tOJJYF8-EeiF97L2oxABrA" type="3010" element="_tNsdcF8-EeiF97L2oxABrA">
               <styles xmi:type="notation:FontStyle" xmi:id="_tOJJYV8-EeiF97L2oxABrA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_tOJJYl8-EeiF97L2oxABrA"/>
@@ -1441,9 +1445,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_hYB0INCWEeiEE76twq75zQ" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_hYB0INCWEeiEE76twq75zQ" name="/listRiepilogoNoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_hYB0IdCWEeiEE76twq75zQ" labelColor="39,76,114" labelAlignment="LEFT" description="_t23JEIRHEei1O9OJewzsxA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -1518,7 +1522,7 @@
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_zblDEwb7Eeqgh-jgjMZerA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_x09PgxA7EeqJ4clygT9CPw" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -1606,10 +1610,10 @@
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Pyc9ALzsEeiCN9ZHsq1xmQ" labelColor="39,76,114" labelAlignment="LEFT" description="_t23JEIRHEei1O9OJewzsxA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_pb38MF8_EeiF97L2oxABrA" name="isIscrizioneOk : EBooleanObject = False" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_pb38MF8_EeiF97L2oxABrA" name="/isIscrizioneOk : EBooleanObject = False" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isIscrizioneOk"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isIscrizioneOk"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_btQEsQqtEeqFEv3oCgkttA" labelAlignment="LEFT" description="_9A9Xce_YEeeTXYZPrO7Puw">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_d3UnAxA8EeqJ4clygT9CPw" labelColor="39,76,114" labelAlignment="LEFT" description="_t5tAQO_fEeeTXYZPrO7Puw">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
@@ -1625,17 +1629,15 @@
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_5Jp0cIBAEeimv_fCF6xYqw" name="isCertificatoMedico : EBooleanObject = False" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isCertificatoMedico"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isCertificatoMedico"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_AoSFJAFCEeqrJrVfL1D1rw" labelAlignment="LEFT">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_fVqNRRA8EeqJ4clygT9CPw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_40EHMIQrEei1O9OJewzsxA" name="isCertificatoMedicoOk : EBooleanObject = False" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_40EHMIQrEei1O9OJewzsxA" name="/isCertificatoMedicoOk : EBooleanObject = False" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isCertificatoMedicoOk"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/isCertificatoMedicoOk"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_Cwpf1QFCEeqrJrVfL1D1rw" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_puVtxhA7EeqJ4clygT9CPw" labelColor="39,76,114" labelAlignment="LEFT" description="_t23JEIRHEei1O9OJewzsxA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_L4zmoIQwEei1O9OJewzsxA" name="/isQuotaVersataOk : EBooleanObject = False" tooltipText="">
@@ -1668,6 +1670,14 @@
         <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/messaggiErrore"/>
         <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/messaggiErrore"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_S7vBgIUaEeiR5ca21rv_Xw" labelColor="39,76,114" labelAlignment="LEFT" description="_t23JEIRHEei1O9OJewzsxA"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_u_5G4BA7EeqJ4clygT9CPw" name="dataFineCorso : ELocalDate" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/dataFineCorso"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Iscrizione/dataFineCorso"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_x09PnRA7EeqJ4clygT9CPw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_tNsdcF8-EeiF97L2oxABrA" name=" materialeNoleggiato : MaterialeNoleggiato" tooltipText="">
@@ -2351,8 +2361,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_yiJRIMTtEeioIeCjR_kDMA" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_yiJRIsTtEeioIeCjR_kDMA" labelColor="39,76,114" labelAlignment="LEFT" description="_yiJRIcTtEeioIeCjR_kDMA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -3955,8 +3965,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_kVLZoMiyEeiJW9r56lpEYA" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_kVLZosiyEeiJW9r56lpEYA" labelColor="39,76,114" labelAlignment="LEFT" description="_kVLZociyEeiJW9r56lpEYA"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -4822,8 +4832,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_1B6Kqu_4EemXlMvqfheM3w" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_1B6Kq-_4EemXlMvqfheM3w" labelColor="39,76,114" labelAlignment="LEFT" description="_1XgiUqufEeiTb5IpLsz18A"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -5342,6 +5352,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_HdpnEQSHEeqVn_KQUva7bA" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_HdpnEgSHEeqVn_KQUva7bA"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_9bV3ehBQEeqJ4clygT9CPw" type="3010" element="_9aJkcBBQEeqJ4clygT9CPw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_9bV3exBQEeqJ4clygT9CPw" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_9bV3fBBQEeqJ4clygT9CPw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_kcGj5V6IEeiTYYmByPSNCw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_kcGj5l6IEeiTYYmByPSNCw"/>
           </children>
@@ -5687,9 +5701,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_g4DGQMFxEeifyc5JO53QDQ" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_g4DGQMFxEeifyc5JO53QDQ" name="/listRiepilogoNoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_oMWaUMFxEeifyc5JO53QDQ" labelColor="39,76,114" labelAlignment="LEFT" description="_oMUlIMFxEeifyc5JO53QDQ"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
@@ -5732,6 +5746,12 @@
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_9aJkcBBQEeqJ4clygT9CPw" name="ricalcolaConteggi()" tooltipText="ricalcolaConteggi()">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_9avaUBBQEeqJ4clygT9CPw" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_kcGlT16IEeiTYYmByPSNCw" name="Istruttore" tooltipText="" outgoingEdges="_kcHK6l6IEeiTYYmByPSNCw" incomingEdges="_kcGlVV6IEeiTYYmByPSNCw _kcGlWV6IEeiTYYmByPSNCw _kcHK7l6IEeiTYYmByPSNCw" width="12" height="10">
@@ -6625,8 +6645,8 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_0ijPwPGSEemlS9lBmemoQw" name="/listRiepilogonoleggio : EEList" tooltipText="&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogonoleggio"/>
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//Corso/listRiepilogoNoleggio"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_0ijPwvGSEemlS9lBmemoQw" labelColor="39,76,114" labelAlignment="LEFT" description="_0ijPwfGSEemlS9lBmemoQw"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>

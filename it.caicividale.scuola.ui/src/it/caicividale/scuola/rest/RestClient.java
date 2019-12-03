@@ -189,6 +189,11 @@ public class RestClient {
 	}
     }
 
+    public void put(String url, Object body) {
+	put(url, Collections.emptyMap(), body);
+
+    }
+
     public final void put(String url, Map<String, Object> query) throws RestException {
 	put(url, query, null);
     }
@@ -230,4 +235,5 @@ public class RestClient {
 	    return url + queryStringBuffer;
 	}
     }
+
 }

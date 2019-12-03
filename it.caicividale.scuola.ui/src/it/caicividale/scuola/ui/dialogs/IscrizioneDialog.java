@@ -204,6 +204,9 @@ public class IscrizioneDialog extends Dialog {
     private Label lblDifferenzaTotaleVersatoTotaleDovuto;
     private Text differenzaTotaleVersatoTotaleDovuto;
 
+//    private final IObservableValue<Iscrizione> iscrizioneActualObservable = WritableValue
+//	    .withValueType(Iscrizione.class);
+
     private final IObservableValue<Iscrizione> iscrizioneActualObservable = WritableValue
 	    .withValueType(Iscrizione.class);
     private final IObservableValue<MaterialeNoleggiato> materialeNoleggiatoItemsObservable = WritableValue
@@ -1426,7 +1429,7 @@ public class IscrizioneDialog extends Dialog {
 
 	// data ScadenzaCertificato
 	LocalDateSelectionProperty localDateSelectionDataScadenzaCertificatoProperty = new LocalDateSelectionProperty();
-	IObservableValue<Date> dataScadenzaCertificatoObservable = EMFProperties
+	IObservableValue<LocalDate> dataScadenzaCertificatoObservable = EMFProperties
 		.value(FeaturePath.fromList(ModelPackage.Literals.ISCRIZIONE__DATA_SCADENZA_CERTIFICATO_MEDICO))
 		.observeDetail(iscrizioneActualObservable);
 	ISWTObservableValue dataScadenzaCertificatoDateTimeObservable = localDateSelectionDataScadenzaCertificatoProperty
@@ -1608,10 +1611,10 @@ public class IscrizioneDialog extends Dialog {
 	    }
 	});
 
-	dataScadenzaCertificatoObservable.addValueChangeListener(new IValueChangeListener<Date>() {
+	dataScadenzaCertificatoObservable.addValueChangeListener(new IValueChangeListener<LocalDate>() {
 
 	    @Override
-	    public void handleValueChange(ValueChangeEvent<? extends Date> event) {
+	    public void handleValueChange(ValueChangeEvent<? extends LocalDate> event) {
 		listViewerElencoErrori.refresh();
 	    }
 	});

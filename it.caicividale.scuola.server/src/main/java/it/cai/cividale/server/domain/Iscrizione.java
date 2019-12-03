@@ -37,7 +37,7 @@ public class Iscrizione implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "corso_id", nullable = false)
+    @JoinColumn(name = "corso_id")
     private Corso corso;
 
     @Column(name = "is_modulo_iscrizione")

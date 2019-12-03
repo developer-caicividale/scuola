@@ -92,7 +92,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numeroAllieviConNoleggio"
         ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"
         changeable="false" volatile="true" transient="true" derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listRiepilogonoleggio"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listRiepilogoNoleggio"
         ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="moduli" upperBound="-1"
@@ -129,15 +129,17 @@
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="materialeNoleggiato" upperBound="-1"
         eType="#//MaterialeNoleggiato" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIscrizioneOk" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
-        defaultValueLiteral="False"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIscrizioneOk" ordered="false"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
+        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quotaNoleggio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCertificatoMedico" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="False"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCertificatoMedicoOk"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
-        defaultValueLiteral="False"/>
+        ordered="false" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
+        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isQuotaVersataOk" ordered="false"
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
@@ -154,6 +156,7 @@
         changeable="false" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allievo" lowerBound="1"
         eType="#//Allievo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataFineCorso" eType="#//ELocalDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lezione">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="titolo" lowerBound="1"

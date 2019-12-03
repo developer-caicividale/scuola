@@ -19,9 +19,9 @@ public class IscrizioneDaoImpl extends AbstractDaoImpl<Iscrizione> implements Is
 
     @Override
     public void save(Iscrizione iscrizioneDomain, Long idCorso) {
-	Corso corsoDomian = corsoDao.objectById(idCorso);
+	Corso corsoDomian = new Corso();
 	corsoDomian.setId(idCorso);
-	corsoDomian.getIscrizioni().add(iscrizioneDomain);
+	iscrizioneDomain.setCorso(corsoDomian);
 	save(iscrizioneDomain);
 
     }

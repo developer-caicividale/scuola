@@ -11,6 +11,8 @@ public interface RestResources {
 
     final String ISCRIZIONE_CREA = "/iscrizione/insert/{idCorso}";
 
+    final String ISCRIZIONE_UPDATE = "/iscrizione/update/{idCorso}";
+
     final String ELENCO_MATERIALI = "/dizionari/elenco_materiali";
 
     final String ELENCO_ISTRUTTORI = "/persona/elenco_istruttori";

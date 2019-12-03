@@ -9,6 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: it.caicividale.scuola.emf.model,
+ it.caicividale.scuola.emf.model.adapters,
  it.caicividale.scuola.emf.model.beans,
  it.caicividale.scuola.emf.model.impl,
  it.caicividale.scuola.emf.model.sharedresources,

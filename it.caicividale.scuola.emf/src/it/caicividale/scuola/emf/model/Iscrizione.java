@@ -38,6 +38,7 @@ import java.time.LocalDate;
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getDifferenzaTotaleVersatoTotaleDaVersare <em>Differenza Totale Versato Totale Da Versare</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getMessaggiErrore <em>Messaggi Errore</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getAllievo <em>Allievo</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getDataFineCorso <em>Data Fine Corso</em>}</li>
  * </ul>
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione()
@@ -288,22 +289,11 @@ public interface Iscrizione extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Is Iscrizione Ok</em>' attribute.
-     * @see #setIsIscrizioneOk(Boolean)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_IsIscrizioneOk()
-     * @model default="False" required="true"
+     * @model default="False" unique="false" required="true" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
     Boolean getIsIscrizioneOk();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Is Iscrizione Ok</em>' attribute.
-     * @see #getIsIscrizioneOk()
-     * @generated
-     */
-    void setIsIscrizioneOk(Boolean value);
 
     /**
      * Returns the value of the '<em><b>Quota Noleggio</b></em>' attribute.
@@ -356,22 +346,11 @@ public interface Iscrizione extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Is Certificato Medico Ok</em>' attribute.
-     * @see #setIsCertificatoMedicoOk(Boolean)
      * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_IsCertificatoMedicoOk()
-     * @model default="False"
+     * @model default="False" unique="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
     Boolean getIsCertificatoMedicoOk();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getIsCertificatoMedicoOk <em>Is Certificato Medico Ok</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Is Certificato Medico Ok</em>' attribute.
-     * @see #getIsCertificatoMedicoOk()
-     * @generated
-     */
-    void setIsCertificatoMedicoOk(Boolean value);
 
     /**
      * Returns the value of the '<em><b>Is Quota Versata Ok</b></em>' attribute.
@@ -462,5 +441,27 @@ public interface Iscrizione extends EObject {
      * @generated
      */
     void setAllievo(Allievo value);
+
+    /**
+     * Returns the value of the '<em><b>Data Fine Corso</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Data Fine Corso</em>' attribute.
+     * @see #setDataFineCorso(LocalDate)
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_DataFineCorso()
+     * @model dataType="it.caicividale.scuola.emf.model.ELocalDate"
+     * @generated
+     */
+    LocalDate getDataFineCorso();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Iscrizione#getDataFineCorso <em>Data Fine Corso</em>}' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Data Fine Corso</em>' attribute.
+     * @see #getDataFineCorso()
+     * @generated
+     */
+    void setDataFineCorso(LocalDate value);
 
 } // Iscrizione

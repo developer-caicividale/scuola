@@ -2,18 +2,22 @@ package it.caicividale.scuola.service;
 
 import java.time.LocalDate;
 
+import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.list.ListChangeEvent;
 import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.IValueChangeListener;
 import org.eclipse.core.databinding.observable.value.ValueChangeEvent;
 import org.eclipse.core.databinding.observable.value.WritableValue;
 
+import it.caicividale.scuola.NumeroAllieviBean;
 import it.caicividale.scuola.emf.model.Corso;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.Persona;
+import it.caicividale.scuola.emf.model.adapters.ChangeDataAdapter;
 import lombok.Data;
 
 @Data
@@ -23,11 +27,16 @@ public class ModelManager {
     // corso selezionato
     private final IObservableValue<Corso> corsoObservable = WritableValue.withValueType(Corso.class);
 
+    private final ChangeDataAdapter changeDataAdapter = new ChangeDataAdapter();
+
 //    // id corso selezionato
 //    private final IObservableValue<Long> idCorsoObservable = WritableValue.withValueType(Long.class);
 
     // anno relativo ai corsi
     private final IObservableValue<Integer> annoCorsiObservable = WritableValue.withValueType(Integer.class);
+
+    private final IObservableValue<NumeroAllieviBean> numeroAllieviBeanObservable = WritableValue
+	    .withValueType(NumeroAllieviBean.class);
 
     // elenco delle item corso per anno
     private final IObservableList<Corso> elencoCorsiItemsObservableList = WritableList.withElementType(Corso.class);
@@ -75,19 +84,43 @@ public class ModelManager {
 	    }
 	});
 
-//	// quando cambia l'ElencoCorsiItem aggiorno il corso
-//	idCorsoObservable.addValueChangeListener(new IValueChangeListener<Long>() {
-//
-//	    @Override
-//	    public void handleValueChange(ValueChangeEvent<? extends Long> event) {
-//		Long idCorso = (Long) ((IObservableValue) event.getSource()).getValue();
-//		if (idCorso != null) {
-//		    loadCorso(idCorso);
-//		}
-//
-//	    }
-//
-//	});
+	// quando cambia l'ElencoCorsiItem aggiorno il corso
+	corsoObservable.addValueChangeListener(new IValueChangeListener<Corso>() {
+
+	    @Override
+	    public void handleValueChange(ValueChangeEvent<? extends Corso> event) {
+		Corso corso = (Corso) ((IObservableValue) event.getSource()).getValue();
+		if (corso != null) {
+		    corso.eAdapters().add(changeDataAdapter);
+		}
+
+	    }
+
+	});
+
+	iscrizioneObservable.addValueChangeListener(new IValueChangeListener<Iscrizione>() {
+
+	    @Override
+	    public void handleValueChange(ValueChangeEvent<? extends Iscrizione> event) {
+//		NumeroAllieviBean numeroAllieviBean = new NumeroAllieviBean();
+//		numeroAllieviBeanObservable.setValue(numeroAllieviBean);
+		if (numeroAllieviBeanObservable.getValue() != null) {
+		    numeroAllieviBeanObservable.getValue().ricalcolaConteggi();
+		}
+	    }
+
+	});
+
+	IListChangeListener<? super Iscrizione> listener;
+	elencoIscrizioneObservableList.addListChangeListener(new IListChangeListener<Iscrizione>() {
+
+	    @Override
+	    public void handleListChange(ListChangeEvent<? extends Iscrizione> event) {
+		System.out.println("Cambiamento lista iscrizioni rilevato:" + event.diff.toString());
+
+	    }
+
+	});
     }
 
     public void loadElencoCorsi(Integer anno) {

@@ -100,7 +100,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviMaschi"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviFemmine"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/numeroAllieviConNoleggio"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/listRiepilogonoleggio"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Corso/listRiepilogoNoleggio"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/moduli"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniPratiche"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Corso/lezioniTeoriche"/>
@@ -129,6 +129,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/differenzaTotaleVersatoTotaleDaVersare"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/messaggiErrore"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/allievo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/dataFineCorso"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Lezione">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Lezione/titolo"/>

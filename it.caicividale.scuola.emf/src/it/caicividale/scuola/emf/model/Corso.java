@@ -40,7 +40,7 @@ import java.time.LocalDate;
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getNumeroAllieviMaschi <em>Numero Allievi Maschi</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getNumeroAllieviFemmine <em>Numero Allievi Femmine</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getNumeroAllieviConNoleggio <em>Numero Allievi Con Noleggio</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Corso#getListRiepilogonoleggio <em>List Riepilogonoleggio</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Corso#getListRiepilogoNoleggio <em>List Riepilogo Noleggio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getModuli <em>Moduli</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getLezioniPratiche <em>Lezioni Pratiche</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Corso#getLezioniTeoriche <em>Lezioni Teoriche</em>}</li>
@@ -499,15 +499,15 @@ public interface Corso extends EObject {
     Integer getNumeroAllieviConNoleggio();
 
     /**
-     * Returns the value of the '<em><b>List Riepilogonoleggio</b></em>' attribute.
+     * Returns the value of the '<em><b>List Riepilogo Noleggio</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>List Riepilogonoleggio</em>' attribute.
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_ListRiepilogonoleggio()
+     * @return the value of the '<em>List Riepilogo Noleggio</em>' attribute.
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getCorso_ListRiepilogoNoleggio()
      * @model unique="false" many="false" transient="true" changeable="false" volatile="true" derived="true" ordered="false"
      * @generated
      */
-    EList getListRiepilogonoleggio();
+    EList getListRiepilogoNoleggio();
 
     /**
      * Returns the value of the '<em><b>Moduli</b></em>' containment reference list.

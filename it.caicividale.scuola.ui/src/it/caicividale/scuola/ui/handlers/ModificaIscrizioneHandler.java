@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.eclipse.core.databinding.observable.list.ListChangeEvent;
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IStylingEngine;
@@ -20,7 +21,6 @@ import it.caicividale.scuola.service.ModelManager;
 import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.dialogs.IscrizioneDialog;
 import it.caicividale.scuola.ui.utils.EmfUtils;
-import it.caicividale.scuola.ui.utils.PartsUtils;
 
 public class ModificaIscrizioneHandler {
     @Inject
@@ -36,7 +36,6 @@ public class ModificaIscrizioneHandler {
 	Corso corso = modelManager.getCorsoObservable().getValue();
 	if (corso != null) {
 	    Iscrizione iscrizione = ModelManager.getInstance().getIscrizioneObservable().getValue();
-	    iscrizione.setTotaleDaVersare(corso.getQuotaIscrizione());
 	    Iscrizione iscrizioneOld = EcoreUtil.copy(iscrizione);
 	    // int position = IntStream.range(0,
 	    // modelManager.getCorsoObservable().getValue().getIscrizioni().size())
@@ -49,13 +48,17 @@ public class ModificaIscrizioneHandler {
 		if (dialog.open() == Window.OK) {
 		    List<Iscrizione> iscrizioni = corso.getIscrizioni();
 		    iscrizioni.set(index, iscrizione);
-		    serviceManager.update(iscrizione);
+		    serviceManager.update(iscrizione, corso.getId());
+//		    // L'ooservabile Corso non reagisce ai cambiamenti della lista iscrizione, forzo
+//		    // il cambiamento copiando l'oggetto
+		    modelManager.getCorsoObservable().setValue(EcoreUtil.copy(corso));
 
-		    modelManager.loadCorso(corso.getId());
-		    PartsUtils.refreshMyParts(partService);
+		    // modelManager.getIscrizioneObservable().setValue(iscrizione);
+
+		    ListChangeEvent tracker;
 
 		} else {
-		    modelManager.getIscrizioneObservable().setValue(iscrizioneOld);
+		    ModelManager.getInstance().getIscrizioneObservable().setValue(iscrizioneOld);
 		    corso.getIscrizioni().set(index, iscrizioneOld);
 		}
 	    } else {

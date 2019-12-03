@@ -120,8 +120,11 @@ public class ServiceManager {
 
     }
 
-    public void update(Iscrizione iscrizione) {
-	// TODO Auto-generated method stub
+    public void update(Iscrizione iscrizione, Long idCorso) {
+	Map<String, Object> query = new HashMap<>();
+	query.put("idCorso", idCorso);
+
+	restClient.put(url(RestResources.ISCRIZIONE_UPDATE, query), iscrizione);
 
     }
 

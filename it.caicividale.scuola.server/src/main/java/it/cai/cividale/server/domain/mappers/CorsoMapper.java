@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-import it.cai.cividale.server.domain.Iscrizione;
 import it.cai.cividale.server.domain.mappers.converters.EmailConverterDomain2Model;
 import it.cai.cividale.server.domain.mappers.converters.EmailConverterModel2Domain;
 import it.cai.cividale.server.domain.mappers.converters.NumeroCellulareConverterDomain2Model;
 import it.cai.cividale.server.domain.mappers.converters.NumeroCellulareConverterModel2Domain;
 import it.caicividale.scuola.emf.model.Corso;
+import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelFactory;
 import it.caicividale.scuola.emf.model.Persona;
@@ -80,8 +80,11 @@ public class CorsoMapper {
 
 	corsoModel.setViceDirettore(vicedirettoreModel);
 
-	for (Iscrizione iscrizioneDomain : corsoDomain.getIscrizioni()) {
-	    corsoModel.getIscrizioni().add(iscrizioneMapper.domain2model(iscrizioneDomain));
+	for (it.cai.cividale.server.domain.Iscrizione iscrizioneDomain : corsoDomain.getIscrizioni()) {
+	    Iscrizione iscrizioneModel = iscrizioneMapper.domain2model(iscrizioneDomain);
+	    iscrizioneModel.setTotaleDaVersare(corsoModel.getQuotaIscrizione());
+	    iscrizioneModel.setDataFineCorso(corsoModel.getDataFine());
+	    corsoModel.getIscrizioni().add(iscrizioneModel);
 	}
 
 	return corsoModel;
