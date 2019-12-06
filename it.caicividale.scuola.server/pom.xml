@@ -32,7 +32,7 @@
 		<org.aspectj.version>1.9.4</org.aspectj.version>
 
 
-		<c3p0.version>0.9.5.3</c3p0.version>
+		<c3p0.version>0.9.5.4</c3p0.version>
 		<org.glassfish.javax.el.version>3.0.1-b09</org.glassfish.javax.el.version>
 
 		<SCXML.version>0.9</SCXML.version>
