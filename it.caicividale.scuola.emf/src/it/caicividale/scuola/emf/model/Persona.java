@@ -22,15 +22,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getNumeroCellulare <em>Numero Cellulare</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getEMail <em>EMail</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getResidenzaVia <em>Residenza Via</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCitta <em>Residenza Citta</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Persona#getResidenzaProvincia <em>Residenza Provincia</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCap <em>Residenza Cap</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getNascitaData <em>Nascita Data</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Persona#getNascitaCitta <em>Nascita Citta</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Persona#getNascitaProvincia <em>Nascita Provincia</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getSezioneCaiAppartenenza <em>Sezione Cai Appartenenza</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Persona#getIsStaffScuola <em>Is Staff Scuola</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Persona#getComuneResidenza <em>Comune Residenza</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Persona#getComuneNascita <em>Comune Nascita</em>}</li>
  * </ul>
  *
  * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona()
@@ -174,72 +171,6 @@ public interface Persona extends EObject {
     void setResidenzaVia(String value);
 
     /**
-     * Returns the value of the '<em><b>Residenza Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Residenza Citta</em>' attribute.
-     * @see #setResidenzaCitta(String)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_ResidenzaCitta()
-     * @model required="true"
-     * @generated
-     */
-    String getResidenzaCitta();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCitta <em>Residenza Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Residenza Citta</em>' attribute.
-     * @see #getResidenzaCitta()
-     * @generated
-     */
-    void setResidenzaCitta(String value);
-
-    /**
-     * Returns the value of the '<em><b>Residenza Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Residenza Provincia</em>' attribute.
-     * @see #setResidenzaProvincia(String)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_ResidenzaProvincia()
-     * @model required="true"
-     * @generated
-     */
-    String getResidenzaProvincia();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaProvincia <em>Residenza Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Residenza Provincia</em>' attribute.
-     * @see #getResidenzaProvincia()
-     * @generated
-     */
-    void setResidenzaProvincia(String value);
-
-    /**
-     * Returns the value of the '<em><b>Residenza Cap</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Residenza Cap</em>' attribute.
-     * @see #setResidenzaCap(String)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_ResidenzaCap()
-     * @model required="true"
-     * @generated
-     */
-    String getResidenzaCap();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCap <em>Residenza Cap</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Residenza Cap</em>' attribute.
-     * @see #getResidenzaCap()
-     * @generated
-     */
-    void setResidenzaCap(String value);
-
-    /**
      * Returns the value of the '<em><b>Nascita Data</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -260,50 +191,6 @@ public interface Persona extends EObject {
      * @generated
      */
     void setNascitaData(LocalDate value);
-
-    /**
-     * Returns the value of the '<em><b>Nascita Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Nascita Citta</em>' attribute.
-     * @see #setNascitaCitta(String)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_NascitaCitta()
-     * @model
-     * @generated
-     */
-    String getNascitaCitta();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getNascitaCitta <em>Nascita Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Nascita Citta</em>' attribute.
-     * @see #getNascitaCitta()
-     * @generated
-     */
-    void setNascitaCitta(String value);
-
-    /**
-     * Returns the value of the '<em><b>Nascita Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Nascita Provincia</em>' attribute.
-     * @see #setNascitaProvincia(String)
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_NascitaProvincia()
-     * @model
-     * @generated
-     */
-    String getNascitaProvincia();
-
-    /**
-     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getNascitaProvincia <em>Nascita Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Nascita Provincia</em>' attribute.
-     * @see #getNascitaProvincia()
-     * @generated
-     */
-    void setNascitaProvincia(String value);
 
     /**
      * Returns the value of the '<em><b>Sezione Cai Appartenenza</b></em>' attribute.
@@ -371,5 +258,49 @@ public interface Persona extends EObject {
      * @generated
      */
     void setIsStaffScuola(Boolean value);
+
+    /**
+     * Returns the value of the '<em><b>Comune Residenza</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Comune Residenza</em>' containment reference.
+     * @see #setComuneResidenza(DizComune)
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_ComuneResidenza()
+     * @model containment="true"
+     * @generated
+     */
+    DizComune getComuneResidenza();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getComuneResidenza <em>Comune Residenza</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Comune Residenza</em>' containment reference.
+     * @see #getComuneResidenza()
+     * @generated
+     */
+    void setComuneResidenza(DizComune value);
+
+    /**
+     * Returns the value of the '<em><b>Comune Nascita</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Comune Nascita</em>' containment reference.
+     * @see #setComuneNascita(DizComune)
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getPersona_ComuneNascita()
+     * @model containment="true"
+     * @generated
+     */
+    DizComune getComuneNascita();
+
+    /**
+     * Sets the value of the '{@link it.caicividale.scuola.emf.model.Persona#getComuneNascita <em>Comune Nascita</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Comune Nascita</em>' containment reference.
+     * @see #getComuneNascita()
+     * @generated
+     */
+    void setComuneNascita(DizComune value);
 
 } // Persona

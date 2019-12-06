@@ -214,6 +214,13 @@ public class ModelSwitch<T> extends Switch<T> {
 		result = defaultCase(theEObject);
 	    return result;
 	}
+	case ModelPackage.DIZ_COMUNE: {
+	    DizComune dizComune = (DizComune) theEObject;
+	    T result = caseDizComune(dizComune);
+	    if (result == null)
+		result = defaultCase(theEObject);
+	    return result;
+	}
 	default:
 	    return defaultCase(theEObject);
 	}
@@ -516,6 +523,21 @@ public class ModelSwitch<T> extends Switch<T> {
      * @generated
      */
     public T caseElencoIstruttori(ElencoIstruttori object) {
+	return null;
+    }
+
+    /**
+     * Returns the result of interpreting the object as an instance of '<em>Diz Comune</em>'.
+     * <!-- begin-user-doc -->
+     * This implementation returns null;
+     * returning a non-null result will terminate the switch.
+     * <!-- end-user-doc -->
+     * @param object the target of the switch.
+     * @return the result of interpreting the object as an instance of '<em>Diz Comune</em>'.
+     * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+     * @generated
+     */
+    public T caseDizComune(DizComune object) {
 	return null;
     }
 

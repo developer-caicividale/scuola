@@ -3,6 +3,7 @@ package it.cai.cividale.server.domain;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -11,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import it.cai.cividale.server.domain.converters.TipoSessoConverter;
@@ -52,23 +55,16 @@ public class Persona implements Serializable {
     @Column(name = "residenza_via", nullable = false)
     private String residenzaVia;
 
-    @Column(name = "residenza_citta", nullable = false)
-    private String residenzaCitta;
-
-    @Column(name = "residenza_provincia", nullable = false)
-    private String residenzaProvincia;
-
-    @Column(name = "residenza_cap", nullable = false)
-    private String residenzaCap;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_comune_residenza")
+    private DizComune comuneResidenza;
 
     @Column(name = "nascita_data", nullable = false, length = 19)
     private LocalDate nascitaData;
 
-    @Column(name = "nascita_citta")
-    private String nascitaCitta;
-
-    @Column(name = "nascita_provincia")
-    private String nascitaProvincia;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_comune_nascita")
+    private DizComune comuneNascita;
 
     @Column(name = "sezione_cai_appartenenza", nullable = false)
     private String sezioneCaiAppartenenza;

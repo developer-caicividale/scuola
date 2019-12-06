@@ -62,15 +62,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/numeroCellulare"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/eMail"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/residenzaVia"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/residenzaCitta"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/residenzaProvincia"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/residenzaCap"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nascitaData"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nascitaCitta"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nascitaProvincia"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/sezioneCaiAppartenenza"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/isStaffScuola"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Persona/comuneResidenza"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Persona/comuneNascita"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Allievo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Allievo/isDiploma"/>
@@ -216,6 +213,14 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//ElencoIstruttori">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoIstruttori/elencoIstruttori"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//DizComune">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/comune"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/provincia"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/sigla"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/regione"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/cap"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

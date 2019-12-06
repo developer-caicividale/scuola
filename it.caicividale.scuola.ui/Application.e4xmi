@@ -27,6 +27,7 @@
                   <children xsi:type="menu:HandledToolItem" xmi:id="_-JkeIG70EeiNddvTTM8VUw" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.modificaiscrizione" accessibilityPhrase="Modifica iscrizione" label="Modifica iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/modifica24x24.png" tooltip="Modifica i dati dell'iscrizione" command="_33kfIG71EeiNddvTTM8VUw"/>
                   <children xsi:type="menu:ToolBarSeparator" xmi:id="_9WUBQJctEeiVMZCCPdwYSg" elementId="it.caicividale.scuola.ui.toolbarseparator.2"/>
                   <children xsi:type="menu:HandledToolItem" xmi:id="_874qoG5SEeiDxJ1Ohr-a8w" elementId="it.caicividale.scuola.ui.part.elencoiscrizioni.toolbar.cancellaiscrizione" accessibilityPhrase="Elimina iscrizione" label="Elimina iscrizione" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/trash_red24x24.png" tooltip="Elimina iscrizione" command="_FbY7oG5VEeiDxJ1Ohr-a8w"/>
+                  <children xsi:type="menu:HandledToolItem" xmi:id="_JPytwBhJEeq0yZmZvfh8Bw" elementId="it.caicividale.scuola.ui.handledtoolitem.modificaallievo" accessibilityPhrase="Modifica allievo" label="Modifica allievo" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/people_modifica24x24.png" tooltip="Modifica allievo" command="_Zrx_EBhJEeq0yZmZvfh8Bw"/>
                 </toolbar>
               </children>
               <children xsi:type="basic:Part" xmi:id="_yRPTIF26EeiJIKXlXpiC1Q" elementId="it.caicividale.scuola.ui.part.bilancio" containerData="90" accessibilityPhrase="Bilancio" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.parts.BilancioPart" label="Bilancio" iconURI="platform:/plugin/it.caicividale.scuola.ui/icons/euro32x32.png" tooltip="Bilancio"/>
@@ -113,6 +114,7 @@
   <handlers xmi:id="_-IdDoNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilancionuovouscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioNuovaUscitaHandler" command="_y0O9YNB3EeiEE76twq75zQ"/>
   <handlers xmi:id="_Ip63QNB4EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciomodificauscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioModificaUscitaHandler" command="_2Ru_ANB3EeiEE76twq75zQ"/>
   <handlers xmi:id="_OCihwNB4EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.handler.bilanciocancellauscita" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.BilancioCancellaUscitaHandler" command="_6gNKkNB3EeiEE76twq75zQ"/>
+  <handlers xmi:id="_ZiylsBhKEeq0yZmZvfh8Bw" elementId="it.caicividale.scuola.ui.handler.modificaallievo" contributionURI="bundleclass://it.caicividale.scuola.ui/it.caicividale.scuola.ui.handlers.ModificaAllievoHandler" command="_Zrx_EBhJEeq0yZmZvfh8Bw"/>
   <bindingTables xmi:id="_6wlLfsgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.bindingtable" bindingContext="_6wlLecgZEeSyMNYR5xypkQ">
     <bindings xmi:id="_6wlLf8gZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1q" keySequence="M1+Q" command="_6wlLfMgZEeSyMNYR5xypkQ"/>
     <bindings xmi:id="_6wlLgsgZEeSyMNYR5xypkQ" elementId="it.caicividale.scuola.ui.keybinding.m1o" keySequence="M1+O" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
@@ -149,6 +151,7 @@
   <commands xmi:id="_y0O9YNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilancionuovouscita" commandName="bilancionuovouscita" description="bilancionuovouscita"/>
   <commands xmi:id="_2Ru_ANB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciomodificauscita" commandName="bilanciomodificauscita" description="bilanciomodificauscita"/>
   <commands xmi:id="_6gNKkNB3EeiEE76twq75zQ" elementId="it.caicividale.scuola.ui.command.bilanciocancellauscita" commandName="bilanciocancellauscita" description="bilanciocancellauscita"/>
+  <commands xmi:id="_Zrx_EBhJEeq0yZmZvfh8Bw" elementId="it.caicividale.scuola.ui.command.modificaallievo" commandName="modificaallievo" description="modifica allievo"/>
   <addons xmi:id="_6wlLcsgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_6wlLc8gZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_6wlLdMgZEeSyMNYR5xypkQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

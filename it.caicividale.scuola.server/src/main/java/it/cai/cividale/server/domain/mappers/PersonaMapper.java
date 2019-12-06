@@ -1,8 +1,5 @@
 package it.cai.cividale.server.domain.mappers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
@@ -11,8 +8,9 @@ import it.cai.cividale.server.domain.mappers.converters.EmailConverterDomain2Mod
 import it.cai.cividale.server.domain.mappers.converters.EmailConverterModel2Domain;
 import it.cai.cividale.server.domain.mappers.converters.NumeroCellulareConverterDomain2Model;
 import it.cai.cividale.server.domain.mappers.converters.NumeroCellulareConverterModel2Domain;
-import it.caicividale.scuola.emf.model.Istruttore;
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.ModelFactory;
+import it.caicividale.scuola.emf.model.Persona;
 
 @Component
 @SessionScope
@@ -21,6 +19,7 @@ public class PersonaMapper {
 
     public PersonaMapper() {
 	modelMapper = new ModelMapper();
+
 	modelMapper.addConverter(new NumeroCellulareConverterModel2Domain());
 	modelMapper.addConverter(new NumeroCellulareConverterDomain2Model());
 
@@ -29,15 +28,20 @@ public class PersonaMapper {
 
     }
 
-    public List<Istruttore> domain2model(List<it.cai.cividale.server.domain.Istruttore> istruttoriDomain) {
-	List<Istruttore> istruttoriModel = new ArrayList<>();
-	for (it.cai.cividale.server.domain.Istruttore istruttoreDomain : istruttoriDomain) {
-	    Istruttore istruttoreModel = ModelFactory.eINSTANCE.createIstruttore();
-	    modelMapper.map(istruttoreDomain, istruttoreModel);
-	    istruttoriModel.add(istruttoreModel);
+    public Persona domain2modelPersona(it.cai.cividale.server.domain.Persona personaDomain) {
+	Persona personaModel = ModelFactory.eINSTANCE.createPersona();
+	if (personaDomain.getComuneNascita() != null) {
+	    DizComune comuneNascitaModel = ModelFactory.eINSTANCE.createDizComune();
+	    modelMapper.map(personaDomain.getComuneNascita(), comuneNascitaModel);
+	    personaModel.setComuneNascita(comuneNascitaModel);
 	}
-//	modelMapper.map(materialiDomain, new TypeToken<List<DizMateriale>>() {
-//	}.getType());
-	return istruttoriModel;
+	if (personaDomain.getComuneResidenza() != null) {
+	    DizComune comuneReisndenzaModel = ModelFactory.eINSTANCE.createDizComune();
+	    modelMapper.map(personaDomain.getComuneResidenza(), comuneReisndenzaModel);
+	    personaModel.setComuneResidenza(comuneReisndenzaModel);
+	}
+	modelMapper.map(personaDomain, personaModel);
+	return personaModel;
+
     }
 }

@@ -2,6 +2,7 @@
  */
 package it.caicividale.scuola.emf.model.impl;
 
+import it.caicividale.scuola.emf.model.DizComune;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -30,15 +31,12 @@ import java.time.LocalDate;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getNumeroCellulare <em>Numero Cellulare</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getEMail <em>EMail</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getResidenzaVia <em>Residenza Via</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getResidenzaCitta <em>Residenza Citta</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getResidenzaProvincia <em>Residenza Provincia</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getResidenzaCap <em>Residenza Cap</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getNascitaData <em>Nascita Data</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getNascitaCitta <em>Nascita Citta</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getNascitaProvincia <em>Nascita Provincia</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getSezioneCaiAppartenenza <em>Sezione Cai Appartenenza</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getIsStaffScuola <em>Is Staff Scuola</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getComuneResidenza <em>Comune Residenza</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.PersonaImpl#getComuneNascita <em>Comune Nascita</em>}</li>
  * </ul>
  *
  * @generated
@@ -165,66 +163,6 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
     protected String residenzaVia = RESIDENZA_VIA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getResidenzaCitta() <em>Residenza Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaCitta()
-     * @generated
-     * @ordered
-     */
-    protected static final String RESIDENZA_CITTA_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getResidenzaCitta() <em>Residenza Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaCitta()
-     * @generated
-     * @ordered
-     */
-    protected String residenzaCitta = RESIDENZA_CITTA_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getResidenzaProvincia() <em>Residenza Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaProvincia()
-     * @generated
-     * @ordered
-     */
-    protected static final String RESIDENZA_PROVINCIA_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getResidenzaProvincia() <em>Residenza Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaProvincia()
-     * @generated
-     * @ordered
-     */
-    protected String residenzaProvincia = RESIDENZA_PROVINCIA_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getResidenzaCap() <em>Residenza Cap</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaCap()
-     * @generated
-     * @ordered
-     */
-    protected static final String RESIDENZA_CAP_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getResidenzaCap() <em>Residenza Cap</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getResidenzaCap()
-     * @generated
-     * @ordered
-     */
-    protected String residenzaCap = RESIDENZA_CAP_EDEFAULT;
-
-    /**
      * The default value of the '{@link #getNascitaData() <em>Nascita Data</em>}' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -243,46 +181,6 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
      * @ordered
      */
     protected LocalDate nascitaData = NASCITA_DATA_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getNascitaCitta() <em>Nascita Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getNascitaCitta()
-     * @generated
-     * @ordered
-     */
-    protected static final String NASCITA_CITTA_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getNascitaCitta() <em>Nascita Citta</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getNascitaCitta()
-     * @generated
-     * @ordered
-     */
-    protected String nascitaCitta = NASCITA_CITTA_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getNascitaProvincia() <em>Nascita Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getNascitaProvincia()
-     * @generated
-     * @ordered
-     */
-    protected static final String NASCITA_PROVINCIA_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getNascitaProvincia() <em>Nascita Provincia</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getNascitaProvincia()
-     * @generated
-     * @ordered
-     */
-    protected String nascitaProvincia = NASCITA_PROVINCIA_EDEFAULT;
 
     /**
      * The default value of the '{@link #getSezioneCaiAppartenenza() <em>Sezione Cai Appartenenza</em>}' attribute.
@@ -343,6 +241,26 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
      * @ordered
      */
     protected Boolean isStaffScuola = IS_STAFF_SCUOLA_EDEFAULT;
+
+    /**
+     * The cached value of the '{@link #getComuneResidenza() <em>Comune Residenza</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getComuneResidenza()
+     * @generated
+     * @ordered
+     */
+    protected DizComune comuneResidenza;
+
+    /**
+     * The cached value of the '{@link #getComuneNascita() <em>Comune Nascita</em>}' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getComuneNascita()
+     * @generated
+     * @ordered
+     */
+    protected DizComune comuneNascita;
 
     /**
      * <!-- begin-user-doc -->
@@ -509,78 +427,6 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
      * @generated
      */
     @Override
-    public String getResidenzaCitta() {
-	return residenzaCitta;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setResidenzaCitta(String newResidenzaCitta) {
-	String oldResidenzaCitta = residenzaCitta;
-	residenzaCitta = newResidenzaCitta;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__RESIDENZA_CITTA,
-		    oldResidenzaCitta, residenzaCitta));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getResidenzaProvincia() {
-	return residenzaProvincia;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setResidenzaProvincia(String newResidenzaProvincia) {
-	String oldResidenzaProvincia = residenzaProvincia;
-	residenzaProvincia = newResidenzaProvincia;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__RESIDENZA_PROVINCIA,
-		    oldResidenzaProvincia, residenzaProvincia));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getResidenzaCap() {
-	return residenzaCap;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setResidenzaCap(String newResidenzaCap) {
-	String oldResidenzaCap = residenzaCap;
-	residenzaCap = newResidenzaCap;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__RESIDENZA_CAP, oldResidenzaCap,
-		    residenzaCap));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
     public LocalDate getNascitaData() {
 	return nascitaData;
     }
@@ -597,54 +443,6 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	if (eNotificationRequired())
 	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__NASCITA_DATA, oldNascitaData,
 		    nascitaData));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getNascitaCitta() {
-	return nascitaCitta;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setNascitaCitta(String newNascitaCitta) {
-	String oldNascitaCitta = nascitaCitta;
-	nascitaCitta = newNascitaCitta;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__NASCITA_CITTA, oldNascitaCitta,
-		    nascitaCitta));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getNascitaProvincia() {
-	return nascitaProvincia;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setNascitaProvincia(String newNascitaProvincia) {
-	String oldNascitaProvincia = nascitaProvincia;
-	nascitaProvincia = newNascitaProvincia;
-	if (eNotificationRequired())
-	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__NASCITA_PROVINCIA,
-		    oldNascitaProvincia, nascitaProvincia));
     }
 
     /**
@@ -724,6 +522,54 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
      * @generated
      */
     @Override
+    public DizComune getComuneResidenza() {
+	return comuneResidenza;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setComuneResidenza(DizComune newComuneResidenza) {
+	DizComune oldComuneResidenza = comuneResidenza;
+	comuneResidenza = newComuneResidenza;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__COMUNE_RESIDENZA,
+		    oldComuneResidenza, comuneResidenza));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public DizComune getComuneNascita() {
+	return comuneNascita;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setComuneNascita(DizComune newComuneNascita) {
+	DizComune oldComuneNascita = comuneNascita;
+	comuneNascita = newComuneNascita;
+	if (eNotificationRequired())
+	    eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PERSONA__COMUNE_NASCITA,
+		    oldComuneNascita, comuneNascita));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
 	switch (featureID) {
 	case ModelPackage.PERSONA__NOME:
@@ -738,24 +584,18 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	    return getEMail();
 	case ModelPackage.PERSONA__RESIDENZA_VIA:
 	    return getResidenzaVia();
-	case ModelPackage.PERSONA__RESIDENZA_CITTA:
-	    return getResidenzaCitta();
-	case ModelPackage.PERSONA__RESIDENZA_PROVINCIA:
-	    return getResidenzaProvincia();
-	case ModelPackage.PERSONA__RESIDENZA_CAP:
-	    return getResidenzaCap();
 	case ModelPackage.PERSONA__NASCITA_DATA:
 	    return getNascitaData();
-	case ModelPackage.PERSONA__NASCITA_CITTA:
-	    return getNascitaCitta();
-	case ModelPackage.PERSONA__NASCITA_PROVINCIA:
-	    return getNascitaProvincia();
 	case ModelPackage.PERSONA__SEZIONE_CAI_APPARTENENZA:
 	    return getSezioneCaiAppartenenza();
 	case ModelPackage.PERSONA__ID:
 	    return getId();
 	case ModelPackage.PERSONA__IS_STAFF_SCUOLA:
 	    return getIsStaffScuola();
+	case ModelPackage.PERSONA__COMUNE_RESIDENZA:
+	    return getComuneResidenza();
+	case ModelPackage.PERSONA__COMUNE_NASCITA:
+	    return getComuneNascita();
 	}
 	return super.eGet(featureID, resolve, coreType);
     }
@@ -786,23 +626,8 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	case ModelPackage.PERSONA__RESIDENZA_VIA:
 	    setResidenzaVia((String) newValue);
 	    return;
-	case ModelPackage.PERSONA__RESIDENZA_CITTA:
-	    setResidenzaCitta((String) newValue);
-	    return;
-	case ModelPackage.PERSONA__RESIDENZA_PROVINCIA:
-	    setResidenzaProvincia((String) newValue);
-	    return;
-	case ModelPackage.PERSONA__RESIDENZA_CAP:
-	    setResidenzaCap((String) newValue);
-	    return;
 	case ModelPackage.PERSONA__NASCITA_DATA:
 	    setNascitaData((LocalDate) newValue);
-	    return;
-	case ModelPackage.PERSONA__NASCITA_CITTA:
-	    setNascitaCitta((String) newValue);
-	    return;
-	case ModelPackage.PERSONA__NASCITA_PROVINCIA:
-	    setNascitaProvincia((String) newValue);
 	    return;
 	case ModelPackage.PERSONA__SEZIONE_CAI_APPARTENENZA:
 	    setSezioneCaiAppartenenza((String) newValue);
@@ -812,6 +637,12 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	    return;
 	case ModelPackage.PERSONA__IS_STAFF_SCUOLA:
 	    setIsStaffScuola((Boolean) newValue);
+	    return;
+	case ModelPackage.PERSONA__COMUNE_RESIDENZA:
+	    setComuneResidenza((DizComune) newValue);
+	    return;
+	case ModelPackage.PERSONA__COMUNE_NASCITA:
+	    setComuneNascita((DizComune) newValue);
 	    return;
 	}
 	super.eSet(featureID, newValue);
@@ -843,23 +674,8 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	case ModelPackage.PERSONA__RESIDENZA_VIA:
 	    setResidenzaVia(RESIDENZA_VIA_EDEFAULT);
 	    return;
-	case ModelPackage.PERSONA__RESIDENZA_CITTA:
-	    setResidenzaCitta(RESIDENZA_CITTA_EDEFAULT);
-	    return;
-	case ModelPackage.PERSONA__RESIDENZA_PROVINCIA:
-	    setResidenzaProvincia(RESIDENZA_PROVINCIA_EDEFAULT);
-	    return;
-	case ModelPackage.PERSONA__RESIDENZA_CAP:
-	    setResidenzaCap(RESIDENZA_CAP_EDEFAULT);
-	    return;
 	case ModelPackage.PERSONA__NASCITA_DATA:
 	    setNascitaData(NASCITA_DATA_EDEFAULT);
-	    return;
-	case ModelPackage.PERSONA__NASCITA_CITTA:
-	    setNascitaCitta(NASCITA_CITTA_EDEFAULT);
-	    return;
-	case ModelPackage.PERSONA__NASCITA_PROVINCIA:
-	    setNascitaProvincia(NASCITA_PROVINCIA_EDEFAULT);
 	    return;
 	case ModelPackage.PERSONA__SEZIONE_CAI_APPARTENENZA:
 	    setSezioneCaiAppartenenza(SEZIONE_CAI_APPARTENENZA_EDEFAULT);
@@ -869,6 +685,12 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	    return;
 	case ModelPackage.PERSONA__IS_STAFF_SCUOLA:
 	    setIsStaffScuola(IS_STAFF_SCUOLA_EDEFAULT);
+	    return;
+	case ModelPackage.PERSONA__COMUNE_RESIDENZA:
+	    setComuneResidenza((DizComune) null);
+	    return;
+	case ModelPackage.PERSONA__COMUNE_NASCITA:
+	    setComuneNascita((DizComune) null);
 	    return;
 	}
 	super.eUnset(featureID);
@@ -895,21 +717,8 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	    return EMAIL_EDEFAULT == null ? eMail != null : !EMAIL_EDEFAULT.equals(eMail);
 	case ModelPackage.PERSONA__RESIDENZA_VIA:
 	    return RESIDENZA_VIA_EDEFAULT == null ? residenzaVia != null : !RESIDENZA_VIA_EDEFAULT.equals(residenzaVia);
-	case ModelPackage.PERSONA__RESIDENZA_CITTA:
-	    return RESIDENZA_CITTA_EDEFAULT == null ? residenzaCitta != null
-		    : !RESIDENZA_CITTA_EDEFAULT.equals(residenzaCitta);
-	case ModelPackage.PERSONA__RESIDENZA_PROVINCIA:
-	    return RESIDENZA_PROVINCIA_EDEFAULT == null ? residenzaProvincia != null
-		    : !RESIDENZA_PROVINCIA_EDEFAULT.equals(residenzaProvincia);
-	case ModelPackage.PERSONA__RESIDENZA_CAP:
-	    return RESIDENZA_CAP_EDEFAULT == null ? residenzaCap != null : !RESIDENZA_CAP_EDEFAULT.equals(residenzaCap);
 	case ModelPackage.PERSONA__NASCITA_DATA:
 	    return NASCITA_DATA_EDEFAULT == null ? nascitaData != null : !NASCITA_DATA_EDEFAULT.equals(nascitaData);
-	case ModelPackage.PERSONA__NASCITA_CITTA:
-	    return NASCITA_CITTA_EDEFAULT == null ? nascitaCitta != null : !NASCITA_CITTA_EDEFAULT.equals(nascitaCitta);
-	case ModelPackage.PERSONA__NASCITA_PROVINCIA:
-	    return NASCITA_PROVINCIA_EDEFAULT == null ? nascitaProvincia != null
-		    : !NASCITA_PROVINCIA_EDEFAULT.equals(nascitaProvincia);
 	case ModelPackage.PERSONA__SEZIONE_CAI_APPARTENENZA:
 	    return SEZIONE_CAI_APPARTENENZA_EDEFAULT == null ? sezioneCaiAppartenenza != null
 		    : !SEZIONE_CAI_APPARTENENZA_EDEFAULT.equals(sezioneCaiAppartenenza);
@@ -918,6 +727,10 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	case ModelPackage.PERSONA__IS_STAFF_SCUOLA:
 	    return IS_STAFF_SCUOLA_EDEFAULT == null ? isStaffScuola != null
 		    : !IS_STAFF_SCUOLA_EDEFAULT.equals(isStaffScuola);
+	case ModelPackage.PERSONA__COMUNE_RESIDENZA:
+	    return comuneResidenza != null;
+	case ModelPackage.PERSONA__COMUNE_NASCITA:
+	    return comuneNascita != null;
 	}
 	return super.eIsSet(featureID);
     }
@@ -945,18 +758,8 @@ public class PersonaImpl extends MinimalEObjectImpl.Container implements Persona
 	result.append(eMail);
 	result.append(", residenzaVia: ");
 	result.append(residenzaVia);
-	result.append(", residenzaCitta: ");
-	result.append(residenzaCitta);
-	result.append(", residenzaProvincia: ");
-	result.append(residenzaProvincia);
-	result.append(", residenzaCap: ");
-	result.append(residenzaCap);
 	result.append(", nascitaData: ");
 	result.append(nascitaData);
-	result.append(", nascitaCitta: ");
-	result.append(nascitaCitta);
-	result.append(", nascitaProvincia: ");
-	result.append(nascitaProvincia);
 	result.append(", sezioneCaiAppartenenza: ");
 	result.append(sezioneCaiAppartenenza);
 	result.append(", id: ");

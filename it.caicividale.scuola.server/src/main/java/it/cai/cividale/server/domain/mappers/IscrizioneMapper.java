@@ -15,7 +15,6 @@ import it.cai.cividale.server.domain.mappers.converters.NumeroCellulareConverter
 import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.ModelFactory;
-import it.caicividale.scuola.emf.model.impl.AllievoImpl;
 import it.caicividale.scuola.emf.model.impl.IscrizioneImpl;
 
 @Component
@@ -46,6 +45,7 @@ public class IscrizioneMapper {
 	modelMapper.addConverter(new EmailConverterDomain2Model());
 
 	typeMapDomain2Model.addMappings(mapper -> {
+
 	    mapper.with(allievoProvider).map(it.cai.cividale.server.domain.Iscrizione::getAllievo,
 		    IscrizioneImpl::setAllievo);
 
@@ -57,7 +57,7 @@ public class IscrizioneMapper {
 	Iscrizione model = ModelFactory.eINSTANCE.createIscrizione();
 	modelMapper.map(domain, model);
 
-	AllievoImpl allievo = modelMapper.map(domain.getAllievo(), AllievoImpl.class);
+	Allievo allievo = allievoMapper.domain2model(domain.getAllievo());
 	model.setAllievo(allievo);
 	return model;
     }

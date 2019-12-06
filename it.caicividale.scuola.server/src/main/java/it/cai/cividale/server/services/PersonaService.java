@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
 import it.cai.cividale.server.dao.IstruttoreDao;
-import it.cai.cividale.server.domain.mappers.PersonaMapper;
+import it.cai.cividale.server.domain.mappers.IstruttoreMapper;
 import it.caicividale.scuola.emf.model.ElencoIstruttori;
 import it.caicividale.scuola.emf.model.Istruttore;
 import it.caicividale.scuola.emf.model.ModelFactory;
@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 public class PersonaService {
 
     private final IstruttoreDao istruttoreDao;
-    private final PersonaMapper mapper;
+    private final IstruttoreMapper mapper;
 
     public ElencoIstruttori getElencoIstruttori() {
 	List<it.cai.cividale.server.domain.Istruttore> istruttoriDomain = istruttoreDao.list();

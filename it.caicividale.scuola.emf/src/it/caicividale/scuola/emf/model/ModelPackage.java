@@ -123,58 +123,13 @@ public interface ModelPackage extends EPackage {
     int PERSONA__RESIDENZA_VIA = 5;
 
     /**
-     * The feature id for the '<em><b>Residenza Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERSONA__RESIDENZA_CITTA = 6;
-
-    /**
-     * The feature id for the '<em><b>Residenza Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERSONA__RESIDENZA_PROVINCIA = 7;
-
-    /**
-     * The feature id for the '<em><b>Residenza Cap</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERSONA__RESIDENZA_CAP = 8;
-
-    /**
      * The feature id for the '<em><b>Nascita Data</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int PERSONA__NASCITA_DATA = 9;
-
-    /**
-     * The feature id for the '<em><b>Nascita Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERSONA__NASCITA_CITTA = 10;
-
-    /**
-     * The feature id for the '<em><b>Nascita Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int PERSONA__NASCITA_PROVINCIA = 11;
+    int PERSONA__NASCITA_DATA = 6;
 
     /**
      * The feature id for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute.
@@ -183,7 +138,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PERSONA__SEZIONE_CAI_APPARTENENZA = 12;
+    int PERSONA__SEZIONE_CAI_APPARTENENZA = 7;
 
     /**
      * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -192,7 +147,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PERSONA__ID = 13;
+    int PERSONA__ID = 8;
 
     /**
      * The feature id for the '<em><b>Is Staff Scuola</b></em>' attribute.
@@ -201,7 +156,25 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PERSONA__IS_STAFF_SCUOLA = 14;
+    int PERSONA__IS_STAFF_SCUOLA = 9;
+
+    /**
+     * The feature id for the '<em><b>Comune Residenza</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA__COMUNE_RESIDENZA = 10;
+
+    /**
+     * The feature id for the '<em><b>Comune Nascita</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int PERSONA__COMUNE_NASCITA = 11;
 
     /**
      * The number of structural features of the '<em>Persona</em>' class.
@@ -210,7 +183,7 @@ public interface ModelPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int PERSONA_FEATURE_COUNT = 15;
+    int PERSONA_FEATURE_COUNT = 12;
 
     /**
      * The number of operations of the '<em>Persona</em>' class.
@@ -286,33 +259,6 @@ public interface ModelPackage extends EPackage {
     int ALLIEVO__RESIDENZA_VIA = PERSONA__RESIDENZA_VIA;
 
     /**
-     * The feature id for the '<em><b>Residenza Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ALLIEVO__RESIDENZA_CITTA = PERSONA__RESIDENZA_CITTA;
-
-    /**
-     * The feature id for the '<em><b>Residenza Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ALLIEVO__RESIDENZA_PROVINCIA = PERSONA__RESIDENZA_PROVINCIA;
-
-    /**
-     * The feature id for the '<em><b>Residenza Cap</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ALLIEVO__RESIDENZA_CAP = PERSONA__RESIDENZA_CAP;
-
-    /**
      * The feature id for the '<em><b>Nascita Data</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -320,24 +266,6 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int ALLIEVO__NASCITA_DATA = PERSONA__NASCITA_DATA;
-
-    /**
-     * The feature id for the '<em><b>Nascita Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ALLIEVO__NASCITA_CITTA = PERSONA__NASCITA_CITTA;
-
-    /**
-     * The feature id for the '<em><b>Nascita Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ALLIEVO__NASCITA_PROVINCIA = PERSONA__NASCITA_PROVINCIA;
 
     /**
      * The feature id for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute.
@@ -365,6 +293,24 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int ALLIEVO__IS_STAFF_SCUOLA = PERSONA__IS_STAFF_SCUOLA;
+
+    /**
+     * The feature id for the '<em><b>Comune Residenza</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ALLIEVO__COMUNE_RESIDENZA = PERSONA__COMUNE_RESIDENZA;
+
+    /**
+     * The feature id for the '<em><b>Comune Nascita</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ALLIEVO__COMUNE_NASCITA = PERSONA__COMUNE_NASCITA;
 
     /**
      * The feature id for the '<em><b>Is Diploma</b></em>' attribute.
@@ -1282,33 +1228,6 @@ public interface ModelPackage extends EPackage {
     int ISTRUTTORE__RESIDENZA_VIA = PERSONA__RESIDENZA_VIA;
 
     /**
-     * The feature id for the '<em><b>Residenza Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISTRUTTORE__RESIDENZA_CITTA = PERSONA__RESIDENZA_CITTA;
-
-    /**
-     * The feature id for the '<em><b>Residenza Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISTRUTTORE__RESIDENZA_PROVINCIA = PERSONA__RESIDENZA_PROVINCIA;
-
-    /**
-     * The feature id for the '<em><b>Residenza Cap</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISTRUTTORE__RESIDENZA_CAP = PERSONA__RESIDENZA_CAP;
-
-    /**
      * The feature id for the '<em><b>Nascita Data</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1316,24 +1235,6 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int ISTRUTTORE__NASCITA_DATA = PERSONA__NASCITA_DATA;
-
-    /**
-     * The feature id for the '<em><b>Nascita Citta</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISTRUTTORE__NASCITA_CITTA = PERSONA__NASCITA_CITTA;
-
-    /**
-     * The feature id for the '<em><b>Nascita Provincia</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int ISTRUTTORE__NASCITA_PROVINCIA = PERSONA__NASCITA_PROVINCIA;
 
     /**
      * The feature id for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute.
@@ -1361,6 +1262,24 @@ public interface ModelPackage extends EPackage {
      * @ordered
      */
     int ISTRUTTORE__IS_STAFF_SCUOLA = PERSONA__IS_STAFF_SCUOLA;
+
+    /**
+     * The feature id for the '<em><b>Comune Residenza</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ISTRUTTORE__COMUNE_RESIDENZA = PERSONA__COMUNE_RESIDENZA;
+
+    /**
+     * The feature id for the '<em><b>Comune Nascita</b></em>' containment reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ISTRUTTORE__COMUNE_NASCITA = PERSONA__COMUNE_NASCITA;
 
     /**
      * The feature id for the '<em><b>Titolo</b></em>' attribute.
@@ -2113,6 +2032,88 @@ public interface ModelPackage extends EPackage {
     int ELENCO_ISTRUTTORI_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link it.caicividale.scuola.emf.model.impl.DizComuneImpl <em>Diz Comune</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.caicividale.scuola.emf.model.impl.DizComuneImpl
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getDizComune()
+     * @generated
+     */
+    int DIZ_COMUNE = 20;
+
+    /**
+     * The feature id for the '<em><b>Id</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__ID = 0;
+
+    /**
+     * The feature id for the '<em><b>Comune</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__COMUNE = 1;
+
+    /**
+     * The feature id for the '<em><b>Provincia</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__PROVINCIA = 2;
+
+    /**
+     * The feature id for the '<em><b>Sigla</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__SIGLA = 3;
+
+    /**
+     * The feature id for the '<em><b>Regione</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__REGIONE = 4;
+
+    /**
+     * The feature id for the '<em><b>Cap</b></em>' attribute.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE__CAP = 5;
+
+    /**
+     * The number of structural features of the '<em>Diz Comune</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE_FEATURE_COUNT = 6;
+
+    /**
+     * The number of operations of the '<em>Diz Comune</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int DIZ_COMUNE_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2120,7 +2121,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESesso()
      * @generated
      */
-    int ESESSO = 20;
+    int ESESSO = 21;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
@@ -2130,7 +2131,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETitoloIstruttore()
      * @generated
      */
-    int ETITOLO_ISTRUTTORE = 21;
+    int ETITOLO_ISTRUTTORE = 22;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
@@ -2140,7 +2141,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
      * @generated
      */
-    int TIPO_ESITO_VALUTAZIONE = 22;
+    int TIPO_ESITO_VALUTAZIONE = 23;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
@@ -2150,7 +2151,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESiglaCorso()
      * @generated
      */
-    int ESIGLA_CORSO = 23;
+    int ESIGLA_CORSO = 24;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
@@ -2160,7 +2161,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
      * @generated
      */
-    int ETIPO_VOCE_DI_SPESA = 24;
+    int ETIPO_VOCE_DI_SPESA = 25;
 
     /**
      * The meta object id for the '<em>Numero Cellulare</em>' data type.
@@ -2170,7 +2171,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getNumeroCellulare()
      * @generated
      */
-    int NUMERO_CELLULARE = 25;
+    int NUMERO_CELLULARE = 26;
 
     /**
      * The meta object id for the '<em>EMail</em>' data type.
@@ -2180,7 +2181,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getEMail()
      * @generated
      */
-    int EMAIL = 26;
+    int EMAIL = 27;
 
     /**
      * The meta object id for the '<em>ELocal Date</em>' data type.
@@ -2190,7 +2191,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDate()
      * @generated
      */
-    int ELOCAL_DATE = 27;
+    int ELOCAL_DATE = 28;
 
     /**
      * The meta object id for the '<em>ELocal Date Time</em>' data type.
@@ -2200,7 +2201,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDateTime()
      * @generated
      */
-    int ELOCAL_DATE_TIME = 28;
+    int ELOCAL_DATE_TIME = 29;
 
     /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Persona <em>Persona</em>}'.
@@ -2279,39 +2280,6 @@ public interface ModelPackage extends EPackage {
     EAttribute getPersona_ResidenzaVia();
 
     /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCitta <em>Residenza Citta</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Residenza Citta</em>'.
-     * @see it.caicividale.scuola.emf.model.Persona#getResidenzaCitta()
-     * @see #getPersona()
-     * @generated
-     */
-    EAttribute getPersona_ResidenzaCitta();
-
-    /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaProvincia <em>Residenza Provincia</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Residenza Provincia</em>'.
-     * @see it.caicividale.scuola.emf.model.Persona#getResidenzaProvincia()
-     * @see #getPersona()
-     * @generated
-     */
-    EAttribute getPersona_ResidenzaProvincia();
-
-    /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getResidenzaCap <em>Residenza Cap</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Residenza Cap</em>'.
-     * @see it.caicividale.scuola.emf.model.Persona#getResidenzaCap()
-     * @see #getPersona()
-     * @generated
-     */
-    EAttribute getPersona_ResidenzaCap();
-
-    /**
      * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getNascitaData <em>Nascita Data</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2321,28 +2289,6 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EAttribute getPersona_NascitaData();
-
-    /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getNascitaCitta <em>Nascita Citta</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Nascita Citta</em>'.
-     * @see it.caicividale.scuola.emf.model.Persona#getNascitaCitta()
-     * @see #getPersona()
-     * @generated
-     */
-    EAttribute getPersona_NascitaCitta();
-
-    /**
-     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getNascitaProvincia <em>Nascita Provincia</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Nascita Provincia</em>'.
-     * @see it.caicividale.scuola.emf.model.Persona#getNascitaProvincia()
-     * @see #getPersona()
-     * @generated
-     */
-    EAttribute getPersona_NascitaProvincia();
 
     /**
      * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Persona#getSezioneCaiAppartenenza <em>Sezione Cai Appartenenza</em>}'.
@@ -2376,6 +2322,28 @@ public interface ModelPackage extends EPackage {
      * @generated
      */
     EAttribute getPersona_IsStaffScuola();
+
+    /**
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Persona#getComuneResidenza <em>Comune Residenza</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Comune Residenza</em>'.
+     * @see it.caicividale.scuola.emf.model.Persona#getComuneResidenza()
+     * @see #getPersona()
+     * @generated
+     */
+    EReference getPersona_ComuneResidenza();
+
+    /**
+     * Returns the meta object for the containment reference '{@link it.caicividale.scuola.emf.model.Persona#getComuneNascita <em>Comune Nascita</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference '<em>Comune Nascita</em>'.
+     * @see it.caicividale.scuola.emf.model.Persona#getComuneNascita()
+     * @see #getPersona()
+     * @generated
+     */
+    EReference getPersona_ComuneNascita();
 
     /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Allievo <em>Allievo</em>}'.
@@ -3745,6 +3713,82 @@ public interface ModelPackage extends EPackage {
     EReference getElencoIstruttori_ElencoIstruttori();
 
     /**
+     * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.DizComune <em>Diz Comune</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Diz Comune</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune
+     * @generated
+     */
+    EClass getDizComune();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getId <em>Id</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Id</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getId()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Id();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getComune <em>Comune</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Comune</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getComune()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Comune();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getProvincia <em>Provincia</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Provincia</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getProvincia()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Provincia();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getSigla <em>Sigla</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Sigla</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getSigla()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Sigla();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getRegione <em>Regione</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Regione</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getRegione()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Regione();
+
+    /**
+     * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.DizComune#getCap <em>Cap</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the attribute '<em>Cap</em>'.
+     * @see it.caicividale.scuola.emf.model.DizComune#getCap()
+     * @see #getDizComune()
+     * @generated
+     */
+    EAttribute getDizComune_Cap();
+
+    /**
      * Returns the meta object for enum '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3920,52 +3964,12 @@ public interface ModelPackage extends EPackage {
 	EAttribute PERSONA__RESIDENZA_VIA = eINSTANCE.getPersona_ResidenzaVia();
 
 	/**
-		 * The meta object literal for the '<em><b>Residenza Citta</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-		 * @generated
-		 */
-	EAttribute PERSONA__RESIDENZA_CITTA = eINSTANCE.getPersona_ResidenzaCitta();
-
-	/**
-		 * The meta object literal for the '<em><b>Residenza Provincia</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-		 * @generated
-		 */
-	EAttribute PERSONA__RESIDENZA_PROVINCIA = eINSTANCE.getPersona_ResidenzaProvincia();
-
-	/**
-		 * The meta object literal for the '<em><b>Residenza Cap</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-		 * @generated
-		 */
-	EAttribute PERSONA__RESIDENZA_CAP = eINSTANCE.getPersona_ResidenzaCap();
-
-	/**
 		 * The meta object literal for the '<em><b>Nascita Data</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 		 * @generated
 		 */
 	EAttribute PERSONA__NASCITA_DATA = eINSTANCE.getPersona_NascitaData();
-
-	/**
-		 * The meta object literal for the '<em><b>Nascita Citta</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-		 * @generated
-		 */
-	EAttribute PERSONA__NASCITA_CITTA = eINSTANCE.getPersona_NascitaCitta();
-
-	/**
-		 * The meta object literal for the '<em><b>Nascita Provincia</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-		 * @generated
-		 */
-	EAttribute PERSONA__NASCITA_PROVINCIA = eINSTANCE.getPersona_NascitaProvincia();
 
 	/**
 		 * The meta object literal for the '<em><b>Sezione Cai Appartenenza</b></em>' attribute feature.
@@ -3990,6 +3994,22 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EAttribute PERSONA__IS_STAFF_SCUOLA = eINSTANCE.getPersona_IsStaffScuola();
+
+	/**
+		 * The meta object literal for the '<em><b>Comune Residenza</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference PERSONA__COMUNE_RESIDENZA = eINSTANCE.getPersona_ComuneResidenza();
+
+	/**
+		 * The meta object literal for the '<em><b>Comune Nascita</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference PERSONA__COMUNE_NASCITA = eINSTANCE.getPersona_ComuneNascita();
 
 	/**
 		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.impl.AllievoImpl <em>Allievo</em>}' class.
@@ -5038,6 +5058,64 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EReference ELENCO_ISTRUTTORI__ELENCO_ISTRUTTORI = eINSTANCE.getElencoIstruttori_ElencoIstruttori();
+
+	/**
+		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.impl.DizComuneImpl <em>Diz Comune</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.caicividale.scuola.emf.model.impl.DizComuneImpl
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getDizComune()
+		 * @generated
+		 */
+	EClass DIZ_COMUNE = eINSTANCE.getDizComune();
+
+	/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__ID = eINSTANCE.getDizComune_Id();
+
+	/**
+		 * The meta object literal for the '<em><b>Comune</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__COMUNE = eINSTANCE.getDizComune_Comune();
+
+	/**
+		 * The meta object literal for the '<em><b>Provincia</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__PROVINCIA = eINSTANCE.getDizComune_Provincia();
+
+	/**
+		 * The meta object literal for the '<em><b>Sigla</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__SIGLA = eINSTANCE.getDizComune_Sigla();
+
+	/**
+		 * The meta object literal for the '<em><b>Regione</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__REGIONE = eINSTANCE.getDizComune_Regione();
+
+	/**
+		 * The meta object literal for the '<em><b>Cap</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EAttribute DIZ_COMUNE__CAP = eINSTANCE.getDizComune_Cap();
 
 	/**
 		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.

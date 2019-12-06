@@ -15,6 +15,7 @@ import it.caicividale.scuola.emf.model.Allievo;
 import it.caicividale.scuola.emf.model.Bilancio;
 import it.caicividale.scuola.emf.model.Cassa;
 import it.caicividale.scuola.emf.model.Corso;
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.ESesso;
 import it.caicividale.scuola.emf.model.ESiglaCorso;
@@ -189,6 +190,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EClass elencoIstruttoriEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass dizComuneEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -393,7 +401,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_ResidenzaCitta() {
+    public EAttribute getPersona_NascitaData() {
 	return (EAttribute) personaEClass.getEStructuralFeatures().get(6);
     }
 
@@ -403,7 +411,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_ResidenzaProvincia() {
+    public EAttribute getPersona_SezioneCaiAppartenenza() {
 	return (EAttribute) personaEClass.getEStructuralFeatures().get(7);
     }
 
@@ -413,7 +421,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_ResidenzaCap() {
+    public EAttribute getPersona_Id() {
 	return (EAttribute) personaEClass.getEStructuralFeatures().get(8);
     }
 
@@ -423,7 +431,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_NascitaData() {
+    public EAttribute getPersona_IsStaffScuola() {
 	return (EAttribute) personaEClass.getEStructuralFeatures().get(9);
     }
 
@@ -433,8 +441,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_NascitaCitta() {
-	return (EAttribute) personaEClass.getEStructuralFeatures().get(10);
+    public EReference getPersona_ComuneResidenza() {
+	return (EReference) personaEClass.getEStructuralFeatures().get(10);
     }
 
     /**
@@ -443,38 +451,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EAttribute getPersona_NascitaProvincia() {
-	return (EAttribute) personaEClass.getEStructuralFeatures().get(11);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EAttribute getPersona_SezioneCaiAppartenenza() {
-	return (EAttribute) personaEClass.getEStructuralFeatures().get(12);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EAttribute getPersona_Id() {
-	return (EAttribute) personaEClass.getEStructuralFeatures().get(13);
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public EAttribute getPersona_IsStaffScuola() {
-	return (EAttribute) personaEClass.getEStructuralFeatures().get(14);
+    public EReference getPersona_ComuneNascita() {
+	return (EReference) personaEClass.getEStructuralFeatures().get(11);
     }
 
     /**
@@ -1743,6 +1721,76 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EClass getDizComune() {
+	return dizComuneEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Id() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Comune() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(1);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Provincia() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(2);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Sigla() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(3);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Regione() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(4);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getDizComune_Cap() {
+	return (EAttribute) dizComuneEClass.getEStructuralFeatures().get(5);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public EEnum getESesso() {
 	return eSessoEEnum;
     }
@@ -1864,15 +1912,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEAttribute(personaEClass, PERSONA__NUMERO_CELLULARE);
 	createEAttribute(personaEClass, PERSONA__EMAIL);
 	createEAttribute(personaEClass, PERSONA__RESIDENZA_VIA);
-	createEAttribute(personaEClass, PERSONA__RESIDENZA_CITTA);
-	createEAttribute(personaEClass, PERSONA__RESIDENZA_PROVINCIA);
-	createEAttribute(personaEClass, PERSONA__RESIDENZA_CAP);
 	createEAttribute(personaEClass, PERSONA__NASCITA_DATA);
-	createEAttribute(personaEClass, PERSONA__NASCITA_CITTA);
-	createEAttribute(personaEClass, PERSONA__NASCITA_PROVINCIA);
 	createEAttribute(personaEClass, PERSONA__SEZIONE_CAI_APPARTENENZA);
 	createEAttribute(personaEClass, PERSONA__ID);
 	createEAttribute(personaEClass, PERSONA__IS_STAFF_SCUOLA);
+	createEReference(personaEClass, PERSONA__COMUNE_RESIDENZA);
+	createEReference(personaEClass, PERSONA__COMUNE_NASCITA);
 
 	allievoEClass = createEClass(ALLIEVO);
 	createEAttribute(allievoEClass, ALLIEVO__IS_DIPLOMA);
@@ -2019,6 +2064,14 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	elencoIstruttoriEClass = createEClass(ELENCO_ISTRUTTORI);
 	createEReference(elencoIstruttoriEClass, ELENCO_ISTRUTTORI__ELENCO_ISTRUTTORI);
 
+	dizComuneEClass = createEClass(DIZ_COMUNE);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__ID);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__COMUNE);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__PROVINCIA);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__SIGLA);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__REGIONE);
+	createEAttribute(dizComuneEClass, DIZ_COMUNE__CAP);
+
 	// Create enums
 	eSessoEEnum = createEEnum(ESESSO);
 	eTitoloIstruttoreEEnum = createEEnum(ETITOLO_ISTRUTTORE);
@@ -2082,21 +2135,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getPersona_ResidenzaVia(), ecorePackage.getEString(), "residenzaVia", null, 1, 1, Persona.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_ResidenzaCitta(), ecorePackage.getEString(), "residenzaCitta", null, 1, 1,
-		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-		!IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_ResidenzaProvincia(), ecorePackage.getEString(), "residenzaProvincia", null, 1, 1,
-		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-		!IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_ResidenzaCap(), ecorePackage.getEString(), "residenzaCap", null, 1, 1, Persona.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getPersona_NascitaData(), this.getELocalDate(), "nascitaData", null, 1, 1, Persona.class,
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_NascitaCitta(), ecorePackage.getEString(), "nascitaCitta", null, 0, 1, Persona.class,
-		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-	initEAttribute(getPersona_NascitaProvincia(), ecorePackage.getEString(), "nascitaProvincia", null, 0, 1,
-		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-		!IS_DERIVED, IS_ORDERED);
 	initEAttribute(getPersona_SezioneCaiAppartenenza(), ecorePackage.getEString(), "sezioneCaiAppartenenza", null,
 		1, 1, Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);
@@ -2105,6 +2145,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getPersona_IsStaffScuola(), ecorePackage.getEBooleanObject(), "isStaffScuola", "false", 1, 1,
 		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 		!IS_DERIVED, IS_ORDERED);
+	initEReference(getPersona_ComuneResidenza(), this.getDizComune(), null, "comuneResidenza", null, 0, 1,
+		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEReference(getPersona_ComuneNascita(), this.getDizComune(), null, "comuneNascita", null, 0, 1,
+		Persona.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	initEClass(allievoEClass, Allievo.class, "Allievo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	initEAttribute(getAllievo_IsDiploma(), ecorePackage.getEBooleanObject(), "isDiploma", "false", 0, 1,
@@ -2442,6 +2488,21 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEReference(getElencoIstruttori_ElencoIstruttori(), this.getIstruttore(), null, "elencoIstruttori", null, 0,
 		-1, ElencoIstruttori.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(dizComuneEClass, DizComune.class, "DizComune", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEAttribute(getDizComune_Id(), ecorePackage.getELong(), "id", null, 0, 1, DizComune.class, !IS_TRANSIENT,
+		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEAttribute(getDizComune_Comune(), ecorePackage.getEString(), "comune", null, 0, 1, DizComune.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEAttribute(getDizComune_Provincia(), ecorePackage.getEString(), "provincia", null, 0, 1, DizComune.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEAttribute(getDizComune_Sigla(), ecorePackage.getEString(), "sigla", null, 0, 1, DizComune.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEAttribute(getDizComune_Regione(), ecorePackage.getEString(), "regione", null, 0, 1, DizComune.class,
+		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+	initEAttribute(getDizComune_Cap(), ecorePackage.getEString(), "cap", null, 0, 1, DizComune.class, !IS_TRANSIENT,
+		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	// Initialize enums and add enum literals
 	initEEnum(eSessoEEnum, ESesso.class, "ESesso");
