@@ -46,7 +46,8 @@ public class ModificaAllievoHandler {
 		int index = EmfUtils.getIndexOfEObject(corso.getIscrizioni(), iscrizione);
 		Allievo allievo = iscrizione.getAllievo();
 
-		AllievoDialog dialog = new AllievoDialog(shell, allievo, stylingEngine);
+		AllievoDialog dialog = new AllievoDialog(shell, allievo, stylingEngine,
+			modelManager.getElencoDizComuni());
 		if (dialog.open() == Window.OK) {
 		    List<Iscrizione> iscrizioni = corso.getIscrizioni();
 		    iscrizione.setAllievo(allievo);

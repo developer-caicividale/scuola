@@ -211,6 +211,15 @@ public interface ModelFactory extends EFactory {
     DizComune createDizComune();
 
     /**
+     * Returns a new object of class '<em>Elenco Comuni</em>'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return a new object of class '<em>Elenco Comuni</em>'.
+     * @generated
+     */
+    ElencoComuni createElencoComuni();
+
+    /**
      * Returns the package supported by this factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->

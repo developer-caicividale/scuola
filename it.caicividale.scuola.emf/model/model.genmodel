@@ -222,5 +222,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/regione"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DizComune/cap"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//ElencoComuni">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ElencoComuni/elencoComuni"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

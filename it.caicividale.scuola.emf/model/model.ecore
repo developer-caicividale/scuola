@@ -333,4 +333,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="regione" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cap" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElencoComuni">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elencoComuni" upperBound="-1"
+        eType="#//DizComune" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -1,6 +1,8 @@
 package it.caicividale.scuola.service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -13,6 +15,7 @@ import org.eclipse.core.databinding.observable.value.WritableValue;
 
 import it.caicividale.scuola.NumeroAllieviBean;
 import it.caicividale.scuola.emf.model.Corso;
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
@@ -51,6 +54,11 @@ public class ModelManager {
     // dizionaio materiali
     private final IObservableList<DizMateriale> elencoDizMaterialeObservableList = WritableList
 	    .withElementType(DizMateriale.class);
+
+    // dizionaio comuni
+//    private final IObservableList<DizComune> elencoDizComuneObservableList = WritableList
+//	    .withElementType(DizComune.class);
+    List<DizComune> elencoDizComuni = new ArrayList<>();
 
 //	// riepilogo materiale noleggiato
 //	private final IObservableList<RiepilogoNoleggioBean> noleggioObservableList = WritableList
@@ -144,11 +152,9 @@ public class ModelManager {
     public void caricamentoCorsi() {
 	try {
 
-	    loadElencoCorsiAnnoSelected();
+	    loadDizionari();
 
-	    // carico i dizionari
-	    elencoDizMaterialeObservableList.clear();
-	    elencoDizMaterialeObservableList.addAll(serviceManager.getDizionarioMateriali());
+	    loadElencoCorsiAnnoSelected();
 
 	    // elenco istruttori (attivi e non)
 	    elencoIstruttoriObservableList.clear();
@@ -174,5 +180,18 @@ public class ModelManager {
 //			noleggioObservableList.clear();
 //			noleggioObservableList.addAll(corso.getListRiepilogonoleggio());
 //		}
+    }
+
+    public void loadDizionari() {
+	// carico i dizionari
+	elencoDizMaterialeObservableList.clear();
+	elencoDizMaterialeObservableList.addAll(serviceManager.getDizionarioMateriali());
+
+//	elencoDizComuneObservableList.clear();
+//	elencoDizComuneObservableList.addAll(serviceManager.getDizionarioComuni("FRIULI VENEZIA GIULIA"));
+
+	elencoDizComuni.clear();
+	elencoDizComuni.addAll(serviceManager.getDizionarioComuni("FRIULI VENEZIA GIULIA"));
+
     }
 }

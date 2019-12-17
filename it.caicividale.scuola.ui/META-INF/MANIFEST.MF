@@ -25,7 +25,9 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
  org.eclipse.nebula.widgets.cdatetime;bundle-version="1.4.0",
  it.caicividale.scuola.emf.model;bundle-version="1.0.0",
  org.eclipse.e4.ui.css.swt.theme;bundle-version="0.12.300",
- org.eclipse.core.databinding.beans;bundle-version="1.5.0"
+ org.eclipse.core.databinding.beans;bundle-version="1.5.0",
+ org.eclipse.ui.workbench;bundle-version="3.115.0",
+ org.eclipse.nebula.widgets.opal.textassist;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: it.caicividale.scuola.ui
 Import-Package: javax.annotation;version="0.0.0",

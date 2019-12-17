@@ -20,7 +20,7 @@ import org.eclipse.jface.databinding.swt.ISWTObservableValue;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewersObservables;
+import org.eclipse.jface.databinding.viewers.typed.ViewerProperties;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.ISelection;
@@ -122,8 +122,9 @@ public class ElencoIscrizioniPart implements IMyPart {
 	tableViewerElencoIscrizioni.setInput(iscrizioniObservableList);
 
 	IObservableValue<Iscrizione> iscrizioneObservable = modelManager.getIscrizioneObservable();
-	IViewerObservableValue targetObservable = ViewersObservables
-		.observeSingleSelection(tableViewerElencoIscrizioni);
+	IViewerObservableValue targetObservable = ViewerProperties.singleSelection()
+		.observe(tableViewerElencoIscrizioni);
+
 	bindingContext.bindValue(targetObservable, iscrizioneObservable);
 
 	tableViewerElencoIscrizioni.addDoubleClickListener(new IDoubleClickListener() {

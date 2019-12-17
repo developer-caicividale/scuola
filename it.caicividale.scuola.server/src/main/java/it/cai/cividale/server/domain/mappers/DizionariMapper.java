@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.ModelFactory;
 
@@ -35,7 +36,7 @@ public class DizionariMapper {
 
     }
 
-    public List<DizMateriale> domain2model(List<it.cai.cividale.server.domain.DizMateriale> materialiDomain) {
+    public List<DizMateriale> domain2modelMateriali(List<it.cai.cividale.server.domain.DizMateriale> materialiDomain) {
 	List<DizMateriale> materialiModel = new ArrayList<>();
 	for (it.cai.cividale.server.domain.DizMateriale dizMaterialeDomain : materialiDomain) {
 	    DizMateriale dizMaterialeModel = ModelFactory.eINSTANCE.createDizMateriale();
@@ -45,5 +46,17 @@ public class DizionariMapper {
 //	modelMapper.map(materialiDomain, new TypeToken<List<DizMateriale>>() {
 //	}.getType());
 	return materialiModel;
+    }
+
+    public List<DizComune> domain2modelComuni(List<it.cai.cividale.server.domain.DizComune> domain) {
+	List<DizComune> model = new ArrayList<>();
+	for (it.cai.cividale.server.domain.DizComune dizDomain : domain) {
+	    DizComune dizModel = ModelFactory.eINSTANCE.createDizComune();
+	    modelMapper.map(dizDomain, dizModel);
+	    model.add(dizModel);
+	}
+//	modelMapper.map(materialiDomain, new TypeToken<List<DizMateriale>>() {
+//	}.getType());
+	return model;
     }
 }

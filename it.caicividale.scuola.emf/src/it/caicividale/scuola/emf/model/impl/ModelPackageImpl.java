@@ -21,6 +21,7 @@ import it.caicividale.scuola.emf.model.ESesso;
 import it.caicividale.scuola.emf.model.ESiglaCorso;
 import it.caicividale.scuola.emf.model.ETipoVoceDiSpesa;
 import it.caicividale.scuola.emf.model.ETitoloIstruttore;
+import it.caicividale.scuola.emf.model.ElencoComuni;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.ElencoIscrizioni;
 import it.caicividale.scuola.emf.model.ElencoIstruttori;
@@ -197,6 +198,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EClass dizComuneEClass = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EClass elencoComuniEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -1791,6 +1799,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EClass getElencoComuni() {
+	return elencoComuniEClass;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EReference getElencoComuni_ElencoComuni() {
+	return (EReference) elencoComuniEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public EEnum getESesso() {
 	return eSessoEEnum;
     }
@@ -2071,6 +2099,9 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEAttribute(dizComuneEClass, DIZ_COMUNE__SIGLA);
 	createEAttribute(dizComuneEClass, DIZ_COMUNE__REGIONE);
 	createEAttribute(dizComuneEClass, DIZ_COMUNE__CAP);
+
+	elencoComuniEClass = createEClass(ELENCO_COMUNI);
+	createEReference(elencoComuniEClass, ELENCO_COMUNI__ELENCO_COMUNI);
 
 	// Create enums
 	eSessoEEnum = createEEnum(ESESSO);
@@ -2503,6 +2534,12 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getDizComune_Cap(), ecorePackage.getEString(), "cap", null, 0, 1, DizComune.class, !IS_TRANSIENT,
 		!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+	initEClass(elencoComuniEClass, ElencoComuni.class, "ElencoComuni", !IS_ABSTRACT, !IS_INTERFACE,
+		IS_GENERATED_INSTANCE_CLASS);
+	initEReference(getElencoComuni_ElencoComuni(), this.getDizComune(), null, "elencoComuni", null, 0, -1,
+		ElencoComuni.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 	// Initialize enums and add enum literals
 	initEEnum(eSessoEEnum, ESesso.class, "ESesso");

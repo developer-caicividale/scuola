@@ -8,7 +8,9 @@ import java.util.Objects;
 import org.apache.commons.lang3.StringUtils;
 
 import it.caicividale.scuola.emf.model.Corso;
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.DizMateriale;
+import it.caicividale.scuola.emf.model.ElencoComuni;
 import it.caicividale.scuola.emf.model.ElencoCorsi;
 import it.caicividale.scuola.emf.model.ElencoIstruttori;
 import it.caicividale.scuola.emf.model.ElencoMateriali;
@@ -140,4 +142,14 @@ public class ServiceManager {
 	restClient.post(url(RestResources.ISCRIZIONE_CREA, query), iscrizione, IscrizioneImpl.class);
 
     }
+
+    public List<DizComune> getDizionarioComuni(String regione) {
+	Map<String, Object> query = new HashMap<>();
+	query.put("regione", regione);
+	ElencoComuni elencoComuni = restClient.get(url(RestResources.ELENCO_COMUNI, query), ElencoComuni.class);
+
+	List<DizComune> comuni = elencoComuni.getElencoComuni();
+	return comuni;
+    }
+
 }

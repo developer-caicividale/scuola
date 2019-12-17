@@ -2114,6 +2114,43 @@ public interface ModelPackage extends EPackage {
     int DIZ_COMUNE_OPERATION_COUNT = 0;
 
     /**
+     * The meta object id for the '{@link it.caicividale.scuola.emf.model.impl.ElencoComuniImpl <em>Elenco Comuni</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see it.caicividale.scuola.emf.model.impl.ElencoComuniImpl
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getElencoComuni()
+     * @generated
+     */
+    int ELENCO_COMUNI = 21;
+
+    /**
+     * The feature id for the '<em><b>Elenco Comuni</b></em>' containment reference list.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_COMUNI__ELENCO_COMUNI = 0;
+
+    /**
+     * The number of structural features of the '<em>Elenco Comuni</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_COMUNI_FEATURE_COUNT = 1;
+
+    /**
+     * The number of operations of the '<em>Elenco Comuni</em>' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int ELENCO_COMUNI_OPERATION_COUNT = 0;
+
+    /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2121,7 +2158,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESesso()
      * @generated
      */
-    int ESESSO = 21;
+    int ESESSO = 22;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETitoloIstruttore <em>ETitolo Istruttore</em>}' enum.
@@ -2131,7 +2168,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETitoloIstruttore()
      * @generated
      */
-    int ETITOLO_ISTRUTTORE = 22;
+    int ETITOLO_ISTRUTTORE = 23;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.TipoEsitoValutazione <em>Tipo Esito Valutazione</em>}' enum.
@@ -2141,7 +2178,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getTipoEsitoValutazione()
      * @generated
      */
-    int TIPO_ESITO_VALUTAZIONE = 23;
+    int TIPO_ESITO_VALUTAZIONE = 24;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ESiglaCorso <em>ESigla Corso</em>}' enum.
@@ -2151,7 +2188,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getESiglaCorso()
      * @generated
      */
-    int ESIGLA_CORSO = 24;
+    int ESIGLA_CORSO = 25;
 
     /**
      * The meta object id for the '{@link it.caicividale.scuola.emf.model.ETipoVoceDiSpesa <em>ETipo Voce Di Spesa</em>}' enum.
@@ -2161,7 +2198,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getETipoVoceDiSpesa()
      * @generated
      */
-    int ETIPO_VOCE_DI_SPESA = 25;
+    int ETIPO_VOCE_DI_SPESA = 26;
 
     /**
      * The meta object id for the '<em>Numero Cellulare</em>' data type.
@@ -2171,7 +2208,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getNumeroCellulare()
      * @generated
      */
-    int NUMERO_CELLULARE = 26;
+    int NUMERO_CELLULARE = 27;
 
     /**
      * The meta object id for the '<em>EMail</em>' data type.
@@ -2181,7 +2218,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getEMail()
      * @generated
      */
-    int EMAIL = 27;
+    int EMAIL = 28;
 
     /**
      * The meta object id for the '<em>ELocal Date</em>' data type.
@@ -2191,7 +2228,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDate()
      * @generated
      */
-    int ELOCAL_DATE = 28;
+    int ELOCAL_DATE = 29;
 
     /**
      * The meta object id for the '<em>ELocal Date Time</em>' data type.
@@ -2201,7 +2238,7 @@ public interface ModelPackage extends EPackage {
      * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getELocalDateTime()
      * @generated
      */
-    int ELOCAL_DATE_TIME = 29;
+    int ELOCAL_DATE_TIME = 30;
 
     /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Persona <em>Persona</em>}'.
@@ -3789,6 +3826,27 @@ public interface ModelPackage extends EPackage {
     EAttribute getDizComune_Cap();
 
     /**
+     * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.ElencoComuni <em>Elenco Comuni</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for class '<em>Elenco Comuni</em>'.
+     * @see it.caicividale.scuola.emf.model.ElencoComuni
+     * @generated
+     */
+    EClass getElencoComuni();
+
+    /**
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.ElencoComuni#getElencoComuni <em>Elenco Comuni</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the containment reference list '<em>Elenco Comuni</em>'.
+     * @see it.caicividale.scuola.emf.model.ElencoComuni#getElencoComuni()
+     * @see #getElencoComuni()
+     * @generated
+     */
+    EReference getElencoComuni_ElencoComuni();
+
+    /**
      * Returns the meta object for enum '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5116,6 +5174,24 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EAttribute DIZ_COMUNE__CAP = eINSTANCE.getDizComune_Cap();
+
+	/**
+		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.impl.ElencoComuniImpl <em>Elenco Comuni</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see it.caicividale.scuola.emf.model.impl.ElencoComuniImpl
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getElencoComuni()
+		 * @generated
+		 */
+	EClass ELENCO_COMUNI = eINSTANCE.getElencoComuni();
+
+	/**
+		 * The meta object literal for the '<em><b>Elenco Comuni</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+	EReference ELENCO_COMUNI__ELENCO_COMUNI = eINSTANCE.getElencoComuni_ElencoComuni();
 
 	/**
 		 * The meta object literal for the '{@link it.caicividale.scuola.emf.model.ESesso <em>ESesso</em>}' enum.

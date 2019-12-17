@@ -102,6 +102,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return createElencoIstruttori();
 	case ModelPackage.DIZ_COMUNE:
 	    return createDizComune();
+	case ModelPackage.ELENCO_COMUNI:
+	    return createElencoComuni();
 	default:
 	    throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 	}
@@ -398,6 +400,17 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
     public DizComune createDizComune() {
 	DizComuneImpl dizComune = new DizComuneImpl();
 	return dizComune;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public ElencoComuni createElencoComuni() {
+	ElencoComuniImpl elencoComuni = new ElencoComuniImpl();
+	return elencoComuni;
     }
 
     /**

@@ -10,6 +10,6 @@ import it.cai.cividale.server.domain.DizMateriale;
 @Repository
 @Transactional
 @SessionScope
-public class DizionariDaoImpl extends AbstractDaoImpl<DizMateriale> implements DizionarioMaterialiDao {
+public class DizionarioMaterialiDaoImpl extends AbstractDaoImpl<DizMateriale> implements DizionarioMaterialiDao {
 
 }

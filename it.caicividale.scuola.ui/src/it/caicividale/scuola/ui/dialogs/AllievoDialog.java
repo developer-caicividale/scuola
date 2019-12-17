@@ -1,11 +1,15 @@
 package it.caicividale.scuola.ui.dialogs;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.Hashtable;
+import java.util.List;
 
 import org.eclipse.core.databinding.AggregateValidationStatus;
 import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.list.IObservableList;
+import org.eclipse.core.databinding.observable.list.WritableList;
 import org.eclipse.core.databinding.observable.value.ComputedValue;
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.core.databinding.observable.value.WritableValue;
@@ -28,8 +32,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
 
 import it.caicividale.scuola.emf.model.Allievo;
+import it.caicividale.scuola.emf.model.DizComune;
 import it.caicividale.scuola.emf.model.ESesso;
 import it.caicividale.scuola.emf.model.ModelPackage;
 import it.caicividale.scuola.emf.model.valueobject.EMail;
@@ -40,6 +46,8 @@ import it.caicividale.scuola.ui.databinding.converters.LocalDate2DateConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2EmailConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2NumeroCellulareConverter;
 import it.caicividale.scuola.ui.databinding.converters.ValueObject2StringConverter;
+import it.caicividale.scuola.ui.lov.Lov;
+import it.caicividale.scuola.ui.lov.LovListener;
 import it.caicividale.scuola.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
 import it.caicividale.scuola.ui.validators.BooleanWarningValidator;
 import it.caicividale.scuola.ui.validators.DataNotNullValidator;
@@ -66,11 +74,20 @@ public class AllievoDialog extends Dialog {
 
     private final IObservableValue<Allievo> allievoActualObservable = WritableValue.withValueType(Allievo.class);
 
-    public AllievoDialog(Shell parentShell, Allievo allievo, IStylingEngine stylingEngine) {
+    private Lov<DizComune> lovDizComuni;
+    private LovListener<DizComune> lovListenerDizComune = null;
+
+    final Hashtable<Text, String> riporti = new Hashtable<Text, String>();
+
+    private IObservableList<DizComune> dizComuneObservableList = WritableList.withElementType(DizComune.class);
+
+    public AllievoDialog(Shell parentShell, Allievo allievo, IStylingEngine stylingEngine, List<DizComune> comuni) {
 	super(parentShell);
 	allievoActualObservable.setValue(allievo);
 	this.stylingEngine = stylingEngine;
 	this.shell = parentShell;
+	this.dizComuneObservableList.clear();
+	this.dizComuneObservableList.addAll(comuni);
     }
 
     @Override
@@ -104,13 +121,6 @@ public class AllievoDialog extends Dialog {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     private void bind2model() {
 	DataBindingContext bindingContext = new DataBindingContext();
-	// if (allievoActualObservable.getValue() == null) {
-	// // sono nel caso di nuovo inserimento
-	// Iscrizione iscrizione = ModelFactory.eINSTANCE.createIscrizione();
-	// Allievo allievo = ModelFactory.eINSTANCE.createAllievo();
-	// iscrizione.setAllievo(allievo);
-	// allievoActualObservable.setValue(iscrizione);
-	// }
 
 	UpdateValueStrategy target2modelTextSoloLettereNotNullStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
@@ -208,28 +218,9 @@ public class AllievoDialog extends Dialog {
 		comuneResidenzaObservable, target2modelTextSoloLettereStrategy, null);
 	ControlDecorationSupport.create(comuneResidenzaBinding, SWT.TOP | SWT.LEFT);
 
-	// cap
-	IObservableValue<String> capObservable = EMFProperties.value(FeaturePath
-		.fromList(ModelPackage.Literals.PERSONA__COMUNE_RESIDENZA, ModelPackage.Literals.DIZ_COMUNE__CAP))
-		.observeDetail(allievoActualObservable);
-	ISWTObservableValue capTextObservable = WidgetProperties.text(SWT.Modify).observe(allievoComposite.getCap());
-	Binding capBinding = bindingContext.bindValue(capTextObservable, capObservable,
-		target2modelTextSoloNumeriStrategy, null);
-	ControlDecorationSupport.create(capBinding, SWT.TOP | SWT.LEFT);
-
-	// provincia residenza
-	IObservableValue<String> provinciaResidenzaObservable = EMFProperties.value(FeaturePath
-		.fromList(ModelPackage.Literals.PERSONA__COMUNE_RESIDENZA, ModelPackage.Literals.DIZ_COMUNE__SIGLA))
-		.observeDetail(allievoActualObservable);
-	ISWTObservableValue provinciaResidenzaTextObservable = WidgetProperties.text(SWT.Modify)
-		.observe(allievoComposite.getProvinciaResidenza());
-	Binding provinciaResidenzaBinding = bindingContext.bindValue(provinciaResidenzaTextObservable,
-		provinciaResidenzaObservable, target2modelTextSolo2LettereStrategy, null);
-	ControlDecorationSupport.create(provinciaResidenzaBinding, SWT.TOP | SWT.LEFT);
-
 	// data Nascita
 	LocalDateSelectionProperty localDateSelectionDataNascitaProperty = new LocalDateSelectionProperty();
-	IObservableValue<Date> dataNascitaObservable = EMFProperties
+	IObservableValue<LocalDate> dataNascitaObservable = EMFProperties
 		.value(FeaturePath.fromList(ModelPackage.Literals.PERSONA__NASCITA_DATA))
 		.observeDetail(allievoActualObservable);
 	ISWTObservableValue dataNascitaDateTimeObservable = localDateSelectionDataNascitaProperty
@@ -247,16 +238,6 @@ public class AllievoDialog extends Dialog {
 	Binding comuneNascitaBinding = bindingContext.bindValue(comuneNascitaTextObservable, comuneNascitaObservable,
 		target2modelTextSoloLettereNotNullStrategy, null);
 	ControlDecorationSupport.create(comuneNascitaBinding, SWT.TOP | SWT.LEFT);
-
-	// provincia Nascita
-	IObservableValue<String> provinciaNascitaObservable = EMFProperties.value(FeaturePath
-		.fromList(ModelPackage.Literals.PERSONA__COMUNE_NASCITA, ModelPackage.Literals.DIZ_COMUNE__SIGLA))
-		.observeDetail(allievoActualObservable);
-	ISWTObservableValue comuneProvinciaTextObservable = WidgetProperties.text(SWT.Modify)
-		.observe(allievoComposite.getProvinciaNascita());
-	Binding provinciaNascitaBinding = bindingContext.bindValue(comuneProvinciaTextObservable,
-		provinciaNascitaObservable, target2modelTextSolo2LettereStrategy, null);
-	ControlDecorationSupport.create(provinciaNascitaBinding, SWT.TOP | SWT.LEFT);
 
 	// sezione
 	IObservableValue<String> sezioneObservable = EMFProperties
@@ -315,7 +296,7 @@ public class AllievoDialog extends Dialog {
 
     @Override
     protected Point getInitialSize() {
-	return new Point(1200, 800);
+	return new Point(800, 800);
     }
 
     public IObservableValue<Allievo> getIscrizioneActualObservable() {
