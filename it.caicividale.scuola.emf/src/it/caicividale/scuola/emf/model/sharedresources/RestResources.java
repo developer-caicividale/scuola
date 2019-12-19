@@ -17,6 +17,8 @@ public interface RestResources {
 
     final String ELENCO_COMUNI = "/dizionari/elenco_comuni/{regione}";
 
+    final String ELENCO_REGIONI = "/dizionari/elenco_regioni";
+
     final String ELENCO_ISTRUTTORI = "/persona/elenco_istruttori";
 
 }

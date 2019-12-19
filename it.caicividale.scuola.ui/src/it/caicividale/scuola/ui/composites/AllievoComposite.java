@@ -99,7 +99,7 @@ public class AllievoComposite {
 
     ModelManager modelManager = ModelManager.getInstance();
 
-    public Group configureGropuDatiAnagrafici() {
+    public Composite configureGropuDatiAnagrafici() {
 	FormData formData = new FormData();
 
 	// gruppo per dati anagrafici
@@ -332,7 +332,7 @@ public class AllievoComposite {
 
 	    @Override
 	    public void mouseDoubleClick(MouseEvent e) {
-		List<DizComune> dizComuni = modelManager.getElencoDizComuni();
+		List<DizComune> dizComuni = modelManager.getElencoDizComuniResidenza();
 
 		MySelectionDialog dialog = new MySelectionDialog(shell, new LovDizComuneLabelProvider(),
 			new ComuneFilter(), dizComuni, DizComune.class, comuneResidenza.getText());
@@ -574,7 +574,7 @@ public class AllievoComposite {
 	formData.width = 200;
 	checkBoxNuovoAllievo.setLayoutData(formData);
 
-	return groupDatiAnagrafici;
+	return container;
 
     }
 }

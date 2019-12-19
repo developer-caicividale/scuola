@@ -46,4 +46,8 @@ public class DizionariService {
 
 	return elencoComuni;
     }
+
+    public List<String> getElencoRegioni() {
+	return dizionarioComuniDao.listRegioni();
+    }
 }

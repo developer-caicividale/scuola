@@ -3,6 +3,8 @@ package it.caicividale.scuola.service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.eclipse.core.databinding.observable.list.IListChangeListener;
 import org.eclipse.core.databinding.observable.list.IObservableList;
@@ -58,7 +60,12 @@ public class ModelManager {
     // dizionaio comuni
 //    private final IObservableList<DizComune> elencoDizComuneObservableList = WritableList
 //	    .withElementType(DizComune.class);
-    List<DizComune> elencoDizComuni = new ArrayList<>();
+    List<DizComune> elencoDizComuniResidenza = new ArrayList<>();
+    List<DizComune> elencoDizComuniNascita = new ArrayList<>();
+    List<String> regioni = new ArrayList<>();
+
+    private final IObservableValue<String> regioneResidenzaObservable = WritableValue.withValueType(String.class);
+    private final IObservableValue<String> regioneNascitaObservable = WritableValue.withValueType(String.class);
 
 //	// riepilogo materiale noleggiato
 //	private final IObservableList<RiepilogoNoleggioBean> noleggioObservableList = WritableList
@@ -129,6 +136,42 @@ public class ModelManager {
 	    }
 
 	});
+
+	regioneResidenzaObservable.addValueChangeListener(new IValueChangeListener<String>() {
+
+	    @Override
+	    public void handleValueChange(ValueChangeEvent<? extends String> event) {
+		String regione = (String) ((IObservableValue) event.getSource()).getValue();
+		if (regione != null) {
+		    elencoDizComuniResidenza.clear();
+		    if (Optional.ofNullable(regioneNascitaObservable.getValue()).orElse("").equals(regione)) {
+			elencoDizComuniNascita.addAll(elencoDizComuniResidenza.stream().collect(Collectors.toList()));
+		    } else {
+			List<DizComune> dizionarioComuni = serviceManager.getDizionarioComuni(regione);
+			elencoDizComuniResidenza.addAll(dizionarioComuni);
+		    }
+		}
+	    }
+
+	});
+
+	regioneNascitaObservable.addValueChangeListener(new IValueChangeListener<String>() {
+
+	    @Override
+	    public void handleValueChange(ValueChangeEvent<? extends String> event) {
+		String regione = (String) ((IObservableValue) event.getSource()).getValue();
+		if (regione != null) {
+		    elencoDizComuniNascita.clear();
+		    if (Optional.ofNullable(regioneResidenzaObservable.getValue()).orElse("").equals(regione)) {
+			elencoDizComuniNascita.addAll(elencoDizComuniResidenza.stream().collect(Collectors.toList()));
+		    } else {
+			List<DizComune> dizionarioComuni = serviceManager.getDizionarioComuni(regione);
+			elencoDizComuniNascita.addAll(dizionarioComuni);
+		    }
+		}
+	    }
+
+	});
     }
 
     public void loadElencoCorsi(Integer anno) {
@@ -187,11 +230,8 @@ public class ModelManager {
 	elencoDizMaterialeObservableList.clear();
 	elencoDizMaterialeObservableList.addAll(serviceManager.getDizionarioMateriali());
 
-//	elencoDizComuneObservableList.clear();
-//	elencoDizComuneObservableList.addAll(serviceManager.getDizionarioComuni("FRIULI VENEZIA GIULIA"));
-
-	elencoDizComuni.clear();
-	elencoDizComuni.addAll(serviceManager.getDizionarioComuni("FRIULI VENEZIA GIULIA"));
-
+	regioni.clear();
+	regioni.addAll(serviceManager.getDizionarioRegioni());
     }
+
 }

@@ -152,4 +152,9 @@ public class ServiceManager {
 	return comuni;
     }
 
+    public List<String> getDizionarioRegioni() {
+
+	return restClient.get(url(RestResources.ELENCO_REGIONI), List.class);
+    }
+
 }

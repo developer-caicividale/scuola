@@ -31,4 +31,16 @@ public class DizionarioComuniDaoImpl extends AbstractDaoImpl<DizComune> implemen
 	}
     }
 
+    @Override
+    public List<String> listRegioni() {
+	try {
+	    @SuppressWarnings("unchecked")
+	    TypedQuery<String> query = sessionFactory.getCurrentSession().//
+		    createQuery("select distinct regione from DizComune order by regione");
+	    return (List<String>) query.getResultList();
+	} catch (Exception e) {
+	    throw new DaoException(ECodiceErrore.DAO_ERROR, new Object[] { e.getMessage() });
+	}
+    }
+
 }

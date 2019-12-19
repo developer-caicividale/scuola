@@ -1,5 +1,7 @@
 package it.cai.cividale.server.controllers;
 
+import java.util.List;
+
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,5 +33,12 @@ public class DizionariController {
 	ElencoComuni elencoComuni = dizionariService.getElencoComuni(regione);
 
 	return ResponseEntityUtils.create(elencoComuni);
+    }
+
+    @GetMapping(value = RestResources.ELENCO_REGIONI, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<String>> getElencoRegioni() {
+	List<String> elencoRegioni = dizionariService.getElencoRegioni();
+
+	return ResponseEntityUtils.create(elencoRegioni);
     }
 }
