@@ -59,7 +59,7 @@ public class AllievoDialog extends Dialog {
 	container.setLayout(layout);
 
 	allievoComposite = new AllievoComposite(shell, container, stylingEngine);
-	allievoComposite.configureGropuDatiAnagrafici();
+	allievoComposite.configure();
 
 	return area;
     }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.eclipse.e4.ui.services.IStylingEngine;
 import org.eclipse.jface.viewers.ComboViewer;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.window.Window;
 import org.eclipse.nebula.widgets.cdatetime.CDT;
 import org.eclipse.nebula.widgets.cdatetime.CDateTime;
@@ -35,6 +36,7 @@ import it.caicividale.scuola.ui.lov.LovDizComuneLabelProvider;
 import it.caicividale.scuola.ui.lov.MySelectionDialog;
 import it.caicividale.scuola.ui.parts.PartDefaults;
 import it.caicividale.scuola.ui.parts.tableviewer.filters.ComuneFilter;
+import it.caicividale.scuola.ui.parts.tableviewer.filters.RegioneFilter;
 import lombok.Data;
 
 @Data
@@ -99,7 +101,7 @@ public class AllievoComposite {
 
     ModelManager modelManager = ModelManager.getInstance();
 
-    public Composite configureGropuDatiAnagrafici() {
+    public Composite configure() {
 	FormData formData = new FormData();
 
 	// gruppo per dati anagrafici
@@ -293,6 +295,36 @@ public class AllievoComposite {
 	    }
 	});
 
+	regioneResidenza.addMouseListener(new MouseListener() {
+
+	    @Override
+	    public void mouseDoubleClick(MouseEvent e) {
+		List<String> regioni = modelManager.getRegioni();
+
+		MySelectionDialog dialog = new MySelectionDialog(shell, new LabelProvider(), new RegioneFilter(),
+			regioni, String.class, regioneResidenza.getText());
+		if (dialog.open() == Window.OK) {
+		    Object result = dialog.getSelecion();
+		    if (result != null) {
+			String regione = (String) result;
+			regioneResidenza.setText(regione);
+			comuneResidenza.setText("");
+		    }
+		}
+	    }
+
+	    @Override
+	    public void mouseDown(MouseEvent e) {
+
+	    }
+
+	    @Override
+	    public void mouseUp(MouseEvent e) {
+
+	    }
+
+	});
+
 	// comuneResidenza
 	lblComuneResidenza = new Label(groupDatiResidenza, SWT.NONE);
 	lblComuneResidenza.setText("Comune Residenza");
@@ -340,8 +372,8 @@ public class AllievoComposite {
 		if (dialog.open() == Window.OK) {
 		    Object result = dialog.getSelecion();
 		    if (result != null) {
-			DizComune DizComune = (DizComune) result;
-			DizComune.getComune();
+			DizComune dizComune = (DizComune) result;
+			comuneResidenza.setText(dizComune.getComune());
 		    }
 		}
 	    }
@@ -419,6 +451,36 @@ public class AllievoComposite {
 	    }
 	});
 
+	regioneNascita.addMouseListener(new MouseListener() {
+
+	    @Override
+	    public void mouseDoubleClick(MouseEvent e) {
+		List<String> regioni = modelManager.getRegioni();
+
+		MySelectionDialog dialog = new MySelectionDialog(shell, new LabelProvider(), new RegioneFilter(),
+			regioni, String.class, regioneNascita.getText());
+		if (dialog.open() == Window.OK) {
+		    Object result = dialog.getSelecion();
+		    if (result != null) {
+			String regione = (String) result;
+			regioneNascita.setText(regione);
+			comuneNascita.setText("");
+		    }
+		}
+	    }
+
+	    @Override
+	    public void mouseDown(MouseEvent e) {
+
+	    }
+
+	    @Override
+	    public void mouseUp(MouseEvent e) {
+
+	    }
+
+	});
+
 	// comuneNascita
 	lblComuneNascita = new Label(groupDatiNascita, SWT.NONE);
 	lblComuneNascita.setText("Comune Nascita");
@@ -452,6 +514,36 @@ public class AllievoComposite {
 		    e.doit = true;
 		}
 	    }
+	});
+
+	comuneNascita.addMouseListener(new MouseListener() {
+
+	    @Override
+	    public void mouseDoubleClick(MouseEvent e) {
+		List<DizComune> dizComuni = modelManager.getElencoDizComuniNascita();
+
+		MySelectionDialog dialog = new MySelectionDialog(shell, new LovDizComuneLabelProvider(),
+			new ComuneFilter(), dizComuni, DizComune.class, comuneNascita.getText());
+		// dialog.setSize(100, 20);
+		if (dialog.open() == Window.OK) {
+		    Object result = dialog.getSelecion();
+		    if (result != null) {
+			DizComune dizComune = (DizComune) result;
+			comuneNascita.setText(dizComune.getComune());
+		    }
+		}
+	    }
+
+	    @Override
+	    public void mouseDown(MouseEvent e) {
+
+	    }
+
+	    @Override
+	    public void mouseUp(MouseEvent e) {
+
+	    }
+
 	});
 
 	groupDatiContatti = new Group(container, SWT.NONE);
