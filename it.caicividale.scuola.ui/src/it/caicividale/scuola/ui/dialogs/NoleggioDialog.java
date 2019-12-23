@@ -13,30 +13,30 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Shell;
 
-import it.caicividale.scuola.emf.model.Allievo;
-import it.caicividale.scuola.ui.composites.AllievoComposite;
-import it.caicividale.scuola.ui.controllers.AllievoController;
+import it.caicividale.scuola.emf.model.Iscrizione;
+import it.caicividale.scuola.ui.composites.NoleggioComposite;
+import it.caicividale.scuola.ui.controllers.NoleggioController;
 
-public class AllievoDialog extends Dialog {
+public class NoleggioDialog extends Dialog {
 
     private final Shell shell;
 
     private final IStylingEngine stylingEngine;
 
-    private AllievoComposite allievoComposite;
-    private AllievoController allievoController;
+    private NoleggioComposite noleggioComposite;
+    private NoleggioController noleggioController;
 
 //    private final IObservableValue<Iscrizione> allievoActualObservable = WritableValue
 //	    .withValueType(Iscrizione.class);
 
-    private final IObservableValue<Allievo> allievoActualObservable = WritableValue.withValueType(Allievo.class);
+    private final IObservableValue<Iscrizione> iscrizioneActualObservable = WritableValue
+	    .withValueType(Iscrizione.class);
 
-    public AllievoDialog(Shell parentShell, Allievo allievo, IStylingEngine stylingEngine) {
+    public NoleggioDialog(Shell parentShell, Iscrizione iscrizione, IStylingEngine stylingEngine) {
 	super(parentShell);
-	allievoActualObservable.setValue(allievo);
+	iscrizioneActualObservable.setValue(iscrizione);
 	this.stylingEngine = stylingEngine;
 	this.shell = parentShell;
-
     }
 
     @Override
@@ -44,9 +44,9 @@ public class AllievoDialog extends Dialog {
 	super.create();
 
 	// metto il binding qui in modo che venga fatto dopo la create della super
-	allievoController = new AllievoController(allievoComposite, getButton(IDialogConstants.OK_ID),
-		allievoActualObservable);
-	allievoController.bind2model();
+	noleggioController = new NoleggioController(noleggioComposite, getButton(IDialogConstants.OK_ID),
+		iscrizioneActualObservable);
+	noleggioController.bind2model();
     }
 
     @Override
@@ -58,8 +58,8 @@ public class AllievoDialog extends Dialog {
 	FormLayout layout = new FormLayout();
 	container.setLayout(layout);
 
-	allievoComposite = new AllievoComposite(shell, container, stylingEngine);
-	allievoComposite.configure();
+	noleggioComposite = new NoleggioComposite(shell, container, stylingEngine);
+	noleggioComposite.configure();
 
 	return area;
     }
@@ -74,7 +74,7 @@ public class AllievoDialog extends Dialog {
 	return new Point(800, 800);
     }
 
-    public IObservableValue<Allievo> getAllievoActualObservable() {
-	return allievoActualObservable;
+    public IObservableValue<Iscrizione> getIscrizioneActualObservable() {
+	return iscrizioneActualObservable;
     }
 }
