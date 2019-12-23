@@ -20,6 +20,7 @@ import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Text;
 
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.ModelPackage;
@@ -28,6 +29,7 @@ import it.caicividale.scuola.ui.composites.IscrizioneComposite;
 import it.caicividale.scuola.ui.databinding.converters.Date2LocalDateConverter;
 import it.caicividale.scuola.ui.databinding.converters.Float2StringConverter;
 import it.caicividale.scuola.ui.databinding.converters.LocalDate2DateConverter;
+import it.caicividale.scuola.ui.databinding.converters.PersonaNomeCognome2StringConverter;
 import it.caicividale.scuola.ui.databinding.converters.String2FloatConverter;
 import it.caicividale.scuola.ui.decorationupdaters.OkKoControlDecoratorUpdater;
 import it.caicividale.scuola.ui.updatevaluestrategy.ConverterUpdateValueStrategy;
@@ -54,6 +56,9 @@ public class IscrizioneController {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public void bind2model() {
 	DataBindingContext bindingContext = new DataBindingContext();
+
+	UpdateValueStrategy model2targetInfoAllievo = new ConverterUpdateValueStrategy(
+		new PersonaNomeCognome2StringConverter());
 
 	UpdateValueStrategy target2modelTextSoloLettereNotNullStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
@@ -101,6 +106,14 @@ public class IscrizioneController {
 	UpdateValueStrategy target2modelDifferenzaQuotaStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
 	target2modelDifferenzaQuotaStrategy.setBeforeSetValidator(new DifferenzaQuotaValidator());
+
+	// allievo
+	IObservableValue<Text> allievoObservable = EMFProperties
+		.value(FeaturePath.fromList(ModelPackage.Literals.ISCRIZIONE__ALLIEVO))
+		.observeDetail(iscrizioneActualObservable);
+	ISWTObservableValue allievoTextObservable = WidgetProperties.text(SWT.Modify)
+		.observe(iscrizioneComposite.getAllievo());
+	bindingContext.bindValue(allievoTextObservable, allievoObservable, null, model2targetInfoAllievo);
 
 	// moduloIscrizione
 	IObservableValue<Boolean> moduloIscrizioneObservable = EMFProperties

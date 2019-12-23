@@ -66,7 +66,7 @@ public class IscrizioneDialog extends Dialog {
 
     @Override
     protected Point getInitialSize() {
-	return new Point(1200, 800);
+	return new Point(800, 800);
     }
 
     public IObservableValue<Iscrizione> getIscrizioneActualObservable() {

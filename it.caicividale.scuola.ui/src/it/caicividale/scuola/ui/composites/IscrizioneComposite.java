@@ -28,11 +28,15 @@ public class IscrizioneComposite {
     private final Shell shell;
     private final Composite container;
     private final IStylingEngine stylingEngine;
+
+    private Group groupAllievo;
     private Group groupIscrizione;
     private Group groupQuote;
     private Group groupStatoIscrizione;
 
     private Button ricercaAllievo;
+
+    private Text allievo;
 
     // iscrizione
     private Button checkBoxModuloIscrizione;
@@ -79,21 +83,88 @@ public class IscrizioneComposite {
     private Text differenzaTotaleVersatoTotaleDovuto;
 
     public void configure() {
+
+	configureGroupAllievo();
+	configureGroupStatoIscrizione();
+	configureGroupIscrizione();
+	configureGroupQuote();
+
+    }
+
+    private void configureGroupAllievo() {
+	FormData formData;
+	groupAllievo = new Group(container, SWT.NONE);
+	groupAllievo.setText("Allievo");
+	groupAllievo.setLayout(new FormLayout());
+	formData = new FormData();
+	formData.top = new FormAttachment(PartDefaults.MARGIN_GROUP);
+	formData.left = new FormAttachment(PartDefaults.MARGIN_GROUP);
+	formData.right = new FormAttachment(PartDefaults.MARGIN_RIGHT);
+	groupAllievo.setLayoutData(formData);
+
+	allievo = new Text(groupAllievo, SWT.NONE);
+	allievo.setEditable(false);
+	formData = new FormData();
+	formData.top = new FormAttachment(PartDefaults.V_LABEL2CONTROL_OFFSET);
+	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.width = 400;
+	allievo.setLayoutData(formData);
+	stylingEngine.setId(allievo, "CSSTextTitle");
+    }
+
+    private void configureGroupStatoIscrizione() {
+	FormData formData;
+	groupStatoIscrizione = new Group(container, SWT.NONE);
+	groupStatoIscrizione.setText("Stato iscrizione");
+	groupStatoIscrizione.setLayout(new FormLayout());
+	formData = new FormData();
+	formData.top = new FormAttachment(groupAllievo, PartDefaults.V_CONTROL2CONTROL_OFFSET);
+	formData.left = new FormAttachment(PartDefaults.MARGIN_GROUP);
+	formData.right = new FormAttachment(PartDefaults.MARGIN_RIGHT);
+	// formData.right = new FormAttachment(100, -PartDefaults.MARGIN_GROUP);
+//	formData.width = 400;
+//	formData.bottom = new FormAttachment(100, -3);
+	groupStatoIscrizione.setLayoutData(formData);
+
+	lblElencoErrori = new Label(groupStatoIscrizione, SWT.NONE);
+	lblElencoErrori.setText("Errori rilevati");
+	formData = new FormData();
+	formData.top = new FormAttachment(PartDefaults.MARGIN);
+	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.width = 150;
+	formData.height = PartDefaults.H_LABEL;
+	lblElencoErrori.setLayoutData(formData);
+
+	listViewerElencoErrori = new ListViewer(groupStatoIscrizione, SWT.BORDER | SWT.MULTI);
+	List list = listViewerElencoErrori.getList();
+	list.setLayoutData(new FormData());
+	formData = new FormData();
+	formData.top = new FormAttachment(lblElencoErrori, PartDefaults.V_LABEL2CONTROL_OFFSET);
+	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.width = 400;
+	formData.height = 100;
+	listViewerElencoErrori.getControl().setLayoutData(formData);
+	stylingEngine.setId(listViewerElencoErrori.getControl(), "CSSListRed");
+
+    }
+
+    private void configureGroupIscrizione() {
 	FormData formData;
 	groupIscrizione = new Group(container, SWT.NONE);
 	groupIscrizione.setText("Iscrizione");
 	groupIscrizione.setLayout(new FormLayout());
 	formData = new FormData();
-	formData.top = new FormAttachment(PartDefaults.MARGIN_GROUP);
+	formData.top = new FormAttachment(groupStatoIscrizione, PartDefaults.V_CONTROL2CONTROL_OFFSET);
 	formData.left = new FormAttachment(PartDefaults.MARGIN_GROUP);
 	formData.right = new FormAttachment(PartDefaults.MARGIN_RIGHT);
 	groupIscrizione.setLayoutData(formData);
 
 	// ModuloIscrizione
+
 	checkBoxModuloIscrizione = new Button(groupIscrizione, SWT.CHECK);
 	checkBoxModuloIscrizione.setText("Modulo iscrizione");
 	formData = new FormData();
-	formData.top = new FormAttachment(PartDefaults.MARGIN);
+	formData.top = new FormAttachment(allievo, PartDefaults.V_CONTROL2CONTROL_OFFSET);
 	formData.left = new FormAttachment(PartDefaults.MARGIN);
 	formData.width = 200;
 	checkBoxModuloIscrizione.setLayoutData(formData);
@@ -128,8 +199,8 @@ public class IscrizioneComposite {
 	lblDataScadenzaCertificatoMedico = new Label(groupIscrizione, SWT.NONE);
 	lblDataScadenzaCertificatoMedico.setText("Data scadenza certificato");
 	formData = new FormData();
-	formData.top = new FormAttachment(checkBoxCertificatoMedico, PartDefaults.V_CONTROL2CONTROL_OFFSET);
-	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.top = new FormAttachment(checkBoxConsensoInformato, PartDefaults.V_CONTROL2CONTROL_OFFSET);
+	formData.left = new FormAttachment(checkBoxCertificatoMedico, PartDefaults.H_LABEL2LABEL_OFFSET);
 	formData.width = 200;
 	formData.height = PartDefaults.H_LABEL;
 	lblDataScadenzaCertificatoMedico.setLayoutData(formData);
@@ -138,7 +209,7 @@ public class IscrizioneComposite {
 	dataScadenzaCertificatoMedico.setPattern("dd/MM/yyyy");
 	formData = new FormData();
 	formData.top = new FormAttachment(lblDataScadenzaCertificatoMedico, PartDefaults.V_LABEL2CONTROL_OFFSET);
-	formData.left = new FormAttachment(PartDefaults.MARGIN);
+	formData.left = new FormAttachment(checkBoxCertificatoMedico, PartDefaults.H_LABEL2LABEL_OFFSET);
 	formData.width = 150;
 	formData.height = PartDefaults.H_DATA;
 	dataScadenzaCertificatoMedico.setLayoutData(formData);
@@ -150,43 +221,17 @@ public class IscrizioneComposite {
 	    }
 	});
 
-	lblNote = new Label(groupIscrizione, SWT.NONE);
-	lblNote.setText("Note");
-	formData = new FormData();
-	formData.top = new FormAttachment(PartDefaults.MARGIN_GROUP);
-	formData.left = new FormAttachment(tableNoleggio, PartDefaults.V_LABEL2LABEL_OFFSET);
-	formData.width = 150;
-	formData.height = PartDefaults.H_LABEL;
-	lblNote.setLayoutData(formData);
-
-	note = new StyledText(groupIscrizione, SWT.MULTI | SWT.BORDER | SWT.WRAP | SWT.V_SCROLL);
-	formData = new FormData();
-	formData.top = new FormAttachment(lblNote, PartDefaults.V_LABEL2CONTROL_OFFSET);
-	formData.left = new FormAttachment(tableNoleggio, PartDefaults.V_LABEL2LABEL_OFFSET);
-	formData.width = 400;
-	formData.height = 120;
-	note.setLayoutData(formData);
-	note.addTraverseListener(new TraverseListener() {
-	    public void keyTraversed(TraverseEvent e) {
-		if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
-		    e.doit = true;
-		}
-	    }
-	});
-
-	configureGroupQuote();
-	configureGroupStatoIscrizione();
-
     }
 
     private void configureGroupQuote() {
 	FormData formData;
-	groupQuote = new Group(groupIscrizione, SWT.NONE);
+	groupQuote = new Group(container, SWT.NONE);
 	groupQuote.setText("Quote (Euro)");
 	groupQuote.setLayout(new FormLayout());
 	formData = new FormData();
-	formData.top = new FormAttachment(dataScadenzaCertificatoMedico, PartDefaults.V_CONTROL2CONTROL_OFFSET);
+	formData.top = new FormAttachment(groupIscrizione, PartDefaults.V_CONTROL2CONTROL_OFFSET);
 	formData.left = new FormAttachment(PartDefaults.MARGIN_GROUP);
+	formData.right = new FormAttachment(PartDefaults.MARGIN_RIGHT);
 	groupQuote.setLayoutData(formData);
 
 	int widthLabel = 120;
@@ -365,40 +410,29 @@ public class IscrizioneComposite {
 	differenzaTotaleVersatoTotaleDovuto.setLayoutData(formData);
 	stylingEngine.setId(differenzaTotaleVersatoTotaleDovuto, "CSSTextMediumBold");
 
-    }
-
-    private void configureGroupStatoIscrizione() {
-	FormData formData;
-	groupStatoIscrizione = new Group(groupIscrizione, SWT.NONE);
-	groupStatoIscrizione.setText("Stato iscrizione");
-	groupStatoIscrizione.setLayout(new FormLayout());
+	lblNote = new Label(groupQuote, SWT.NONE);
+	lblNote.setText("Note");
 	formData = new FormData();
-	formData.top = new FormAttachment(dataScadenzaCertificatoMedico, PartDefaults.V_CONTROL2CONTROL_OFFSET);
-	formData.left = new FormAttachment(groupQuote, PartDefaults.V_CONTROL2CONTROL_OFFSET);
-	formData.right = new FormAttachment(100, -PartDefaults.MARGIN_GROUP);
-	formData.width = 400;
-	formData.bottom = new FormAttachment(100, -3);
-	groupStatoIscrizione.setLayoutData(formData);
-
-	lblElencoErrori = new Label(groupStatoIscrizione, SWT.NONE);
-	lblElencoErrori.setText("Errori rilevati");
-	formData = new FormData();
-	formData.top = new FormAttachment(PartDefaults.MARGIN);
+	formData.top = new FormAttachment(differenzaTotaleVersatoTotaleDovuto, PartDefaults.MARGIN_GROUP);
 	formData.left = new FormAttachment(PartDefaults.MARGIN);
 	formData.width = 150;
 	formData.height = PartDefaults.H_LABEL;
-	lblElencoErrori.setLayoutData(formData);
+	lblNote.setLayoutData(formData);
 
-	listViewerElencoErrori = new ListViewer(groupStatoIscrizione, SWT.BORDER | SWT.MULTI);
-	List list = listViewerElencoErrori.getList();
-	list.setLayoutData(new FormData());
+	note = new StyledText(groupQuote, SWT.MULTI | SWT.BORDER | SWT.WRAP | SWT.V_SCROLL);
 	formData = new FormData();
-	formData.top = new FormAttachment(lblElencoErrori, PartDefaults.V_LABEL2CONTROL_OFFSET);
+	formData.top = new FormAttachment(lblNote, PartDefaults.V_LABEL2CONTROL_OFFSET);
 	formData.left = new FormAttachment(PartDefaults.MARGIN);
 	formData.width = 400;
-	formData.height = 100;
-	listViewerElencoErrori.getControl().setLayoutData(formData);
-	stylingEngine.setId(listViewerElencoErrori.getControl(), "CSSListRed");
+	formData.height = 120;
+	note.setLayoutData(formData);
+	note.addTraverseListener(new TraverseListener() {
+	    public void keyTraversed(TraverseEvent e) {
+		if (e.detail == SWT.TRAVERSE_TAB_NEXT || e.detail == SWT.TRAVERSE_TAB_PREVIOUS) {
+		    e.doit = true;
+		}
+	    }
+	});
 
     }
 

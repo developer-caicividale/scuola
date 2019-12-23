@@ -35,7 +35,9 @@ public class ElencoIscrizioniLabelProvider extends CellLabelProvider {
 	// classLoader.getResourceAsStream("/icons/female16x16.png"));
 
 	// Abilito i tooltip
-	ColumnViewerToolTipSupport.enableFor(tableViewer);
+	if (tableViewer != null) {
+	    ColumnViewerToolTipSupport.enableFor(tableViewer);
+	}
 	// tableViewer.getTable().setData(RWT.TOOLTIP_MARKUP_ENABLED, Boolean.TRUE);
     }
 
@@ -200,7 +202,7 @@ public class ElencoIscrizioniLabelProvider extends CellLabelProvider {
 	return text;
     }
 
-    private String getInfoAllievo(Allievo allievo) {
+    public String getInfoAllievo(Allievo allievo) {
 	String text;
 	String sessoString = "";
 	ESesso sesso = allievo.getSesso();
