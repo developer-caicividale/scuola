@@ -123,7 +123,7 @@
         unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         changeable="false" volatile="true" transient="true" defaultValueLiteral="False"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="materialeNoleggiato" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="materialiNoleggiati" upperBound="-1"
         eType="#//MaterialeNoleggiato" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIscrizioneOk" ordered="false"
         unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
@@ -337,4 +337,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elencoComuni" upperBound="-1"
         eType="#//DizComune" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EqualsAndHashCode" instanceClassName="lombok.EqualsAndHashCode"/>
 </ecore:EPackage>

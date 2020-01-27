@@ -1,8 +1,6 @@
 
 package it.caicividale.scuola.ui.handlers;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import org.eclipse.e4.core.di.annotations.Execute;
@@ -45,11 +43,7 @@ public class NoleggioHandler {
 		int index = EmfUtils.getIndexOfEObject(corso.getIscrizioni(), iscrizione);
 		NoleggioDialog dialog = new NoleggioDialog(shell, iscrizione, stylingEngine);
 		if (dialog.open() == Window.OK) {
-		    List<Iscrizione> iscrizioni = corso.getIscrizioni();
-		    iscrizioni.set(index, iscrizione);
-		    serviceManager.update(iscrizione, corso.getId());
-//		    // L'ooservabile Corso non reagisce ai cambiamenti della lista iscrizione, forzo
-//		    // il cambiamento copiando l'oggetto
+
 		    modelManager.getCorsoObservable().setValue(EcoreUtil.copy(corso));
 
 		} else {

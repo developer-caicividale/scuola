@@ -968,7 +968,7 @@ public class CorsoImpl extends MinimalEObjectImpl.Container implements Corso {
 	if (corso != null && corso.getIscrizioni() != null && !corso.getIscrizioni().isEmpty()) {
 	    for (Iscrizione iscrizione : corso.getIscrizioni()) {
 		if (iscrizione.getIsNoleggio()) {
-		    listaMaterialeNoleggiato.addAll(EcoreUtil.copyAll(iscrizione.getMaterialeNoleggiato()));
+		    listaMaterialeNoleggiato.addAll(EcoreUtil.copyAll(iscrizione.getMaterialiNoleggiati()));
 		}
 	    }
 	    if (!listaMaterialeNoleggiato.isEmpty()) {

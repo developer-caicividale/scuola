@@ -25,6 +25,9 @@ public class IscrizioneMapper {
     @Autowired
     private AllievoMapper allievoMapper;
 
+    @Autowired
+    private MaterialeNoleggaitoMapper materialeNoleggaitoMapper;
+
     public IscrizioneMapper() {
 	modelMapper = new ModelMapper();
 	TypeMap<it.cai.cividale.server.domain.Iscrizione, IscrizioneImpl> typeMapDomain2Model = modelMapper
@@ -56,6 +59,13 @@ public class IscrizioneMapper {
     public Iscrizione domain2model(it.cai.cividale.server.domain.Iscrizione domain) {
 	Iscrizione model = ModelFactory.eINSTANCE.createIscrizione();
 	modelMapper.map(domain, model);
+	if (!domain.getMaterialiNoleggiati().isEmpty()) {
+	    for (it.cai.cividale.server.domain.MaterialeNoleggiato materialeNoleggiatoDomain : domain
+		    .getMaterialiNoleggiati()) {
+		model.getMaterialiNoleggiati().add(materialeNoleggaitoMapper.domain2Model(materialeNoleggiatoDomain));
+
+	    }
+	}
 
 	Allievo allievo = allievoMapper.domain2model(domain.getAllievo());
 	model.setAllievo(allievo);
@@ -67,6 +77,14 @@ public class IscrizioneMapper {
 
 	it.cai.cividale.server.domain.Iscrizione iscrizione = modelMapper.map(model,
 		it.cai.cividale.server.domain.Iscrizione.class);
+
+//	if (model.getIsNoleggio()) {
+//	    for (MaterialeNoleggiato materialeNoleggiatoModel : model.getMaterialiNoleggiati()) {
+//		iscrizione.getMaterialiNoleggiati()
+//			.add(materialeNoleggaitoMapper.model2Domain(materialeNoleggiatoModel));
+//
+//	    }
+//	}
 	iscrizione.setAllievo(allievo);
 	return iscrizione;
     }

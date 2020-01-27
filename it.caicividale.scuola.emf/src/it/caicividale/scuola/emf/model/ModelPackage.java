@@ -738,13 +738,13 @@ public interface ModelPackage extends EPackage {
     int ISCRIZIONE__IS_NOLEGGIO = 10;
 
     /**
-     * The feature id for the '<em><b>Materiale Noleggiato</b></em>' containment reference list.
+     * The feature id for the '<em><b>Materiali Noleggiati</b></em>' containment reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int ISCRIZIONE__MATERIALE_NOLEGGIATO = 11;
+    int ISCRIZIONE__MATERIALI_NOLEGGIATI = 11;
 
     /**
      * The feature id for the '<em><b>Is Iscrizione Ok</b></em>' attribute.
@@ -2241,6 +2241,16 @@ public interface ModelPackage extends EPackage {
     int ELOCAL_DATE_TIME = 30;
 
     /**
+     * The meta object id for the '<em>Equals And Hash Code</em>' data type.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see lombok.EqualsAndHashCode
+     * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getEqualsAndHashCode()
+     * @generated
+     */
+    int EQUALS_AND_HASH_CODE = 31;
+
+    /**
      * Returns the meta object for class '{@link it.caicividale.scuola.emf.model.Persona <em>Persona</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2864,15 +2874,15 @@ public interface ModelPackage extends EPackage {
     EAttribute getIscrizione_IsNoleggio();
 
     /**
-     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}'.
+     * Returns the meta object for the containment reference list '{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialiNoleggiati <em>Materiali Noleggiati</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the meta object for the containment reference list '<em>Materiale Noleggiato</em>'.
-     * @see it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato()
+     * @return the meta object for the containment reference list '<em>Materiali Noleggiati</em>'.
+     * @see it.caicividale.scuola.emf.model.Iscrizione#getMaterialiNoleggiati()
      * @see #getIscrizione()
      * @generated
      */
-    EReference getIscrizione_MaterialeNoleggiato();
+    EReference getIscrizione_MaterialiNoleggiati();
 
     /**
      * Returns the meta object for the attribute '{@link it.caicividale.scuola.emf.model.Iscrizione#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}'.
@@ -3941,6 +3951,17 @@ public interface ModelPackage extends EPackage {
     EDataType getELocalDateTime();
 
     /**
+     * Returns the meta object for data type '{@link lombok.EqualsAndHashCode <em>Equals And Hash Code</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for data type '<em>Equals And Hash Code</em>'.
+     * @see lombok.EqualsAndHashCode
+     * @model instanceClass="lombok.EqualsAndHashCode"
+     * @generated
+     */
+    EDataType getEqualsAndHashCode();
+
+    /**
      * Returns the factory that creates the instances of the model.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4429,12 +4450,12 @@ public interface ModelPackage extends EPackage {
 	EAttribute ISCRIZIONE__IS_NOLEGGIO = eINSTANCE.getIscrizione_IsNoleggio();
 
 	/**
-		 * The meta object literal for the '<em><b>Materiale Noleggiato</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Materiali Noleggiati</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-	EReference ISCRIZIONE__MATERIALE_NOLEGGIATO = eINSTANCE.getIscrizione_MaterialeNoleggiato();
+	EReference ISCRIZIONE__MATERIALI_NOLEGGIATI = eINSTANCE.getIscrizione_MaterialiNoleggiati();
 
 	/**
 		 * The meta object literal for the '<em><b>Is Iscrizione Ok</b></em>' attribute feature.
@@ -5282,6 +5303,16 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 	EDataType ELOCAL_DATE_TIME = eINSTANCE.getELocalDateTime();
+
+	/**
+		 * The meta object literal for the '<em>Equals And Hash Code</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see lombok.EqualsAndHashCode
+		 * @see it.caicividale.scuola.emf.model.impl.ModelPackageImpl#getEqualsAndHashCode()
+		 * @generated
+		 */
+	EDataType EQUALS_AND_HASH_CODE = eINSTANCE.getEqualsAndHashCode();
 
     }
 

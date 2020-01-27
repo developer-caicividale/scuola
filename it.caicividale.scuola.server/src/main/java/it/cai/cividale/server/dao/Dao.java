@@ -3,7 +3,7 @@ package it.cai.cividale.server.dao;
 import java.util.List;
 
 public interface Dao<T> {
-    void save(T object);
+    Long save(T object);
 
     void saveOrUpdate(T object);
 
@@ -12,4 +12,8 @@ public interface Dao<T> {
     List<T> list();
 
     T objectById(Long id);
+
+    T merge(T object);
+
+    void delete(T object);
 }

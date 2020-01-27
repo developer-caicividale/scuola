@@ -40,7 +40,7 @@ import it.caicividale.scuola.emf.model.util.UtilsService;
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getNote <em>Note</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getIsNoleggio <em>Is Noleggio</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getMaterialiNoleggiati <em>Materiali Noleggiati</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getQuotaNoleggio <em>Quota Noleggio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.impl.IscrizioneImpl#getIsCertificatoMedico <em>Is Certificato Medico</em>}</li>
@@ -246,15 +246,14 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     protected static final Boolean IS_NOLEGGIO_EDEFAULT = Boolean.FALSE;
 
     /**
-     * The cached value of the '{@link #getMaterialeNoleggiato() <em>Materiale
-     * Noleggiato</em>}' reference list. <!-- begin-user-doc --> <!-- end-user-doc
-     * -->
-     * 
-     * @see #getMaterialeNoleggiato()
+     * The cached value of the '{@link #getMaterialiNoleggiati() <em>Materiali Noleggiati</em>}' containment reference list.
+     * <!-- begin-user-doc --> <!--
+     * end-user-doc -->
+     * @see #getMaterialiNoleggiati()
      * @generated
      * @ordered
      */
-    protected EList<MaterialeNoleggiato> materialeNoleggiato;
+    protected EList<MaterialeNoleggiato> materialiNoleggiati;
 
     /**
      * The default value of the '{@link #getIsIscrizioneOk() <em>Is Iscrizione Ok</em>}' attribute.
@@ -617,7 +616,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
      * @generated NOT
      */
     public Boolean getIsNoleggio() {
-	Boolean isNoleggio = !getMaterialeNoleggiato().isEmpty();
+	Boolean isNoleggio = !getMaterialiNoleggiati().isEmpty();
 	System.out.println("Is noleggio:" + isNoleggio);
 	return isNoleggio;
 
@@ -628,12 +627,12 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
      * @generated
      */
     @Override
-    public EList<MaterialeNoleggiato> getMaterialeNoleggiato() {
-	if (materialeNoleggiato == null) {
-	    materialeNoleggiato = new EObjectEList<MaterialeNoleggiato>(MaterialeNoleggiato.class, this,
-		    ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO);
+    public EList<MaterialeNoleggiato> getMaterialiNoleggiati() {
+	if (materialiNoleggiati == null) {
+	    materialiNoleggiati = new EObjectEList<MaterialeNoleggiato>(MaterialeNoleggiato.class, this,
+		    ModelPackage.ISCRIZIONE__MATERIALI_NOLEGGIATI);
 	}
-	return materialeNoleggiato;
+	return materialiNoleggiati;
     }
 
     /**
@@ -742,7 +741,7 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
     public Float getQuotaNoleggioDaVersare() {
 	Float quota = 0.0F;
 	if (getIsNoleggio()) {
-	    for (MaterialeNoleggiato materiale : getMaterialeNoleggiato()) {
+	    for (MaterialeNoleggiato materiale : getMaterialiNoleggiati()) {
 		quota += materiale.getMateriale().getQuotaNoleggio() * materiale.getQuantita();
 	    }
 	}
@@ -887,8 +886,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	    return getNote();
 	case ModelPackage.ISCRIZIONE__IS_NOLEGGIO:
 	    return getIsNoleggio();
-	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
-	    return getMaterialeNoleggiato();
+	case ModelPackage.ISCRIZIONE__MATERIALI_NOLEGGIATI:
+	    return getMaterialiNoleggiati();
 	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
 	    return getIsIscrizioneOk();
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
@@ -950,9 +949,9 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__NOTE:
 	    setNote((String) newValue);
 	    return;
-	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
-	    getMaterialeNoleggiato().clear();
-	    getMaterialeNoleggiato().addAll((Collection<? extends MaterialeNoleggiato>) newValue);
+	case ModelPackage.ISCRIZIONE__MATERIALI_NOLEGGIATI:
+	    getMaterialiNoleggiati().clear();
+	    getMaterialiNoleggiati().addAll((Collection<? extends MaterialeNoleggiato>) newValue);
 	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio((Float) newValue);
@@ -1007,8 +1006,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__NOTE:
 	    setNote(NOTE_EDEFAULT);
 	    return;
-	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
-	    getMaterialeNoleggiato().clear();
+	case ModelPackage.ISCRIZIONE__MATERIALI_NOLEGGIATI:
+	    getMaterialiNoleggiati().clear();
 	    return;
 	case ModelPackage.ISCRIZIONE__QUOTA_NOLEGGIO:
 	    setQuotaNoleggio(QUOTA_NOLEGGIO_EDEFAULT);
@@ -1065,8 +1064,8 @@ public class IscrizioneImpl extends MinimalEObjectImpl.Container implements Iscr
 	case ModelPackage.ISCRIZIONE__IS_NOLEGGIO:
 	    return IS_NOLEGGIO_EDEFAULT == null ? getIsNoleggio() != null
 		    : !IS_NOLEGGIO_EDEFAULT.equals(getIsNoleggio());
-	case ModelPackage.ISCRIZIONE__MATERIALE_NOLEGGIATO:
-	    return materialeNoleggiato != null && !materialeNoleggiato.isEmpty();
+	case ModelPackage.ISCRIZIONE__MATERIALI_NOLEGGIATI:
+	    return materialiNoleggiati != null && !materialiNoleggiati.isEmpty();
 	case ModelPackage.ISCRIZIONE__IS_ISCRIZIONE_OK:
 	    return IS_ISCRIZIONE_OK_EDEFAULT == null ? getIsIscrizioneOk() != null
 		    : !IS_ISCRIZIONE_OK_EDEFAULT.equals(getIsIscrizioneOk());

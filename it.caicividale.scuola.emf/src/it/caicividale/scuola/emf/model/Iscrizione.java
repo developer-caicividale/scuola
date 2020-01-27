@@ -27,7 +27,7 @@ import java.time.LocalDate;
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getId <em>Id</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getNote <em>Note</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getIsNoleggio <em>Is Noleggio</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialeNoleggiato <em>Materiale Noleggiato</em>}</li>
+ *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getMaterialiNoleggiati <em>Materiali Noleggiati</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getIsIscrizioneOk <em>Is Iscrizione Ok</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getQuotaNoleggio <em>Quota Noleggio</em>}</li>
  *   <li>{@link it.caicividale.scuola.emf.model.Iscrizione#getIsCertificatoMedico <em>Is Certificato Medico</em>}</li>
@@ -272,16 +272,16 @@ public interface Iscrizione extends EObject {
     Boolean getIsNoleggio();
 
     /**
-     * Returns the value of the '<em><b>Materiale Noleggiato</b></em>' containment reference list.
+     * Returns the value of the '<em><b>Materiali Noleggiati</b></em>' containment reference list.
      * The list contents are of type {@link it.caicividale.scuola.emf.model.MaterialeNoleggiato}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return the value of the '<em>Materiale Noleggiato</em>' containment reference list.
-     * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_MaterialeNoleggiato()
+     * @return the value of the '<em>Materiali Noleggiati</em>' containment reference list.
+     * @see it.caicividale.scuola.emf.model.ModelPackage#getIscrizione_MaterialiNoleggiati()
      * @model containment="true"
      * @generated
      */
-    EList<MaterialeNoleggiato> getMaterialeNoleggiato();
+    EList<MaterialeNoleggiato> getMaterialiNoleggiati();
 
     /**
      * Returns the value of the '<em><b>Is Iscrizione Ok</b></em>' attribute.

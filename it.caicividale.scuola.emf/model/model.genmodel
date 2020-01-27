@@ -55,6 +55,7 @@
     <genDataTypes ecoreDataType="model.ecore#//EMail"/>
     <genDataTypes ecoreDataType="model.ecore#//ELocalDate"/>
     <genDataTypes ecoreDataType="model.ecore#//ELocalDateTime"/>
+    <genDataTypes ecoreDataType="model.ecore#//EqualsAndHashCode"/>
     <genClasses ecoreClass="model.ecore#//Persona">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/nome"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Persona/cognome"/>
@@ -115,7 +116,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/note"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isNoleggio"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/materialeNoleggiato"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Iscrizione/materialiNoleggiati"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isIscrizioneOk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/quotaNoleggio"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Iscrizione/isCertificatoMedico"/>

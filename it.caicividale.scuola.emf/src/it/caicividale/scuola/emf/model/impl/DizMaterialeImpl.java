@@ -3,36 +3,43 @@
 package it.caicividale.scuola.emf.model.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import it.caicividale.scuola.emf.model.DizMateriale;
 import it.caicividale.scuola.emf.model.ModelPackage;
+import lombok.EqualsAndHashCode;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Diz Materiale</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Diz
+ * Materiale</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getId <em>Id</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getNome <em>Nome</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getNota <em>Nota</em>}</li>
- *   <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getQuotaNoleggio <em>Quota Noleggio</em>}</li>
+ * <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getId
+ * <em>Id</em>}</li>
+ * <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getNome
+ * <em>Nome</em>}</li>
+ * <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getNota
+ * <em>Nota</em>}</li>
+ * <li>{@link it.caicividale.scuola.emf.model.impl.DizMaterialeImpl#getQuotaNoleggio
+ * <em>Quota Noleggio</em>}</li>
  * </ul>
  *
- * @generated
+ * @generated NOT
  */
+
+///////////////////////////////
+@EqualsAndHashCode(callSuper = false)
+////////////////////////////////
+
 public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements DizMateriale {
     /**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -40,9 +47,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected static final Long ID_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -50,9 +57,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected Long id = ID_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getNome() <em>Nome</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getNome() <em>Nome</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getNome()
      * @generated
      * @ordered
@@ -60,9 +67,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected static final String NOME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getNome() <em>Nome</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getNome() <em>Nome</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getNome()
      * @generated
      * @ordered
@@ -70,9 +77,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected String nome = NOME_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getNota() <em>Nota</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getNota() <em>Nota</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getNota()
      * @generated
      * @ordered
@@ -80,9 +87,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected static final String NOTA_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getNota() <em>Nota</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getNota() <em>Nota</em>}' attribute. <!--
+     * begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getNota()
      * @generated
      * @ordered
@@ -90,9 +97,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected String nota = NOTA_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getQuotaNoleggio() <em>Quota
+     * Noleggio</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getQuotaNoleggio()
      * @generated
      * @ordered
@@ -100,9 +107,9 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected static final float QUOTA_NOLEGGIO_EDEFAULT = 0.0F;
 
     /**
-     * The cached value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getQuotaNoleggio() <em>Quota Noleggio</em>}'
+     * attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getQuotaNoleggio()
      * @generated
      * @ordered
@@ -110,8 +117,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     protected float quotaNoleggio = QUOTA_NOLEGGIO_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     protected DizMaterialeImpl() {
@@ -119,8 +126,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -129,8 +136,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -139,8 +146,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -152,8 +159,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -162,8 +169,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -175,8 +182,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -185,8 +192,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -198,8 +205,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -208,8 +215,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -222,8 +229,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -242,8 +249,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -266,8 +273,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -290,8 +297,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -310,8 +317,8 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -332,4 +339,4 @@ public class DizMaterialeImpl extends MinimalEObjectImpl.Container implements Di
 	return result.toString();
     }
 
-} //DizMaterialeImpl
+} // DizMaterialeImpl

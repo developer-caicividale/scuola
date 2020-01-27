@@ -7,6 +7,7 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import it.cai.cividale.server.dao.IscrizioneDao;
 import it.cai.cividale.server.domain.mappers.IscrizioneMapper;
+import it.cai.cividale.server.domain.mappers.MaterialeNoleggaitoMapper;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import lombok.RequiredArgsConstructor;
 
@@ -17,6 +18,7 @@ public class IscrizioneService {
 
     private final IscrizioneDao iscrizioneDao;
     private final IscrizioneMapper mapper;
+    private final MaterialeNoleggaitoMapper materialeNoleggaitoMapper;
 
     public void creaIscrizione(@NotNull Iscrizione iscrizioneModel, @NotNull Long idCorso) {
 	it.cai.cividale.server.domain.Iscrizione iscrizioneDomain = mapper.model2domain(iscrizioneModel);
@@ -32,4 +34,5 @@ public class IscrizioneService {
 	iscrizioneDao.update(iscrizioneDomain);
 
     }
+
 }

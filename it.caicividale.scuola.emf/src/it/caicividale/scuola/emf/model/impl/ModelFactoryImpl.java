@@ -16,6 +16,7 @@ import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import lombok.EqualsAndHashCode;
 
 /**
  * <!-- begin-user-doc -->
@@ -135,6 +136,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return createELocalDateFromString(eDataType, initialValue);
 	case ModelPackage.ELOCAL_DATE_TIME:
 	    return createELocalDateTimeFromString(eDataType, initialValue);
+	case ModelPackage.EQUALS_AND_HASH_CODE:
+	    return createEqualsAndHashCodeFromString(eDataType, initialValue);
 	default:
 	    throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 	}
@@ -166,6 +169,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	    return convertELocalDateToString(eDataType, instanceValue);
 	case ModelPackage.ELOCAL_DATE_TIME:
 	    return convertELocalDateTimeToString(eDataType, instanceValue);
+	case ModelPackage.EQUALS_AND_HASH_CODE:
+	    return convertEqualsAndHashCodeToString(eDataType, instanceValue);
 	default:
 	    throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 	}
@@ -592,6 +597,24 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
      * @generated
      */
     public String convertELocalDateTimeToString(EDataType eDataType, Object instanceValue) {
+	return super.convertToString(eDataType, instanceValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EqualsAndHashCode createEqualsAndHashCodeFromString(EDataType eDataType, String initialValue) {
+	return (EqualsAndHashCode) super.createFromString(eDataType, initialValue);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public String convertEqualsAndHashCodeToString(EDataType eDataType, Object instanceValue) {
 	return super.convertToString(eDataType, instanceValue);
     }
 

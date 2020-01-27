@@ -74,7 +74,7 @@ public class Iscrizione implements Serializable {
     @JoinColumn(name = "allievo_allievo_id", nullable = false)
     private Allievo allievo;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "iscrizione", fetch = FetchType.EAGER)
     private List<MaterialeNoleggiato> materialiNoleggiati = new ArrayList<>();
 
 }

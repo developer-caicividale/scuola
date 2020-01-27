@@ -44,6 +44,7 @@ import it.caicividale.scuola.emf.model.valueobject.EMail;
 import it.caicividale.scuola.emf.model.valueobject.NumeroCellulare;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import lombok.EqualsAndHashCode;
 
 /**
  * <!-- begin-user-doc -->
@@ -268,6 +269,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     private EDataType eLocalDateTimeEDataType = null;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    private EDataType equalsAndHashCodeEDataType = null;
 
     /**
      * Creates an instance of the model <b>Package</b>, registered with
@@ -909,7 +917,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
-    public EReference getIscrizione_MaterialeNoleggiato() {
+    public EReference getIscrizione_MaterialiNoleggiati() {
 	return (EReference) iscrizioneEClass.getEStructuralFeatures().get(11);
     }
 
@@ -1909,6 +1917,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
      * @generated
      */
     @Override
+    public EDataType getEqualsAndHashCode() {
+	return equalsAndHashCodeEDataType;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public ModelFactory getModelFactory() {
 	return (ModelFactory) getEFactoryInstance();
     }
@@ -1993,7 +2011,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__ID);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__NOTE);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__IS_NOLEGGIO);
-	createEReference(iscrizioneEClass, ISCRIZIONE__MATERIALE_NOLEGGIATO);
+	createEReference(iscrizioneEClass, ISCRIZIONE__MATERIALI_NOLEGGIATI);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__IS_ISCRIZIONE_OK);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__QUOTA_NOLEGGIO);
 	createEAttribute(iscrizioneEClass, ISCRIZIONE__IS_CERTIFICATO_MEDICO);
@@ -2115,6 +2133,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	eMailEDataType = createEDataType(EMAIL);
 	eLocalDateEDataType = createEDataType(ELOCAL_DATE);
 	eLocalDateTimeEDataType = createEDataType(ELOCAL_DATE_TIME);
+	equalsAndHashCodeEDataType = createEDataType(EQUALS_AND_HASH_CODE);
     }
 
     /**
@@ -2299,7 +2318,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	initEAttribute(getIscrizione_IsNoleggio(), ecorePackage.getEBooleanObject(), "isNoleggio", "False", 0, 1,
 		Iscrizione.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 		IS_DERIVED, !IS_ORDERED);
-	initEReference(getIscrizione_MaterialeNoleggiato(), this.getMaterialeNoleggiato(), null, "materialeNoleggiato",
+	initEReference(getIscrizione_MaterialiNoleggiati(), this.getMaterialeNoleggiato(), null, "materialiNoleggiati",
 		null, 0, -1, Iscrizione.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 		!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	initEAttribute(getIscrizione_IsIscrizioneOk(), ecorePackage.getEBooleanObject(), "isIscrizioneOk", "False", 1,
@@ -2590,9 +2609,26 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		!IS_GENERATED_INSTANCE_CLASS);
 	initEDataType(eLocalDateTimeEDataType, LocalDateTime.class, "ELocalDateTime", IS_SERIALIZABLE,
 		!IS_GENERATED_INSTANCE_CLASS);
+	initEDataType(equalsAndHashCodeEDataType, EqualsAndHashCode.class, "EqualsAndHashCode", IS_SERIALIZABLE,
+		!IS_GENERATED_INSTANCE_CLASS);
 
 	// Create resource
 	createResource(eNS_URI);
+
+	// Create annotations
+	// null
+	createNullAnnotations();
+    }
+
+    /**
+     * Initializes the annotations for <b>null</b>.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    protected void createNullAnnotations() {
+	String source = null;
+	addAnnotation(dizMaterialeEClass, source, new String[] {});
     }
 
 } //ModelPackageImpl

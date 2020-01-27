@@ -13,10 +13,10 @@ import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.emf.databinding.FeaturePath;
 import org.eclipse.jface.databinding.fieldassist.ControlDecorationSupport;
 import org.eclipse.jface.databinding.swt.ISWTObservableValue;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
+import org.eclipse.jface.databinding.swt.typed.WidgetProperties;
 import org.eclipse.jface.databinding.viewers.IViewerObservableValue;
 import org.eclipse.jface.databinding.viewers.ObservableListContentProvider;
-import org.eclipse.jface.databinding.viewers.ViewersObservables;
+import org.eclipse.jface.databinding.viewers.typed.ViewerProperties;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.jface.viewers.ComboViewer;
@@ -55,11 +55,13 @@ public class NoleggioMaterialeDialog extends TitleAreaDialog {
 
     private final ModelManager modelManager = ModelManager.getInstance();
     private final IObservableValue<MaterialeNoleggiato> materialeNoleggiatoObservableValue = WritableValue
-	    .withValueType(MaterialeNoleggiato.class);;
+	    .withValueType(MaterialeNoleggiato.class);
+    private MaterialeNoleggiato materialeNoleggiato;
 
     public NoleggioMaterialeDialog(Shell parentShell, MaterialeNoleggiato materialeNoleggiato) {
 	super(parentShell);
-	this.materialeNoleggiatoObservableValue.setValue(materialeNoleggiato);
+	this.materialeNoleggiato = materialeNoleggiato;
+
     }
 
     @Override
@@ -108,7 +110,7 @@ public class NoleggioMaterialeDialog extends TitleAreaDialog {
 	return area;
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     private void bindToModel() {
 	DataBindingContext bindingContext = new DataBindingContext();
 
@@ -117,6 +119,14 @@ public class NoleggioMaterialeDialog extends TitleAreaDialog {
 	target2modelObjectNotNullStrategy.setBeforeSetValidator(new ObjectNotNullValidator());
 	UpdateValueStrategy model2targetObjectNotNullStrategy = new UpdateValueStrategy(
 		UpdateValueStrategy.POLICY_UPDATE);
+
+	UpdateValueStrategy terget2ModelDizMaterialeNotNullStrategy = new UpdateValueStrategy(
+		UpdateValueStrategy.POLICY_UPDATE);
+	// = new ConverterUpdateValueStrategy(new String2DizMaterialeConverter());
+	terget2ModelDizMaterialeNotNullStrategy.setBeforeSetValidator(new ObjectNotNullValidator());
+	UpdateValueStrategy model2targetDizMaterialeNotNullStrategy = new UpdateValueStrategy(
+		UpdateValueStrategy.POLICY_UPDATE);
+	// new ConverterUpdateValueStrategy(new DizMateriale2StringConverter());
 
 	UpdateValueStrategy target2modelIntegerStrategy = new ConverterUpdateValueStrategy(new String2ShortConverter());
 	target2modelIntegerStrategy.setBeforeSetValidator(new ObjectNotNullValidator());
@@ -159,12 +169,13 @@ public class NoleggioMaterialeDialog extends TitleAreaDialog {
 		return text;
 	    }
 	});
+
 	IObservableValue<DizMateriale> dizMaterialeObservable = EMFProperties
 		.value(FeaturePath.fromList(ModelPackage.Literals.MATERIALE_NOLEGGIATO__MATERIALE))
 		.observeDetail(materialeNoleggiatoObservableValue);
-	IViewerObservableValue targetObservable = ViewersObservables.observeSingleSelection(materialeComboViewer);
+	IViewerObservableValue targetObservable = ViewerProperties.singleSelection().observe(materialeComboViewer);
 	Binding materialeNoleggiatoBinding = bindingContext.bindValue(targetObservable, dizMaterialeObservable,
-		target2modelObjectNotNullStrategy, model2targetObjectNotNullStrategy);
+		terget2ModelDizMaterialeNotNullStrategy, model2targetDizMaterialeNotNullStrategy);
 	ControlDecorationSupport.create(materialeNoleggiatoBinding, SWT.TOP | SWT.LEFT);
 
 	// quantità
@@ -185,6 +196,8 @@ public class NoleggioMaterialeDialog extends TitleAreaDialog {
 		.observe(getButton(IDialogConstants.OK_ID));
 	bindingContext.bindValue(buttonEnabledObservable, isValidationOk);
 
+	materialeNoleggiatoObservableValue.setValue(materialeNoleggiato);
+//	materialeComboViewer.setSelection(new StructuredSelection(materialeNoleggiato));
     }
 
     public IObservableValue<MaterialeNoleggiato> getMaterialeNoleggiatoObservableValue() {

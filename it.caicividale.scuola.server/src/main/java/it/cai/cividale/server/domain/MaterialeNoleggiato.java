@@ -6,10 +6,12 @@ import java.time.LocalDate;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,6 +33,10 @@ public class MaterialeNoleggiato implements Serializable {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "iscrizione_id")
+    private Iscrizione iscrizione;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "dizmateriale_materiale_id")
     private DizMateriale materiale;
@@ -38,7 +44,7 @@ public class MaterialeNoleggiato implements Serializable {
     @Column(name = "quantita", nullable = false)
     private short quantita;
 
-    @Column(name = "datanoleggio", nullable = false, length = 19)
-    private LocalDate datanoleggio;
+    @Column(name = "data_noleggio", nullable = false, length = 19)
+    private LocalDate dataNoleggio;
 
 }

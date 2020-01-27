@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.eclipse.core.databinding.observable.list.ListChangeEvent;
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.services.IStylingEngine;
@@ -52,10 +51,6 @@ public class ModificaIscrizioneHandler {
 //		    // L'ooservabile Corso non reagisce ai cambiamenti della lista iscrizione, forzo
 //		    // il cambiamento copiando l'oggetto
 		    modelManager.getCorsoObservable().setValue(EcoreUtil.copy(corso));
-
-		    // modelManager.getIscrizioneObservable().setValue(iscrizione);
-
-		    ListChangeEvent tracker;
 
 		} else {
 		    ModelManager.getInstance().getIscrizioneObservable().setValue(iscrizioneOld);

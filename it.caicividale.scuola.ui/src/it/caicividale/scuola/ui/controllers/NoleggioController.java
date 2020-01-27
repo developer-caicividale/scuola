@@ -27,6 +27,7 @@ import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
 import it.caicividale.scuola.emf.model.ModelFactory;
 import it.caicividale.scuola.emf.model.ModelPackage;
+import it.caicividale.scuola.service.ServiceManager;
 import it.caicividale.scuola.ui.composites.NoleggioComposite;
 import it.caicividale.scuola.ui.databinding.converters.Float2StringConverter;
 import it.caicividale.scuola.ui.databinding.converters.PersonaNomeCognome2StringConverter;
@@ -48,6 +49,8 @@ public class NoleggioController {
 
     private final IObservableValue<MaterialeNoleggiato> materialeNoleggiatoItemsObservable = WritableValue
 	    .withValueType(MaterialeNoleggiato.class);
+
+    private ServiceManager serviceManager = ServiceManager.getInstance();
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public void bind2model() {
@@ -74,7 +77,7 @@ public class NoleggioController {
 	ObservableListContentProvider noleggioListContentProvider = new ObservableListContentProvider();
 	noleggioComposite.getTableViewerNoleggio().setContentProvider(noleggioListContentProvider);
 	IObservableList<MaterialeNoleggiato> materialeNoleggiatoObservableList = EMFProperties
-		.list(ModelPackage.Literals.ISCRIZIONE__MATERIALE_NOLEGGIATO).observeDetail(iscrizioneActualObservable);
+		.list(ModelPackage.Literals.ISCRIZIONE__MATERIALI_NOLEGGIATI).observeDetail(iscrizioneActualObservable);
 	noleggioComposite.getTableViewerNoleggio().setInput(materialeNoleggiatoObservableList);
 	IViewerObservableValue targetObservableMaterialeNoleggiato = ViewerProperties.singleSelection()
 		.observe(noleggioComposite.getTableViewerNoleggio());
@@ -90,7 +93,10 @@ public class NoleggioController {
 		NoleggioMaterialeDialog noleggioMaterialeDialog = new NoleggioMaterialeDialog(
 			noleggioComposite.getShell(), materialeNoleggiato);
 		if (noleggioMaterialeDialog.open() == Window.OK) {
-		    iscrizioneActualObservable.getValue().getMaterialeNoleggiato()
+		    Long id = serviceManager.nuovoMaterialeNoleggiato(iscrizioneActualObservable.getValue().getId(),
+			    materialeNoleggiato);
+		    materialeNoleggiato.setId(id);
+		    iscrizioneActualObservable.getValue().getMaterialiNoleggiati()
 			    .add(noleggioMaterialeDialog.getMaterialeNoleggiatoObservableValue().getValue());
 		}
 		noleggioComposite.getTableViewerNoleggio().refresh();
@@ -110,7 +116,7 @@ public class NoleggioController {
 		    MaterialeNoleggiato materialeNoleggiatoOld = EcoreUtil
 			    .copy(materialeNoleggiatoItemsObservable.getValue());
 		    int index = EmfUtils.getIndexOfEObject(
-			    iscrizioneActualObservable.getValue().getMaterialeNoleggiato(), materialeNoleggiatoOld);
+			    iscrizioneActualObservable.getValue().getMaterialiNoleggiati(), materialeNoleggiatoOld);
 
 		    MaterialeNoleggiato materialeNoleggiatoActual = EcoreUtil
 			    .copy(materialeNoleggiatoItemsObservable.getValue());
@@ -118,8 +124,9 @@ public class NoleggioController {
 		    NoleggioMaterialeDialog noleggioMaterialeDialog = new NoleggioMaterialeDialog(
 			    noleggioComposite.getShell(), materialeNoleggiatoActual);
 		    if (noleggioMaterialeDialog.open() == Window.OK) {
-			// materialeNoleggiatoItemsObservable.setValue(noleggioMaterialeDialog.getMaterialeNoleggiatoObservableValue().getValue());
-			iscrizioneActualObservable.getValue().getMaterialeNoleggiato().set(index,
+			serviceManager.modificaMaterialeNoleggiato(materialeNoleggiatoActual);
+
+			iscrizioneActualObservable.getValue().getMaterialiNoleggiati().set(index,
 				noleggioMaterialeDialog.getMaterialeNoleggiatoObservableValue().getValue());
 		    }
 		    noleggioComposite.getTableViewerNoleggio().refresh();
@@ -143,7 +150,9 @@ public class NoleggioController {
 		    if (MessageDialog.openConfirm(noleggioComposite.getShell(), "Errore",
 			    "Confermi la cencellazione del noleggio '"
 				    + materialeNoleggiatoItemsObservable.getValue().getMateriale().getNome() + "'?")) {
-			iscrizioneActualObservable.getValue().getMaterialeNoleggiato()
+			serviceManager.cancellaMaterialeNoleggiato(materialeNoleggiatoItemsObservable.getValue());
+
+			iscrizioneActualObservable.getValue().getMaterialiNoleggiati()
 				.remove(materialeNoleggiatoItemsObservable.getValue());
 			noleggioComposite.getTableViewerNoleggio().refresh();
 		    }

@@ -16,6 +16,7 @@ import it.caicividale.scuola.emf.model.ElencoIstruttori;
 import it.caicividale.scuola.emf.model.ElencoMateriali;
 import it.caicividale.scuola.emf.model.Iscrizione;
 import it.caicividale.scuola.emf.model.Istruttore;
+import it.caicividale.scuola.emf.model.MaterialeNoleggiato;
 import it.caicividale.scuola.emf.model.Persona;
 import it.caicividale.scuola.emf.model.impl.IscrizioneImpl;
 import it.caicividale.scuola.emf.model.sharedresources.RestResources;
@@ -127,6 +128,23 @@ public class ServiceManager {
 	query.put("idCorso", idCorso);
 
 	restClient.put(url(RestResources.ISCRIZIONE_UPDATE, query), iscrizione);
+
+    }
+
+    public Long nuovoMaterialeNoleggiato(Long idIscrizione, MaterialeNoleggiato materialeNoleggiato) {
+	Map<String, Object> query = new HashMap<>();
+	query.put("idIscrizione", idIscrizione);
+
+	return restClient.post(url(RestResources.MATERIALE_NOLEGGIATO_ADD, query), materialeNoleggiato, Long.class);
+
+    }
+
+    public void modificaMaterialeNoleggiato(MaterialeNoleggiato materialeNoleggiato) {
+	restClient.put(url(RestResources.MATERIALE_NOLEGGIATO_UPDATE), materialeNoleggiato);
+    }
+
+    public void cancellaMaterialeNoleggiato(MaterialeNoleggiato materialeNoleggiato) {
+	restClient.put(url(RestResources.MATERIALE_NOLEGGIATO_DELETE), materialeNoleggiato);
 
     }
 

@@ -13,6 +13,10 @@ public interface RestResources {
 
     final String ISCRIZIONE_UPDATE = "/iscrizione/update/{idCorso}";
 
+    final String MATERIALE_NOLEGGIATO_ADD = "/iscrizione/{idIscrizione}/materiale_noleggiato/add";
+    final String MATERIALE_NOLEGGIATO_UPDATE = "/iscrizione/materiale_noleggiato/update/";
+    final String MATERIALE_NOLEGGIATO_DELETE = "/iscrizione/materiale_noleggiato/delete/";
+
     final String ELENCO_MATERIALI = "/dizionari/elenco_materiali";
 
     final String ELENCO_COMUNI = "/dizionari/elenco_comuni/{regione}";

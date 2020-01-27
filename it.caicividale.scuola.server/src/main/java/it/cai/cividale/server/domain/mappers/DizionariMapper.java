@@ -48,6 +48,14 @@ public class DizionariMapper {
 	return materialiModel;
     }
 
+    public DizMateriale domain2modelMateriali(it.cai.cividale.server.domain.DizMateriale dizMaterialeDomain) {
+
+	DizMateriale dizMaterialeModel = ModelFactory.eINSTANCE.createDizMateriale();
+	modelMapper.map(dizMaterialeDomain, dizMaterialeModel);
+
+	return dizMaterialeModel;
+    }
+
     public List<DizComune> domain2modelComuni(List<it.cai.cividale.server.domain.DizComune> domain) {
 	List<DizComune> model = new ArrayList<>();
 	for (it.cai.cividale.server.domain.DizComune dizDomain : domain) {

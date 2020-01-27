@@ -58,9 +58,10 @@ public abstract class AbstractDaoImpl<T> implements Dao<T> {
     }
 
     @Override
-    public void save(T object) {
+    public Long save(T object) {
 	try {
-	    sessionFactory.getCurrentSession().save(object);
+	    Long id = (Long) sessionFactory.getCurrentSession().save(object);
+	    return id;
 	} catch (Exception e) {
 	    throw new DaoException(ECodiceErrore.DAO_ERROR, new Object[] { e.getMessage() });
 	}
@@ -79,6 +80,26 @@ public abstract class AbstractDaoImpl<T> implements Dao<T> {
 
     @Override
     public void update(T object) {
+	try {
+	    sessionFactory.getCurrentSession().update(object);
+	} catch (Exception e) {
+	    throw new DaoException(ECodiceErrore.DAO_ERROR, new Object[] { e.getMessage() });
+	}
+
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    public T merge(T object) {
+	try {
+	    return (T) sessionFactory.getCurrentSession().merge(object);
+	} catch (Exception e) {
+	    throw new DaoException(ECodiceErrore.DAO_ERROR, new Object[] { e.getMessage() });
+	}
+    }
+
+    @Override
+    public void delete(T object) {
 	try {
 	    sessionFactory.getCurrentSession().update(object);
 	} catch (Exception e) {
